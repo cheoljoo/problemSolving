@@ -1,0 +1,72 @@
+# no0001.pl
+- https://www.algospot.com/judge/problem/read/BOOKSTORE
+- perl no0001.pl < no0001.data
+
+
+# no0003.py
+- http://collab.lge.com/main/pages/viewpage.action?pageId=930044529
+- http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=1835&sca=3080
+- python3 no0003.py < no0003.data
+  - python tree program source
+  - The result is timeout
+- make 3cpp
+    - std::ios_base::sync_with_stdio(false);
+    - use global variable (no initilization)
+- result : fail (timeout)
+
+# 4
+- https://algospot.com/judge/problem/read/GALLERY#
+- 4.cpp : for debugging
+- 4r.cpp : release
+- 4rd.cpp : for debugging
+- #4 is different from #3.
+    - #4 can have the following case.     E - X - X - E
+- result : fail
+- Solution : 4r_goh.c  4r_lsh.cpp
+
+# 5
+- http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=540&sca=30a0
+- 5.cpp : success with 2 sample
+	- but, it is timeout and not solved.
+	- I do not know what do I choose when I have multiple index with the maximum cross lines.
+	- 5r2.cpp : find the proper index among the index with the same cross.
+		- 5.data / 5.data2 / 5.data3 is ok. But , data6 is not ok.  case count is 400
+
+
+# 6 : Joined Longest Increasing Subsequence
+- https://algospot.com/judge/problem/read/JLIS
+	- JLIS, Joined Longest Increasing Subsequence
+	- Find all kinds of IS
+	- First of all , I need KLIS. (kth-LIS)
+- 6r.cpp   : site answer fail
+
+
+# 7 : Longest Increasing Sequence
+- https://algospot.com/judge/problem/read/LIS
+- 7.cpp : site answer : runtime error but I do not understand. change the MAX into 500
+	- ok
+
+# 8 : K-th Longest Increasing Sequence
+- https://algospot.com/judge/problem/read/KLIS
+- 8.cpp  : based on 7.cpp
+	- MAX*130 : memory limit exceed
+	- MAX*120 : RTE (SIGSEGV: segmentation fault, probably incorrect memory access or stack overflow)
+- 8moreC.cpp : based on 8.cpp
+	- MAX*125 : memory limit exceed
+	- new version to reduce the memory usage : But the following message
+		- RTE (SIGSEGV: segmentation fault, probably incorrect memory access or stack overflow)
+- 8cpp.cpp : based on 8moreC.cpp
+	- this is almost cpp std. But, it takes a lot of memory.
+	- RTE (SIGKILL: program was forcefully killed, probably memory limit exceeded)
+
+
+# 9 : D Tree
+- http://codeforces.com/problemset/problem/570/D
+- 9.cpp :  sample is done.   succeed until test 5.    timeout in test 6 within 2 sec (500000 nodes)
+- 9r2.cpp : cache 70 level.   timeout in test 35
+
+
+# 10 : Elivator 
+- http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=701&sca=4050
+- 10.cpp :  I think that it is just get the mimimal using elivator count.  But , I should add the function of elivator history.
+- 10r.cpp
