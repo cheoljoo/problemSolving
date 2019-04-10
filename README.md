@@ -70,3 +70,24 @@
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=701&sca=4050
 - 10.cpp :  I think that it is just get the mimimal using elivator count.  But , I should add the function of elivator history.
 - 10r.cpp
+- [10ans.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/10ans.cpp)
+    - 10.data       2 1 3 
+    - 10.data2      4 5 4 2 1
+    - 10.data3      5 5 4 2 1 3
+    - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=701&sca=4050
+        - No.1  [Good] : 0.002
+        - No.2  [Good] : 0.002
+        - No.3  [Good] : 0.002
+        - No.4  [Good] : 0.003
+        - No.5  [Good] : 0.002
+        - No.6  [RTE]
+        - No.7  [Good] : 0.020
+        - No.8  [Good] : 0.003
+        - No.9  [Good] : 0.002
+        - No.10 [Good] : 0.001
+- algorithm
+    - store story(floor) and elivator  from 0 to N-1
+    - use DFS
+    - restriction : 
+            - store the cost (count or depth) for each story (floor)
+            - check visited

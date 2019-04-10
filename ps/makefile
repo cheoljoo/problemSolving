@@ -97,10 +97,11 @@
 	g++ -std=c++11 9r2.cpp -o 9r2
 	./9r2  < 9.data3
 
-10: 10.cpp 10.data  10r.cpp
+10: 10.cpp 10.data  10r.cpp 10.data2 10ans.cpp
 	g++ -std=c++11 10.cpp -o 10
 	g++ -std=c++11 10r.cpp -o 10r
-	./10r  < 10.data
+	g++ -std=c++11 10ans.cpp -o 10ans
+	./10ans  < 10.data3
 
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp
