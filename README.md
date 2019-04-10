@@ -74,7 +74,7 @@
     - 10.data       2 1 3 
     - 10.data2      4 5 4 2 1
     - 10.data3      5 5 4 2 1 3
-    - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=701&sca=4050
+    - [Result](http://www.jungol.co.kr/theme/jungol/reinfo.php?sid=??)
         - No.1  [Good] : 0.002
         - No.2  [Good] : 0.002
         - No.3  [Good] : 0.002
