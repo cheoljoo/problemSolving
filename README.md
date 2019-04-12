@@ -91,3 +91,9 @@
     - restriction : 
             - store the cost (count or depth) for each story (floor)
             - check visited
+
+# 11 : 조세퍼스 순열
+- https://www.acmicpc.net/problem/1168
+- [11.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/11.cpp)  : for debugging 
+- [11r.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/11r.cpp)  :  [ok](https://www.acmicpc.net/status?user_id=healing&problem_id=1168&from_mine=1)
+

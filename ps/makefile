@@ -103,17 +103,9 @@
 	g++ -std=c++11 10ans.cpp -o 10ans
 	./10ans  < 10.data3
 
+11: 11.cpp 11.data
+	g++ -std=c++11 11.cpp -o 11
+	./11 < 11.data
+
 temp: temp.cpp
-	g++ -std=c++11 temp.cpp -o temp
-	@echo ""
-	@echo ""
-	@echo "answer:3"
-	./temp  < 5.data
-	@echo ""
-	@echo ""
-	@echo "answer:6"
-	./temp  < 5.data2
-	@echo ""
-	@echo ""
-	@echo "answer:37"
-	./temp  < 5.data3
+	g++ -std=c++11 temp.cpp -o temp ;  ./temp
