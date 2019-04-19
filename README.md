@@ -100,7 +100,7 @@
 # 12 :  배낭 챙기기 1
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=357&sca=50
 
-| |  12r.cpp  | 12r1.cpp   |  12r2.cpp |
+| |  [12r.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r.cpp)  | [12r1.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r1.cpp)   |  [12r2.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r2.cpp) |
 |-|-----------|------------|-----------|
 | type |  recursive | stack | stack |
 | method | DFS  | BFS  | DFS  |
