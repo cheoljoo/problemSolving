@@ -100,3 +100,13 @@
 # 12 :  배낭 챙기기 1
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=357&sca=50
 
+| |  12r.cpp  | 12r1.cpp   |  12r2.cpp |
++-+-----------+------------+-----------+
+| type |  recursive | stack | stack |
+| method | DFS  | BFS  | DFS  |
+| real time |  0m0.119s | 0m1.352s | 0m1.198s |
+| stack max (case : 12.data3) |           | 8397  | 5586  |
+| result |  success | Time Limit Exceed(30) - 1704ms  | Memory Limit Exceed(30) - 74MB |
+
+
+

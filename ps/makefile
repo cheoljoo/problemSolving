@@ -111,5 +111,19 @@
 	g++ -std=c++11 12.cpp -o 12
 	./12 < 12.data
 
+12r: 12r.cpp 12.data 12.data2
+	g++ -std=c++11 12r.cpp -o 12r       # ok : recursive DFS 
+	./12r < 12.data     # 300  2*2+5*2
+	./12r < 12.data2    # 80   2*2
+	./12r < 12.data3    # 3813498
+
+12r1: 12r1.cpp 12.data      
+	g++ -std=c++11 12r1.cpp -o 12r1     # timeout :  stack BFS
+	./12r1 < 12.data     # 300  2*2+5*2
+
+12r2: 12r2.cpp 12.data3
+	g++ -std=c++11 12r2.cpp -o 12r2     # ok : stack DFS
+	./12r2 < 12.data    # 3813498
+
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
