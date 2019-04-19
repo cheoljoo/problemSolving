@@ -107,5 +107,9 @@
 	g++ -std=c++11 11.cpp -o 11
 	./11 < 11.data
 
+12: 12.cpp 12.data
+	g++ -std=c++11 12.cpp -o 12
+	./12 < 12.data
+
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
