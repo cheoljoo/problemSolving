@@ -108,6 +108,6 @@
 | stack max (case : 12.data3) |           | 8397  | 5586  |
 | result |  success | Time Limit Exceed(30) - 1704ms  | Memory Limit Exceed(30) - 74MB |
 
-- [MEMO](../images/BackPack01.jpg)
+- [MEMO](https://github.com/cheoljoo/problemSolving/blob/master/images/BackPack01.jpg)
 
 
