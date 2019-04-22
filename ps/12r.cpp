@@ -9,6 +9,8 @@
 #include <unistd.h>
  
 using namespace std;
+
+#define MORE 0  // set 1 if need to get what kinds of jewel in backpack
  
 #define NMAX 10001
 int N,V;    // jewel number , value
@@ -23,6 +25,7 @@ struct Jewel jewel[NMAX]; // jewel[weight]  weight start from 1.
 
 int minJewelWeight = NMAX;
 
+#if MORE
 void
 calculateWeight(int w)  // weight
 {
@@ -39,6 +42,7 @@ calculateWeight(int w)  // weight
     }
     cout << " }";
 }
+#endif
 
 int
 getMaxValue(int weight)
@@ -85,7 +89,7 @@ int main(int argc,char *argv[])
     int maxValue = getMaxValue(V);
     cout << maxValue << endl;
 
-/*
+#if MORE
     calculateWeight(V); cout << endl;
 
     int sum = 0;
@@ -99,7 +103,7 @@ int main(int argc,char *argv[])
     cout << endl;
     cout << "jewels total count : " << sum << endl;
     cout << "jewels max value : " << maxValue << endl;
-*/
+#endif
 
     return 0;
 }
