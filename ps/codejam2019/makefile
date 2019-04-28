@@ -2,11 +2,11 @@
 	python3 ./1.py < ./1.data
 
 2: 2.c 2.data
-	gcc 2.c -o 2
+	gcc 2.c -o 2 
 	./2 < ./2.data
 
 3: 3.cpp 3.data
-	g++ -std=c++1z 3.cpp -o 3
+	g++ -std=c++1z 3.cpp -o 3 -Wall
 	./3 < ./3.data
 
 3r: 3r.cpp 3.data
