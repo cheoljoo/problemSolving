@@ -16,7 +16,7 @@ long long int sumLevel(int level , int from , int end)
         localsum += m[level][i];
     }
 
-    return localsum;
+    return localsum % PRIME;
 }
 
 int main(int argc,char *argv[])
@@ -39,10 +39,10 @@ int main(int argc,char *argv[])
             sum[l] = 0;
             for(int i=1;i<=p[l];i++){
                 //printf("l %d ,i %d , p[l-1] %d\n", l,i,p[l-1]);
-                m[l][i] = (l == 1)? 1 : sumLevel(l-1,i,p[l-1]);
+                m[l][i] = (l == 1)? 1 : (sumLevel(l-1,i,p[l-1]) % PRIME);
                 //printf("m[l][i] : %lld\n", m[l][i]);
                 sum[l] += m[l][i];
-                //sum[l] %= PRIME;
+                sum[l] %= PRIME;
                 //printf("sum[l] : %lld\n", sum[l]);
             }
         }

@@ -9,10 +9,6 @@
 	g++ -std=c++1z 3.cpp -o 3 -Wall
 	./3 < ./3.data
 
-3r: 3r.cpp 3.data
-	g++ -std=c++1z 3r.cpp -o 3r -Wall
-	./3r < ./3.data
-
 4: 4.c 4.data
 	gcc 4.c -o 4
 	./4 < ./4.data

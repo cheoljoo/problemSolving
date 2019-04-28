@@ -12,7 +12,7 @@ using namespace std;
 
 struct comp
 {
-    bool operator()(const vector<char>& lhs, const vector<char>& rhs) const
+    bool operator()(const string& lhs, const string& rhs) const
     {
         if(lhs.size() !=  rhs.size()){
             return lhs.size() < rhs.size();
@@ -27,21 +27,17 @@ int N;    // opeation size
 int O;  // order
 long long int val1,val2,old;
 
-set< vector<char>,comp > ss;     // keys to find closest : orderd
-map< vector<char> ,long long int> mm;   // key , value
+set< string,comp > ss;     // keys to find closest : orderd
+map< string ,long long int> mm;   // key , value
 
-vector<char> in1,in2;
+string in1,in2;
 
-long long int getin(vector<char>& in)
+long long int getin(string& in)
 {
     char charin[201];
     cin >> charin;
     in.clear();
-    for(int i=0;charin[i] != 0;i++){
-        in.push_back(charin[i]);
-    }
-
-    //cout << " ~"; for(auto a : in) { cout << a; } cout << "~ ";
+    in = charin;
 
     return (long long int) ( atoi(charin) );
 
@@ -58,16 +54,14 @@ int main(int argc,char *argv[])
     cin >> N;
 	for(int cnt = 0 ; cnt < N ; cnt++){
         cin >> O ;
-        //cout << "operation:" << O << "  ";;
+        //;;cout << "operation:" << O << "  ";;
         if(O == 3){
-            //cin >> val1;
             val1 = getin(in1);
-            //cout << val1 << " __ \n";
+            //;;cout << val1 << " __ ";
         } else {
             val1 = getin(in1);
             val2 = getin(in2);
-            //cin >> val1 >> val2;
-            //cout << val1 << " " << val2 << " __ ";
+            //;;cout << val1 << " " << val2 << " __ ";
         }
         if(O == 1){
             sum += val2;
@@ -80,18 +74,23 @@ int main(int argc,char *argv[])
         } else if(O == 2){
             long long int localsum = 0;
 
-            set< vector<char>, comp >::iterator ssitlow, ssitup;
+            set< string, comp >::iterator ssitlow, ssitup;
             ssitlow=ss.lower_bound (in1); 
             ssitup=ss.upper_bound (in2);
-            //std::cout << "ss ";
-                //for(auto a : *ssitlow) { cout << a; } cout << '~'; 
-                //if(ssitup != ss.end()){ for(auto a : *ssitup) { cout << a; } cout << " : "; }
-            for (std::set< vector<char>, comp >::iterator it=ssitlow; it!=ssitup; ++it){
-                //cout << ' '; for(auto a : *it) { cout << a; } cout << "[" << mm[*it] << "] ";
-                localsum += mm[*it];
+            if(ssitlow == ss.end()){
+                cout << 0 << ' ';
+            } else {
+                //;;std::cout << "ss ";
+                //;;for(auto a : *ssitlow) { cout << a; } cout << '~'; 
+                //;;if(ssitup != ss.end()){ for(auto a : *ssitup) { cout << a; } cout << " : "; }
+                //;;else { cout << "end : "; }
+                for (std::set< string, comp >::iterator it=ssitlow; it!=ssitup; ++it){
+                    //;;cout << ' '; for(auto a : *it) { cout << a; } cout << "[" << mm[*it] << "] ";
+                    localsum += mm[*it];
+                }
+                //;;cout << " __ ";
+                cout << localsum << ' ';
             }
-            //std::cout << '\n';
-            cout << localsum << ' ';
 
         } else {
             old = mm[in1];
@@ -99,18 +98,13 @@ int main(int argc,char *argv[])
             sum -= old;
             cout << sum << ' ';
         }
-        /*
-        std::cout << " s contains:";
-        for (std::set<long long int>::iterator it=s.begin(); it!=s.end(); ++it)
-            std::cout << ' ' << *it << "[" << m[*it] << "] ";
-        std::cout << '\n';
-        std::cout << "ss contains:";
-        for (std::set< vector<char>, comp >::iterator it=ss.begin(); it!=ss.end(); ++it){
-            cout << " "; for(auto a : *it) { cout << a; } cout << "[" << mm[*it] << "] ";
-        }
-        std::cout << '\n';
-        */
+        //;;std::cout << "ss contains:";
+        //;;for (std::set< string, comp >::iterator it=ss.begin(); it!=ss.end(); ++it){
+            //;;cout << " "; for(auto a : *it) { cout << a; } cout << "[" << mm[*it] << "] ";
+        //;;}
+        //;;std::cout << '\n';
     }
+    cout << '\n';
 
     return 0;
 }
