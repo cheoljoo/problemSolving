@@ -16,9 +16,14 @@ long long int sumLevel(int level , int from , int end)
         localsum += m[level][i];
     }
 
-    //return localsum % PRIME;
-    return localsum ;
+    return localsum % PRIME;
+    //return localsum ;
 }
+
+int cmpfunc (const void * a, const void * b) {
+   return ( *(int*)b - *(int*)a );
+}
+
 
 int main(int argc,char *argv[])
 {
@@ -34,22 +39,28 @@ int main(int argc,char *argv[])
         //for(int r=1;r<=N;r++){
             //printf("%d ",p[r]);
         //} printf("\n");
+        p[0] = 9999;
+
+        qsort(p, N+1, sizeof(int), cmpfunc);
+        //for(int r=1;r<=N;r++){
+            //printf("%d ",p[r]);
+        //} printf("\n");
 
 
         for(int l=1;l<=N;l++){
             sum[l] = 0;
             for(int i=1;i<=p[l];i++){
                 //printf("l %d ,i %d , p[l-1] %d\n", l,i,p[l-1]);
-                //m[l][i] = (l == 1)? 1 : (sumLevel(l-1,i,p[l-1]) % PRIME);
-                m[l][i] = (l == 1)? 1 : (sumLevel(l-1,i,p[l-1]) );
-                //printf("m[l][i] : %lld\n", m[l][i]);
+                m[l][i] = (l == 1)? 1 : (sumLevel(l-1,i,p[l-1]) % PRIME);
+                //m[l][i] = (l == 1)? 1 : (sumLevel(l-1,i,p[l-1]) );
+                //printf("m[%d][%d] : %lld\n", l,i,m[l][i]);
                 sum[l] += m[l][i];
                 sum[l] %= PRIME;
-                //printf("sum[l] : %lld\n", sum[l]);
+                //printf("sum[%d] : %lld\n", l ,sum[l]);
             }
         }
-        printf("%lld\n", sum[N]);     // count of combination
-        printf("%lld\n", sum[N] * N);     // count of combination
+        //printf("%lld\n", sum[N]);     // count of combination
+        //printf("%lld\n", sum[N] * N);     // count of combination
         printf("%lld\n", (sum[N] * N ) % PRIME);
     }
 
