@@ -16,7 +16,8 @@ long long int sumLevel(int level , int from , int end)
         localsum += m[level][i];
     }
 
-    return localsum % PRIME;
+    //return localsum % PRIME;
+    return localsum ;
 }
 
 int main(int argc,char *argv[])
@@ -39,14 +40,16 @@ int main(int argc,char *argv[])
             sum[l] = 0;
             for(int i=1;i<=p[l];i++){
                 //printf("l %d ,i %d , p[l-1] %d\n", l,i,p[l-1]);
-                m[l][i] = (l == 1)? 1 : (sumLevel(l-1,i,p[l-1]) % PRIME);
+                //m[l][i] = (l == 1)? 1 : (sumLevel(l-1,i,p[l-1]) % PRIME);
+                m[l][i] = (l == 1)? 1 : (sumLevel(l-1,i,p[l-1]) );
                 //printf("m[l][i] : %lld\n", m[l][i]);
                 sum[l] += m[l][i];
                 sum[l] %= PRIME;
                 //printf("sum[l] : %lld\n", sum[l]);
             }
         }
-        //printf("%lld\n", sum[N]);     // count of combination
+        printf("%lld\n", sum[N]);     // count of combination
+        printf("%lld\n", sum[N] * N);     // count of combination
         printf("%lld\n", (sum[N] * N ) % PRIME);
     }
 
