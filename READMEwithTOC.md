@@ -13,6 +13,7 @@ Table of Contents
    * [10 : Elivator](#10--elivator)
    * [11 : 조세퍼스 순열](#11--조세퍼스-순열)
    * [12 :  배낭 챙기기 1](#12---배낭-챙기기-1)
+   * [13 : LG CodeJam 2019](#13--lg-codejam-2019)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
@@ -120,7 +121,7 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 # 12 :  배낭 챙기기 1
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=357&sca=50
 
-| // |  [12r.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r.cpp)  | [12r1.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r1.cpp)   |  [12r2.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r2.cpp) |
+| \ |  [12r.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r.cpp)  | [12r1.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r1.cpp)   |  [12r2.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r2.cpp) |
 |-|-----------|------------|-----------|
 | type |  recursive | stack | stack |
 | method | DFS  | BFS  | DFS  |
@@ -128,5 +129,21 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 | stack max (case : 12.data3) |           | 8397  | 5586  |
 | result |  success | Time Limit Exceed(30) - 1704ms  | Memory Limit Exceed(30) - 74MB |
 
+- [MEMO](https://github.com/cheoljoo/problemSolving/blob/master/images/BackPack01.jpg)
 
+
+# 13 : LG CodeJam 2019
+- http://codejam.lge.com
+- samples : http://collab.lge.com/main/display/Expert/LGE+Code+Jam+2019
+ 
+| \ |  [1.py](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/1.py)  | [2.c](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/2.c)   |  [3.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/3.cpp) | [4.c](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/4.c) | [5.c](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/5.c) | [6big.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/6big.cpp) |
+|-|-----------|------------|-----------|---|---|---|
+| type |  | | |   |   recursive |    |
+| method |  |  |  |   |  DFS  |   |
+| result | ok  |ok   |ok   | not proper answer   |  partial ok  | partial ok|
+| extreme | NA |NA  | NA |NA   |  not try  | timeout  |
+| real time | within 2s | within 2s | within 2s |within 2s | fail |  fail |
+| try more sample |   |   |   | ok   |   | timeout |
+| reason |     |     |     |  need sort of person's input      |              |  maybe for statement to compare |
+| result after more sample |   |   |   | ok   | not try   | timeout (100s in sample 12)  but it show right answer|
 
