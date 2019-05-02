@@ -111,3 +111,15 @@
 - [MEMO](https://github.com/cheoljoo/problemSolving/blob/master/images/BackPack01.jpg)
 
 
+# 13 : LG CodeJam 2019
+- http://codejam.lge.com
+- samples : http://collab.lge.com/main/display/Expert/LGE+Code+Jam+2019
+ 
+| \ |  [1.py](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/1.py)  | [2.c](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/2.c)   |  [3.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/3.cpp) | [4.c](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/4.c) | [5.c](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/5.c) | [6big.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/codejam2019/6big.cpp) |
+|-|-----------|------------|-----------|---|---|---|
+| type |  | | |   |   recursive |    |
+| method |  |  |  |   |  DFS  |   |
+| result | ok  |ok   |ok   | not proper answer   |  partial ok  | partial ok|
+| extreme | NA |NA  | NA |NA   |  not try  | timeout  |
+| real time | within 2s | within 2s | within 2s |within 2s | fail |  100s |
+
