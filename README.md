@@ -124,5 +124,5 @@
 | real time | within 2s | within 2s | within 2s |within 2s | fail |  fail |
 | try more sample |   |   |   | ok   |   | timeout |
 | reason |     |     |     |  need sort of person's input      |              |  maybe for statement to compare |
-| result after more sample |   |   |   | ok   | not try   | timeout but it show right answer|
+| result after more sample |   |   |   | ok   | not try   | timeout (100s in sample 12)  but it show right answer|
 
