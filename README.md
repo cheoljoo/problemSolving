@@ -121,5 +121,8 @@
 | method |  |  |  |   |  DFS  |   |
 | result | ok  |ok   |ok   | not proper answer   |  partial ok  | partial ok|
 | extreme | NA |NA  | NA |NA   |  not try  | timeout  |
-| real time | within 2s | within 2s | within 2s |within 2s | fail |  100s |
+| real time | within 2s | within 2s | within 2s |within 2s | fail |  fail |
+| try more sample |   |   |   | ok   |   | timeout |
+| reason |     |     |     |  need sort of person's input      |              |  maybe for statement to compare |
+| result after more sample |   |   |   | ok   | not try   | timeout but it show right answer|
 
