@@ -125,5 +125,9 @@
 	g++ -std=c++11 12r2.cpp -o 12r2     # ok : stack DFS
 	./12r2 < 12.data    # 3813498
 
+13: 13.cpp 13.data1 13.data2
+	g++ -std=c++11 13.cpp -o 13     
+	./13 < 13.data2    # 3813498
+
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
