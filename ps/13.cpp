@@ -30,8 +30,6 @@ int main(int argc,char *argv[])
 //;; for(int i=0;i<vec.size();i++){ cout << vec[i] << " "; } cout << endl;
 //;; cout << "N:" << N << ",K:" << K << endl;
 
-    int iS = 0;
-    int iE = iS + K; // until iS + K -1
     double min = -1;
     double sd = 0.0;
     long squareSum = 0;
@@ -43,7 +41,7 @@ int main(int argc,char *argv[])
     min = sqrt((double) squareSum / (double) K - ((double) sum / (double) K)*((double) sum/(double) K));
     //cout << "[0]squareSum:" <<  squareSum << endl;
     //cout << "[0]sum:" <<  sum << endl;
-    cout << "[0]min:" <<  min << endl;
+    //cout << "[0]min:" <<  min << endl;
 
 	for(int i = 1 ; i < (N -K +1) ; i++){
         squareSum -= vec[i-1] * vec[i-1];
@@ -53,10 +51,10 @@ int main(int argc,char *argv[])
         sd = sqrt((double)squareSum / (double)K - ((double)sum / (double)K)*((double)sum/(double)K));
         //cout << "[" << i << "]squareSum:" <<  squareSum << endl;
         //cout << "[" << i << "]sum:" <<  sum << endl;
-        cout << "[" << i << "]sd:" <<  sd << endl;
+        //cout << "[" << i << "]sd:" <<  sd << endl;
         if(sd < min) { min = sd; }
     }
 
-    printf("%.10f\n",min);
+    printf("%.7f",min);
     return 0;
 }
