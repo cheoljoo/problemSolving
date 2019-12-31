@@ -133,6 +133,11 @@
 14: 14.cpp 14.data1
 	g++ -std=c++11 14.cpp -o 14     
 	./14 < 14.data1    # 2
+    
+# 15 : https://www.acmicpc.net/problem/2985
+15: 15.cpp 15.data1
+	g++ -std=c++11 15.cpp -o 15     
+	./15 < 15.data1   
 
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
