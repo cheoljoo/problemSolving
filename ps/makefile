@@ -139,5 +139,10 @@
 	g++ -std=c++11 15.cpp -o 15     
 	./15 < 15.data1   
 
+# 16 : https://www.acmicpc.net/source/17291850
+16: 16.c 16.data1
+	gcc 16.c -o 16     
+	./16 < 16.data1   
+
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
