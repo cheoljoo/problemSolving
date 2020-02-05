@@ -144,5 +144,10 @@
 	gcc 16.c -o 16     
 	./16 < 16.data1   
 
+# 17 : https://www.acmicpc.net/problem/15997
+17: 17.cpp 17.data1
+	g++ -std=c++11 17.cpp -o 17     
+	./17 < 17.data1   
+
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
