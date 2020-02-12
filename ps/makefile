@@ -149,5 +149,12 @@
 	g++ -std=c++11 17.cpp -o 17     
 	./17 < 17.data1   
 
+# 18 : https://www.acmicpc.net/problem/17135
+18: 18.cpp 18.data1
+	g++ -std=c++11 18.cpp -o 18     
+	./18 < 18.data1   
+	./18 < 18.data2 
+	./18 < 18.data3 
+
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
