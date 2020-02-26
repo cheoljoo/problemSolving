@@ -156,5 +156,12 @@
 	./18 < 18.data2 
 	./18 < 18.data3 
 
+# 19 (next_permutation) : https://www.acmicpc.net/problem/15977
+# 15977번: 조화로운 행렬
+19: 19.cpp 19.data1
+	g++ -std=c++11 19.cpp -o 19     
+	./19 < 19.data1   
+	./19 < 19.data2
+
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
