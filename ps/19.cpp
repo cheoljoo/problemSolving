@@ -12,15 +12,16 @@
  
 using namespace std;
  
-std::vector<long> input;
-
 int N,R;
 char *SS;
 char *DD;
 int maxCnt=0;
 
 int table[3][200000];
+int tableIndex[3][200000];
 int order[3][200000];
+int ad[3][200000];
+vector< pair <int,int> > st[3]; 
 
 
 int main(int argc,char *argv[])
@@ -36,50 +37,93 @@ int main(int argc,char *argv[])
         }
     }
 
-    for(int i=N,j=0;i>2;i--,j++){
-        //??cout << "====" << i << endl;
+    int rr;
+    int r;
+    for(rr=0;rr<R;rr++){
+        for(int p=0;p<N;p++){
+                st[rr].push_back( make_pair(table[rr][p],p) ); 
+        }
+        sort(st[rr].begin(), st[rr].end());
+        for (int ii=0; ii<st[rr].size(); ii++) {
+            tableIndex[rr][st[rr][ii].second] = ii;
+        }
+    }
+#if 0       //??
+    for(r=0;r<R;r++){
+                printf("table [%3d] ",r);
+                for(int p=0;p<N;p++){
+                        printf("%3d ", table[r][p]);
+                }
+                cout << endl;
+                /*
+                printf("order [%3d] ",r);
+                for (int ii=0; ii<N; ii++) 
+                {
+                        printf("%3d ", order[r][ii]);
+                }
+                cout << endl;
+                */
+                printf("taIdx [%3d] ",r);
+                for (int ii=0; ii<N; ii++) 
+                {
+                        printf("%3d ", tableIndex[r][ii]);
+                }
+                cout << endl;
+                for (int ii=0; ii<N; ii++) 
+                { 
+                    cout << st[r][ii].first << ":" 
+                    << st[r][ii].second << " "; 
+                } 
+                cout << endl;
+    }
+#endif
+
+    for(int i=N,j=0;i>3;i--,j++){
         vector<int> permu(N);
         for(int kk=0;kk<j;kk++){
             permu[N-1-kk] = 1;          // 0 is selected
         }
+        //??cout << "====" << i << endl;
+        int sizeVec= i;;
         //std::sort(permu.begin(), permu.end());
         do{
             //cout << "permu size : " << permu.size() << endl;
             //??cout << "---- ";
-            //??for(auto ii : permu){ cout << ii << " "; }
             /*
-            for(int ii=0;ii< permu.size();ii++){
+            for(auto ii : permu){ 
+                cout << ii << " "; 
+            }
+            for(int ii=0;ii<N;ii++){
                 cout << permu[ii] << " ";
             }
+            cout << endl;
             */
-            //??cout << endl;
-            int sizeVec=0;
             for(int r=0;r<R;r++){
-                vector< pair <int,int> > vect; 
-                //cout << "--vector size 1: " << vect.size() << endl;
-                for(int p=0,o=0;p<N;p++){
-                    if(permu[p] == 0){
-                        vect.push_back( make_pair(table[r][p],o) ); 
-                        o++;
-                    }
-                }
-                //cout << "--vector size 2: " << vect.size() << endl;
-                sort(vect.begin(), vect.end());
 #if 0
                 cout << "The vector after applying sort is:\n" ; 
-                for (int ii=0; ii<vect.size(); ii++) 
+                for (int ii=0; ii<N; ii++) 
                 { 
                     // "first" and "second" are used to access 
                     // 1st and 2nd element of pair respectively 
-                    cout << vect[ii].first << ":" 
-                    << vect[ii].second << " "; 
+                    cout << st[r][ii].first << ":" 
+                    << st[r][ii].second << ":" 
+                    << permu[ii] << " "; 
                 } 
                 cout << endl;
 #endif
-                for (int ii=0; ii<vect.size(); ii++) 
+
+#if 1       // important algorithm
+                int o= 0;
+                for (int ii=0; ii<N; ii++) 
                 {
-                    order[r][vect[ii].second] = ii+1;
+                    int idx = st[r][ii].second;
+                    if(permu[idx] == 0){
+                        order[r][idx] = o;
+                        o++;
+                    } 
                 }
+#endif 
+
 #if 0
                 cout << "table [" << r << "] ";
                 for(int p=0;p<N;p++){
@@ -97,22 +141,64 @@ int main(int argc,char *argv[])
                 }
                 cout << endl;
 #endif
-                sizeVec = vect.size();
-                //cout << "--vector size 3: " << vect.size() << endl;
-                vect.clear();
-                //cout << "--vector size 4: " << vect.size() << endl;
             }
-            int flag = 0;
-            //??cout << "sizeVec : " << sizeVec << endl;
-            for(int ii=0;ii<sizeVec;ii++){
-                for(int rr=1;rr<R;rr++){
-                    if(order[0][ii] != order[rr][ii]){
-                        flag = 1;
-                        break;
+#if 0       //?? print
+            for(r=0;r<R;r++){
+                printf("table [%3d] ",r);
+                for(int p=0;p<N;p++){
+                    if(permu[p] == 0){
+                        printf("%3d ", table[r][p]);
+                    } else {
+                        printf("--- ");
                     }
                 }
-                if(flag != 0){
-                    break;
+                cout << endl;
+                printf("order [%3d] ",r);
+                for (int ii=0; ii<N; ii++) 
+                {
+                    if(permu[ii] == 0){
+                        printf("%3d ", order[r][ii]);
+                    } else {
+                        printf("--- ");
+                    }
+                }
+                cout << endl;
+                printf("taIdx [%3d] ",r);
+                for (int ii=0; ii<N; ii++) 
+                {
+                    if(permu[ii] == 0){
+                        printf("%3d ", tableIndex[r][ii]);
+                    } else {
+                        printf("--- ");
+                    }
+                }
+                cout << endl;
+                /*
+                for (int ii=0; ii<N; ii++) 
+                { 
+                    if(permu[ii] == 0){
+                        cout << st[r][ii].first << ":" 
+                            << st[r][ii].second << " "; 
+                    } else {
+                        cout << "--:--" ;
+                    }
+                } 
+                cout << endl;
+                */
+            }
+#endif
+            int flag = 0;
+            for(int ii=0;ii<N;ii++){
+                if(permu[ii] == 0){
+                    for(int rr=1;rr<R;rr++){
+                        if(order[0][ii] != order[rr][ii]){
+                            flag = 1;
+                            break;
+                        }
+                    }
+                    if(flag != 0){
+                        break;
+                    }
                 }
             }
             if(flag == 0){
