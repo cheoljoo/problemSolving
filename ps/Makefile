@@ -163,5 +163,12 @@
 	./19 < 19.data1   
 	./19 < 19.data2
 
+# 20 (next_permutation) : https://www.acmicpc.net/problem/17277
+# 17277번: 주식
+20: 20.cpp 20.data1
+	g++ -std=c++11 20.cpp -o 20     
+	./20 < 20.data1   
+
+
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
