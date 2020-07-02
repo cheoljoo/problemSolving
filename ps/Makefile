@@ -169,6 +169,12 @@
 	g++ -std=c++11 20.cpp -o 20     
 	./20 < 20.data1   
 
+# 21 : https://www.acmicpc.net/problem/1479
+# 1479번: 네 부분문자열
+# failed
+21: 21.cpp 21.data
+	g++ -std=c++11 21.cpp -o 21     
+	./21 < 21.data
 
 temp: temp.cpp
 	g++ -std=c++11 temp.cpp -o temp ;  ./temp
