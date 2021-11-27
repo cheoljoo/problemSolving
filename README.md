@@ -2,7 +2,6 @@
 - https://www.algospot.com/judge/problem/read/BOOKSTORE
 - perl no0001.pl < no0001.data
 
-
 # no0003.py
 - http://collab.lge.com/main/pages/viewpage.action?pageId=930044529
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=1835&sca=3080
@@ -126,3 +125,4 @@
 | reason |     |     |     |  need sort of person's input      |              |  maybe for statement to compare |
 | result after more sample |   |   |   | ok   | not try   | timeout (100s in sample 12)  but it show right answer|
 
+# test
