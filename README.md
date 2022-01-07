@@ -11,6 +11,20 @@
 - source a/bin/activate
 - pip install numpy
 - pip install memory_profiler
+- pip install mkdocs
+
+### docstirngs
+- pip install mkdocs
+- pip install mkdocstrings
+- pip install mkdocs-material
+
+- command
+    - mkdocs new [yours]
+    - cd [yours]
+    - copy your files and change yml and others
+    - mkdocs build
+
+- http://lotto645.lge.com:8088/cheoljoo.lee/code/problemSolving/2022/docstring/site/my_page/
 
 ### 1st trial - dictionay version
 - https://github.com/cheoljoo/problemSolving/blob/220107/1_hate_a_b/2022/1.1.py

@@ -1,0 +1,18 @@
+site_name: My Docs
+theme:
+  name: "material"
+nav:
+    - "Index": index.md
+    - "My page": my_page.md
+plugins:
+- search
+- autorefs
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        rendering:
+          show_source: true
+    custom_templates: templates
+    watch:
+      - src/my_package
