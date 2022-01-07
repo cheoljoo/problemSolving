@@ -1,8 +1,21 @@
-# no0001.pl
+#year 2022
+
+## 집합은 a, b를 싫어해
+- https://codeup.kr/problem.php?id=2128
+- cd 2022
+- make 1
+- result : fail (memory overflow)
+
+
+
+-----------------------------------------------------
+
+# year 2019
+## no0001.pl
 - https://www.algospot.com/judge/problem/read/BOOKSTORE
 - perl no0001.pl < no0001.data
 
-# no0003.py
+## no0003.py
 - http://collab.lge.com/main/pages/viewpage.action?pageId=930044529
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=1835&sca=3080
 - python3 no0003.py < no0003.data
@@ -13,7 +26,7 @@
     - use global variable (no initilization)
 - result : fail (timeout)
 
-# 4 GALLERY
+## 4 GALLERY
 - https://algospot.com/judge/problem/read/GALLERY#
 - 4.cpp : for debugging
 - 4r.cpp : release
@@ -23,7 +36,7 @@
 - result : fail
 - Solution : 4r_goh.c  4r_lsh.cpp
 
-# 5
+## 5
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=540&sca=30a0
 - 5.cpp : success with 2 sample
 	- but, it is timeout and not solved.
@@ -32,7 +45,7 @@
 		- 5.data / 5.data2 / 5.data3 is ok. But , data6 is not ok.  case count is 400
 
 
-# 6 : Joined Longest Increasing Subsequence
+## 6 : Joined Longest Increasing Subsequence
 - https://algospot.com/judge/problem/read/JLIS
 	- JLIS, Joined Longest Increasing Subsequence
 	- Find all kinds of IS
@@ -40,12 +53,12 @@
 - 6r.cpp   : site answer fail
 
 
-# 7 : Longest Increasing Sequence
+## 7 : Longest Increasing Sequence
 - https://algospot.com/judge/problem/read/LIS
 - 7.cpp : site answer : runtime error but I do not understand. change the MAX into 500
 	- ok
 
-# 8 : K-th Longest Increasing Sequence
+## 8 : K-th Longest Increasing Sequence
 - https://algospot.com/judge/problem/read/KLIS
 - 8.cpp  : based on 7.cpp
 	- MAX*130 : memory limit exceed
@@ -59,13 +72,13 @@
 	- RTE (SIGKILL: program was forcefully killed, probably memory limit exceeded)
 
 
-# 9 : D Tree
+## 9 : D Tree
 - http://codeforces.com/problemset/problem/570/D
 - 9.cpp :  sample is done.   succeed until test 5.    timeout in test 6 within 2 sec (500000 nodes)
 - 9r2.cpp : cache 70 level.   timeout in test 35
 
 
-# 10 : Elivator 
+## 10 : Elivator 
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=701&sca=4050
 - 10.cpp :  I think that it is just get the mimimal using elivator count.  But , I should add the function of elivator history.
 - 10r.cpp
@@ -91,12 +104,12 @@
             - store the cost (count or depth) for each story (floor)
             - check visited
 
-# 11 : 조세퍼스 순열
+## 11 : 조세퍼스 순열
 - https://www.acmicpc.net/problem/1168
 - [11.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/11.cpp)  : for debugging 
 - [11r.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/11r.cpp)  :  [ok](https://www.acmicpc.net/status?user_id=healing&problem_id=1168&from_mine=1)
 
-# 12 :  배낭 챙기기 1
+## 12 :  배낭 챙기기 1
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=357&sca=50
 
 | \ |  [12r.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r.cpp)  | [12r1.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r1.cpp)   |  [12r2.cpp](https://github.com/cheoljoo/problemSolving/blob/master/ps/12r2.cpp) |
@@ -110,7 +123,7 @@
 - [MEMO](https://github.com/cheoljoo/problemSolving/blob/master/images/BackPack01.jpg)
 
 
-# 13 : LG CodeJam 2019
+## 13 : LG CodeJam 2019
 - http://codejam.lge.com
 - samples : http://collab.lge.com/main/display/Expert/LGE+Code+Jam+2019
  
