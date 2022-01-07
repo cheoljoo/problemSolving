@@ -25,7 +25,7 @@ class CountAntiSet :
         self.n = n
         self.a = a
         self.b = b
-        self.x = np.zeros(n+1)
+        self.x = np.zeros(n+1,dtype=np.int8)
 
         super().__init__()
 
