@@ -1,10 +1,16 @@
-#year 2022
+# year 2022
 
 ## 집합은 a, b를 싫어해
 - https://codeup.kr/problem.php?id=2128
 - cd 2022
 - make 1
 - result : fail (memory overflow)
+
+### virtualenv (numpy memory_profiler)
+- virtualenv a
+- source a/bin/activate
+- pip install numpy
+- pip install memory_profiler
 
 
 
