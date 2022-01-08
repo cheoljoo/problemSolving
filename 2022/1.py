@@ -43,7 +43,7 @@ class CountAntiSet :
         print the elements in debug mode
     """
 
-    #@profile
+    @profile
     def __init__(self, n , a , b, debug=0):
         """
         get the count of elements to meet the rule. (2)
@@ -65,7 +65,7 @@ class CountAntiSet :
         if self.debug :
             print(sys._getframe().f_code.co_name ,":",self.n , self.a , self.b,self.debug)
 
-    #@profile
+    @profile
     def get_count(self):
         """
         get the count of elements to meet the rule. (2)

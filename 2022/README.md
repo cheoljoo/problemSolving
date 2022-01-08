@@ -152,4 +152,106 @@ numpy.core._exceptions.MemoryError: Unable to allocate 9.10 TiB for an array wit
 ```
 
 
+### memory difference with big N
+```txt
+$  echo "10293842 6 2" | python3 1.1.1.dict_bool.py
+
+8823293
+Filename: 1.1.1.dict_bool.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    25     33.5 MiB     33.5 MiB           1       @profile
+    26                                             def get_count(self):
+    27     33.5 MiB      0.0 MiB           1           sn ,sa , sb = input().split()
+    28     33.5 MiB      0.0 MiB           1           n = int(sn)
+    29     33.5 MiB      0.0 MiB           1           a = int(sa)
+    30     33.5 MiB      0.0 MiB           1           b = int(sb)
+    31     33.5 MiB      0.0 MiB           1           if debug :
+    32                                                     print(n , a , b,debug)
+    33
+    34     33.5 MiB      0.0 MiB           1           x = defaultdict(bool)
+    35                                                 #x = np.zeros(n)
+    36     33.5 MiB      0.0 MiB           1           count = n
+    37    284.8 MiB      0.0 MiB     1715641           for i in range(1 , n+1):
+    38    284.8 MiB      0.0 MiB     1715641               nxt = a*i+b
+    39    284.8 MiB     90.4 MiB     1715641               if debug :
+    40                                                         print("element:",i, x[i])
+    41    284.8 MiB    107.0 MiB     1715641               if x[i] != True :
+    42    284.8 MiB      0.0 MiB     1470550                   if debug :
+    43                                                             print("x:",nxt, x[nxt])
+    44    284.8 MiB      0.0 MiB     1470550                   if nxt > n :
+    45    284.8 MiB      0.0 MiB           1                       break
+    46                                                         else :
+    47    284.8 MiB     54.0 MiB     1470549                       x[nxt] = True
+    48    284.8 MiB      0.0 MiB     1470549                       if debug :
+    49                                                                 print("set x:",nxt, a*i+b , x[nxt])
+    50    284.8 MiB      0.0 MiB     1470549                       count -= 1
+    51
+    52    284.8 MiB      0.0 MiB           1           if debug :
+    53                                                     print("result : ",end="")
+    54    284.8 MiB      0.0 MiB           1           print(count)
+
+
+
+
+$  echo "10293842 6 2" | python3 -m memory_profiler 1.py
+8823293
+Filename: 1.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    46   34.141 MiB   34.141 MiB           1       @profile
+    47                                             def __init__(self, n , a , b, debug=0):
+    48                                                 """
+    49                                                 get the count of elements to meet the rule. (2)
+    50
+    51                                                 :param n: max number
+    52                                                 :param a: ax+b
+    53                                                 :param b: ax+b
+    54                                                 :param debug: debug mode
+    55                                                 :return:
+    56                                                 """
+    57   34.141 MiB    0.000 MiB           1           self.debug = debug
+    58   34.141 MiB    0.000 MiB           1           self.n = n
+    59   34.141 MiB    0.000 MiB           1           self.a = a
+    60   34.141 MiB    0.000 MiB           1           self.b = b
+    61   34.141 MiB    0.000 MiB           1           self.x = np.zeros(n+1,dtype=np.int8)
+    62
+    63   34.141 MiB    0.000 MiB           1           super().__init__()
+    64
+    65   34.141 MiB    0.000 MiB           1           if self.debug :
+    66                                                     print(sys._getframe().f_code.co_name ,":",self.n , self.a , self.b,self.debug)
+
+
+Filename: 1.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    68   34.141 MiB   34.141 MiB           1       @profile
+    69                                             def get_count(self):
+    70                                                 """
+    71                                                 get the count of elements to meet the rule. (2)
+    72                                                 """
+    73
+    74   34.141 MiB    0.000 MiB           1           count = self.n
+    75   43.914 MiB    0.000 MiB     1715641           for i in range(1 , self.n+1):
+    76   43.914 MiB    0.000 MiB     1715641               nxt = self.a*i+self.b
+    77   43.914 MiB    0.000 MiB     1715641               if self.x[i] != 1 :
+    78   43.914 MiB    0.000 MiB     1470550                   if self.debug :
+    79                                                             print("x:",i , ", x[i]:",self.x[i])
+    80   43.914 MiB    0.000 MiB     1470550                   if nxt > self.n :
+    81   43.914 MiB    0.000 MiB           1                       break
+    82                                                         else :
+    83   43.914 MiB    9.773 MiB     1470549                       self.x[nxt] = 1
+    84   43.914 MiB    0.000 MiB     1470549                       if self.debug :
+    85                                                                 self.print_set()
+    86   43.914 MiB    0.000 MiB     1470549                       count -= 1
+    87
+    88   43.914 MiB    0.000 MiB           1           if self.debug :
+    89                                                     print("result : ",end="")
+    90   43.914 MiB    0.000 MiB           1           print(count)
+```
+
+
 
