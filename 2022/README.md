@@ -4,7 +4,7 @@
 - https://codeup.kr/problem.php?id=2128
 - cd 2022
 - make 1
-- result : fail (memory overflow)
+- 통과 했습니다.  ( 1-lowMem3.py )
 
 ### virtualenv (numpy memory_profiler)
 - virtualenv a
