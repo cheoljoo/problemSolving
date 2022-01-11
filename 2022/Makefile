@@ -4,3 +4,5 @@
 	#python3 -m memory_profiler ./1.py --debug < ./1.data
 	echo "10000000000000000000000000 100 1" | python3 1-lowMem3.py
 
+2: 2.py 2.data
+	python3 ./2.py --debug < ./2.data
