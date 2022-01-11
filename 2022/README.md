@@ -5,6 +5,8 @@
 - cd 2022
 - make 1
 - 통과 했습니다.  ( 1-lowMem3.py )
+  - 고성대 책임님이 지적해 주신 것이 맞았습니다. 앞으로 int ( ? / ? ) 으로 하면 안되고 , // operator을 사용해서 몫을 int로 바로 구해야 문제 없습니다.
+  - int ( ? / ? ) 으로 하면 ?/? 에서 float로 변경을 할때 많은 뒤의 상세한 값들을 잃어버리게 된다고 합니다. 그래서 , 몫을 구할때  // operator를 써야 정확하게 integer의 몫을 구할수 있다고 합니다.
 
 ### virtualenv (numpy memory_profiler)
 - virtualenv a
