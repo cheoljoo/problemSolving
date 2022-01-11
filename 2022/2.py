@@ -92,7 +92,7 @@ if (__name__ == "__main__"):
     args = parser.parse_args()
     debug = args.debug
     if not debug:
-        debug = 1
+        debug = 0
     
     n = int( input() )
     inx=[]
