@@ -259,5 +259,8 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 
 ## 색종이
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=712&sca=2060#n
+- jungol에서는 numpy와 같은 추가적인듈을 사용하면 안된다.
+
 - cd 2022
 - make 2
+
