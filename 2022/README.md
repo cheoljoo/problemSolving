@@ -4,7 +4,7 @@
 - https://codeup.kr/problem.php?id=2128
 - cd 2022
 - make 1
-- 통과 했습니다.  ( 1-lowMem3.py )
+- 통과   ( 1-lowMem3.py )
   - 고성대 책임님이 지적해 주신 것이 맞았습니다. 앞으로 int ( ? / ? ) 으로 하면 안되고 , // operator을 사용해서 몫을 int로 바로 구해야 문제 없습니다.
   - int ( ? / ? ) 으로 하면 ?/? 에서 float로 변경을 할때 많은 뒤의 상세한 값들을 잃어버리게 된다고 합니다. 그래서 , 몫을 구할때  // operator를 써야 정확하게 integer의 몫을 구할수 있다고 합니다.
 
@@ -260,7 +260,19 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 ## 색종이
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=712&sca=2060#n
 - jungol에서는 numpy와 같은 추가적인듈을 사용하면 안된다.
+- 통과
 
 - cd 2022
 - make 2
+
+## 주사위 굴리기 2 (삼성)
+- https://www.acmicpc.net/problem/23288   : 백준
+- memory이슈까지 고민하여 문제 풀 예정
+  - 주사위 동작할때 변하는 모습 미리 fix : 맨 아래값 고정 , 다음을 위한 변환된 주사위 모양 저장
+  - 판에서 현 위치에서와 같은 연결되된 구간의 갯수 구하는 것
+- unittest를 적용해보자. 기본 값을 가졌을때 이미 알고 있는 값들이 있으니 unit test구현 가능할 것으로 보임.
+- 실패 : 예제는 통과했지만, site에서는 런탕미에러 (IndexError)
+  - 다른 사람들은 모두 C++로 풀었네요.
+
+- make 3 
 

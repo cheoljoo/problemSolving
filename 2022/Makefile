@@ -6,3 +6,6 @@
 
 2: 2.py 2.data
 	python3 ./2.py --debug < ./2.data
+
+3: 3.py 3.data
+	python3 ./3.py --debug < ./3.data
