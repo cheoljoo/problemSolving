@@ -48,7 +48,9 @@ class PermuMatch :
             self.big = self.n
         else :
             self.big = self.m
-        self.B = np.empty(self.big+1, dtype=int)
+        # self.board = [0 for i in range(BOARD_X*BOARD_Y)]
+        # self.B = np.empty(self.big+1, dtype=int)
+        self.B = [0 for i in range(self.big+1)]
         self.B[0]=0
         self.B[1]=1
         if self.debug :
@@ -98,6 +100,7 @@ if (__name__ == "__main__"):
         per = PermuMatch(dbg)
         per.getB()
         ret.append(per.gcd())
+        del per
     
     for r in ret:
         print(r)
