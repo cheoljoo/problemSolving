@@ -61,7 +61,7 @@ class PermuMatch :
         """
         for i in range(2,self.big+1):
             self.B[i] = self.a*self.B[i-1] + self.b*self.B[i-2]
-            self.B[i] %= MatchNumber
+            #self.B[i] %= MatchNumber
         if self.debug :
             print("Bn Bm: ",self.B[self.n] , self.B[self.m])
 

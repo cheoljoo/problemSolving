@@ -9,3 +9,7 @@
 
 3: 3.py 3.data
 	python3 ./3.py --debug < ./3.data
+
+4: 4.py 4.data
+	#python3 ./4.py --debug < ./4.data
+	python3 ./4.py < ./4.data
