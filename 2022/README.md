@@ -1,3 +1,19 @@
+
+- [year 2022](#year-2022)
+  - [집합은 a, b를 싫어해](#집합은-a-b를-싫어해)
+    - [virtualenv (numpy memory_profiler)](#virtualenv-numpy-memory_profiler)
+    - [docstirngs](#docstirngs)
+    - [1st trial - dictionay version](#1st-trial---dictionay-version)
+    - [2nd trial - numpy version](#2nd-trial---numpy-version)
+    - [memory difference with big N](#memory-difference-with-big-n)
+  - [색종이](#색종이)
+  - [주사위 굴리기 2 (삼성)](#주사위-굴리기-2-삼성)
+  - [모자른 나라](#모자른-나라)
+  - [k개의 부분 배열](#k개의-부분-배열)
+  - [수열과 인연](#수열과-인연)
+
+----------
+
 # year 2022
 
 ## 집합은 a, b를 싫어해
@@ -275,4 +291,20 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
   - 다른 사람들은 모두 C++로 풀었네요.
 
 - make 3 
+
+## 모자른 나라
+- https://codeup.kr/problem.php?id=3808
+
+## k개의 부분 배열
+- https://codeup.kr/problem.php?id=3092
+
+
+## 수열과 인연
+- https://codeup.kr/problem.php?id=2127
+- GCD : 유클리드 호제법 : 240 , 46 -> 46 , 240%46=10 -> 10 , 6 -> 6 , 4 -> 4 , 2 -> 2 , 0  답 2
+
+- make 4
+- vsc에서는 값이 잘 나오는 것 같은데, 사이트에서는 꼭 1 1 8 이라는 값으로 나오네요.
+
+
 
