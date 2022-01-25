@@ -11,6 +11,7 @@
   - [모자른 나라](#모자른-나라)
   - [k개의 부분 배열](#k개의-부분-배열)
   - [수열과 인연](#수열과-인연)
+  - [줄자접기](#줄자접기)
 
 ----------
 
@@ -305,6 +306,11 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 
 - make 4
 - vsc에서는 값이 잘 나오는 것 같은데, 3 1 8 이 답인데 사이트에서는 꼭 1 1 8 이라는 값으로 나오네요.
+
+
+## 줄자접기
+- http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=392&sca=3080
+- pass
 
 
 
