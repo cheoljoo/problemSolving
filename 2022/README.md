@@ -13,6 +13,7 @@
   - [1.6. 수열과 인연](#16-수열과-인연)
   - [1.7. 줄자접기](#17-줄자접기)
   - [1.8. 잃어버린 괄호](#18-잃어버린-괄호)
+  - [1.9. 뒤집어진 소수](#19-뒤집어진-소수)
 
 ----------
 
@@ -324,7 +325,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 - python regular expression : https://www.programiz.com/python-programming/regex
 
 
-## 뒤집어진 소수
+## 1.9. 뒤집어진 소수
 - https://www.acmicpc.net/problem/10859
   - 어제 자다가 알람 시계를 떨어뜨렸는지, 08:15분이 51:80분이 되어 있었다. 그때 나는 디지털로 표시된 어떤 숫자는 180도 뒤집혔을 때도 숫자가 될 수 있다는 걸 깨달았다.
   - 내가 좋아하는 숫자는 소수이다. 당신이 할 일은 주어진 숫자가 소수인지, 뒤집혀서도 소수인지 확인하는 것이다.
