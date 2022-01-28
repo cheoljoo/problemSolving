@@ -17,3 +17,10 @@
 5: 5.py 5.data
 	python3 ./5.py --debug < ./5.data
 	#python3 ./5.py < ./5.data
+
+6: 6.py
+	echo "55-50+40" | python3 ./6.py --debug
+
+7: 7.py
+	echo "18115211" | python3 ./7.py --debug
+
