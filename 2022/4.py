@@ -1,11 +1,9 @@
-from collections import defaultdict
+#from collections import defaultdict
 import numpy as np
 
 import sys
 import argparse
 
-B0 = 0
-B1 = 1
 MatchNumber = 998244353
 
 
@@ -76,28 +74,15 @@ class PermuMatch :
         Bn = self.B[self.n]
         Bm = self.B[self.m]
         
-        return np.gcd(Bn,Bm)
+        return np.gcd(Bn,Bm) % MatchNumber
 
 
 if (__name__ == "__main__"):
-    dbg = 0
-    parser = argparse.ArgumentParser(
-        prog='PermuMatch.py',
-        description=
-        'GCD and Permutatin Match'
-    )
-    parser.add_argument( '--debug', '-d' , action='store_const' , const=1 , help='debug on')
-
-    args = parser.parse_args()
-    dbg = args.debug
-    if not dbg:
-        dbg = 0
-    
     n = int( input() )
     
     ret = []
     for i in range(n):
-        per = PermuMatch(dbg)
+        per = PermuMatch()
         per.getB()
         ret.append(per.gcd())
         del per
