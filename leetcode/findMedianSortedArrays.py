@@ -74,6 +74,8 @@ class Solution:
                 return (nums2[self.midSize-1] + nums2[self.midSize])/2
 
 
+# OO is old and old (previous and previous) : if we have the same value in previous item , we should stop.
+# 여기는 너무 끝의 처리가 너무 힘들다. 
 
 if (__name__ == "__main__"):
     # problem : https://leetcode.com/problems/median-of-two-sorted-arrays/
