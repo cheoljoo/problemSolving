@@ -17,7 +17,7 @@ class Solution:
                 continue
             if (i+1) == len(p) : # this is last character
                 self.tc.append(p[i])
-                self. ta.append(0)
+                self.ta.append(0)
             else :
                 if p[i+1] == '*':
                     self.tc.append(p[i])
@@ -49,7 +49,7 @@ class Solution:
         # self.debug(s,sIndex,patternIndex,loopLevel)
         if self.ta[patternIndex] == 1 :
             if self.tc[patternIndex] == '.':
-                for i in range(len(s) - sIndex+1):
+                for i in reversed(range(len(s) - sIndex+1)):
                     rr = self.go(s,sIndex+i,patternIndex+1,loopLevel+1)
                     # tmp = "go_return:.*(" + str(i) + ")"
                     # self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
