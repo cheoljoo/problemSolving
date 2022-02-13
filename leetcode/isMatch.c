@@ -43,4 +43,5 @@ bool isMatch(char * s, char * p){
 main()
 {
     printf("%b",isMatch("aa","a*"));
+    
 }
