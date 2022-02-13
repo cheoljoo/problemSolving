@@ -46,63 +46,63 @@ class Solution:
             # self.returnDebug(tmp,True ,s,sIndex,patternIndex,loopLevel)
             return True
         
-        self.debug(s,sIndex,patternIndex,loopLevel)
+        # self.debug(s,sIndex,patternIndex,loopLevel)
         if self.ta[patternIndex] == 1 :
             if self.tc[patternIndex] == '.':
                 for i in range(len(s) - sIndex+1):
                     rr = self.go(s,sIndex+i,patternIndex+1,loopLevel+1)
-                    tmp = "go_return:.*(" + str(i) + ")"
-                    self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
+                    # tmp = "go_return:.*(" + str(i) + ")"
+                    # self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
                     if True == rr:
                         return True
-                tmp = "go_return:.*"
-                self.returnDebug(tmp,False,s,sIndex,patternIndex,loopLevel)
+                # tmp = "go_return:.*"
+                # self.returnDebug(tmp,False,s,sIndex,patternIndex,loopLevel)
                 return False
             else :
                 if self.tc[patternIndex] == s[sIndex] :
-                    tmp = "go_return:match*"
-                    r1 = self.go(s,sIndex+1,patternIndex,loopLevel+1)
-                    self.returnDebug(tmp,r1,s,sIndex,patternIndex,loopLevel+1)
-                    r2 = self.go(s,sIndex,patternIndex+1,loopLevel+1)
-                    self.returnDebug(tmp,r2,s,sIndex,patternIndex,loopLevel+1)
-                    r3 = self.go(s,sIndex+1,patternIndex+1,loopLevel+1)
-                    self.returnDebug(tmp,r3,s,sIndex,patternIndex,loopLevel+1)
-                    return  r1 or r2 or r3
-                    # return  self.go(s,sIndex+1,patternIndex,loopLevel+1) or self.go(s,sIndex,patternIndex+1,loopLevel+1) or self.go(s,sIndex+1,patternIndex+1,loopLevel+1)
+                    # tmp = "go_return:match*"
+                    # r1 = self.go(s,sIndex+1,patternIndex,loopLevel+1)
+                    # self.returnDebug(tmp,r1,s,sIndex,patternIndex,loopLevel+1)
+                    # r2 = self.go(s,sIndex,patternIndex+1,loopLevel+1)
+                    # self.returnDebug(tmp,r2,s,sIndex,patternIndex,loopLevel+1)
+                    # r3 = self.go(s,sIndex+1,patternIndex+1,loopLevel+1)
+                    # self.returnDebug(tmp,r3,s,sIndex,patternIndex,loopLevel+1)
+                    # return  r1 or r2 or r3
+                    return  self.go(s,sIndex+1,patternIndex,loopLevel+1) or self.go(s,sIndex,patternIndex+1,loopLevel+1) or self.go(s,sIndex+1,patternIndex+1,loopLevel+1)
                 else :
-                    tmp = "go_return:miss*"
-                    rr = self.go(s,sIndex,patternIndex+1,loopLevel+1)
-                    self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
-                    return rr
-                    # return self.go(s,sIndex,patternIndex+1,loopLevel+1)
+                    # tmp = "go_return:miss*"
+                    # rr = self.go(s,sIndex,patternIndex+1,loopLevel+1)
+                    # self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
+                    # return rr
+                    return self.go(s,sIndex,patternIndex+1,loopLevel+1)
         else :
             if self.tc[patternIndex] == '.':
-                tmp = "go_return:match"
+                # tmp = "go_return:match"
                 rr = self.go(s,sIndex+1,patternIndex+1,loopLevel+1)
-                self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
+                # self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
                 return rr
                 # return self.go(s,sIndex+1,patternIndex+1,loopLevel+1)
             elif self.tc[patternIndex] == s[sIndex] :
-                tmp = "go_return:match"
+                # tmp = "go_return:match"
                 rr = self.go(s,sIndex+1,patternIndex+1,loopLevel+1)
-                self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
+                # self.returnDebug(tmp,rr,s,sIndex,patternIndex,loopLevel+1)
                 return rr
                 # return self.go(s,sIndex+1,patternIndex+1,loopLevel+1)
             else :
-                tmp = "go_return:miss"
-                self.returnDebug(tmp,False,s,sIndex,patternIndex,loopLevel+1)
+                # tmp = "go_return:miss"
+                # self.returnDebug(tmp,False,s,sIndex,patternIndex,loopLevel+1)
                 return False
         # print("return")
         return True
     
     def returnDebug(self,tmp:str , ret:bool,s : str,sIndex : int,patternIndex : int,loopLevel:int) :
-        return
+        # return
         print("return:",ret,sep="",end=" ")
         print(tmp,sep="",end=" ")
         self.debug(s,sIndex,patternIndex,loopLevel)
         
     def debug(self,s : str,sIndex : int,patternIndex : int,loopLevel:int) :
-        return
+        # return
         print("DL:",loopLevel, sep="", end=" ")
         print("sIndex:",sIndex, sep="", end=" ")
         print("sChar:",s[sIndex], sep="", end=" ")
@@ -110,7 +110,7 @@ class Solution:
         print("patternIndex:",patternIndex, sep="", end=" ")
         print("patternChar:",self.tc[patternIndex], sep="", end=" ")
         print("pattern*:",self.ta[patternIndex], sep="", end=" ")
-        print("pattern:",self.p, sep="", end=" ")
+        # print("pattern:",self.p, sep="", end=" ")
         print("macheds:",end="")
         for i in range(sIndex):
             print(s[i],sep="",end="")
