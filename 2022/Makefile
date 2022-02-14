@@ -10,6 +10,7 @@
 3: 3.py 3.data
 	python3 ./3.py --debug < ./3.data
 
+# 1.6. 수열과 인연
 4: 4.py 4.data
 	#python3 ./4.py --debug < ./4.data
 	python3 ./4.py < ./4.data
