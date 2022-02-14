@@ -1,6 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+#include <cstring>
+
 
 
 char tc[40];
@@ -53,14 +54,6 @@ bool go(char *s,int sIndex,int patternIndex, int loopLevel){
 }
 
 bool isMatch(char * s, char * p){
-    for(int i=0;i<40;i++){
-        tc[i] = 0;
-        ta[i]=0;
-    }
-    tlen = 0;
-    slen = 0;
-    plen = 0;
-
     slen = strlen(s);
     plen = strlen(p);
     for(int i=0;i<plen;i++){
@@ -96,6 +89,7 @@ void run(bool e,char *s , char *p)
     tlen = 0;
     slen = 0;
     plen = 0;
+
     if(e == isMatch(s,p)){
         printf("success -> %s %s\n",s,p);
     } else {
@@ -104,14 +98,34 @@ void run(bool e,char *s , char *p)
 
 }
 
+using namespace std;
+
+class Solution {
+public:
+    bool isMatch(string s, string p) {
+
+    }
+};
+
 int main()
 {
+
     run(true,"aa","a*");
     run(false,"abbccc", ".*c.*b.*c");
     run(false,"acbbcbcbcbaaacaac", "ac*.a*ac*.*ab*b*ac");
     run(true,"bbcacbabbcbaaccabc", "b*a*a*.c*bb*b*.*.*");
+
     run(true,"mississipppu","mis*is*ip*.u");
     run(true,"mississippi","mis*is*ip*.");
+
+    run(false,"abcccccc","abb*bc*");
+    run(true,"abbcccccc","abb*bc*");
+    run(true,"abc", "ab*bc*" );
+
+    run(false,"aa","ab*");
+    run(true,"a","ab*");
+    run(false,"atbtd","a.bc*d");
+    run(true,"aaabbb","aa*b*c*b");
 
     return 0;
 }

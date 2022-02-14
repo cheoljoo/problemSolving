@@ -17,4 +17,8 @@
 - hard
 - https://leetcode.com/problems/regular-expression-matching/
 - isMatch.py : wrong answer
-- isMatch_dfs.py : time limit exceed 
+- isMatch_dfs.py : time limit exceeded : 38 / 353 test cases passed.
+- isMatch.c : Code in site : time limit exceeded : 353 / 353 test cases passed, but took too long.
+
+
+
