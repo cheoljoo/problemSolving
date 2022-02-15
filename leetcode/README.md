@@ -1,6 +1,7 @@
 - [1. leetcode](#1-leetcode)
 - [2. Meidan of Two Sorted Arrays](#2-meidan-of-two-sorted-arrays)
 - [3. Regular Expression Matching](#3-regular-expression-matching)
+- [4. Strange Printer](#4-strange-printer)
 
 --------------------
 # 1. leetcode
@@ -20,5 +21,8 @@
 - isMatch_dfs.py : time limit exceeded : 38 / 353 test cases passed.
 - isMatch.c : Code in site : time limit exceeded : 353 / 353 test cases passed, but took too long.
 
-
+# 4. Strange Printer
+- hard
+- https://leetcode.com/problems/strange-printer/
+- 
 
