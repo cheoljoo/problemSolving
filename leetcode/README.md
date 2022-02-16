@@ -4,6 +4,7 @@
 - [4. Strange Printer](#4-strange-printer)
 - [5. Third Maximum Number](#5-third-maximum-number)
 - [6. Find All Numbers Disappeared in an Array](#6-find-all-numbers-disappeared-in-an-array)
+- [7. Squares of a Sorted Array](#7-squares-of-a-sorted-array)
 
 --------------------
 # 1. leetcode
@@ -38,5 +39,11 @@
 - medium : O(N)
 - https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3270/
 - findDisappearedNumbers.py : passed
+
+# 7. Squares of a Sorted Array
+- medium : O(N)
+- Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+- https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3574/
+- sortedSquares.py : passed
 
 
