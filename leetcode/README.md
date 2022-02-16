@@ -24,5 +24,9 @@
 # 4. Strange Printer
 - hard
 - https://leetcode.com/problems/strange-printer/
-- 
+- get the code and hint from discussion
+- strangePrinter.py : passed
+
+
+
 
