@@ -5,6 +5,7 @@
 - [5. Third Maximum Number](#5-third-maximum-number)
 - [6. Find All Numbers Disappeared in an Array](#6-find-all-numbers-disappeared-in-an-array)
 - [7. Squares of a Sorted Array](#7-squares-of-a-sorted-array)
+- [8. Remove Duplicates from Sorted Array](#8-remove-duplicates-from-sorted-array)
 
 --------------------
 # 1. leetcode
@@ -46,4 +47,11 @@
 - https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3574/
 - sortedSquares.py : passed
 
+# 8. Remove Duplicates from Sorted Array
+- easy : Array
+- Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/
+- removeDuplicates.py : passed 
+  - we should add empty lists to the
+  - if len(nums) == 0 : return 0
 
