@@ -2,6 +2,8 @@
 - [2. Meidan of Two Sorted Arrays](#2-meidan-of-two-sorted-arrays)
 - [3. Regular Expression Matching](#3-regular-expression-matching)
 - [4. Strange Printer](#4-strange-printer)
+- [5. Third Maximum Number](#5-third-maximum-number)
+- [6. Find All Numbers Disappeared in an Array](#6-find-all-numbers-disappeared-in-an-array)
 
 --------------------
 # 1. leetcode
@@ -27,6 +29,14 @@
 - get the code and hint from discussion
 - strangePrinter.py : passed
 
+# 5. Third Maximum Number
+- easy
+- https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3231/
+- thirdMaximumNumber.py : passed
 
+# 6. Find All Numbers Disappeared in an Array
+- medium : O(N)
+- https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3270/
+- findDisappearedNumbers.py : passed
 
 
