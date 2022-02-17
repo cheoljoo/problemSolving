@@ -6,6 +6,7 @@
 - [6. Find All Numbers Disappeared in an Array](#6-find-all-numbers-disappeared-in-an-array)
 - [7. Squares of a Sorted Array](#7-squares-of-a-sorted-array)
 - [8. Remove Duplicates from Sorted Array](#8-remove-duplicates-from-sorted-array)
+- [9. Single Number](#9-single-number)
 
 --------------------
 # 1. leetcode
@@ -54,4 +55,15 @@
 - removeDuplicates.py : passed 
   - we should add empty lists to the
   - if len(nums) == 0 : return 0
+
+# 9. Single Number
+- medium : Arrays
+- Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/
+- singleNumber.py : passed 
+  - O(N)
+  - but , i used the dictionay with size of array.   is it a constant extra space? (NO)
+
+
+
 
