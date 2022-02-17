@@ -8,6 +8,7 @@
 - [8. Remove Duplicates from Sorted Array](#8-remove-duplicates-from-sorted-array)
 - [9. Single Number](#9-single-number)
 - [10. Plus One](#10-plus-one)
+- [11. Remove Nth Node From End of List (Linked List)](#11-remove-nth-node-from-end-of-list-linked-list)
 
 --------------------
 # 1. leetcode
@@ -71,6 +72,16 @@
   - Increment the large integer by one and return the resulting array of digits.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/559/
 - plusOne.py : passed
+
+# 11. Remove Nth Node From End of List (Linked List)
+- easy : Linked List
+- Given the head of a linked list, remove the nth node from the end of the list and return its head.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/
+- removeNthFromEnd.py : passed
+
+
+
+
 
 
 
