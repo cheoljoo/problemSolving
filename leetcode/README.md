@@ -7,6 +7,7 @@
 - [7. Squares of a Sorted Array](#7-squares-of-a-sorted-array)
 - [8. Remove Duplicates from Sorted Array](#8-remove-duplicates-from-sorted-array)
 - [9. Single Number](#9-single-number)
+- [10. Plus One](#10-plus-one)
 
 --------------------
 # 1. leetcode
@@ -57,12 +58,19 @@
   - if len(nums) == 0 : return 0
 
 # 9. Single Number
-- medium : Arrays
+- easy or hard : Arrays
 - Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/
 - singleNumber.py : passed 
   - O(N)
   - but , i used the dictionay with size of array.   is it a constant extra space? (NO)
+
+# 10. Plus One
+- easy : Array
+- You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+  - Increment the large integer by one and return the resulting array of digits.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/559/
+- plusOne.py : passed
 
 
 
