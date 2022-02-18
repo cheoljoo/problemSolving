@@ -9,6 +9,7 @@
 - [9. Single Number](#9-single-number)
 - [10. Plus One](#10-plus-one)
 - [11. Remove Nth Node From End of List (Linked List)](#11-remove-nth-node-from-end-of-list-linked-list)
+- [12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees)](#12-convert-sorted-array-to-binary-search-tree-trees--height-balanced-binary-search-trees)
 
 --------------------
 # 1. leetcode
@@ -79,8 +80,14 @@
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/
 - removeNthFromEnd.py : passed
 
-
-
+# 12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees)
+- easy : Trees , but it is not AVL.
+- Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree : https://www.programiz.com/dsa/avl-tree
+  - avl.py
+- Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
+  - A height-balanced binary tree is a binary tree in which the depth of the two subtrees of every node never differs by more than one.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/631/
+- sortedArrayToBST.py : passed
 
 
 
