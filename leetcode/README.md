@@ -107,7 +107,7 @@
 - You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/96/sorting-and-searching/774/
 - At first time I try to find sequentially.  but time exceeded.
-- firstBadVersion.py 
+- firstBadVersion.py : passed
 
 
 
