@@ -11,6 +11,7 @@
 - [11. Remove Nth Node From End of List (Linked List)](#11-remove-nth-node-from-end-of-list-linked-list)
 - [12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees)](#12-convert-sorted-array-to-binary-search-tree-trees--height-balanced-binary-search-trees)
 - [13. is Balanced Binary Tree](#13-is-balanced-binary-tree)
+- [14. First Bad Version](#14-first-bad-version)
 
 --------------------
 # 1. leetcode
@@ -99,6 +100,14 @@
 - isBalanced2.py : passed
   - isBalanced.py : running is ok. but it has warning in vsc.
 
+# 14. First Bad Version
+- easy : Sorting and Searching
+- You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+- Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
+- You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/96/sorting-and-searching/774/
+- At first time I try to find sequentially.  but time exceeded.
+- firstBadVersion.py 
 
 
 
