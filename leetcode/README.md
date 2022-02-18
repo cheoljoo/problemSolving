@@ -10,6 +10,7 @@
 - [10. Plus One](#10-plus-one)
 - [11. Remove Nth Node From End of List (Linked List)](#11-remove-nth-node-from-end-of-list-linked-list)
 - [12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees)](#12-convert-sorted-array-to-binary-search-tree-trees--height-balanced-binary-search-trees)
+- [13. is Balanced Binary Tree](#13-is-balanced-binary-tree)
 
 --------------------
 # 1. leetcode
@@ -89,6 +90,14 @@
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/631/
 - sortedArrayToBST.py : passed
 
+# 13. is Balanced Binary Tree
+- easy : Trees
+- Given a binary tree, determine if it is height-balanced.
+- For this problem, a height-balanced binary tree is defined as:
+- a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+- https://leetcode.com/problems/balanced-binary-tree/
+- isBalanced2.py : passed
+  - isBalanced.py : running is ok. but it has warning in vsc.
 
 
 
