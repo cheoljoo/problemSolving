@@ -166,6 +166,9 @@ P   A   H   N
 - https://leetcode.com/problems/number-of-1-bits/ 
 - passed : C (unsigned int) , python3 (int) 
 
+- 8 bit : 1. shift 8  2. table
+- 32bit : 1. shift 32 2. hamming weight-1 (4 operation * 5(1,2,4,8,16))  3. hamming weight-2 (4 operation * count) if count <= 5
+
 
 
 
