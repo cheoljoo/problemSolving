@@ -15,6 +15,7 @@
 - [15. Maximum Subarray](#15-maximum-subarray)
 - [16. Remove Outermost Parentheses (#1021)](#16-remove-outermost-parentheses-1021)
 - [17. Zigzag Conversion (#6)](#17-zigzag-conversion-6)
+- [18. House Robber (#198)](#18-house-robber-198)
 
 --------------------
 # 1. leetcode
@@ -143,5 +144,13 @@ P   A   H   N
   - And then read line by line: "PAHNAPLSIIGYIR"
 - https://leetcode.com/problems/zigzag-conversion/
 - [zigzagConversion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/zigzagConversion.py) : passed
+
+# 18. House Robber (#198)
+- easy
+- You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+- Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/576/    https://leetcode.com/problems/house-robber/
+- [rob.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/rob.py) : passed
+
 
 
