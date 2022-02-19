@@ -12,6 +12,7 @@
 - [12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees)](#12-convert-sorted-array-to-binary-search-tree-trees--height-balanced-binary-search-trees)
 - [13. is Balanced Binary Tree](#13-is-balanced-binary-tree)
 - [14. First Bad Version](#14-first-bad-version)
+- [15. Maximum Subarray](#15-maximum-subarray)
 
 --------------------
 # 1. leetcode
@@ -107,6 +108,20 @@
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/96/sorting-and-searching/774/
 - At first time I try to find sequentially.  but time exceeded.
 - [firstBadVersion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/firstBadVersion.py) : passed
+
+# 15. Maximum Subarray
+- easy : DP dynamic programming  (나는 hard)
+- Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+- A subarray is a contiguous part of an array.
+- Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/566/
+- [maxSubArray.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray.py) : timeout
+  - RecursionError: maximum recursion depth exceeded in comparison
+- [maxSubArray-norecursion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray-norecursion.py) : O(N**2) it is not good. -> O(N) ?
+- [maxSubArray-norecursion2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray-norecursion2.py) : passwd O(N)
+  - refer to discussion : https://leetcode.com/problems/maximum-subarray/discuss/159849/Python-solution
+    - we should change my idea for O(N) : my code is not proper answer for start and end position. but we can get the right maxSubArray answer. -> solved
+    - if subSum is negative , we can restart. 
 
 
 
