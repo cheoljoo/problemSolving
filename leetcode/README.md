@@ -14,6 +14,7 @@
 - [14. First Bad Version](#14-first-bad-version)
 - [15. Maximum Subarray](#15-maximum-subarray)
 - [16. Remove Outermost Parentheses (#1021)](#16-remove-outermost-parentheses-1021)
+- [17. Zigzag Conversion (#6)](#17-zigzag-conversion-6)
 
 --------------------
 # 1. leetcode
@@ -129,7 +130,18 @@
 - Given a valid parentheses string s, consider its primitive decomposition: s = P1 + P2 + ... + Pk, where Pi are primitive valid parentheses strings.
 - Return s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.
 - https://leetcode.com/problems/remove-outermost-parentheses/
-- [removeOuterParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeOuterParentheses.py)
+- [removeOuterParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeOuterParentheses.py) : passed
 
+# 17. Zigzag Conversion (#6)
+- medium
+- The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+```
+P   A   H   N
+ A P L S I I G
+  Y   I   R
+```
+  - And then read line by line: "PAHNAPLSIIGYIR"
+- https://leetcode.com/problems/zigzag-conversion/
+- [zigzagConversion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/zigzagConversion.py) : passed
 
 
