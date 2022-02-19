@@ -19,8 +19,7 @@
 # 2. Meidan of Two Sorted Arrays
 - hard
 - https://leetcode.com/problems/median-of-two-sorted-arrays/
-- findMedianSortedArrays2.py
-- solved
+- https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findMedianSortedArrays2.py : passed
 - ex
   - [][] , [2][] , [][2] , [2][2] , [2][1,3,4] 
 
@@ -32,10 +31,10 @@
 - isMatch.c : Code in site : time limit exceeded : 353 / 353 test cases passed, but took too long.
 
 # 4. Strange Printer
-- hard
+- hard : DP dynamic programming
 - https://leetcode.com/problems/strange-printer/
 - get the code and hint from discussion
-- strangePrinter.py : passed
+- [strangePrinter.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/strangePrinter.py) : passed
 
 # 5. Third Maximum Number
 - easy
