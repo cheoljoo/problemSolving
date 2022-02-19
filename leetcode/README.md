@@ -17,6 +17,7 @@
 - [17. Zigzag Conversion (#6)](#17-zigzag-conversion-6)
 - [18. House Robber (#198)](#18-house-robber-198)
 - [19. Shuffle an Array (#384)](#19-shuffle-an-array-384)
+- [20. Number of 1 Bits (#191)](#20-number-of-1-bits-191)
 
 --------------------
 # 1. leetcode
@@ -158,4 +159,13 @@ P   A   H   N
 - Given an integer array nums, design an algorithm to randomly shuffle the array. All permutations of the array should be equally likely as a result of the shuffling.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/98/design/670/    https://leetcode.com/problems/shuffle-an-array/
 - passed
+
+# 20. Number of 1 Bits (#191)
+- easy : hamming weight 
+- Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the [Hamming weight](http://shumin.co.kr/algorithm-hamming-weight-bit-count/)).
+- https://leetcode.com/problems/number-of-1-bits/ 
+- passed : C (unsigned int) , python3 (int) 
+
+
+
 
