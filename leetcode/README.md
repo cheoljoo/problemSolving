@@ -13,6 +13,7 @@
 - [13. is Balanced Binary Tree](#13-is-balanced-binary-tree)
 - [14. First Bad Version](#14-first-bad-version)
 - [15. Maximum Subarray](#15-maximum-subarray)
+- [16. Remove Outermost Parentheses (#1021)](#16-remove-outermost-parentheses-1021)
 
 --------------------
 # 1. leetcode
@@ -118,10 +119,17 @@
 - [maxSubArray.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray.py) : timeout
   - RecursionError: maximum recursion depth exceeded in comparison
 - [maxSubArray-norecursion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray-norecursion.py) : O(N**2) it is not good. -> O(N) ?
-- [maxSubArray-norecursion2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray-norecursion2.py) : passwd O(N)
+- [maxSubArray-norecursion2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray-norecursion2.py) : passwd O(N)  - this is not DP.
   - refer to discussion : https://leetcode.com/problems/maximum-subarray/discuss/159849/Python-solution
     - we should change my idea for O(N) : my code is not proper answer for start and end position. but we can get the right maxSubArray answer. -> solved
     - if subSum is negative , we can restart. 
+
+# 16. Remove Outermost Parentheses (#1021)
+- easy : 
+- Given a valid parentheses string s, consider its primitive decomposition: s = P1 + P2 + ... + Pk, where Pi are primitive valid parentheses strings.
+- Return s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.
+- https://leetcode.com/problems/remove-outermost-parentheses/
+- [removeOuterParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeOuterParentheses.py)
 
 
 
