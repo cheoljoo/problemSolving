@@ -18,6 +18,7 @@
 - [18. House Robber (#198)](#18-house-robber-198)
 - [19. Shuffle an Array (#384)](#19-shuffle-an-array-384)
 - [20. Number of 1 Bits (#191)](#20-number-of-1-bits-191)
+- [21. Hamming Distance (#461)](#21-hamming-distance-461)
 
 --------------------
 # 1. leetcode
@@ -169,6 +170,16 @@ P   A   H   N
 - 8 bit : 1. shift 8  2. table
 - 32bit : 1. shift 32 2. hamming weight-1 (4 operation * 5(1,2,4,8,16))  3. hamming weight-2 (4 operation * count) if count <= 5
 
+# 21. Hamming Distance (#461)
+- easy : hamming distance / hamming weight (number of 1 bits)
+```
+1   (0 0 0 1)
+4   (0 1 0 0)
+       ↑   ↑
+The above arrows point to positions where the corresponding bits are different.
+```
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/99/others/762/     https://leetcode.com/problems/hamming-distance/
+- [hammingDistance.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hammingDistance.py) : passed
 
 
 
