@@ -19,6 +19,7 @@
 - [19. Shuffle an Array (#384)](#19-shuffle-an-array-384)
 - [20. Number of 1 Bits (#191)](#20-number-of-1-bits-191)
 - [21. Hamming Distance (#461)](#21-hamming-distance-461)
+- [22. Missing Number (#268)](#22-missing-number-268)
 
 --------------------
 # 1. leetcode
@@ -181,5 +182,9 @@ The above arrows point to positions where the corresponding bits are different.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/99/others/762/     https://leetcode.com/problems/hamming-distance/
 - [hammingDistance.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hammingDistance.py) : passed
 
-
+# 22. Missing Number (#268)
+- easy : jongkyung.byun teaches me. len() * (len() +1) / 2 is total sum.  so your missing number = total sum - input sum
+- Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+- https://leetcode.com/explore/interview/card/top-interview-questions-easy/99/others/722/    https://leetcode.com/problems/missing-number/
+- [missingNumber.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/missingNumber.py) : passed
 
