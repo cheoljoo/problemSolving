@@ -20,6 +20,7 @@
 - [20. Number of 1 Bits (#191)](#20-number-of-1-bits-191)
 - [21. Hamming Distance (#461)](#21-hamming-distance-461)
 - [22. Missing Number (#268)](#22-missing-number-268)
+- [23. Minimize Deviation in Array (#1675)](#23-minimize-deviation-in-array-1675)
 
 --------------------
 # 1. leetcode
@@ -187,4 +188,23 @@ The above arrows point to positions where the corresponding bits are different.
 - Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/99/others/722/    https://leetcode.com/problems/missing-number/
 - [missingNumber.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/missingNumber.py) : passed
+
+# 23. Minimize Deviation in Array (#1675)
+- hard
+- You are given an array nums of n positive integers.
+```
+You can perform two types of operations on any element of the array any number of times:
+
+If the element is even, divide it by 2.
+For example, if the array is [1,2,3,4], then you can do this operation on the last element, and the array will be [1,2,3,2].
+If the element is odd, multiply it by 2.
+For example, if the array is [1,2,3,4], then you can do this operation on the first element, and the array will be [2,2,3,4].
+The deviation of the array is the maximum difference between any two elements in the array.
+
+Return the minimum deviation the array can have after performing some number of operations.
+```
+- we choose 2 number : max even , min odd -> then do
+- https://leetcode.com/problems/minimize-deviation-in-array/
+- [minimumDeviation.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeviation.py) : 71 / 76 test cases passed.
+- [minimumDeviation2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeviation2.py) : 75 / 76 test cases passed.  Status: Time Limit Exceeded
 
