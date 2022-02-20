@@ -1,4 +1,8 @@
-- [1. leetcode](#1-leetcode)
+- [1. knowledge](#1-knowledge)
+  - [1.1. sort performance](#11-sort-performance)
+  - [1.2. sort keys](#12-sort-keys)
+  - [1.3. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#13-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
+  - [1.4. hamming weight : number of '1' bits](#14-hamming-weight--number-of-1-bits)
 - [2. Meidan of Two Sorted Arrays](#2-meidan-of-two-sorted-arrays)
 - [3. Regular Expression Matching](#3-regular-expression-matching)
 - [4. Strange Printer](#4-strange-printer)
@@ -21,9 +25,49 @@
 - [21. Hamming Distance (#461)](#21-hamming-distance-461)
 - [22. Missing Number (#268)](#22-missing-number-268)
 - [23. Minimize Deviation in Array (#1675)](#23-minimize-deviation-in-array-1675)
+- [24. Remove Covered Intervals (#1288)](#24-remove-covered-intervals-1288)
 
 --------------------
-# 1. leetcode
+leetcode
+# 1. knowledge
+## 1.1. sort performance
+- update and sort is faster than update-insert each elements
+  - slow : remove() and bisect.insort()
+  - fast : nums[]=? and sort()
+
+## 1.2. sort keys
+- https://realpython.com/python-sort/
+- https://www.programiz.com/python-programming/methods/built-in/sorted
+- runners.sort(key=lambda x: getattr(x, 'duration'))
+```python
+    >>> words = ['banana', 'pie', 'Washington', 'book']
+    >>> sorted(words, key=lambda x: x[::-1], reverse=True)
+    ['Washington', 'book', 'pie', 'banana']
+
+    >>> phrases = ['when in rome', 
+    ...     'what goes around comes around', 
+    ...     'all is fair in love and war'
+    ...     ]
+    >>> phrases.sort(key=lambda x: x.split()[2][1], reverse=True)
+    >>> phrases
+    ['what goes around comes around', 'when in rome', 'all is fair in love and war']
+
+    >>> from collections import namedtuple
+    >>> StudentFinal = namedtuple('StudentFinal', 'name grade')
+    >>> bill = StudentFinal('Bill', 90)
+    >>> patty = StudentFinal('Patty', 94)
+    >>> bart = StudentFinal('Bart', 89)
+    >>> students = [bill, patty, bart]
+    >>> sorted(students, key=lambda x: getattr(x, 'grade'), reverse=True)
+    [StudentFinal(name='Patty', grade=94), StudentFinal(name='Bill', grade=90), StudentFinal(name='Bart', grade=89)]
+```
+
+## 1.3. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree
+- https://www.programiz.com/dsa/avl-tree
+- [avl.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/avl.py)
+
+## 1.4. hamming weight : number of '1' bits
+- Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the [Hamming weight](http://shumin.co.kr/algorithm-hamming-weight-bit-count/)).
 
 # 2. Meidan of Two Sorted Arrays
 - hard
@@ -93,7 +137,7 @@
 # 12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees)
 - easy : Trees , but it is not AVL.
 - Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree : https://www.programiz.com/dsa/avl-tree
-  - avl.py
+  - [avl.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/avl.py)
 - Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
   - A height-balanced binary tree is a binary tree in which the depth of the two subtrees of every node never differs by more than one.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/631/
@@ -224,7 +268,7 @@ Return the minimum deviation the array can have after performing some number of 
   - do2() : fold all even number until below maxOddNumber if deviation will reduce
     - maxOddNumber보다 큰 짝수들은 모두 deviation이 기존 것보다 작아질때 반씩 줄여준다/접어준다.
       - (deviation = maxOddNumber - evenNumber) > (deviation = maxOddNumber - evenNumber//2)
-  - do3() : reverse direction of do2().    all double until below maxOddNumber
+  - do3() : reverse direction of do2().    all double until below maxOddNumber.   but it is not optimized. (TODO)
   - do4() : 4-1 is basic, but we should do more if we can get minimal deviation as we change 4-2 and 4-3
     - 4-1 : rearrange nums[0] and nums[-1] continuously if changed
     - 4-2 : try multiple changes apply above maxOddNumber to fold(//2)
@@ -233,7 +277,43 @@ Return the minimum deviation the array can have after performing some number of 
       - maxOddNumber 보다 작은 수에 대해서 num[0]부터 maxOddNumber까지 모든 수를 한개씩 효과가 있는지 본다.
 - knowledge
   - update and sort is faster than update-insert each elements
-    - slow : remove() bisect.insort()
-    - fast : nums[]=? sort()
+    - slow : remove() and bisect.insort()
+    - fast : nums[]=? and sort()
+
+# 24. Remove Covered Intervals (#1288)
+- medium
+- Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), remove all intervals that are covered by another interval in the list.
+  - The interval [a, b) is covered by the interval [c, d) if and only if c <= a and b <= d. 
+  - Return the number of remaining intervals.
+- https://leetcode.com/problems/remove-covered-intervals/
+- [removeCoveredIntervals.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeCoveredIntervals.py) : 
+- knowledge (sort key)
+  - https://realpython.com/python-sort/
+  - https://www.programiz.com/python-programming/methods/built-in/sorted
+  - runners.sort(key=lambda x: getattr(x, 'duration'))
+  - ```python
+    >>> words = ['banana', 'pie', 'Washington', 'book']
+    >>> sorted(words, key=lambda x: x[::-1], reverse=True)
+    ['Washington', 'book', 'pie', 'banana']
+
+    >>> phrases = ['when in rome', 
+    ...     'what goes around comes around', 
+    ...     'all is fair in love and war'
+    ...     ]
+    >>> phrases.sort(key=lambda x: x.split()[2][1], reverse=True)
+    >>> phrases
+    ['what goes around comes around', 'when in rome', 'all is fair in love and war']
+
+    >>> from collections import namedtuple
+    >>> StudentFinal = namedtuple('StudentFinal', 'name grade')
+    >>> bill = StudentFinal('Bill', 90)
+    >>> patty = StudentFinal('Patty', 94)
+    >>> bart = StudentFinal('Bart', 89)
+    >>> students = [bill, patty, bart]
+    >>> sorted(students, key=lambda x: getattr(x, 'grade'), reverse=True)
+    [StudentFinal(name='Patty', grade=94), StudentFinal(name='Bill', grade=90), StudentFinal(name='Bart', grade=89)]
+    ```
+
+
 
 
