@@ -18,17 +18,18 @@ from typing import Set
 import bisect
 import time
 
-# minimumDeviation4.py
+# minimumDeviation5.py in https://github.com/cheoljoo/problemSolving/tree/master/leetcode
 
 class Solution:
     def __init__(self):
         self.maxOddValue = 0
     def minimumDeviation(self, nums: List[int]) -> int:
-        start_sort = time.time()
+        # start_sort = time.time()
         nums.sort()
-        print("sort time :", time.time() - start_sort , "-> ", end="")
+        
         self.minDeviation = nums[-1] - nums[0]
         self.getMaxOddValue(nums)
+        # print("sort time :", time.time() - start_sort , "-> ", end="")
         self.do2(nums)
         self.do3(nums)
         self.do4(nums)
@@ -58,34 +59,48 @@ class Solution:
         return count
             
     def do2(self,nums):
-        start = time.time()
+        # start = time.time()
         # fold all even number until below maxOddNumber if deviation will reduce
-        while True:
-            a = nums[-1]
-            if (a > self.maxOddValue) and (a % 2 == 0):
-                o = a
-                a = a // 2
-                if abs(self.maxOddValue - a) < abs(self.maxOddValue - o):
-                    # count = self.remove_all_by_value(nums, o)
-                    # for _ in range(count):
-                    #     bisect.insort(nums,a)
-                    i = -1  
-                    while (abs(i) <= len(nums)) and (nums[i] == o):
-                        nums[i] = a
-                        i -= 1
-                    nums.sort()
-                    # update and sort is faster than update-insert each elements 
-                    # length(10000) 1.0s -> 0.2
-                else:
-                    break  
+        
+        # while True:
+        #     a = nums[-1]
+        #     if (self.maxOddValue < a) and (a % 2 == 0):
+        #         o = a
+        #         a = a // 2
+        #         if abs(self.maxOddValue - a) < abs(self.maxOddValue - o):
+        #             # count = self.remove_all_by_value(nums, o)
+        #             # for _ in range(count):
+        #             #     bisect.insort(nums,a)
+        #             i = -1  
+        #             while (abs(i) <= len(nums)) and (nums[i] == o):
+        #                 nums[i] = a
+        #                 i -= 1
+        #             nums.sort()
+        #             # update and sort is faster than update-insert each elements 
+        #             # length(10000) 1.0s -> 0.2
+        #         else:
+        #             break  
+        #     else :
+        #         break
+        
+        for i in reversed(range(len(nums))):
+            o = nums[i]
+            a = o // 2
+            if (self.maxOddValue < o) and (o % 2 == 0):
+                while abs(self.maxOddValue - a) < abs(self.maxOddValue - o):
+                    nums[i] = a
+                    o = a
+                    a = o // 2
             else :
-                break
+                break    
+        nums.sort()
+        
         if self.minDeviation > nums[-1]-nums[0]:
             self.minDeviation = nums[-1]-nums[0] 
-        print("do2 time :", time.time() - start , "-> ", end="")    
+        # print("do2 time :", time.time() - start , "-> ", end="")    
                   
     def do3(self,nums):
-        start = time.time()
+        # start = time.time()
         # all double until below maxOddNumber
         while (nums[0] < self.maxOddValue) and (nums[0]%2 == 1):
             a = nums[0]
@@ -99,10 +114,10 @@ class Solution:
                 break
         if self.minDeviation > nums[-1]-nums[0]:
             self.minDeviation = nums[-1]-nums[0] 
-        print("do3 time :", time.time() - start , "-> ", end="") 
+        # print("do3 time :", time.time() - start , "-> ", end="") 
 
     def do4(self,nums) -> None :
-        start = time.time()
+        # start = time.time()
         isChanged = True
         while isChanged == True:
             isChanged = False
@@ -171,8 +186,8 @@ class Solution:
                         else:
                             break
                     nums.sort()
-        print("do4-1 time :", time.time() - start , "-> ", end="") 
-        # update and sort is faster than update-insert each elements 
+        # print("do4-1 time :", time.time() - start , "-> ", end="") 
+        # update and sort is faster than remove-insert each elements 
         # length(10000) 0.5s -> 0.0
         
         
@@ -188,7 +203,7 @@ class Solution:
         #     if self.minDeviation > deviation:
         #         self.minDeviation = deviation
         
-        start = time.time()        
+        # start = time.time()        
         min = nums[0]
         max = nums[-1]
         for i in reversed(range(len(nums))):
@@ -203,9 +218,9 @@ class Solution:
                     print("T.error : i == 0 :",nums[0], nums[i], nums[len(nums)-1], self.maxOddValue)
             else :
                 break
-        print("do4-2 time :", time.time() - start , "-> ", end="")
+        # print("do4-2 time :", time.time() - start , "-> ", end="")
          
-        start = time.time()
+        # start = time.time()
         # b = nums.copy()
         # # print("b:",b)
         # while (b[0]%2 == 1) and (b[0] < self.maxOddValue) :
@@ -231,7 +246,7 @@ class Solution:
                     print("B.error : i == len()-1 :",nums[0],nums[i], nums[len(nums)-1], self.maxOddValue)
             else :
                 break
-        print("do4-3 time :", time.time() - start , "-> ", end="") 
+        # print("do4-3 time :", time.time() - start , "-> ", end="") 
         
  
  

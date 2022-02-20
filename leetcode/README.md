@@ -208,3 +208,32 @@ Return the minimum deviation the array can have after performing some number of 
 - [minimumDeviation.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeviation.py) : 71 / 76 test cases passed.
 - [minimumDeviation2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeviation2.py) : 75 / 76 test cases passed.  Status: Time Limit Exceeded
 - [minimumDeviation3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeviation3.py) : optiomization (add time function)  75 / 76 test cases passed.  Status: Time Limit Exceeded
+- [minimumDeviation4.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeviation4.py) : optiomization (add time function)  75 / 76 test cases passed.  Status: Time Limit Exceeded
+  - sort time : 0.0 -> do2 time : 0.2184154987335205 -> do3 time : 0.0 -> do4-1 time : 0.0 -> do4-2 time : 0.0 -> do4-3 time : 0.0 ->   total_time : 0.22439837455749512 -> len(10000)
+    - do2 :   # length(10000) 1.0s -> 0.2
+    - do4-1 : # length(10000) 0.5s -> 0.0
+  - sort time : 0.0 -> do2 time : 0.6432626247406006 -> do3 time : 0.0 -> do4-1 time : 0.0 -> do4-2 time : 0.001994609832763672 -> do4-3 time : 0.0 ->   total_time : 0.6572427749633789 -> len(20000)
+  - sort time : 0.000982046127319336 -> do2 time : 4.376241207122803 -> do3 time : 0.0 -> do4-1 time : 0.0 -> do4-2 time : 0.00399017333984375 -> do4-3 time : 0.0 ->   total_time : 4.400253772735596 -> len(50000)
+  - sort time : 0.0009975433349609375 -> **do2 time : 21.690882444381714** -> do3 time : 0.0 -> do4-1 time : 0.0009968280792236328 -> do4-2 time : 0.006982088088989258 -> do4-3 time : 0.0 ->   **total_time : 21.740752696990967 -> len(100000)**
+- [minimumDeviation5.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeviation5.py) : passed
+  - sort time : 0.022464990615844727 -> **do2 time : 0.015959501266479492** -> do3 time : 0.0 -> do4-1 time : 0.01715397834777832 -> do4-2 time : 0.03398728370666504 -> do4-3 time : 0.0 ->   total_time : 0.8623092174530029 -> len(20000)
+  - **total_time : 0.2331395149230957 -> len(100000)**
+- description in korean
+  - sort()
+  - getMaxOddNumber : this value will not changed. all values are compared with MaxOddNumber. 
+  - do2() : fold all even number until below maxOddNumber if deviation will reduce
+    - maxOddNumber보다 큰 짝수들은 모두 deviation이 기존 것보다 작아질때 반씩 줄여준다/접어준다.
+      - (deviation = maxOddNumber - evenNumber) > (deviation = maxOddNumber - evenNumber//2)
+  - do3() : reverse direction of do2().    all double until below maxOddNumber
+  - do4() : 4-1 is basic, but we should do more if we can get minimal deviation as we change 4-2 and 4-3
+    - 4-1 : rearrange nums[0] and nums[-1] continuously if changed
+    - 4-2 : try multiple changes apply above maxOddNumber to fold(//2)
+      - maxOddNumber 보다 큰 수에 대해서 num[-1]부터 maxOddNumber까지 모든 수를 한개씩 효과가 있는지 본다. 
+    - 4-3 : try multiple changes apply below maxOddNumber to double(*2)
+      - maxOddNumber 보다 작은 수에 대해서 num[0]부터 maxOddNumber까지 모든 수를 한개씩 효과가 있는지 본다.
+- knowledge
+  - update and sort is faster than update-insert each elements
+    - slow : remove() bisect.insort()
+    - fast : nums[]=? sort()
+
+
