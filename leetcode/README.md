@@ -328,3 +328,12 @@ Return the minimum deviation the array can have after performing some number of 
 - [maxScoreIndices.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxScoreIndices.py) : passed
 
 # 26. Majority Element
+- easy  , but hard with O(1) space
+- Given an array nums of size n, return the majority element.
+  - The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+- https://leetcode.com/problems/majority-element/
+- [majorityElement.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/majorityElement.py) : passed
+- [majorityElement2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/majorityElement2.py) : passed   O(1) space
+  - converted as C : 
+    - Runtime: 30 ms, faster than 41.77% of C online submissions for Majority Element.
+    - Memory Usage: 7.5 MB, less than 99.35% of C online submissions for Majority Element.
