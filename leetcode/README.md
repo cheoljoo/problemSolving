@@ -28,6 +28,7 @@
 - [24. Remove Covered Intervals (#1288)](#24-remove-covered-intervals-1288)
 - [25. All Divisions With the Highest Score of a Binary Array](#25-all-divisions-with-the-highest-score-of-a-binary-array)
 - [26. Majority Element](#26-majority-element)
+- [27. The Skyline Problem (#218)](#27-the-skyline-problem-218)
 
 --------------------
 leetcode
@@ -337,3 +338,9 @@ Return the minimum deviation the array can have after performing some number of 
   - converted as C : 
     - Runtime: 30 ms, faster than 41.77% of C online submissions for Majority Element.
     - Memory Usage: 7.5 MB, less than 99.35% of C online submissions for Majority Element.
+
+# 27. The Skyline Problem (#218)
+- hard
+- A city's skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively.
+- https://leetcode.com/problems/the-skyline-problem/
+- [getSkyline.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSkyline.py) : 39 / 40 test cases passed.     Status: Time Limit Exceeded
