@@ -14,6 +14,7 @@
 4: 4.py 4.data
 	#python3 ./4.py --debug < ./4.data
 	python3 ./4.py < ./4.data
+	python3 ./4-2.py < ./4.data
 
 5: 5.py 5.data
 	python3 ./5.py --debug < ./5.data

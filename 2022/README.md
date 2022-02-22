@@ -308,7 +308,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 
 - make 4
 - vsc에서는 값이 잘 나오는 것 같은데, 3 1 8 이 답인데 사이트에서는 꼭 1 1 8 이라는 값으로 나오네요.
-
+- 4-2.py : 메모리 초과 문제 해결하니 시간초과
 
 ## 1.7. 줄자접기
 - http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=392&sca=3080
