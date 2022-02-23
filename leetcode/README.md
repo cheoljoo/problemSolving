@@ -1,8 +1,9 @@
 - [1. knowledge](#1-knowledge)
   - [1.1. sort performance](#11-sort-performance)
   - [1.2. sort keys](#12-sort-keys)
-  - [1.3. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#13-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
-  - [1.4. hamming weight : number of '1' bits](#14-hamming-weight--number-of-1-bits)
+  - [1.3. Euclidean-algorithm : 유클리드 호제법](#13-euclidean-algorithm--유클리드-호제법)
+  - [1.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#14-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
+  - [1.5. hamming weight : number of '1' bits](#15-hamming-weight--number-of-1-bits)
 - [2. Meidan of Two Sorted Arrays](#2-meidan-of-two-sorted-arrays)
 - [3. Regular Expression Matching](#3-regular-expression-matching)
 - [4. Strange Printer](#4-strange-printer)
@@ -29,6 +30,7 @@
 - [25. All Divisions With the Highest Score of a Binary Array](#25-all-divisions-with-the-highest-score-of-a-binary-array)
 - [26. Majority Element](#26-majority-element)
 - [27. The Skyline Problem (#218)](#27-the-skyline-problem-218)
+- [28. Clone Graph (#133)](#28-clone-graph-133)
 
 --------------------
 leetcode
@@ -65,11 +67,25 @@ leetcode
     [StudentFinal(name='Patty', grade=94), StudentFinal(name='Bill', grade=90), StudentFinal(name='Bart', grade=89)]
 ```
 
-## 1.3. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree
+## 1.3. Euclidean-algorithm : 유클리드 호제법
+- https://velog.io/@yerin4847/W1-%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C-%ED%98%B8%EC%A0%9C%EB%B2%95 - good explanation with movie
+```c
+int GCD(int a, int b){
+  int tmp;
+  while(b){      //b가 0이 될 때까지
+    tmp = a % b;
+    a = b;
+    b = tmp;
+  }
+  return a;
+}
+```
+
+## 1.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree
 - https://www.programiz.com/dsa/avl-tree
 - [avl.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/avl.py)
 
-## 1.4. hamming weight : number of '1' bits
+## 1.5. hamming weight : number of '1' bits
 - Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the [Hamming weight](http://shumin.co.kr/algorithm-hamming-weight-bit-count/)).
 
 # 2. Meidan of Two Sorted Arrays
@@ -344,3 +360,15 @@ Return the minimum deviation the array can have after performing some number of 
 - A city's skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively.
 - https://leetcode.com/problems/the-skyline-problem/
 - [getSkyline.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSkyline.py) : 39 / 40 test cases passed.     Status: Time Limit Exceeded
+
+# 28. Clone Graph (#133)
+- medium
+- Given a reference of a node in a connected undirected graph. 
+  - Return a deep copy (clone) of the graph.
+- https://leetcode.com/problems/clone-graph/
+- [cloneGraph.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/cloneGraph.py) : passed
+  - only show ```def cloneGraph(self, node: 'Node') -> 'Node':```
+  - 'Node' means class(Node)
+
+
+
