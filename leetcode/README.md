@@ -31,6 +31,7 @@
 - [26. Majority Element](#26-majority-element)
 - [27. The Skyline Problem (#218)](#27-the-skyline-problem-218)
 - [28. Clone Graph (#133)](#28-clone-graph-133)
+- [29. Sort List (#148)](#29-sort-list-148)
 
 --------------------
 leetcode
@@ -189,7 +190,7 @@ int GCD(int a, int b){
 - [maxSubArray.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray.py) : timeout
   - RecursionError: maximum recursion depth exceeded in comparison
 - [maxSubArray-norecursion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray-norecursion.py) : O(N**2) it is not good. -> O(N) ?
-- [maxSubArray-norecursion2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray-norecursion2.py) : passwd O(N)  - this is not DP.
+- [maxSubArray-norecursion2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSubArray-norecursion2.py) : passed O(N)  - this is not DP.
   - refer to discussion : https://leetcode.com/problems/maximum-subarray/discuss/159849/Python-solution
     - we should change my idea for O(N) : my code is not proper answer for start and end position. but we can get the right maxSubArray answer. -> solved
     - if subSum is negative , we can restart. 
@@ -362,7 +363,7 @@ Return the minimum deviation the array can have after performing some number of 
 - [getSkyline.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSkyline.py) : 39 / 40 test cases passed.     Status: Time Limit Exceeded
 
 # 28. Clone Graph (#133)
-- medium
+- medium : TreeNode
 - Given a reference of a node in a connected undirected graph. 
   - Return a deep copy (clone) of the graph.
 - https://leetcode.com/problems/clone-graph/
@@ -370,5 +371,11 @@ Return the minimum deviation the array can have after performing some number of 
   - only show ```def cloneGraph(self, node: 'Node') -> 'Node':```
   - 'Node' means class(Node)
 
-
+# 29. Sort List (#148)
+- medium : Linked Lists
+- Given the head of a linked list, return the list after sorting it in ascending order.
+  - Follow up: Can you sort the linked list in O(n logn) time and O(1) memory (i.e. constant space)?
+- https://leetcode.com/problems/sort-list/
+- [sortList.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortList.py) : O(N^2) 24 / 28 test cases passed.  status: Time Limit Exceeded   len:9828  total_time : 47.36812353134155
+- [sortList2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortList2.py) : O(NlogN)  passed
 

@@ -68,18 +68,24 @@ class Solution:
             if isUp == 1:  # up
                 # l1 : [x1,x2,height]
                 # enumerate() -> (index,[x1,x2,height])
-                minIdx = self.minIndexLessThanX(endSort,x)
-                if debugFlag : print("UP x :",x,"idx :", minIdx,end="")
+                # minIdx = self.minIndexLessThanX(endSort,x)
+                if debugFlag : print("UP x :",x,"idx :",end="")
                 hmax = 0
                 count = 0
-                for i in range(minIdx,len(endSort)):
-                    if endSort[i][0] <= x and x < endSort[i][1]: 
-                        if hmax < endSort[i][2]: 
-                            hmax = endSort[i][2]
+                for i in range(self.startSortIndex,len(startSort)):
+                    if startSort[i][1] <= x :
+                        self.startSortIndex = i
+                        break         
+                for i in range(self.startSortIndex,len(startSort)):
+                    if startSort[i][0] > x :
+                        break
+                    if startSort[i][0] <= x and x < startSort[i][1]: 
+                        if hmax < startSort[i][2]: 
+                            hmax = startSort[i][2]
                             count = 1
-                        elif hmax == endSort[i][2]: 
+                        elif hmax == startSort[i][2]: 
                             count += 1
-                        if debugFlag :print(" ->%d(%d..%d)H%d"%(i,endSort[i][0],endSort[i][1],endSort[i][2]), end="")
+                        if debugFlag :print(" ->%d(%d..%d)H%d"%(i,startSort[i][0],startSort[i][1],startSort[i][2]), end="")
                 if debugFlag : print(" hmax :",hmax , end="")
                 if debugFlag : print(" #%d"%count , end="")
                 if hmax == h : # and count == 1:
@@ -98,17 +104,22 @@ class Solution:
                 if debugFlag : print()
         if timeFlag : print(" up(%d):"%len(res), time.time() - start , "-> ", end="")
         start = time.time()        
-        for (x,isUp,h) in res:   
-            if isUp != 1:  # up 
+        for (x,isUp,h) in res:
             # else :   # isUp == 0: down
+            if isUp != 1:  # up
                 # l1 : [x1,x2,height]
                 # enumerate() -> (index,[x1,x2,height])
-                minIdx = self.minIndexLessThanX(endSort,x)
-                if debugFlag : print("dn x :",x,"idx :", minIdx,end="")
+                # minIdx = self.minIndexLessThanX(endSort,x)
+                if debugFlag : print("dn x :",x,"idx :",end="")
                 hmax = 0
                 hmax2nd = 0
                 count = 0
-                for i in range(minIdx,len(endSort)):
+                for i in range(self.endSortIndex,len(endSort)):
+                    if endSort[i][1] > x : # x is endPosition
+                        self.endSortIndex = i
+                        break
+                                        
+                for i in range(self.endSortIndex,len(endSort)):
                     if endSort[i][0] < x and x < endSort[i][1]: 
                         if hmax < endSort[i][2]:
                             hmax2nd = hmax 
