@@ -32,6 +32,7 @@
 - [27. The Skyline Problem (#218)](#27-the-skyline-problem-218)
 - [28. Clone Graph (#133)](#28-clone-graph-133)
 - [29. Sort List (#148)](#29-sort-list-148)
+- [30. Compare Version Numbers (#165)](#30-compare-version-numbers-165)
 
 --------------------
 leetcode
@@ -378,4 +379,14 @@ Return the minimum deviation the array can have after performing some number of 
 - https://leetcode.com/problems/sort-list/
 - [sortList.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortList.py) : O(N^2) 24 / 28 test cases passed.  status: Time Limit Exceeded   len:9828  total_time : 47.36812353134155
 - [sortList2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortList2.py) : O(NlogN)  passed
+
+# 30. Compare Version Numbers (#165)
+- medium 
+- Given two version numbers, version1 and version2, compare them.
+  - Version numbers consist of one or more revisions joined by a dot '.'. Each revision consists of digits and may contain leading zeros. Every revision contains at least one character. Revisions are 0-indexed from left to right, with the leftmost revision being revision 0, the next revision being revision 1, and so on. For example 2.5.33 and 0.1 are valid version numbers.
+  - To compare version numbers, compare their revisions in left-to-right order. Revisions are compared using their integer value ignoring any leading zeros. This means that revisions 1 and 001 are considered equal. If a version number does not specify a revision at an index, then treat the revision as 0. For example, version 1.0 is less than version 1.1 because their revision 0s are the same, but their revision 1s are 0 and 1 respectively, and 0 < 1.
+- https://leetcode.com/problems/compare-version-numbers/
+- [compareVersion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/compareVersion.py) : passed
+
+
 
