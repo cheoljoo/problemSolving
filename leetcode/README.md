@@ -29,7 +29,7 @@
 - [24. Remove Covered Intervals (#1288)](#24-remove-covered-intervals-1288)
 - [25. All Divisions With the Highest Score of a Binary Array](#25-all-divisions-with-the-highest-score-of-a-binary-array)
 - [26. Majority Element](#26-majority-element)
-- [27. The Skyline Problem (#218)](#27-the-skyline-problem-218)
+- [27. The Skyline Problem (#218) - Hard](#27-the-skyline-problem-218---hard)
 - [28. Clone Graph (#133)](#28-clone-graph-133)
 - [29. Sort List (#148)](#29-sort-list-148)
 - [30. Compare Version Numbers (#165)](#30-compare-version-numbers-165)
@@ -357,11 +357,16 @@ Return the minimum deviation the array can have after performing some number of 
     - Runtime: 30 ms, faster than 41.77% of C online submissions for Majority Element.
     - Memory Usage: 7.5 MB, less than 99.35% of C online submissions for Majority Element.
 
-# 27. The Skyline Problem (#218)
-- hard
+# 27. The Skyline Problem (#218) - Hard
+- hard : x 값이 어느 Boundary에 들어가는지를 가장 빨리 찾을수 있는 방법을 N 보다 작은 logN으로 찾아야 한다.
 - A city's skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively.
 - https://leetcode.com/problems/the-skyline-problem/
 - [getSkyline.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSkyline.py) : 39 / 40 test cases passed.     Status: Time Limit Exceeded
+- [getSkyline4.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSkyline4.py) : passed  (205ms)
+  - it takes very long time. 
+- [getSkyline5.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSkyline5.py) : passed (remove unused codes)
+  - Runtime: 158 ms, faster than 66.63% of Python3 online submissions for The Skyline Problem.
+  - Memory Usage: 20 MB, less than 33.75% of Python3 online submissions for The Skyline Problem.
 
 # 28. Clone Graph (#133)
 - medium : TreeNode
