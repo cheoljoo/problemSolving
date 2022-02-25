@@ -4,6 +4,7 @@
   - [1.3. Euclidean-algorithm : 유클리드 호제법](#13-euclidean-algorithm--유클리드-호제법)
   - [1.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#14-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
   - [1.5. hamming weight : number of '1' bits](#15-hamming-weight--number-of-1-bits)
+  - [1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#16-find--including-a-among-x1x2---if-x1x2)
 - [2. Meidan of Two Sorted Arrays](#2-meidan-of-two-sorted-arrays)
 - [3. Regular Expression Matching](#3-regular-expression-matching)
 - [4. Strange Printer](#4-strange-printer)
@@ -90,6 +91,12 @@ int GCD(int a, int b){
 ## 1.5. hamming weight : number of '1' bits
 - Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the [Hamming weight](http://shumin.co.kr/algorithm-hamming-weight-bit-count/)).
 
+## 1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2 
+- 27. The Skyline Problem (#218) - Hard
+- korean : [(x1,x2) , ....] 에서 A를 포함하는 것들을 구하시요.
+- sort by x1 -> find x1 : 0 .. A .. x1 -> calulate
+- if A is another sorted list [A1,A2...] , 0 .. A1 .. x1 and x2 A1 (sorted by x2) -> when we find pairs for A2 , we can skip until x2   
+- 
 # 2. Meidan of Two Sorted Arrays
 - hard
 - https://leetcode.com/problems/median-of-two-sorted-arrays/
@@ -103,6 +110,11 @@ int GCD(int a, int b){
 - [isMatch.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isMatch.py) : wrong answer
 - [isMatch_dfs.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isMatch_dfs.py) : time limit exceeded : 38 / 353 test cases passed.
 - [isMatch.c](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isMatch.c) : Code in site : time limit exceeded : 353 / 353 test cases passed, but took too long.
+- [isMatch2.c](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isMatch2.c) : passed
+  - change call order : longest match is first.   -> passed
+  - ```
+      return go(s,sIndex+1,patternIndex+1,loopLevel+1) || go(s,sIndex+1,patternIndex,loopLevel+1) || go(s,sIndex,patternIndex+1,loopLevel+1)  ;
+    ``` 
 
 # 4. Strange Printer
 - hard : DP dynamic programming
@@ -365,6 +377,7 @@ Return the minimum deviation the array can have after performing some number of 
 - [getSkyline4.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSkyline4.py) : passed  (205ms)
   - it takes very long time. 
 - [getSkyline5.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSkyline5.py) : passed (remove unused codes)
+  - down lines : answer is second max in DownList. DownList is all heights for x (many lines go through this number of x)
   - Runtime: 158 ms, faster than 66.63% of Python3 online submissions for The Skyline Problem.
   - Memory Usage: 20 MB, less than 33.75% of Python3 online submissions for The Skyline Problem.
 
