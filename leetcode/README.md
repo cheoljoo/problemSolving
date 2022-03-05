@@ -5,6 +5,7 @@
   - [1.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#14-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
   - [1.5. hamming weight : number of '1' bits](#15-hamming-weight--number-of-1-bits)
   - [1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#16-find--including-a-among-x1x2---if-x1x2)
+  - [1.7. two dimensional array initialize and set](#17-two-dimensional-array-initialize-and-set)
 - [2. Meidan of Two Sorted Arrays](#2-meidan-of-two-sorted-arrays)
 - [3. Regular Expression Matching](#3-regular-expression-matching)
 - [4. Strange Printer](#4-strange-printer)
@@ -34,6 +35,10 @@
 - [28. Clone Graph (#133)](#28-clone-graph-133)
 - [29. Sort List (#148)](#29-sort-list-148)
 - [30. Compare Version Numbers (#165)](#30-compare-version-numbers-165)
+- [31. Count Array Pairs Divisible by K (#2183) - <fail>](#31-count-array-pairs-divisible-by-k-2183---fail)
+- [32. Shortest Path Visiting All Nodes (#847) - <fail>](#32-shortest-path-visiting-all-nodes-847---fail)
+- [33. Arithmetic Slices (#413)](#33-arithmetic-slices-413)
+- [34. Champagne Tower (#799)](#34-champagne-tower-799)
 
 --------------------
 leetcode
@@ -96,7 +101,14 @@ int GCD(int a, int b){
 - korean : [(x1,x2) , ....] 에서 A를 포함하는 것들을 구하시요.
 - sort by x1 -> find x1 : 0 .. A .. x1 -> calulate
 - if A is another sorted list [A1,A2...] , 0 .. A1 .. x1 and x2 A1 (sorted by x2) -> when we find pairs for A2 , we can skip until x2   
-- 
+
+## 1.7. two dimensional array initialize and set
+- ln = [[0] * 101] * (query_row+1)
+  - ln[0][0]=2 then all row's [0] were changed into 2
+- ln = [[0 for c in range(101)] for r in range(query_row+1)]
+  - it is right solution to initialize two dimensional array
+  - https://www.kite.com/python/answers/how-to-initialize-a-2d-array-in-python
+  
 # 2. Meidan of Two Sorted Arrays
 - hard
 - https://leetcode.com/problems/median-of-two-sorted-arrays/
@@ -405,6 +417,159 @@ Return the minimum deviation the array can have after performing some number of 
   - To compare version numbers, compare their revisions in left-to-right order. Revisions are compared using their integer value ignoring any leading zeros. This means that revisions 1 and 001 are considered equal. If a version number does not specify a revision at an index, then treat the revision as 0. For example, version 1.0 is less than version 1.1 because their revision 0s are the same, but their revision 1s are 0 and 1 respectively, and 0 < 1.
 - https://leetcode.com/problems/compare-version-numbers/
 - [compareVersion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/compareVersion.py) : passed
+
+# 31. Count Array Pairs Divisible by K (#2183) - <fail>
+- hard
+- Given a 0-indexed integer array nums of length n and an integer k, return the number of pairs (i, j) such that:
+  - 0 <= i < j <= n - 1 and 
+  - nums[i] * nums[j] is divisible by k.
+- https://leetcode.com/problems/count-array-pairs-divisible-by-k/
+- [countPairs.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countPairs.py) : 92 / 115 test cases passed. Status: Time Limit Exceeded
+- [countPairs2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countPairs2.py) :
+```python
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    30     24.4 MiB     24.4 MiB           1       @profile
+    31                                             def countPairs(self, nums: List[int], k: int) -> int:
+    32                                                 # k 소인수분해로 그 조합
+    33                                                 # k = 8
+    34     24.4 MiB      0.0 MiB           1           if timeFlag : start = time.time()
+    35     24.4 MiB      0.0 MiB           1           nums.sort()
+    36     24.4 MiB      0.0 MiB           1           if timeFlag : print(" nums.sort(%d):"%len(nums), time.time() - start , "-> ", end="")
+    37     24.4 MiB      0.0 MiB           1           if timeFlag : start = time.time()
+    38     24.4 MiB      0.0 MiB           1           d = k
+    39     24.4 MiB      0.0 MiB           1           i = 1
+    40                                                 # self.k.append(k)
+    41     24.4 MiB      0.0 MiB         236           while i*i <= k :
+    42     24.4 MiB      0.0 MiB         235               if d % i == 0 :
+    43     24.4 MiB      0.0 MiB           6                   self.k.append(i)
+    44     24.4 MiB      0.0 MiB           6                   t = d//i
+    45     24.4 MiB      0.0 MiB           6                   if t != i : self.k.append(t)
+    46     24.4 MiB      0.0 MiB         235               i += 1
+    47     24.4 MiB      0.0 MiB           1           self.k.sort()
+    48     24.4 MiB      0.0 MiB           1           if debugFlag : print("key:",self.k)
+    49     24.4 MiB      0.0 MiB           1           if timeFlag : print(" k.sort(%d):"%len(self.k), time.time() - start , "-> ", end="")
+    50     24.4 MiB      0.0 MiB           1           if timeFlag : start = time.time()
+    51     24.4 MiB      0.0 MiB           1           kMultiple = 0
+    52     24.4 MiB      0.0 MiB           1           divid0 = []
+    53     24.4 MiB      0.0 MiB        1681           for t in reversed(nums) :
+    54     24.4 MiB      0.0 MiB        1680               if t % k == 0 :
+    55                                                         kMultiple += 1
+    56     24.4 MiB      0.0 MiB        1680               divid0.append(kMultiple)
+    57     24.4 MiB      0.0 MiB           1           divid0.reverse()
+    58     24.4 MiB      0.0 MiB           1           if debugFlag : print("nums:",nums)
+    59     24.4 MiB      0.0 MiB           1           if debugFlag : print("divid0:",divid0)
+    60     24.4 MiB      0.0 MiB           1           if timeFlag : print(" multiple(%d):"%len(nums), time.time() - start , "-> ", end="")
+    61     24.4 MiB      0.0 MiB           1           if timeFlag : start = time.time()
+    62     24.4 MiB      0.0 MiB           1           r = []
+    63     24.7 MiB      0.0 MiB        1681           for i in nums:
+    64                                                     # n = set()
+    65     24.7 MiB      0.1 MiB        1680               n = []
+    66     24.7 MiB      0.0 MiB        1680               if i == 1 :
+    67                                                         r.append([i,n])
+    68                                                         continue
+    69     24.7 MiB      0.0 MiB       21840               for d in self.k:
+    70     24.7 MiB      0.0 MiB       20160                   if d == 1:
+    71     24.7 MiB      0.0 MiB        1680                       continue
+    72     24.7 MiB      0.0 MiB       18480                   if i % d == 0:
+    73                                                             # n.add(d)
+    74     24.7 MiB      0.0 MiB        1028                       n.append(d)
+    75     24.7 MiB      0.1 MiB        1680               r.append([i,n])
+    76     24.7 MiB      0.0 MiB           1           if debugFlag : print("result:",r)
+    77     24.7 MiB      0.0 MiB           1           if timeFlag : print(" result(%d):"%len(r), time.time() - start , "-> ", end="")
+    78     24.7 MiB      0.0 MiB           1           if timeFlag : start = time.time()
+    79
+    80     24.7 MiB      0.0 MiB           1           count = 0
+    81                                                 # if nums[0] == 1 :
+    82                                                 #     count += divid0[0]
+    83                                                 # print("count:",count)
+    84     24.7 MiB    -16.6 MiB        1681           for (idx,v) in enumerate(r):
+    85     24.7 MiB    -16.6 MiB        1680               if v[0] % k == 0 :
+    86                                                         count += len(r) - (idx+1)
+    87                                                         if debugFlag : print("idx:",idx, "CASE:v[0]%k==0" , "v[0]:",v[0],"v[1]:",v[1],"count:",count)
+    88     24.7 MiB    -16.6 MiB        1680               elif len(v[1]) == 0 :
+    89     24.7 MiB    -10.1 MiB        1007                   count += divid0[idx]
+    90     24.7 MiB    -10.1 MiB        1007                   if debugFlag : print("idx:",idx, "CASE:len(v[1])==0","v[0]:",v[0],"v[1]:",v[1],"count:",count )
+    91                                                     else :
+    92     24.7 MiB     -6.5 MiB         673                   if len(v[1]) > 0 :
+    93                                                             # d != 1 :
+    94     24.7 MiB     -6.5 MiB         673                       d = v[1][-1]
+    95     24.7 MiB     -6.5 MiB         673                       another = k // d
+    96     24.7 MiB  -3420.0 MiB      567078                       for t in range(idx+1,len(r)) :
+    97     24.7 MiB  -3413.5 MiB      566405                           if another in r[t][1] :
+    98     24.7 MiB     -0.4 MiB          72                               count += 1
+    99     24.7 MiB     -0.4 MiB          72                               if debugFlag : print("idx:",idx,"t:",t,"d:",d,"another:",another,"r[%d]"%t,r[t],"r[%d][1]"%t,r[t][1],"pair:",v[0],r[t][0],"count:",count)
+   100     24.7 MiB     -0.0 MiB           1           if timeFlag : print(" getr(%d):"%len(r), time.time() - start , "-> ", end="")
+   101
+   102     24.7 MiB      0.0 MiB           1           return count
+
+
+ len : 1680 , total_time : 52.50429153442383 -> ERROR(0) -> 72 => k:55503  keys: [1, 3, 7, 9, 21, 63, 881, 2643, 6167, 7929, 18501, 55503]
+```
+
+# 32. Shortest Path Visiting All Nodes (#847) - <fail>
+- hard
+- You have an undirected, connected graph of n nodes labeled from 0 to n - 1. You are given an array graph where graph[i] is a list of all the nodes connected with node i by an edge.
+  - Return the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.
+- https://leetcode.com/problems/shortest-path-visiting-all-nodes/
+- [shortestPathLength.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength.py) : 46 / 51 test cases passed. Status: Time Limit Exceeded
+- [shortestPathLength2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength2.py) : 34seconds  47 / 51 test cases passed. Status: Time Limit Exceeded
+- [shortestPathLength3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength3.py) : dp (node1-> node2,mask) = value 51 seconds Time Limit Exceeded
+- [shortestPathLength4.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength4.py) : dp (node,mask) = value 
+
+# 33. Arithmetic Slices (#413)
+- medium
+- An integer array is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
+  - For example, [1,3,5,7,9], [7,7,7,7], and [3,-1,-5,-9] are arithmetic sequences.
+  - Given an integer array nums, return the number of arithmetic subarrays of nums.
+  - A subarray is a contiguous subsequence of the array.
+- https://leetcode.com/problems/arithmetic-slices/
+- [numberOfArithmeticSlices.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/numberOfArithmeticSlices.py) : passed
+- Time: O(n)  Space: O(n) for cache : https://leetcode.com/problems/arithmetic-slices/discuss/1814595/Python3-CACHE-()-Explained
+
+# 34. Champagne Tower (#799)
+- medium
+- We stack glasses in a pyramid, where the first row has 1 glass, the second row has 2 glasses, and so on until the 100th row.  Each glass holds one cup of champagne.
+  - Then, some champagne is poured into the first glass at the top.  When the topmost glass is full, any excess liquid poured will fall equally to the glass immediately to the left and right of it.  When those glasses become full, any excess champagne will fall equally to the left and right of those glasses, and so on.  (A glass at the bottom row has its excess champagne fall on the floor.)
+  - For example, after one cup of champagne is poured, the top most glass is full.  After two cups of champagne are poured, the two glasses on the second row are half full.  After three cups of champagne are poured, those two cups become full - there are 3 full glasses total now.  After four cups of champagne are poured, the third row has the middle glass half full, and the two outside glasses are a quarter full, as pictured below.
+  - Now after pouring some non-negative integer cups of champagne, return how full the jth glass in the ith row is (both i and j are 0-indexed.)
+- https://leetcode.com/problems/champagne-tower/
+- [champagneTower.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/champagneTower.py) : passed
+  - first of all , poured all basket in ln[0][0] then we calculate flowed water.
+- algorithm
+```
+f(L,n) = ( f(L-1,n-1) + f(L-1,n) ) / 2   
+f(0,0) = 1
+f(L,0) = f(L,L) = 1 / 2**L
+
+
+f(1,0) = 1/2  , f(1,1) = 1/2
+f(2,0) = 1/4 , f(2,1) = (f(1,0)+f(1,1))/2 = 2/4
+f(3,0) = 1/8 , f(3,1) = (f(2,0)+f(2,1))/2 = 3/8
+
+we can calulate with only integer.  
+we can predict that denominator is 2**L with Level L.
+
+(L=33,n=17) = 32,16 and 32,17 should be full. 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
