@@ -36,9 +36,10 @@
 - [29. Sort List (#148)](#29-sort-list-148)
 - [30. Compare Version Numbers (#165)](#30-compare-version-numbers-165)
 - [31. Count Array Pairs Divisible by K (#2183) - <fail>](#31-count-array-pairs-divisible-by-k-2183---fail)
-- [32. Shortest Path Visiting All Nodes (#847) - <fail>](#32-shortest-path-visiting-all-nodes-847---fail)
+- [32. Shortest Path Visiting All Nodes (#847)](#32-shortest-path-visiting-all-nodes-847)
 - [33. Arithmetic Slices (#413)](#33-arithmetic-slices-413)
 - [34. Champagne Tower (#799)](#34-champagne-tower-799)
+- [35. Remove Duplicates from Sorted List II (#82)](#35-remove-duplicates-from-sorted-list-ii-82)
 
 --------------------
 leetcode
@@ -507,7 +508,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
  len : 1680 , total_time : 52.50429153442383 -> ERROR(0) -> 72 => k:55503  keys: [1, 3, 7, 9, 21, 63, 881, 2643, 6167, 7929, 18501, 55503]
 ```
 
-# 32. Shortest Path Visiting All Nodes (#847) - <fail>
+# 32. Shortest Path Visiting All Nodes (#847)
 - hard
 - You have an undirected, connected graph of n nodes labeled from 0 to n - 1. You are given an array graph where graph[i] is a list of all the nodes connected with node i by an edge.
   - Return the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.
@@ -515,7 +516,9 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 - [shortestPathLength.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength.py) : 46 / 51 test cases passed. Status: Time Limit Exceeded
 - [shortestPathLength2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength2.py) : 34seconds  47 / 51 test cases passed. Status: Time Limit Exceeded
 - [shortestPathLength3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength3.py) : dp (node1-> node2,mask) = value 51 seconds Time Limit Exceeded
-- [shortestPathLength4.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength4.py) : dp (node,mask) = value 
+- [shortestPathLength4.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength4.py) : dp (node,mask) = value 25 seconds  Time Limit Exceeded
+- [shortestPathLength4-bfs.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength4-bfs.py) : passed - BFS (371 ms in site)
+- DFS can show the path. but BFS can not show path.
 
 # 33. Arithmetic Slices (#413)
 - medium
@@ -554,7 +557,10 @@ we can predict that denominator is 2**L with Level L.
 ```
 
 
-
+# 35. Remove Duplicates from Sorted List II (#82)
+- medium : C++
+- Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
+- [deleteDuplicates.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/deleteDuplicates.cpp) : passed
 
 
 

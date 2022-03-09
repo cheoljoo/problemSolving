@@ -24,7 +24,6 @@ class TreeNode:
         
 class Solution:
     def __init__(self):
-        self.stack = []
         self.result = True
         
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
@@ -41,22 +40,23 @@ class Solution:
         return max(leftHeight,rightHeight) + 1
     
     def makeTree(self, s:List[Optional[int]]) -> Optional[TreeNode]:
+        stack = []
         if len(s) == 0:
             return None
         height = 1
         lvlSum = 1
         head = TreeNode(s[0])
-        self.stack.append(head)
+        stack.append(head)
         parent = head
         for i in range(1,len(s)):
             if i >= lvlSum:
                 lvlSum += 2**height
                 height += 1
             if i%2 == 1:
-                parent = self.stack.pop(0)
+                parent = stack.pop(0)
             if s[i] :  # not None
                 node = TreeNode(s[i])
-                self.stack.append(node)
+                stack.append(node)
                 if i%2 == 1:
                     parent.left = node
                 else :
