@@ -6,42 +6,42 @@
   - [1.5. hamming weight : number of '1' bits](#15-hamming-weight--number-of-1-bits)
   - [1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#16-find--including-a-among-x1x2---if-x1x2)
   - [1.7. two dimensional array initialize and set](#17-two-dimensional-array-initialize-and-set)
-- [2. Meidan of Two Sorted Arrays](#2-meidan-of-two-sorted-arrays)
-- [3. Regular Expression Matching](#3-regular-expression-matching)
-- [4. Strange Printer](#4-strange-printer)
-- [5. Third Maximum Number](#5-third-maximum-number)
-- [6. Find All Numbers Disappeared in an Array](#6-find-all-numbers-disappeared-in-an-array)
-- [7. Squares of a Sorted Array](#7-squares-of-a-sorted-array)
-- [8. Remove Duplicates from Sorted Array](#8-remove-duplicates-from-sorted-array)
-- [9. Single Number](#9-single-number)
-- [10. Plus One](#10-plus-one)
-- [11. Remove Nth Node From End of List (Linked List)](#11-remove-nth-node-from-end-of-list-linked-list)
-- [12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees)](#12-convert-sorted-array-to-binary-search-tree-trees--height-balanced-binary-search-trees)
-- [13. is Balanced Binary Tree](#13-is-balanced-binary-tree)
-- [14. First Bad Version](#14-first-bad-version)
-- [15. Maximum Subarray](#15-maximum-subarray)
-- [16. Remove Outermost Parentheses (#1021)](#16-remove-outermost-parentheses-1021)
-- [17. Zigzag Conversion (#6)](#17-zigzag-conversion-6)
-- [18. House Robber (#198)](#18-house-robber-198)
-- [19. Shuffle an Array (#384)](#19-shuffle-an-array-384)
-- [20. Number of 1 Bits (#191)](#20-number-of-1-bits-191)
-- [21. Hamming Distance (#461)](#21-hamming-distance-461)
-- [22. Missing Number (#268)](#22-missing-number-268)
-- [23. Minimize Deviation in Array (#1675)](#23-minimize-deviation-in-array-1675)
-- [24. Remove Covered Intervals (#1288)](#24-remove-covered-intervals-1288)
-- [25. All Divisions With the Highest Score of a Binary Array](#25-all-divisions-with-the-highest-score-of-a-binary-array)
-- [26. Majority Element](#26-majority-element)
-- [27. The Skyline Problem (#218) - Hard](#27-the-skyline-problem-218---hard)
-- [28. Clone Graph (#133)](#28-clone-graph-133)
-- [29. Sort List (#148)](#29-sort-list-148)
-- [30. Compare Version Numbers (#165)](#30-compare-version-numbers-165)
-- [31. Count Array Pairs Divisible by K (#2183) - <fail>](#31-count-array-pairs-divisible-by-k-2183---fail)
-- [32. Shortest Path Visiting All Nodes (#847)](#32-shortest-path-visiting-all-nodes-847)
-- [33. Arithmetic Slices (#413)](#33-arithmetic-slices-413)
-- [34. Champagne Tower (#799)](#34-champagne-tower-799)
-- [35. Remove Duplicates from Sorted List II (#82)](#35-remove-duplicates-from-sorted-list-ii-82)
-- [36. Count All Valid Pickup and Delivery Options (#1359)](#36-count-all-valid-pickup-and-delivery-options-1359)
-- [37.](#37)
+- [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
+- [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
+- [4. Strange Printer - hard](#4-strange-printer---hard)
+- [5. Third Maximum Number - easy](#5-third-maximum-number---easy)
+- [6. Find All Numbers Disappeared in an Array - medium](#6-find-all-numbers-disappeared-in-an-array---medium)
+- [7. Squares of a Sorted Array - midium](#7-squares-of-a-sorted-array---midium)
+- [8. Remove Duplicates from Sorted Array - easy](#8-remove-duplicates-from-sorted-array---easy)
+- [9. Single Number - easy but hard](#9-single-number---easy-but-hard)
+- [10. Plus One - easy](#10-plus-one---easy)
+- [11. Remove Nth Node From End of List (Linked List) - easy](#11-remove-nth-node-from-end-of-list-linked-list---easy)
+- [12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees) - easy](#12-convert-sorted-array-to-binary-search-tree-trees--height-balanced-binary-search-trees---easy)
+- [13. is Balanced Binary Tree - easy](#13-is-balanced-binary-tree---easy)
+- [14. First Bad Version : Sorting and Searching - easy](#14-first-bad-version--sorting-and-searching---easy)
+- [15. Maximum Subarray : DP - easy but hard](#15-maximum-subarray--dp---easy-but-hard)
+- [16. Remove Outermost Parentheses (#1021) -easy](#16-remove-outermost-parentheses-1021--easy)
+- [17. Zigzag Conversion (#6) - medium](#17-zigzag-conversion-6---medium)
+- [18. House Robber (#198) - medium](#18-house-robber-198---medium)
+- [19. Shuffle an Array (#384) - medium](#19-shuffle-an-array-384---medium)
+- [20. Number of 1 Bits (#191) - easy](#20-number-of-1-bits-191---easy)
+- [21. Hamming Distance (#461) - easy](#21-hamming-distance-461---easy)
+- [22. Missing Number (#268) - easy](#22-missing-number-268---easy)
+- [23. Minimize Deviation in Array (#1675)  -hard](#23-minimize-deviation-in-array-1675---hard)
+- [24. Remove Covered Intervals (#1288) - medium](#24-remove-covered-intervals-1288---medium)
+- [25. All Divisions With the Highest Score of a Binary Array - medium](#25-all-divisions-with-the-highest-score-of-a-binary-array---medium)
+- [26. Majority Element - easy  , but hard with O(1) space](#26-majority-element---easy---but-hard-with-o1-space)
+- [27. The Skyline Problem (#218) - hard](#27-the-skyline-problem-218---hard)
+- [28. Clone Graph (#133) - medium](#28-clone-graph-133---medium)
+- [29. Sort List (#148) - medium](#29-sort-list-148---medium)
+- [30. Compare Version Numbers (#165) - medium](#30-compare-version-numbers-165---medium)
+- [31. Count Array Pairs Divisible by K (#2183) - hard](#31-count-array-pairs-divisible-by-k-2183---hard)
+- [32. Shortest Path Visiting All Nodes (#847) - hard](#32-shortest-path-visiting-all-nodes-847---hard)
+- [33. Arithmetic Slices (#413) - medium](#33-arithmetic-slices-413---medium)
+- [34. Champagne Tower (#799) - medium](#34-champagne-tower-799---medium)
+- [35. Remove Duplicates from Sorted List II (#82) - medium](#35-remove-duplicates-from-sorted-list-ii-82---medium)
+- [36. Count All Valid Pickup and Delivery Options (#1359) - hard](#36-count-all-valid-pickup-and-delivery-options-1359---hard)
+- [37. Counting Bits (#338) - easy](#37-counting-bits-338---easy)
 
 --------------------
 leetcode
@@ -112,14 +112,14 @@ int GCD(int a, int b){
   - it is right solution to initialize two dimensional array
   - https://www.kite.com/python/answers/how-to-initialize-a-2d-array-in-python
   
-# 2. Meidan of Two Sorted Arrays
+# 2. Meidan of Two Sorted Arrays - hard
 - hard
 - https://leetcode.com/problems/median-of-two-sorted-arrays/
 - [findMedianSortedArrays2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findMedianSortedArrays2.py) : passed
 - ex
   - [][] , [2][] , [][2] , [2][2] , [2][1,3,4] 
 
-# 3. Regular Expression Matching
+# 3. Regular Expression Matching - hard
 - hard
 - https://leetcode.com/problems/regular-expression-matching/
 - [isMatch.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isMatch.py) : wrong answer
@@ -131,29 +131,29 @@ int GCD(int a, int b){
       return go(s,sIndex+1,patternIndex+1,loopLevel+1) || go(s,sIndex+1,patternIndex,loopLevel+1) || go(s,sIndex,patternIndex+1,loopLevel+1)  ;
     ``` 
 
-# 4. Strange Printer
+# 4. Strange Printer - hard
 - hard : DP dynamic programming
 - https://leetcode.com/problems/strange-printer/
 - get the code and hint from discussion
 - [strangePrinter.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/strangePrinter.py) : passed
 
-# 5. Third Maximum Number
+# 5. Third Maximum Number - easy
 - easy
 - https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3231/
 - [thirdMaximumNumber.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/thirdMaximumNumber.py) : passed
 
-# 6. Find All Numbers Disappeared in an Array
+# 6. Find All Numbers Disappeared in an Array - medium
 - medium : O(N)
 - https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3270/
 - [findDisappearedNumbers.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findDisappearedNumbers.py) : passed
 
-# 7. Squares of a Sorted Array
+# 7. Squares of a Sorted Array - midium
 - medium : O(N)
 - Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 - https://leetcode.com/explore/learn/card/fun-with-arrays/523/conclusion/3574/
 - [sortedSquares.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortedSquares.py) : passed
 
-# 8. Remove Duplicates from Sorted Array
+# 8. Remove Duplicates from Sorted Array - easy
 - easy : Array
 - Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/
@@ -161,7 +161,7 @@ int GCD(int a, int b){
   - we should add empty lists to the
   - if len(nums) == 0 : return 0
 
-# 9. Single Number
+# 9. Single Number - easy but hard
 - easy or hard : Arrays
 - Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/
@@ -169,20 +169,20 @@ int GCD(int a, int b){
   - O(N)
   - but , i used the dictionay with size of array.   is it a constant extra space? (NO)
 
-# 10. Plus One
+# 10. Plus One - easy
 - easy : Array
 - You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
   - Increment the large integer by one and return the resulting array of digits.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/559/
 - [plusOne.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/plusOne.py) : passed
 
-# 11. Remove Nth Node From End of List (Linked List)
+# 11. Remove Nth Node From End of List (Linked List) - easy
 - easy : Linked List
 - Given the head of a linked list, remove the nth node from the end of the list and return its head.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/
 - [removeNthFromEnd.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeNthFromEnd.py) : passed
 
-# 12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees)
+# 12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees) - easy
 - easy : Trees , but it is not AVL.
 - Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree : https://www.programiz.com/dsa/avl-tree
   - [avl.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/avl.py)
@@ -191,7 +191,7 @@ int GCD(int a, int b){
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/631/
 - [sortedArrayToBST.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortedArrayToBST.py) : passed
 
-# 13. is Balanced Binary Tree
+# 13. is Balanced Binary Tree - easy
 - easy : Trees
 - Given a binary tree, determine if it is height-balanced.
 - For this problem, a height-balanced binary tree is defined as:
@@ -200,7 +200,7 @@ int GCD(int a, int b){
 - [isBalanced2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isBalanced2.py) : passed
   - [isBalanced.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isBalanced.py) : running is ok. but it has warning in vsc.
 
-# 14. First Bad Version
+# 14. First Bad Version : Sorting and Searching - easy
 - easy : Sorting and Searching
 - You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 - Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
@@ -209,7 +209,7 @@ int GCD(int a, int b){
 - At first time I try to find sequentially.  but time exceeded.
 - [firstBadVersion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/firstBadVersion.py) : passed
 
-# 15. Maximum Subarray
+# 15. Maximum Subarray : DP - easy but hard
 - easy : DP dynamic programming  (나는 hard)
 - Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 - A subarray is a contiguous part of an array.
@@ -223,14 +223,14 @@ int GCD(int a, int b){
     - we should change my idea for O(N) : my code is not proper answer for start and end position. but we can get the right maxSubArray answer. -> solved
     - if subSum is negative , we can restart. 
 
-# 16. Remove Outermost Parentheses (#1021)
+# 16. Remove Outermost Parentheses (#1021) -easy
 - easy : 
 - Given a valid parentheses string s, consider its primitive decomposition: s = P1 + P2 + ... + Pk, where Pi are primitive valid parentheses strings.
 - Return s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.
 - https://leetcode.com/problems/remove-outermost-parentheses/
 - [removeOuterParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeOuterParentheses.py) : passed
 
-# 17. Zigzag Conversion (#6)
+# 17. Zigzag Conversion (#6) - medium
 - medium
 - The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 ```
@@ -242,20 +242,20 @@ P   A   H   N
 - https://leetcode.com/problems/zigzag-conversion/
 - [zigzagConversion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/zigzagConversion.py) : passed
 
-# 18. House Robber (#198)
+# 18. House Robber (#198) - medium
 - medium
 - You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
 - Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/576/    https://leetcode.com/problems/house-robber/
 - [rob.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/rob.py) : passed
 
-# 19. Shuffle an Array (#384)
+# 19. Shuffle an Array (#384) - medium
 - medium : 판정 기준이 애매함.
 - Given an integer array nums, design an algorithm to randomly shuffle the array. All permutations of the array should be equally likely as a result of the shuffling.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/98/design/670/    https://leetcode.com/problems/shuffle-an-array/
 - passed
 
-# 20. Number of 1 Bits (#191)
+# 20. Number of 1 Bits (#191) - easy
 - easy : hamming weight 
 - Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the [Hamming weight](http://shumin.co.kr/algorithm-hamming-weight-bit-count/)).
 - https://leetcode.com/problems/number-of-1-bits/ 
@@ -264,7 +264,7 @@ P   A   H   N
 - 8 bit : 1. shift 8  2. table
 - 32bit : 1. shift 32 2. hamming weight-1 (4 operation * 5(1,2,4,8,16))  3. hamming weight-2 (4 operation * count) if count <= 5
 
-# 21. Hamming Distance (#461)
+# 21. Hamming Distance (#461) - easy
 - easy : hamming distance / hamming weight (number of 1 bits)
 ```
 1   (0 0 0 1)
@@ -275,13 +275,13 @@ The above arrows point to positions where the corresponding bits are different.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/99/others/762/     https://leetcode.com/problems/hamming-distance/
 - [hammingDistance.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hammingDistance.py) : passed
 
-# 22. Missing Number (#268)
+# 22. Missing Number (#268) - easy
 - easy : jongkyung.byun teaches me. len() * (len() +1) / 2 is total sum.  so your missing number = total sum - input sum
 - Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 - https://leetcode.com/explore/interview/card/top-interview-questions-easy/99/others/722/    https://leetcode.com/problems/missing-number/
 - [missingNumber.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/missingNumber.py) : passed
 
-# 23. Minimize Deviation in Array (#1675)
+# 23. Minimize Deviation in Array (#1675)  -hard
 - hard
 - You are given an array nums of n positive integers.
 ```
@@ -328,7 +328,7 @@ Return the minimum deviation the array can have after performing some number of 
     - slow : remove() and bisect.insort()
     - fast : nums[]=? and sort()
 
-# 24. Remove Covered Intervals (#1288)
+# 24. Remove Covered Intervals (#1288) - medium
 - medium
 - Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), remove all intervals that are covered by another interval in the list.
   - The interval [a, b) is covered by the interval [c, d) if and only if c <= a and b <= d. 
@@ -362,7 +362,7 @@ Return the minimum deviation the array can have after performing some number of 
     [StudentFinal(name='Patty', grade=94), StudentFinal(name='Bill', grade=90), StudentFinal(name='Bart', grade=89)]
     ```
 
-# 25. All Divisions With the Highest Score of a Binary Array
+# 25. All Divisions With the Highest Score of a Binary Array - medium
 - medium
 - You are given a 0-indexed binary array nums of length n. nums can be divided at index i (where 0 <= i <= n) into two arrays (possibly empty) numsleft and numsright:
   - numsleft has all the elements of nums between index 0 and i - 1 (inclusive), while numsright has all the elements of nums between index i and n - 1 (inclusive).
@@ -373,7 +373,7 @@ Return the minimum deviation the array can have after performing some number of 
 - https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
 - [maxScoreIndices.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxScoreIndices.py) : passed
 
-# 26. Majority Element
+# 26. Majority Element - easy  , but hard with O(1) space
 - easy  , but hard with O(1) space
 - Given an array nums of size n, return the majority element.
   - The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
@@ -384,7 +384,7 @@ Return the minimum deviation the array can have after performing some number of 
     - Runtime: 30 ms, faster than 41.77% of C online submissions for Majority Element.
     - Memory Usage: 7.5 MB, less than 99.35% of C online submissions for Majority Element.
 
-# 27. The Skyline Problem (#218) - Hard
+# 27. The Skyline Problem (#218) - hard
 - hard : x 값이 어느 Boundary에 들어가는지를 가장 빨리 찾을수 있는 방법을 N 보다 작은 logN으로 찾아야 한다.
 - A city's skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively.
 - https://leetcode.com/problems/the-skyline-problem/
@@ -396,7 +396,7 @@ Return the minimum deviation the array can have after performing some number of 
   - Runtime: 158 ms, faster than 66.63% of Python3 online submissions for The Skyline Problem.
   - Memory Usage: 20 MB, less than 33.75% of Python3 online submissions for The Skyline Problem.
 
-# 28. Clone Graph (#133)
+# 28. Clone Graph (#133) - medium
 - medium : TreeNode
 - Given a reference of a node in a connected undirected graph. 
   - Return a deep copy (clone) of the graph.
@@ -405,7 +405,7 @@ Return the minimum deviation the array can have after performing some number of 
   - only show ```def cloneGraph(self, node: 'Node') -> 'Node':```
   - 'Node' means class(Node)
 
-# 29. Sort List (#148)
+# 29. Sort List (#148) - medium
 - medium : Linked Lists
 - Given the head of a linked list, return the list after sorting it in ascending order.
   - Follow up: Can you sort the linked list in O(n logn) time and O(1) memory (i.e. constant space)?
@@ -413,7 +413,7 @@ Return the minimum deviation the array can have after performing some number of 
 - [sortList.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortList.py) : O(N^2) 24 / 28 test cases passed.  status: Time Limit Exceeded   len:9828  total_time : 47.36812353134155
 - [sortList2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortList2.py) : O(NlogN)  passed
 
-# 30. Compare Version Numbers (#165)
+# 30. Compare Version Numbers (#165) - medium
 - medium 
 - Given two version numbers, version1 and version2, compare them.
   - Version numbers consist of one or more revisions joined by a dot '.'. Each revision consists of digits and may contain leading zeros. Every revision contains at least one character. Revisions are 0-indexed from left to right, with the leftmost revision being revision 0, the next revision being revision 1, and so on. For example 2.5.33 and 0.1 are valid version numbers.
@@ -421,14 +421,19 @@ Return the minimum deviation the array can have after performing some number of 
 - https://leetcode.com/problems/compare-version-numbers/
 - [compareVersion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/compareVersion.py) : passed
 
-# 31. Count Array Pairs Divisible by K (#2183) - <fail>
+# 31. Count Array Pairs Divisible by K (#2183) - hard
 - hard
 - Given a 0-indexed integer array nums of length n and an integer k, return the number of pairs (i, j) such that:
   - 0 <= i < j <= n - 1 and 
   - nums[i] * nums[j] is divisible by k.
 - https://leetcode.com/problems/count-array-pairs-divisible-by-k/
 - [countPairs.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countPairs.py) : 92 / 115 test cases passed. Status: Time Limit Exceeded
-- [countPairs2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countPairs2.py) :
+- [countPairs2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countPairs2.py) : Time Limit Exceeded
+  - check memory profiler  with @profiler  : this memory profile gives the running count of each line.
+- [countPairs3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countPairs3.py) : passed
+  - remove loop with prior calculation. (klist)
+  - Runtime: 6060 ms, faster than 5.01% of Python3 online submissions for Count Array Pairs Divisible by K.
+  - Memory Usage: 255.4 MB, less than 5.02% of Python3 online submissions for Count Array Pairs Divisible by K.
 ```python
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
@@ -510,7 +515,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
  len : 1680 , total_time : 52.50429153442383 -> ERROR(0) -> 72 => k:55503  keys: [1, 3, 7, 9, 21, 63, 881, 2643, 6167, 7929, 18501, 55503]
 ```
 
-# 32. Shortest Path Visiting All Nodes (#847)
+# 32. Shortest Path Visiting All Nodes (#847) - hard
 - hard
 - You have an undirected, connected graph of n nodes labeled from 0 to n - 1. You are given an array graph where graph[i] is a list of all the nodes connected with node i by an edge.
   - Return the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.
@@ -522,7 +527,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 - [shortestPathLength4-bfs.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathLength4-bfs.py) : passed - BFS (371 ms in site)
 - DFS can show the path. but BFS can not show path.
 
-# 33. Arithmetic Slices (#413)
+# 33. Arithmetic Slices (#413) - medium
 - medium
 - An integer array is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
   - For example, [1,3,5,7,9], [7,7,7,7], and [3,-1,-5,-9] are arithmetic sequences.
@@ -532,7 +537,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 - [numberOfArithmeticSlices.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/numberOfArithmeticSlices.py) : passed
 - Time: O(n)  Space: O(n) for cache : https://leetcode.com/problems/arithmetic-slices/discuss/1814595/Python3-CACHE-()-Explained
 
-# 34. Champagne Tower (#799)
+# 34. Champagne Tower (#799) - medium
 - medium
 - We stack glasses in a pyramid, where the first row has 1 glass, the second row has 2 glasses, and so on until the 100th row.  Each glass holds one cup of champagne.
   - Then, some champagne is poured into the first glass at the top.  When the topmost glass is full, any excess liquid poured will fall equally to the glass immediately to the left and right of it.  When those glasses become full, any excess champagne will fall equally to the left and right of those glasses, and so on.  (A glass at the bottom row has its excess champagne fall on the floor.)
@@ -559,12 +564,12 @@ we can predict that denominator is 2**L with Level L.
 ```
 
 
-# 35. Remove Duplicates from Sorted List II (#82)
+# 35. Remove Duplicates from Sorted List II (#82) - medium
 - medium : C++
 - Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
 - [deleteDuplicates.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/deleteDuplicates.cpp) : passed
 
-# 36. Count All Valid Pickup and Delivery Options (#1359)
+# 36. Count All Valid Pickup and Delivery Options (#1359) - hard
 - hard
 - Given n orders, each order consist in pickup and delivery services. 
   - Count all valid pickup/delivery possible sequences such that delivery(i) is always after of pickup(i). 
@@ -574,7 +579,19 @@ we can predict that denominator is 2**L with Level L.
     - This is an invalid order (P1,D2,P2,D1) because Pickup 2 is after of Delivery 2.
 - [countOrders.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countOrders.py) : passed
 
-# 37. 
+# 37. Counting Bits (#338) - easy
+- easy
+- Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
+- Follow up:
+  - It is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?
+  - Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
+- [countBits.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countBits.py) : passed     http://shumin.co.kr/algorithm-hamming-weight-bit-count/
+  - class Solution : Hamming Weight -> 141 ms 20.9 MB
+    - Your runtime beats 42.19 % of python3 submissions
+  - class Sol2 :  Dynamic Programming   ->  76 ms   20.9 MB
+    - Runtime: 76 ms, faster than 97.48% of Python3 online submissions for Counting Bits.
+    - Memory Usage: 20.9 MB, less than 38.89% of Python3 online submissions for Counting Bits.
+
 
 
 
