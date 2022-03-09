@@ -40,6 +40,8 @@
 - [33. Arithmetic Slices (#413)](#33-arithmetic-slices-413)
 - [34. Champagne Tower (#799)](#34-champagne-tower-799)
 - [35. Remove Duplicates from Sorted List II (#82)](#35-remove-duplicates-from-sorted-list-ii-82)
+- [36. Count All Valid Pickup and Delivery Options (#1359)](#36-count-all-valid-pickup-and-delivery-options-1359)
+- [37.](#37)
 
 --------------------
 leetcode
@@ -562,19 +564,17 @@ we can predict that denominator is 2**L with Level L.
 - Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
 - [deleteDuplicates.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/deleteDuplicates.cpp) : passed
 
+# 36. Count All Valid Pickup and Delivery Options (#1359)
+- hard
+- Given n orders, each order consist in pickup and delivery services. 
+  - Count all valid pickup/delivery possible sequences such that delivery(i) is always after of pickup(i). 
+  - Since the answer may be too large, return it modulo 10^9 + 7.
+  - Explanation: All possible orders: 
+    - (P1,P2,D1,D2), (P1,P2,D2,D1), (P1,D1,P2,D2), (P2,P1,D1,D2), (P2,P1,D2,D1) and (P2,D2,P1,D1).
+    - This is an invalid order (P1,D2,P2,D1) because Pickup 2 is after of Delivery 2.
+- [countOrders.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countOrders.py) : passed
 
-
-
-
-
-
-
-
-
-
-
-
-
+# 37. 
 
 
 
