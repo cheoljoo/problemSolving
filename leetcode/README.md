@@ -6,6 +6,8 @@
   - [1.5. hamming weight : number of '1' bits](#15-hamming-weight--number-of-1-bits)
   - [1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#16-find--including-a-among-x1x2---if-x1x2)
   - [1.7. two dimensional array initialize and set](#17-two-dimensional-array-initialize-and-set)
+  - [1.8. regular expression (import re)](#18-regular-expression-import-re)
+  - [1.9. format string](#19-format-string)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -112,6 +114,24 @@ int GCD(int a, int b){
   - it is right solution to initialize two dimensional array
   - https://www.kite.com/python/answers/how-to-initialize-a-2d-array-in-python
   
+## 1.8. regular expression (import re)
+- https://www.programiz.com/python-programming/regex
+- https://emilkwak.github.io/python-re-named-group
+```python
+  self.patternDate = re.compile('^\s*(?P<year>\d+)\/(?P<month>\d+)\/(?P<day>\d+)\s*$')
+  self.patternTime = re.compile('^\s*(?P<hour>\d+):(?P<minute>\d+):(?P<second>\d+)\.(?P<microsec>\d+)\s*$')
+  self.patternDateTime = re.compile('^\s*\[\s*(?P<year>\d+)\/(?P<month>\d+)\/(?P<day>\d+)\s+(?P<hour>\d+):(?P<minute>\d+):(?P<second>\d+)\.(?P<microsec>\d+)\s*\]\s*')
+
+  result = self.patternDateTime.match(self.msg)
+  if result:
+    "%02d/%02d/%02d"%(int(result.group('year')),int(result.group('month')),int(result.group('day')))
+    self.msg = self.patternDateTime.sub('',self.msg)
+```
+
+## 1.9. format string
+- https://hyjykelly.tistory.com/65
+- performance comparison : https://brownbears.tistory.com/421
+
 # 2. Meidan of Two Sorted Arrays - hard
 - hard
 - https://leetcode.com/problems/median-of-two-sorted-arrays/
@@ -514,6 +534,9 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 
  len : 1680 , total_time : 52.50429153442383 -> ERROR(0) -> 72 => k:55503  keys: [1, 3, 7, 9, 21, 63, 881, 2643, 6167, 7929, 18501, 55503]
 ```
+- discussion (reference)
+  - https://leetcode.com/problems/count-array-pairs-divisible-by-k/discuss/1785027/C%2B%2BPython-Easy-and-Concise-with-Explanation
+  - https://leetcode.com/problems/count-array-pairs-divisible-by-k/discuss/1784712/Python-O(Nsqrt(K))-Easy-understand-solution
 
 # 32. Shortest Path Visiting All Nodes (#847) - hard
 - hard

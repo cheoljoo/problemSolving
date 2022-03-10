@@ -30,6 +30,30 @@ print(sorted_output)
 # [1, 2, 3, 4, 5, 6]  : 왜 나는 [0, 0, 0, 1, 3, 5]  이런 값이 나올까?
 
 
+import os
+import contextlib
 
-    
+# os.remove('somefile.tmp') 
 
+with contextlib.suppress(FileNotFoundError):
+    print(1)
+    os.remove('somefile.tmp')
+    print(2)
+
+# This is equivalent to:
+
+try:
+    print(3)
+    os.remove('somefile.tmp')
+    print(4)
+except FileNotFoundError:
+    print(5)
+    pass   
+
+import re
+patternDate = '\d+\/\d+\/\d+'
+patternTime = '\d+:\d+:\d+\.\d+'
+if re.match(patternDate, '2022/10/01') :
+    print("True1")
+if re.match(patternTime, "10:10:03.210") :
+    print("True2")
