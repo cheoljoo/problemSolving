@@ -129,6 +129,25 @@ int GCD(int a, int b){
     "%02d/%02d/%02d"%(int(result.group('year')),int(result.group('month')),int(result.group('day')))
     self.msg = self.patternDateTime.sub('',self.msg)
 ```
+- (?......) 
+  - https://docs.python.org/3/howto/regex.html
+  - The solution chosen by the Perl developers was to use (?...) as the extension syntax. ? immediately after a parenthesis was a syntax error because the ? would have nothing to repeat, so this didn’t introduce any compatibility problems. The characters immediately after the ? indicate what extension is being used, so (?=foo) is one thing (a positive lookahead assertion) and (?:foo) is something else (a non-capturing group containing the subexpression foo).
+  - The syntax for a named group is one of the Python-specific extensions: (?P<name>...).
+  - This is another Python extension: (?P=name) indicates that the contents of the group called name should again be matched at the current point. The regular expression for finding doubled words, \b(\w+)\s+\1\b can also be written as \b(?P<word>\w+)\s+(?P=word)\b:
+  - (?=...)
+    - Positive lookahead assertion. This succeeds if the contained regular expression, represented here by ..., successfully matches at the current location, and fails otherwise. But, once the contained expression has been tried, the matching engine doesn’t advance at all; the rest of the pattern is tried right where the assertion started.
+  - (?!...)
+    - Negative lookahead assertion. This is the opposite of the positive assertion; it succeeds if the contained expression doesn’t match at the current position in the string.
+```pythonpat = re.compile(r"""
+ \s*                 # Skip leading whitespace
+ (?P<header>[^:]+)   # Header name
+ \s* :               # Whitespace, and a colon
+ (?P<value>.*?)      # The header's value -- *? used to
+                     # lose the following trailing whitespace
+ \s*$                # Trailing whitespace to end-of-line
+""", re.VERBOSE)
+```
+
 ### 1.8.1. difference between re.search() and re.match()
 - https://www.geeksforgeeks.org/python-re-search-vs-re-match/
 - re.match() searches only from the beginning of the string and return match object if found. But if a match of substring is found somewhere in the middle of the string, it returns none.
