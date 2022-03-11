@@ -7,6 +7,7 @@
   - [1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#16-find--including-a-among-x1x2---if-x1x2)
   - [1.7. two dimensional array initialize and set](#17-two-dimensional-array-initialize-and-set)
   - [1.8. regular expression (import re)](#18-regular-expression-import-re)
+    - [1.8.1. difference between re.search() and re.match()](#181-difference-between-research-and-rematch)
   - [1.9. format string](#19-format-string)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
@@ -44,6 +45,7 @@
 - [35. Remove Duplicates from Sorted List II (#82) - medium](#35-remove-duplicates-from-sorted-list-ii-82---medium)
 - [36. Count All Valid Pickup and Delivery Options (#1359) - hard](#36-count-all-valid-pickup-and-delivery-options-1359---hard)
 - [37. Counting Bits (#338) - easy](#37-counting-bits-338---easy)
+- [38. Rotate List (#61) - medium](#38-rotate-list-61---medium)
 
 --------------------
 leetcode
@@ -127,6 +129,9 @@ int GCD(int a, int b){
     "%02d/%02d/%02d"%(int(result.group('year')),int(result.group('month')),int(result.group('day')))
     self.msg = self.patternDateTime.sub('',self.msg)
 ```
+### 1.8.1. difference between re.search() and re.match()
+- https://www.geeksforgeeks.org/python-re-search-vs-re-match/
+- re.match() searches only from the beginning of the string and return match object if found. But if a match of substring is found somewhere in the middle of the string, it returns none.
 
 ## 1.9. format string
 - https://hyjykelly.tistory.com/65
@@ -608,6 +613,7 @@ we can predict that denominator is 2**L with Level L.
 - Follow up:
   - It is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?
   - Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
+- https://leetcode.com/problems/counting-bits/
 - [countBits.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countBits.py) : passed     http://shumin.co.kr/algorithm-hamming-weight-bit-count/
   - class Solution : Hamming Weight -> 141 ms 20.9 MB
     - Your runtime beats 42.19 % of python3 submissions
@@ -615,7 +621,13 @@ we can predict that denominator is 2**L with Level L.
     - Runtime: 76 ms, faster than 97.48% of Python3 online submissions for Counting Bits.
     - Memory Usage: 20.9 MB, less than 38.89% of Python3 online submissions for Counting Bits.
 
-
+# 38. Rotate List (#61) - medium
+- medium
+- Given the head of a linked list, rotate the list to the right by k places.
+- https://leetcode.com/problems/rotate-list/
+- [rotateRight.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/rotateRight.py) : passed
+  - Runtime: 40 ms, faster than 84.61% of Python3 online submissions for Rotate List.
+  - Memory Usage: 13.9 MB, less than 88.66% of Python3 online submissions for Rotate List.
 
 
 
