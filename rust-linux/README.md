@@ -12,27 +12,27 @@
     - hello-rust-cargo/src/main.rs
     - hello-rust-cargo/Makefile
     - hello-rust-cargo/Cargo.toml
-- docker run -it --rm -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust /bin/sh
+- ```docker run -it --rm -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust /bin/sh```
 
 ## convenience to compile in docker
 - i use 2 kinds of alias
-    - alias cargo='docker run --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust cargo'
+    - ```alias cargo='docker run --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust cargo'```
         - host$ cargo run    -> it will compile then remove container. so it download everytime.
-    - alias rustit='docker run -it --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust'
+    - ```alias rustit='docker run -it --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust'```
         - docker$ cargo run   -> it is in container.   so it is slow at the first time
         - when i need keyboard input as input , this interactive mode is more proper.
 
 ## simple rust test
 - cd test
-- docker run --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust rustc main.rs
+- ```docker run --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust rustc main.rs```
 - main
 
 ## compile and run
 - method 1
-    - docker run --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust cargo build --release
+    - ```docker run --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust cargo build --release```
     - ./target/debug/hello-rust
 - method 2
-    - docker run --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust cargo run
+    - ```docker run --rm --user `id -u`:`id -g` -v `pwd`:/usr/src/myapp -w /usr/src/myapp rust cargo run```
 
 # Tutorial : Gessing Game
 - cd gessing_game
@@ -77,8 +77,8 @@ fn main() {
     println!("{}, world!", s1);
 }
 ```
-    - error msg : move the ownership of s1 to _s2
-    ```
+- error msg : move the ownership of s1 to _s2
+```
         $ rustc test.rs
         error[E0382]: borrow of moved value: `s1`
          --> test.rs:4:28
@@ -95,5 +95,5 @@ fn main() {
         error: aborting due to previous error
 
         For more information about this error, try `rustc --explain E0382`.
-    ```
+```
 
