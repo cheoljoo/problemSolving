@@ -46,6 +46,7 @@
 - [36. Count All Valid Pickup and Delivery Options (#1359) - hard](#36-count-all-valid-pickup-and-delivery-options-1359---hard)
 - [37. Counting Bits (#338) - easy](#37-counting-bits-338---easy)
 - [38. Rotate List (#61) - medium](#38-rotate-list-61---medium)
+- [39. Copy List with Random Pointer (#138) - medium](#39-copy-list-with-random-pointer-138---medium)
 
 --------------------
 leetcode
@@ -648,5 +649,17 @@ we can predict that denominator is 2**L with Level L.
   - Runtime: 40 ms, faster than 84.61% of Python3 online submissions for Rotate List.
   - Memory Usage: 13.9 MB, less than 88.66% of Python3 online submissions for Rotate List.
 
-
-
+# 39. Copy List with Random Pointer (#138) - medium
+- medium
+- A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.
+  - Construct a deep copy of the list. The deep copy should consist of exactly n brand new nodes, where each new node has its value set to the value of its corresponding original node. Both the next and random pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state. None of the pointers in the new list should point to nodes in the original list.
+  - For example, if there are two nodes X and Y in the original list, where X.random --> Y, then for the corresponding two nodes x and y in the copied list, x.random --> y.
+  - Return the head of the copied linked list.
+  - The linked list is represented in the input/output as a list of n nodes. Each node is represented as a pair of [val, random_index] where:
+    - val: an integer representing Node.val
+    - random_index: the index of the node (range from 0 to n-1) that the random pointer points to, or null if it does not point to any node.
+  - Your code will only be given the head of the original linked list.
+- https://leetcode.com/problems/copy-list-with-random-pointer/
+- [copyRandomList.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/copyRandomList.py) : passed
+  - Runtime: 56 ms, faster than 42.66% of Python3 online submissions for Copy List with Random Pointer.
+  - Memory Usage: 14.9 MB, less than 55.97% of Python3 online submissions for Copy List with Random Pointer.
