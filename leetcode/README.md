@@ -6,6 +6,9 @@
   - [1.5. hamming weight : number of '1' bits](#15-hamming-weight--number-of-1-bits)
   - [1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#16-find--including-a-among-x1x2---if-x1x2)
   - [1.7. two dimensional array initialize and set](#17-two-dimensional-array-initialize-and-set)
+  - [1.8. regular expression (import re)](#18-regular-expression-import-re)
+    - [1.8.1. difference between re.search() and re.match()](#181-difference-between-research-and-rematch)
+  - [1.9. format string](#19-format-string)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -42,6 +45,8 @@
 - [35. Remove Duplicates from Sorted List II (#82) - medium](#35-remove-duplicates-from-sorted-list-ii-82---medium)
 - [36. Count All Valid Pickup and Delivery Options (#1359) - hard](#36-count-all-valid-pickup-and-delivery-options-1359---hard)
 - [37. Counting Bits (#338) - easy](#37-counting-bits-338---easy)
+- [38. Rotate List (#61) - medium](#38-rotate-list-61---medium)
+- [39. Copy List with Random Pointer (#138) - medium](#39-copy-list-with-random-pointer-138---medium)
 
 --------------------
 leetcode
@@ -112,6 +117,46 @@ int GCD(int a, int b){
   - it is right solution to initialize two dimensional array
   - https://www.kite.com/python/answers/how-to-initialize-a-2d-array-in-python
   
+## 1.8. regular expression (import re)
+- https://www.programiz.com/python-programming/regex
+- https://emilkwak.github.io/python-re-named-group
+```python
+  self.patternDate = re.compile('^\s*(?P<year>\d+)\/(?P<month>\d+)\/(?P<day>\d+)\s*$')
+  self.patternTime = re.compile('^\s*(?P<hour>\d+):(?P<minute>\d+):(?P<second>\d+)\.(?P<microsec>\d+)\s*$')
+  self.patternDateTime = re.compile('^\s*\[\s*(?P<year>\d+)\/(?P<month>\d+)\/(?P<day>\d+)\s+(?P<hour>\d+):(?P<minute>\d+):(?P<second>\d+)\.(?P<microsec>\d+)\s*\]\s*')
+
+  result = self.patternDateTime.match(self.msg)
+  if result:
+    "%02d/%02d/%02d"%(int(result.group('year')),int(result.group('month')),int(result.group('day')))
+    self.msg = self.patternDateTime.sub('',self.msg)
+```
+- (?......) 
+  - https://docs.python.org/3/howto/regex.html
+  - The solution chosen by the Perl developers was to use (?...) as the extension syntax. ? immediately after a parenthesis was a syntax error because the ? would have nothing to repeat, so this didn’t introduce any compatibility problems. The characters immediately after the ? indicate what extension is being used, so (?=foo) is one thing (a positive lookahead assertion) and (?:foo) is something else (a non-capturing group containing the subexpression foo).
+  - The syntax for a named group is one of the Python-specific extensions: (?P<name>...).
+  - This is another Python extension: (?P=name) indicates that the contents of the group called name should again be matched at the current point. The regular expression for finding doubled words, \b(\w+)\s+\1\b can also be written as \b(?P<word>\w+)\s+(?P=word)\b:
+  - (?=...)
+    - Positive lookahead assertion. This succeeds if the contained regular expression, represented here by ..., successfully matches at the current location, and fails otherwise. But, once the contained expression has been tried, the matching engine doesn’t advance at all; the rest of the pattern is tried right where the assertion started.
+  - (?!...)
+    - Negative lookahead assertion. This is the opposite of the positive assertion; it succeeds if the contained expression doesn’t match at the current position in the string.
+```pythonpat = re.compile(r"""
+ \s*                 # Skip leading whitespace
+ (?P<header>[^:]+)   # Header name
+ \s* :               # Whitespace, and a colon
+ (?P<value>.*?)      # The header's value -- *? used to
+                     # lose the following trailing whitespace
+ \s*$                # Trailing whitespace to end-of-line
+""", re.VERBOSE)
+```
+
+### 1.8.1. difference between re.search() and re.match()
+- https://www.geeksforgeeks.org/python-re-search-vs-re-match/
+- re.match() searches only from the beginning of the string and return match object if found. But if a match of substring is found somewhere in the middle of the string, it returns none.
+
+## 1.9. format string
+- https://hyjykelly.tistory.com/65
+- performance comparison : https://brownbears.tistory.com/421
+
 # 2. Meidan of Two Sorted Arrays - hard
 - hard
 - https://leetcode.com/problems/median-of-two-sorted-arrays/
@@ -514,6 +559,9 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 
  len : 1680 , total_time : 52.50429153442383 -> ERROR(0) -> 72 => k:55503  keys: [1, 3, 7, 9, 21, 63, 881, 2643, 6167, 7929, 18501, 55503]
 ```
+- discussion (reference)
+  - https://leetcode.com/problems/count-array-pairs-divisible-by-k/discuss/1785027/C%2B%2BPython-Easy-and-Concise-with-Explanation
+  - https://leetcode.com/problems/count-array-pairs-divisible-by-k/discuss/1784712/Python-O(Nsqrt(K))-Easy-understand-solution
 
 # 32. Shortest Path Visiting All Nodes (#847) - hard
 - hard
@@ -585,6 +633,7 @@ we can predict that denominator is 2**L with Level L.
 - Follow up:
   - It is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?
   - Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
+- https://leetcode.com/problems/counting-bits/
 - [countBits.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countBits.py) : passed     http://shumin.co.kr/algorithm-hamming-weight-bit-count/
   - class Solution : Hamming Weight -> 141 ms 20.9 MB
     - Your runtime beats 42.19 % of python3 submissions
@@ -592,7 +641,25 @@ we can predict that denominator is 2**L with Level L.
     - Runtime: 76 ms, faster than 97.48% of Python3 online submissions for Counting Bits.
     - Memory Usage: 20.9 MB, less than 38.89% of Python3 online submissions for Counting Bits.
 
+# 38. Rotate List (#61) - medium
+- medium
+- Given the head of a linked list, rotate the list to the right by k places.
+- https://leetcode.com/problems/rotate-list/
+- [rotateRight.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/rotateRight.py) : passed
+  - Runtime: 40 ms, faster than 84.61% of Python3 online submissions for Rotate List.
+  - Memory Usage: 13.9 MB, less than 88.66% of Python3 online submissions for Rotate List.
 
-
-
-
+# 39. Copy List with Random Pointer (#138) - medium
+- medium
+- A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.
+  - Construct a deep copy of the list. The deep copy should consist of exactly n brand new nodes, where each new node has its value set to the value of its corresponding original node. Both the next and random pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state. None of the pointers in the new list should point to nodes in the original list.
+  - For example, if there are two nodes X and Y in the original list, where X.random --> Y, then for the corresponding two nodes x and y in the copied list, x.random --> y.
+  - Return the head of the copied linked list.
+  - The linked list is represented in the input/output as a list of n nodes. Each node is represented as a pair of [val, random_index] where:
+    - val: an integer representing Node.val
+    - random_index: the index of the node (range from 0 to n-1) that the random pointer points to, or null if it does not point to any node.
+  - Your code will only be given the head of the original linked list.
+- https://leetcode.com/problems/copy-list-with-random-pointer/
+- [copyRandomList.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/copyRandomList.py) : passed
+  - Runtime: 56 ms, faster than 42.66% of Python3 online submissions for Copy List with Random Pointer.
+  - Memory Usage: 14.9 MB, less than 55.97% of Python3 online submissions for Copy List with Random Pointer.
