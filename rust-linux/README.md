@@ -1,6 +1,6 @@
 # introduction of rust
 - documents of rust
-    - english : https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/syntax-and-semantics.html
+    - english : https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
     - korean : https://rinthel.github.io/rust-lang-book-ko/ch02-00-guessing-game-tutorial.html
 - leetcode supports rust.
 - learn rust using docker
@@ -70,6 +70,8 @@ error[E0283]: type annotations needed for `{integer}`
 
 # ownership
 - [Rust- 러스트의 꽃, Ownership 파헤치기](https://medium.com/@kwoncharles/rust-%EB%9F%AC%EC%8A%A4%ED%8A%B8%EC%9D%98-%EA%BD%83-ownership-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-2f9c6b744c38#:~:text=Rust%EB%8A%94%20%EC%98%A4%EB%84%88%EC%8B%AD%EC%9D%84%20%EA%B8%B0%EB%B0%98,%ED%95%B4%EC%A0%9C%20%EC%97%90%EB%9F%AC%EA%B0%80%20%EC%9D%BC%EC%96%B4%EB%82%98%EC%A7%80%20%EC%95%8A%EB%8A%94%EB%8B%A4.)
+- korean : https://rinthel.github.io/rust-lang-book-ko/ch04-01-what-is-ownership.html
+- english : https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/ownership.html
 ```rust
 fn main() {
     let s1 = String::from("hello");
