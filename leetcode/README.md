@@ -47,6 +47,10 @@
 - [37. Counting Bits (#338) - easy](#37-counting-bits-338---easy)
 - [38. Rotate List (#61) - medium](#38-rotate-list-61---medium)
 - [39. Copy List with Random Pointer (#138) - medium](#39-copy-list-with-random-pointer-138---medium)
+- [40. Find All K-Distant Indices in an Array (#2200) - easy : weekly contest for amazon 2022-03-13](#40-find-all-k-distant-indices-in-an-array-2200---easy--weekly-contest-for-amazon-2022-03-13)
+- [41. Count Artifacts That Can Be Extracted (#2201) - medium : weekly contest for amazon 2022-03-13](#41-count-artifacts-that-can-be-extracted-2201---medium--weekly-contest-for-amazon-2022-03-13)
+- [42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13](#42-maximize-the-topmost-element-after-k-moves-2202---medium--weekly-contest-for-amazon-2022-03-13)
+- [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13)
 
 --------------------
 leetcode
@@ -663,3 +667,49 @@ we can predict that denominator is 2**L with Level L.
 - [copyRandomList.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/copyRandomList.py) : passed
   - Runtime: 56 ms, faster than 42.66% of Python3 online submissions for Copy List with Random Pointer.
   - Memory Usage: 14.9 MB, less than 55.97% of Python3 online submissions for Copy List with Random Pointer.
+- O(1) space : [copyRandomList-O1.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/copyRandomList-O1.cpp)
+  
+# 40. Find All K-Distant Indices in an Array (#2200) - easy : weekly contest for amazon 2022-03-13
+- easy
+- You are given a 0-indexed integer array nums and two integers key and k. A k-distant index is an index i of nums for which there exists at least one index j such that |i - j| <= k and nums[j] == key.
+  - Return a list of all k-distant indices sorted in increasing order.
+- https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/
+- [findKDistantIndices.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findKDistantIndices.py) : passed
+
+# 41. Count Artifacts That Can Be Extracted (#2201) - medium : weekly contest for amazon 2022-03-13
+- medium
+- There is an n x n 0-indexed grid with some artifacts buried in it. You are given the integer n and a 0-indexed 2D integer array artifacts describing the positions of the rectangular artifacts where artifacts[i] = [r1i, c1i, r2i, c2i] denotes that the ith artifact is buried in the subgrid where:
+  - (r1i, c1i) is the coordinate of the top-left cell of the ith artifact and (r2i, c2i) is the coordinate of the bottom-right cell of the ith artifact.
+  - You will excavate some cells of the grid and remove all the mud from them. If the cell has a part of an artifact buried underneath, it will be uncovered. If all the parts of an artifact are uncovered, you can extract it.
+  - Given a 0-indexed 2D integer array dig where dig[i] = [ri, ci] indicates that you will excavate the cell (ri, ci), return the number of artifacts that you can extract.
+- https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
+- [digArtifacts.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/digArtifacts.py) : passed
+
+# 42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13
+- medium : I didn't understand what measn until now. I saw the following article before solving this problem.
+  - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/discuss/1844542/Python-or-O(1)-space-O(1)-Time-or-Explanation-or-Comments-added
+    - ![picture_explanation](https://assets.leetcode.com/users/images/63265d6c-7a19-4278-b73d-46f0999e47d8_1647147723.9620347.jpeg)
+  - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/discuss/1844225/Python-Solution-by-Analyzing-All-Cases.
+- You are given a 0-indexed integer array nums representing the contents of a pile, where nums[0] is the topmost element of the pile.
+  - In one move, you can perform either of the following:
+    - If the pile is not empty, remove the topmost element of the pile.
+    - If there are one or more removed elements, add any one of them back onto the pile. This element becomes the new topmost element.
+  - You are also given an integer k, which denotes the total number of moves to be made.
+  - Return the maximum value of the topmost element of the pile possible after exactly k moves. In case it is not possible to obtain a non-empty pile after k moves, return -1.
+- https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
+- [maximumTop.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumTop.py) : passed
+
+# 43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13
+- hard : I did not solve this probelm within contest. I can not try it because i can not understand the meaning of #2202.
+- You are given an integer n denoting the number of nodes of a weighted directed graph. The nodes are numbered from 0 to n - 1.
+  - You are also given a 2D integer array edges where edges[i] = [fromi, toi, weighti] denotes that there exists a directed edge from fromi to toi with weight weighti.
+  - Lastly, you are given three distinct integers src1, src2, and dest denoting three distinct nodes of the graph.
+  - Return the minimum weight of a subgraph of the graph such that it is possible to reach dest from both src1 and src2 via a set of edges of this subgraph. In case such a subgraph does not exist, return -1.
+- https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
+- algorithm : dest -> src1 , dest -> src2
+- [minimumWeight.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight.py) : 
+
+
+
+
+
