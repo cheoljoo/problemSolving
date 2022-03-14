@@ -50,7 +50,8 @@
 - [40. Find All K-Distant Indices in an Array (#2200) - easy : weekly contest for amazon 2022-03-13](#40-find-all-k-distant-indices-in-an-array-2200---easy--weekly-contest-for-amazon-2022-03-13)
 - [41. Count Artifacts That Can Be Extracted (#2201) - medium : weekly contest for amazon 2022-03-13](#41-count-artifacts-that-can-be-extracted-2201---medium--weekly-contest-for-amazon-2022-03-13)
 - [42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13](#42-maximize-the-topmost-element-after-k-moves-2202---medium--weekly-contest-for-amazon-2022-03-13)
-- [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13)
+- [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 <fail>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13-fail)
+- [44. Simplify Path (#71) - medium](#44-simplify-path-71---medium)
 
 --------------------
 leetcode
@@ -699,7 +700,7 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
 - [maximumTop.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumTop.py) : passed
 
-# 43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13
+# 43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 <fail>
 - hard : I did not solve this probelm within contest. I can not try it because i can not understand the meaning of #2202.
 - You are given an integer n denoting the number of nodes of a weighted directed graph. The nodes are numbered from 0 to n - 1.
   - You are also given a 2D integer array edges where edges[i] = [fromi, toi, weighti] denotes that there exists a directed edge from fromi to toi with weight weighti.
@@ -707,7 +708,22 @@ we can predict that denominator is 2**L with Level L.
   - Return the minimum weight of a subgraph of the graph such that it is possible to reach dest from both src1 and src2 via a set of edges of this subgraph. In case such a subgraph does not exist, return -1.
 - https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
 - algorithm : dest -> src1 , dest -> src2
-- [minimumWeight.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight.py) : 
+- [minimumWeight.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight.py) :  
+
+# 44. Simplify Path (#71) - medium
+- medium
+- Given a string path, which is an absolute path (starting with a slash '/') to a file or directory in a Unix-style file system, convert it to the simplified canonical path.
+  - In a Unix-style file system, a period '.' refers to the current directory, a double period '..' refers to the directory up a level, and any multiple consecutive slashes (i.e. '//') are treated as a single slash '/'. For this problem, any other format of periods such as '...' are treated as file/directory names.
+  - The canonical path should have the following format:
+    - The path starts with a single slash '/'.
+    - Any two directories are separated by a single slash '/'.
+    - The path does not end with a trailing '/'.
+    - The path only contains the directories on the path from the root directory to the target file or directory (i.e., no period '.' or double period '..')
+  - Return the simplified canonical path.
+- https://leetcode.com/problems/simplify-path/
+- [simplifyPath.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/simplifyPath.py) : passed
+
+
 
 
 
