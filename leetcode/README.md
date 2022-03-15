@@ -52,6 +52,7 @@
 - [42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13](#42-maximize-the-topmost-element-after-k-moves-2202---medium--weekly-contest-for-amazon-2022-03-13)
 - [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 <fail>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13-fail)
 - [44. Simplify Path (#71) - medium](#44-simplify-path-71---medium)
+- [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
 
 --------------------
 leetcode
@@ -687,7 +688,7 @@ we can predict that denominator is 2**L with Level L.
 - [digArtifacts.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/digArtifacts.py) : passed
 
 # 42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13
-- medium : I didn't understand what measn until now. I saw the following article before solving this problem.
+- medium : <got help> I didn't understand what measn until now. I saw the following article before solving this problem.
   - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/discuss/1844542/Python-or-O(1)-space-O(1)-Time-or-Explanation-or-Comments-added
     - ![picture_explanation](https://assets.leetcode.com/users/images/63265d6c-7a19-4278-b73d-46f0999e47d8_1647147723.9620347.jpeg)
   - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/discuss/1844225/Python-Solution-by-Analyzing-All-Cases.
@@ -723,8 +724,16 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/simplify-path/
 - [simplifyPath.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/simplifyPath.py) : passed
 
-
-
+# 45. Minimum Remove to Make Valid Parentheses ($1249) - medium
+- medium
+- Given a string s of '(' , ')' and lowercase English characters.
+  - Your task is to remove the minimum number of parentheses ( '(' or ')', in any positions ) so that the resulting parentheses string is valid and return any valid string.
+  - Formally, a parentheses string is valid if and only if:
+    - It is the empty string, contains only lowercase characters, or
+    - It can be written as AB (A concatenated with B), where A and B are valid strings, or
+    - It can be written as (A), where A is a valid string.
+- https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
+- [minRemoveToMakeValid.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minRemoveToMakeValid.py) : passed
 
 
 
