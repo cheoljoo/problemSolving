@@ -53,6 +53,7 @@
 - [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 <fail>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13-fail)
 - [44. Simplify Path (#71) - medium](#44-simplify-path-71---medium)
 - [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
+- [46. Validate Stack Sequences (#946) - medium](#46-validate-stack-sequences-946---medium)
 
 --------------------
 leetcode
@@ -735,6 +736,11 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 - [minRemoveToMakeValid.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minRemoveToMakeValid.py) : passed
 
-
-
+# 46. Validate Stack Sequences (#946) - medium
+- medium
+- Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
+- https://leetcode.com/problems/validate-stack-sequences/
+- [validateStackSequences.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/validateStackSequences.py) : passed
+  - Runtime: 84 ms, faster than 73.30% of Python3 online submissions for Validate Stack Sequences.
+  - Memory Usage: 14.2 MB, less than 63.80% of Python3 online submissions for Validate Stack Sequences.
 
