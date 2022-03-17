@@ -54,6 +54,7 @@
 - [44. Simplify Path (#71) - medium](#44-simplify-path-71---medium)
 - [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
 - [46. Validate Stack Sequences (#946) - medium : [python] / [rust]](#46-validate-stack-sequences-946---medium--python--rust)
+- [47. Score of Parentheses (#856) - medium : [python]](#47-score-of-parentheses-856---medium--python)
 
 --------------------
 leetcode
@@ -746,5 +747,33 @@ we can predict that denominator is 2**L with Level L.
 - [validateStackSequences.rs](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/validateStackSequences.rs) : passed
   - Runtime: 0 ms, faster than 100.00% of Rust online submissions for Validate Stack Sequences.
   - Memory Usage: 2.2 MB, less than 33.33% of Rust online submissions for Validate Stack Sequences.
+
+# 47. Score of Parentheses (#856) - medium : [python]
+- medium
+- Given a balanced parentheses string s, return the score of the string.
+  - The score of a balanced parentheses string is based on the following rule:
+    - "()" has score 1.
+    - AB has score A + B, where A and B are balanced parentheses strings.
+    - (A) has score 2 * A, where A is a balanced parentheses string.
+- https://leetcode.com/problems/score-of-parentheses/
+- [scoreOfParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/scoreOfParentheses.py) : passed
+  - Runtime: 28 ms, faster than 94.45% of Python3 online submissions for Score of Parentheses.
+  - Memory Usage: 14 MB, less than 30.17% of Python3 online submissions for Score of Parentheses.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
