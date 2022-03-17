@@ -1,7 +1,8 @@
 # introduction of rust
 - documents of rust
-    - english : https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
-    - korean : https://rinthel.github.io/rust-lang-book-ko/ch02-00-guessing-game-tutorial.html
+  - brief explanation (korean): https://parksb.github.io/article/35.html
+    - english nanaul : https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
+    - korean manual : https://rinthel.github.io/rust-lang-book-ko/ch02-00-guessing-game-tutorial.html
 - leetcode supports rust.
 - learn rust using docker
 - docker hub container name is rust:latest
