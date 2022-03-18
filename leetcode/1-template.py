@@ -47,7 +47,7 @@ def run(s,expect):
         print("SUCCESS -> ",end="")
     else :
         print("ERROR(",expect,") -> ",sep="",end="")
-    print(s , end="")  
+    print(r, s , end="")  
     print()
 
 if (__name__ == "__main__"):

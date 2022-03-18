@@ -9,6 +9,7 @@
   - [1.8. regular expression (import re)](#18-regular-expression-import-re)
     - [1.8.1. difference between re.search() and re.match()](#181-difference-between-research-and-rematch)
   - [1.9. format string](#19-format-string)
+  - [1.10. lexicographiacll order](#110-lexicographiacll-order)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -55,6 +56,7 @@
 - [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
 - [46. Validate Stack Sequences (#946) - medium : [python] / [rust]](#46-validate-stack-sequences-946---medium--python--rust)
 - [47. Score of Parentheses (#856) - medium : [python]](#47-score-of-parentheses-856---medium--python)
+- [48. Remove Duplicate Letters (#316) (#1081) - medium : [python]](#48-remove-duplicate-letters-316-1081---medium--python)
 
 --------------------
 leetcode
@@ -164,6 +166,10 @@ int GCD(int a, int b){
 ## 1.9. format string
 - https://hyjykelly.tistory.com/65
 - performance comparison : https://brownbears.tistory.com/421
+
+## 1.10. lexicographiacll order
+  - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
+  - https://leetcode.com/problems/remove-duplicate-letters/submissions/
 
 # 2. Meidan of Two Sorted Arrays - hard
 - hard
@@ -760,9 +766,14 @@ we can predict that denominator is 2**L with Level L.
   - Runtime: 28 ms, faster than 94.45% of Python3 online submissions for Score of Parentheses.
   - Memory Usage: 14 MB, less than 30.17% of Python3 online submissions for Score of Parentheses.
 
-
-
-
+# 48. Remove Duplicate Letters (#316) (#1081) - medium : [python]
+- medium : i need to understand lexicographiacll (alphaveticall) order
+  - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
+- Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+- https://leetcode.com/problems/remove-duplicate-letters/
+- [removeDuplicateLetters.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeDuplicateLetters.py) : passed
+  - Runtime: 56 ms, faster than 48.34% of Python3 online submissions for Remove Duplicate Letters.
+  - Memory Usage: 14 MB, less than 54.66% of Python3 online submissions for Remove Duplicate Letters.
 
 
 
