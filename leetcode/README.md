@@ -10,6 +10,7 @@
     - [1.8.1. difference between re.search() and re.match()](#181-difference-between-research-and-rematch)
   - [1.9. format string](#19-format-string)
   - [1.10. lexicographiacll order](#110-lexicographiacll-order)
+  - [1.11. Books & URL](#111-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -58,6 +59,7 @@
 - [47. Score of Parentheses (#856) - medium : [python]](#47-score-of-parentheses-856---medium--python)
 - [48. Remove Duplicate Letters (#316) (#1081) - medium : [python]](#48-remove-duplicate-letters-316-1081---medium--python)
 - [49. Maximum Frequency Stack (#895) - hard : [python]](#49-maximum-frequency-stack-895---hard--python)
+- [50.](#50)
 
 --------------------
 leetcode
@@ -172,6 +174,10 @@ int GCD(int a, int b){
   - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
   - https://leetcode.com/problems/remove-duplicate-letters/submissions/
 
+## 1.11. Books & URL
+- Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
+- RealPython : http://www.realpython.org
+- 
 # 2. Meidan of Two Sorted Arrays - hard
 - hard
 - https://leetcode.com/problems/median-of-two-sorted-arrays/
@@ -787,17 +793,47 @@ we can predict that denominator is 2**L with Level L.
     - int pop() removes and returns the most frequent element in the stack.
       - If there is a tie for the most frequent element, the element closest to the stack's top is removed and returned.
 - https://leetcode.com/problems/maximum-frequency-stack/
-- [FreqStack.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack.py) : 36/37 timeout   Dictionary
+- [FreqStack.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack.py) : 36/37 timeout   Dictionary  
 - [FreqStack2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack2.py) : passed    List
   - Runtime: 9880 ms, faster than 5.04% of Python3 online submissions for Maximum Frequency Stack.
   - Memory Usage: 22.4 MB, less than 85.58% of Python3 online submissions for Maximum Frequency Stack.
-- - [FreqStack3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack3.py) : passed  basic Llist , but dictionary is faster than list for finding whether it is in or not. 
+- [FreqStack3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack3.py) : passed  basic Llist , but dictionary is faster than list for finding whether it is in or not. 
   - Runtime: 9039 ms, faster than 5.04% of Python3 online submissions for Maximum Frequency Stack.
   - Memory Usage: 22.8 MB, less than 35.18% of Python3 online submissions for Maximum Frequency Stack.
+- - [FreqStack4-BestSolution.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack4-BestSolution.py)  : ***if i have the counter for each value , we can get top level instantly.  and we should use dictionary to run fast.*** 
 - algorithm : what is faster find and push and pop between dictionary and list? 
   - [Faster Lookups In Python. Comparison of dictionaries and lists : The fastest way to repeatedly lookup data with millions of entries in Python is using dictionaries.](https://towardsdatascience.com/faster-lookups-in-python-1d7503e9cd38)
+```cpp
+  freqStack.push(5); // The stack is [5]
+    stack[0] = {5}
+  freqStack.push(7); // The stack is [5,7]
+      stack[0] = {5,7}   7 is recent 
+  freqStack.push(5); // The stack is [5,7,5]
+      stack[1] = {5}
+      stack[0] = {5,7}
+  freqStack.push(7); // The stack is [5,7,5,7]
+      stack[1] = {5,7}
+      stack[0] = {5,7}
+  freqStack.push(4); // The stack is [5,7,5,7,4]
+      stack[1] = {5,7}
+      stack[0] = {5,7,4}
+  freqStack.push(5); // The stack is [5,7,5,7,4,5]
+      stack[2] = {5}     <- top stack level
+      stack[1] = {5,7}
+      stack[0] = {5,7,4}
+  freqStack.pop();   // return 5, as 5 is the most frequent. The stack becomes [5,7,5,7,4].
+      stack[2] = {}
+      stack[1] = {5,7}   <- top stack level
+      stack[0] = {5,7,4}
+  freqStack.pop();   // return 7, as 5 and 7 is the most frequent, but 7 is closest to the top. The stack becomes [5,7,5,4].
+      stack[2] = {}
+      stack[1] = {5}   <- top stack level
+      stack[0] = {5,7,4}
+  freqStack.pop();   // return 5, as 5 is the most frequent. The stack becomes [5,7,4].
+  freqStack.pop();   // return 4, as 4, 5 and 7 is the most frequent, but 4 is closest to the top. The stack becomes [5,7].
+```
 
-
+# 50. 
 
 
 
