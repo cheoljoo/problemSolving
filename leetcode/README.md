@@ -57,6 +57,7 @@
 - [46. Validate Stack Sequences (#946) - medium : [python] / [rust]](#46-validate-stack-sequences-946---medium--python--rust)
 - [47. Score of Parentheses (#856) - medium : [python]](#47-score-of-parentheses-856---medium--python)
 - [48. Remove Duplicate Letters (#316) (#1081) - medium : [python]](#48-remove-duplicate-letters-316-1081---medium--python)
+- [49. Maximum Frequency Stack (#895) - hard : [python]](#49-maximum-frequency-stack-895---hard--python)
 
 --------------------
 leetcode
@@ -770,15 +771,31 @@ we can predict that denominator is 2**L with Level L.
 - medium : i need to understand lexicographiacll (alphaveticall) order
   - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
 - Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+- Given a string s, return the lexicographically smallest subsequence of s that contains all the distinct characters of s exactly once.
 - https://leetcode.com/problems/remove-duplicate-letters/
+- https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/
 - [removeDuplicateLetters.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeDuplicateLetters.py) : passed
   - Runtime: 56 ms, faster than 48.34% of Python3 online submissions for Remove Duplicate Letters.
   - Memory Usage: 14 MB, less than 54.66% of Python3 online submissions for Remove Duplicate Letters.
 
-
-
-
-
+# 49. Maximum Frequency Stack (#895) - hard : [python]
+- hard
+- Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
+  - Implement the FreqStack class:
+    - FreqStack() constructs an empty frequency stack.
+    - void push(int val) pushes an integer val onto the top of the stack.
+    - int pop() removes and returns the most frequent element in the stack.
+      - If there is a tie for the most frequent element, the element closest to the stack's top is removed and returned.
+- https://leetcode.com/problems/maximum-frequency-stack/
+- [FreqStack.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack.py) : 36/37 timeout   Dictionary
+- [FreqStack2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack2.py) : passed    List
+  - Runtime: 9880 ms, faster than 5.04% of Python3 online submissions for Maximum Frequency Stack.
+  - Memory Usage: 22.4 MB, less than 85.58% of Python3 online submissions for Maximum Frequency Stack.
+- - [FreqStack3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/FreqStack3.py) : passed  basic Llist , but dictionary is faster than list for finding whether it is in or not. 
+  - Runtime: 9039 ms, faster than 5.04% of Python3 online submissions for Maximum Frequency Stack.
+  - Memory Usage: 22.8 MB, less than 35.18% of Python3 online submissions for Maximum Frequency Stack.
+- algorithm : what is faster find and push and pop between dictionary and list? 
+  - [Faster Lookups In Python. Comparison of dictionaries and lists : The fastest way to repeatedly lookup data with millions of entries in Python is using dictionaries.](https://towardsdatascience.com/faster-lookups-in-python-1d7503e9cd38)
 
 
 
