@@ -843,6 +843,10 @@ we can predict that denominator is 2**L with Level L.
 - [minDominoRotations.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDominoRotations.py) : passed
   - Runtime: 1651 ms, faster than 36.16% of Python3 online submissions for Minimum Domino Rotations For Equal Row.
   - Memory Usage: 14.9 MB, less than 94.32% of Python3 online submissions for Minimum Domino Rotations For Equal Row.
+- [minDominoRotations2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDominoRotations2.py) : passed
+  - Runtime: 1291 ms, faster than 71.83% of Python3 online submissions for Minimum Domino Rotations For Equal Row.
+  - Memory Usage: 15.1 MB, less than 77.02% of Python3 online submissions for Minimum Domino Rotations For Equal Row.
+
 
 
 
