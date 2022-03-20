@@ -60,9 +60,11 @@
 - [48. Remove Duplicate Letters (#316) (#1081) - medium : [python]](#48-remove-duplicate-letters-316-1081---medium--python)
 - [49. Maximum Frequency Stack (#895) - hard : [python]](#49-maximum-frequency-stack-895---hard--python)
 - [50. Minimum Domino Rotations For Equal Row (#1007) - medium [python]](#50-minimum-domino-rotations-for-equal-row-1007---medium-python)
+- [51. Count Collisions on a Road (#2211) - medium [python] : 2020-03-20 Weekly Contest 285](#51-count-collisions-on-a-road-2211---medium-python--2020-03-20-weekly-contest-285)
+- [52. Maximum Points in an Archery Competition (#2212) - medium [python] : 2020-03-20 Weekly Contest 285](#52-maximum-points-in-an-archery-competition-2212---medium-python--2020-03-20-weekly-contest-285)
 
 --------------------
-leetcode
+leetcode : my introduction https://leetcode.com/cheoljoo/
 # 1. knowledge
 ## 1.1. sort performance
 - update and sort is faster than update-insert each elements
@@ -846,6 +848,135 @@ we can predict that denominator is 2**L with Level L.
 - [minDominoRotations2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDominoRotations2.py) : passed
   - Runtime: 1291 ms, faster than 71.83% of Python3 online submissions for Minimum Domino Rotations For Equal Row.
   - Memory Usage: 15.1 MB, less than 77.02% of Python3 online submissions for Minimum Domino Rotations For Equal Row.
+- algorithm: https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/discuss/1865386/python3-Easy-Understandable-but-not-fast-(Runtime%3A-1291-ms-faster-than-71.83-)
+  - the same number is tops[0] or bottoms[0].
+  - when we find top row will have the same number.
+    - count tops[0] in tops   -> min (count , len(tops) - count)
+    - count bottoms[0] in tops   -> min (count , len(tops) - count)
+  - when we find bottom row will have the same number.
+    - count tops[0] in bottoms   -> min (count , len(bottoms) - count)
+    - count bottoms[0] in bottoms   -> min (count , len(bottms) - count)
+  - minimum count of these counts is answer  
+
+# 51. Count Collisions on a Road (#2211) - medium [python] : 2020-03-20 Weekly Contest 285
+- 2020-03-20 Weekly Contest 285 : https://leetcode.com/contest/weekly-contest-285/
+- medium : it is good
+- There are n cars on an infinitely long road. The cars are numbered from 0 to n - 1 from left to right and each car is present at a unique point.
+  - You are given a 0-indexed string directions of length n. directions[i] can be either 'L', 'R', or 'S' denoting whether the ith car is moving towards the left, towards the right, or staying at its current point respectively. Each moving car has the same speed.
+  - The number of collisions can be calculated as follows:
+    - When two cars moving in opposite directions collide with each other, the number of collisions increases by 2.
+    - When a moving car collides with a stationary car, the number of collisions increases by 1.
+  - After a collision, the cars involved can no longer move and will stay at the point where they collided. Other than that, cars cannot change their state or direction of motion.
+  - Return the total number of collisions that will happen on the road.
+- https://leetcode.com/problems/count-collisions-on-a-road/
+- [countCollisions.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countCollisions.py) : passed
+
+# 52. Maximum Points in an Archery Competition (#2212) - medium [python] : 2020-03-20 Weekly Contest 285
+- 2020-03-20 Weekly Contest 285 : https://leetcode.com/contest/weekly-contest-285/
+- medium
+- problem
+```
+Alice and Bob are opponents in an archery competition. The competition has set the following rules:
+
+    Alice first shoots numArrows arrows and then Bob shoots numArrows arrows.
+    The points are then calculated as follows:
+        The target has integer scoring sections ranging from 0 to 11 inclusive.
+        For each section of the target with score k (in between 0 to 11), say Alice and Bob have shot ak and bk arrows on that section respectively. If ak >= bk, then Alice takes k points. If ak < bk, then Bob takes k points.
+        However, if ak == bk == 0, then nobody takes k points.
+    For example, if Alice and Bob both shot 2 arrows on the section with score 11, then Alice takes 11 points. On the other hand, if Alice shot 0 arrows on the section with score 11 and Bob shot 2 arrows on that same section, then Bob takes 11 points.
+
+You are given the integer numArrows and an integer array aliceArrows of size 12, which represents the number of arrows Alice shot on each scoring section from 0 to 11. Now, Bob wants to maximize the total number of points he can obtain.
+
+Return the array bobArrows which represents the number of arrows Bob shot on each scoring section from 0 to 11. The sum of the values in bobArrows should equal numArrows.
+
+If there are multiple ways for Bob to earn the maximum total points, return any one of them.
+```
+- https://leetcode.com/problems/maximum-points-in-an-archery-competition/
+- [maximumBobPoints.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBobPoints.py) : passed  - we can get score from mask.
+  - 510 ms
+- [maximumBobPoints2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBobPoints2.py) : passed - optimization (mask , score)
+  - Runtime: 396 ms, faster than 100.00% of Python3 online submissions for Maximum Points in an Archery Competition
+  - Memory Usage: 14.2 MB, less than 25.00% of Python3 online submissions for Maximum Points in an Archery Competition.
+- algorithm :
+  - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
