@@ -15,6 +15,8 @@
   - [9.2. string](#92-string)
   - [9.3. Hash Map](#93-hash-map)
 - [10. error handling](#10-error-handling)
+- [Generic Types, Traits, and Lifetimes](#generic-types-traits-and-lifetimes)
+  - [Generic](#generic)
 
 --------
 
@@ -376,7 +378,18 @@ impl Guess {
 }
 ```
 
+# Generic Types, Traits, and Lifetimes
+- Every programming language has tools for effectively handling the duplication of concepts. In Rust, one such tool is generics.  모든 프로그래밍 언어는 컨셉의 복제를 효율적으로 다루기 위한 도구를 가지고 있습니다; 러스트에서, 그러한 도구 중 하나가 바로 제네릭(generic) 입니다.  ex. Option<T>
+- Traits (속성) : traits to define behavior in a generic way.  트레잇(trait) 에 대하여 논의할 것인데, 이는 동작을 제네릭 한 방식으로 정의하는
+방법을 말합니다. 트레잇은 제네릭 타입과 결합되어 제네릭 타입에 대해 아무 타입이나 허용하지 않고,
+특정 동작을 하는 타입으로 제한할 수 있습니다.
+- lifetimes, a variety of generics that give the compiler information about how references relate to each other. Lifetimes allow
+us to borrow values in many situations while still enabling the compiler to
+check that the references are valid. 라이프타임은 수많은 상황에서 값을 빌릴 수 있도록 허용해 주고도 여전히 참조자들이 유효할지를 컴파일러가 검증하도록 해주는 러스트의 지능입니다.
 
+## Generic
+- C++ template
+- 
 
 
 

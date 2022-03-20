@@ -59,7 +59,7 @@
 - [47. Score of Parentheses (#856) - medium : [python]](#47-score-of-parentheses-856---medium--python)
 - [48. Remove Duplicate Letters (#316) (#1081) - medium : [python]](#48-remove-duplicate-letters-316-1081---medium--python)
 - [49. Maximum Frequency Stack (#895) - hard : [python]](#49-maximum-frequency-stack-895---hard--python)
-- [50.](#50)
+- [50. Minimum Domino Rotations For Equal Row (#1007) - medium [python]](#50-minimum-domino-rotations-for-equal-row-1007---medium-python)
 
 --------------------
 leetcode
@@ -833,8 +833,16 @@ we can predict that denominator is 2**L with Level L.
   freqStack.pop();   // return 4, as 4, 5 and 7 is the most frequent, but 4 is closest to the top. The stack becomes [5,7].
 ```
 
-# 50. 
-
+# 50. Minimum Domino Rotations For Equal Row (#1007) - medium [python]
+- medium
+- In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)
+  - We may rotate the ith domino, so that tops[i] and bottoms[i] swap values.
+  - Return the minimum number of rotations so that all the values in tops are the same, or all the values in bottoms are the same.
+  - If it cannot be done, return -1.
+- https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
+- [minDominoRotations.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDominoRotations.py) : passed
+  - Runtime: 1651 ms, faster than 36.16% of Python3 online submissions for Minimum Domino Rotations For Equal Row.
+  - Memory Usage: 14.9 MB, less than 94.32% of Python3 online submissions for Minimum Domino Rotations For Equal Row.
 
 
 
