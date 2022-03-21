@@ -39,16 +39,6 @@ class Solution:
             return t
         
     def countDominoRotations(self,domino_value,tops: List[int], bottoms: List[int]) -> int:
-        # rotate_count = 0
-        # for i in range(len(tops)):
-        #     if domino_value == tops[i]:
-        #         rotate_count += 1
-        # print("tops:",domino_value,rotate_count)
-        # rotate_count = 0
-        # for i in range(len(tops)):
-        #     if domino_value == bottoms[i]:
-        #         rotate_count += 1
-        # print("bottoms:",domino_value,rotate_count)
         rotate_top_count = 0
         rotate_bottom_count = 0
         FindFlag = True 
@@ -57,7 +47,7 @@ class Solution:
                 rotate_top_count += 1
             if domino_value == bottoms[i]:
                 rotate_bottom_count += 1
-            elif domino_value != tops[i]:   # domino_value != tops[i] and domino_value != bottoms[i]
+            if domino_value != tops[i] and domino_value != bottoms[i] :
                 FindFlag = False
                 break
         if FindFlag == True :
