@@ -15,6 +15,7 @@
   - [1.8. 잃어버린 괄호](#18-잃어버린-괄호)
   - [1.9. 뒤집어진 소수](#19-뒤집어진-소수)
   - [1.10. 2020+Online+Code+Jam+2 A번 - 해적과보석 : [python]](#110-2020onlinecodejam2-a번---해적과보석--python)
+- [2020+Online+Code+Jam+2 B번 장난감 동맹군 : [python]](#2020onlinecodejam2-b번-장난감-동맹군--python)
 
 ----------
 
@@ -378,3 +379,14 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
 - Output
   - 각테스트케이스에 대하여 두사람이 최선을 다해 게임을 플레이했을때, (ScoreA - ScoreB) 값을구하여출력한다.
 - [pirateJewel.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/pirateJewel.py) : passed
+
+# 2020+Online+Code+Jam+2 B번 장난감 동맹군 : [python]
+- 2개의 동맹으로 나눌 수 있는지? YES or NO
+- [toyAlly.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/toyAlly.py) : passed
+- [toyAlly2.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/toyAlly2.py) : passed   optimized to find starting node each group
+- algorithm :
+  - 들어오는 순서대로 처리하면 안 될 듯!
+  - 일단 전체적으로 서로 엮여 있는 것들이 group이다.
+    - 각 group이 모두 잘 분류가 되어져있는지 판단한다.
+
+
