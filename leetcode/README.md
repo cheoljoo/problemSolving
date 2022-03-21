@@ -10,7 +10,9 @@
     - [1.8.1. difference between re.search() and re.match()](#181-difference-between-research-and-rematch)
   - [1.9. format string](#19-format-string)
   - [1.10. lexicographiacll order](#110-lexicographiacll-order)
-  - [1.11. Books & URL](#111-books--url)
+  - [1.11. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#111-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
+  - [1.12. list : python remove element from a list](#112-list--python-remove-element-from-a-list)
+  - [1.13. Books & URL](#113-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -62,6 +64,8 @@
 - [50. Minimum Domino Rotations For Equal Row (#1007) - medium [python]](#50-minimum-domino-rotations-for-equal-row-1007---medium-python)
 - [51. Count Collisions on a Road (#2211) - medium [python] : 2020-03-20 Weekly Contest 285](#51-count-collisions-on-a-road-2211---medium-python--2020-03-20-weekly-contest-285)
 - [52. Maximum Points in an Archery Competition (#2212) - medium [python] : 2020-03-20 Weekly Contest 285](#52-maximum-points-in-an-archery-competition-2212---medium-python--2020-03-20-weekly-contest-285)
+- [53. Longest Substring of One Repeating Character (#2213) - hard : 2020-03-20 Weekly Contest 285  <fail>](#53-longest-substring-of-one-repeating-character-2213---hard--2020-03-20-weekly-contest-285--fail)
+- [54. Partition Labels (#763) - medium : [python]](#54-partition-labels-763---medium--python)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -173,10 +177,20 @@ int GCD(int a, int b){
 - performance comparison : https://brownbears.tistory.com/421
 
 ## 1.10. lexicographiacll order
-  - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
-  - https://leetcode.com/problems/remove-duplicate-letters/submissions/
+- alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
+- https://leetcode.com/problems/remove-duplicate-letters/submissions/
 
-## 1.11. Books & URL
+## 1.11. dictionary : Python Remove Key from a Dictionary: A Complete Guide
+- dictionary.pop(key_to_remove, not_found)
+  - https://careerkarma.com/blog/python-remove-key-from-a-dictionary/#:~:text=To%20remove%20a%20key%20from,item%20after%20the%20del%20keyword.
+
+## 1.12. list : python remove element from a list 
+- thislist.remove("banana")
+- thislist.pop(1)
+- del thislist[0]
+- thislist.clear()
+  - https://www.w3schools.com/python/python_lists_remove.asp
+## 1.13. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - 
@@ -888,9 +902,9 @@ Return the array bobArrows which represents the number of arrows Bob shot on eac
 If there are multiple ways for Bob to earn the maximum total points, return any one of them.
 ```
 - https://leetcode.com/problems/maximum-points-in-an-archery-competition/
-- [maximumBobPoints.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBobPoints.py) : passed  - we can get score from mask.
+- [maximumBobPoints.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBobPoints.py) : passed  - we can get score from mask.(3H)
   - 510 ms
-- [maximumBobPoints2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBobPoints2.py) : passed - optimization (mask , score)
+- [maximumBobPoints2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBobPoints2.py) : passed - optimization (mask , score) (3H)
   - Runtime: 396 ms, faster than 100.00% of Python3 online submissions for Maximum Points in an Archery Competition
   - Memory Usage: 14.2 MB, less than 25.00% of Python3 online submissions for Maximum Points in an Archery Competition.
 - algorithm :
@@ -901,13 +915,42 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
       - self.dp(numArrows- (aliceArrows[scoring_section]+1) , mask , scoring_section-1 , score , aliceArrows[:-1])
       - self.dp(numArrows , mask , scoring_section-1 , score , aliceArrows[:-1])
 
+# 53. Longest Substring of One Repeating Character (#2213) - hard : 2020-03-20 Weekly Contest 285  <fail>
+- 2020-03-20 Weekly Contest 285 : https://leetcode.com/contest/weekly-contest-285/
+- hard : 
+- problem :
+  - You are given a 0-indexed string s. You are also given a 0-indexed string queryCharacters of length k and a 0-indexed array of integer indices queryIndices of length k, both of which are used to describe k queries.
+  - The ith query updates the character in s at index queryIndices[i] to the character queryCharacters[i].
+  - Return an array lengths of length k where lengths[i] is the length of the longest substring of s consisting of only one repeating character after the ith query is performed.
+- https://leetcode.com/problems/longest-substring-of-one-repeating-character/
+- [longestRepeating.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestRepeating.py) : timeout  47 / 56 test cases passed.
+- [longestRepeating2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestRepeating2.py) : 
 
-
-
-
-
-
-
+# 54. Partition Labels (#763) - medium : [python]
+- medium
+- problem :
+  - You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
+  - Note that the partition is done so that after concatenating all the parts in order, the resultant string should be s.
+  - Return a list of integers representing the size of these parts.
+- https://leetcode.com/problems/partition-labels/
+- [partitionLabels.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/partitionLabels.py) : passed
+  - Runtime: 40 ms, faster than 92.01% of Python3 online submissions for Partition Labels.
+  - Memory Usage: 13.8 MB, less than 78.97% of Python3 online submissions for Partition Labels.
+- algorithm :
+  - current character does not exist after this position.  (frequency)
+    ```python
+        freq = {}   # set frequency
+        stack = {}  # this is dictionary push / pop
+        for (i,c) in enumerate(list(s)) :
+            freq[c] -= 1
+            if freq[c] == 0 :
+                stack.pop(c,None)  # pop
+                if len(stack.keys()) == 0:
+                    r.append(i+1-p)
+                    p = i+1
+            else :
+                stack[c] = 0  # push    
+    ```
 
 
 

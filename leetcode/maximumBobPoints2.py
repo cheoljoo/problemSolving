@@ -43,7 +43,7 @@ class Solution:
                 r.append(0)
         r = [zeroTarget] + r
         return r
-    def dp(self,numArrows: int, mask , scoring_section  , score ,aliceArrows: List[int]) -> (int,int):
+    def dp(self,numArrows: int, mask , scoring_section  , score ,aliceArrows: List[int]):
         # print("dp:",numArrows  , "mask=",end="")
         # for i in range(len(aliceArrows)):
         #     if mask & 1<<i :
