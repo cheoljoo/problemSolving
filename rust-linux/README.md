@@ -25,6 +25,11 @@
   - brief explanation (korean): https://parksb.github.io/article/35.html
     - english nanaul : https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
     - korean manual : https://rinthel.github.io/rust-lang-book-ko/ch02-00-guessing-game-tutorial.html
+  - documents
+    - https://doc.rust-lang.org/rust-by-example/std/hash.html
+    - https://doc.rust-lang.org/std/collections/struct.HashMap.html
+    - https://doc.rust-lang.org/rust-by-example/flow_control/for.html
+    - https://doc.rust-lang.org/rust-by-example/flow_control/while.html
 - leetcode supports rust.
 - learn rust using docker
 - docker hub container name is rust:latest

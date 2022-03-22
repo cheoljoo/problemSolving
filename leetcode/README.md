@@ -57,15 +57,16 @@
 - [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 <fail>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13-fail)
 - [44. Simplify Path (#71) - medium](#44-simplify-path-71---medium)
 - [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
-- [46. Validate Stack Sequences (#946) - medium : [python] / [rust]](#46-validate-stack-sequences-946---medium--python--rust)
-- [47. Score of Parentheses (#856) - medium : [python]](#47-score-of-parentheses-856---medium--python)
+- [46. Validate Stack Sequences (#946) - medium / python / rust](#46-validate-stack-sequences-946---medium--python--rust)
+- [47. Score of Parentheses (#856) - medium : / python](#47-score-of-parentheses-856---medium---python)
 - [48. Remove Duplicate Letters (#316) (#1081) - medium : [python]](#48-remove-duplicate-letters-316-1081---medium--python)
-- [49. Maximum Frequency Stack (#895) - hard : [python]](#49-maximum-frequency-stack-895---hard--python)
-- [50. Minimum Domino Rotations For Equal Row (#1007) - medium [python]](#50-minimum-domino-rotations-for-equal-row-1007---medium-python)
-- [51. Count Collisions on a Road (#2211) - medium [python] : 2020-03-20 Weekly Contest 285](#51-count-collisions-on-a-road-2211---medium-python--2020-03-20-weekly-contest-285)
-- [52. Maximum Points in an Archery Competition (#2212) - medium [python] : 2020-03-20 Weekly Contest 285](#52-maximum-points-in-an-archery-competition-2212---medium-python--2020-03-20-weekly-contest-285)
+- [49. Maximum Frequency Stack (#895) - hard : / python](#49-maximum-frequency-stack-895---hard---python)
+- [50. Minimum Domino Rotations For Equal Row (#1007) - medium / python](#50-minimum-domino-rotations-for-equal-row-1007---medium--python)
+- [51. Count Collisions on a Road (#2211) - medium / python : 2020-03-20 Weekly Contest 285](#51-count-collisions-on-a-road-2211---medium--python--2020-03-20-weekly-contest-285)
+- [52. Maximum Points in an Archery Competition (#2212) - medium / python : 2020-03-20 Weekly Contest 285 (3H)](#52-maximum-points-in-an-archery-competition-2212---medium--python--2020-03-20-weekly-contest-285-3h)
 - [53. Longest Substring of One Repeating Character (#2213) - hard : 2020-03-20 Weekly Contest 285  <fail>](#53-longest-substring-of-one-repeating-character-2213---hard--2020-03-20-weekly-contest-285--fail)
-- [54. Partition Labels (#763) - medium : [python]](#54-partition-labels-763---medium--python)
+- [54. Partition Labels (#763) - medium / python / 2H](#54-partition-labels-763---medium--python--2h)
+- [55. Smallest String With A Given Numeric Value (#1663) - medium / python](#55-smallest-string-with-a-given-numeric-value-1663---medium--python)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -766,7 +767,7 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 - [minRemoveToMakeValid.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minRemoveToMakeValid.py) : passed
 
-# 46. Validate Stack Sequences (#946) - medium : [python] / [rust]
+# 46. Validate Stack Sequences (#946) - medium / python / rust
 - medium
 - Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
 - https://leetcode.com/problems/validate-stack-sequences/
@@ -777,7 +778,7 @@ we can predict that denominator is 2**L with Level L.
   - Runtime: 0 ms, faster than 100.00% of Rust online submissions for Validate Stack Sequences.
   - Memory Usage: 2.2 MB, less than 33.33% of Rust online submissions for Validate Stack Sequences.
 
-# 47. Score of Parentheses (#856) - medium : [python]
+# 47. Score of Parentheses (#856) - medium : / python
 - medium
 - Given a balanced parentheses string s, return the score of the string.
   - The score of a balanced parentheses string is based on the following rule:
@@ -800,7 +801,7 @@ we can predict that denominator is 2**L with Level L.
   - Runtime: 56 ms, faster than 48.34% of Python3 online submissions for Remove Duplicate Letters.
   - Memory Usage: 14 MB, less than 54.66% of Python3 online submissions for Remove Duplicate Letters.
 
-# 49. Maximum Frequency Stack (#895) - hard : [python]
+# 49. Maximum Frequency Stack (#895) - hard : / python
 - hard
 - Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
   - Implement the FreqStack class:
@@ -849,7 +850,7 @@ we can predict that denominator is 2**L with Level L.
   freqStack.pop();   // return 4, as 4, 5 and 7 is the most frequent, but 4 is closest to the top. The stack becomes [5,7].
 ```
 
-# 50. Minimum Domino Rotations For Equal Row (#1007) - medium [python]
+# 50. Minimum Domino Rotations For Equal Row (#1007) - medium / python
 - medium
 - In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)
   - We may rotate the ith domino, so that tops[i] and bottoms[i] swap values.
@@ -872,7 +873,7 @@ we can predict that denominator is 2**L with Level L.
     - count bottoms[0] in bottoms   -> min (count , len(bottms) - count)
   - minimum count of these counts is answer  
 
-# 51. Count Collisions on a Road (#2211) - medium [python] : 2020-03-20 Weekly Contest 285
+# 51. Count Collisions on a Road (#2211) - medium / python : 2020-03-20 Weekly Contest 285
 - 2020-03-20 Weekly Contest 285 : https://leetcode.com/contest/weekly-contest-285/
 - medium : it is good
 - There are n cars on an infinitely long road. The cars are numbered from 0 to n - 1 from left to right and each car is present at a unique point.
@@ -885,7 +886,7 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/count-collisions-on-a-road/
 - [countCollisions.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countCollisions.py) : passed
 
-# 52. Maximum Points in an Archery Competition (#2212) - medium [python] : 2020-03-20 Weekly Contest 285
+# 52. Maximum Points in an Archery Competition (#2212) - medium / python : 2020-03-20 Weekly Contest 285 (3H)
 - 2020-03-20 Weekly Contest 285 : https://leetcode.com/contest/weekly-contest-285/
 - medium
 - problem
@@ -926,14 +927,14 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
 - [longestRepeating.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestRepeating.py) : timeout  47 / 56 test cases passed.
 - [longestRepeating2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestRepeating2.py) : 
 
-# 54. Partition Labels (#763) - medium : [python]
+# 54. Partition Labels (#763) - medium / python / 2H
 - medium
 - problem :
   - You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
   - Note that the partition is done so that after concatenating all the parts in order, the resultant string should be s.
   - Return a list of integers representing the size of these parts.
 - https://leetcode.com/problems/partition-labels/
-- [partitionLabels.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/partitionLabels.py) : passed
+- [partitionLabels.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/partitionLabels.py) : passed (2H)
   - Runtime: 40 ms, faster than 92.01% of Python3 online submissions for Partition Labels.
   - Memory Usage: 13.8 MB, less than 78.97% of Python3 online submissions for Partition Labels.
 - algorithm :
@@ -952,12 +953,20 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
                 stack[c] = 0  # push    
     ```
 
-
-
-
-
-
-
+# 55. Smallest String With A Given Numeric Value (#1663) - medium / python
+- medium
+- problem :
+  - The numeric value of a lowercase character is defined as its position (1-indexed) in the alphabet, so the numeric value of a is 1, the numeric value of b is 2, the numeric value of c is 3, and so on.
+  - The numeric value of a string consisting of lowercase characters is defined as the sum of its characters' numeric values. For example, the numeric value of the string "abe" is equal to 1 + 2 + 5 = 8.
+  - You are given two integers n and k. Return the ***lexicographically smallest string*** with length equal to n and numeric value equal to k.
+  - Note that a string x is lexicographically smaller than string y if x comes before y in dictionary order, that is, either x is a prefix of y, or if i is the first position such that x[i] != y[i], then x[i] comes before y[i] in alphabetic order.
+- https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/
+- [getSmallestString.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/getSmallestString.py) : passed (1H)
+  - Runtime: 60 ms, faster than 89.86% of Python3 online submissions for Smallest String With A Given Numeric Value.
+  - Memory Usage: 14.9 MB, less than 87.56% of Python3 online submissions for Smallest String With A Given Numeric Value.
+- algorithm :
+  - find z counts until remainK - remianN < 26
+  - ord() chr()
 
 
 
