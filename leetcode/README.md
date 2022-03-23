@@ -66,7 +66,8 @@
 - [52. Maximum Points in an Archery Competition (#2212) - medium / python : 2020-03-20 Weekly Contest 285 (3H)](#52-maximum-points-in-an-archery-competition-2212---medium--python--2020-03-20-weekly-contest-285-3h)
 - [53. Longest Substring of One Repeating Character (#2213) - hard : 2020-03-20 Weekly Contest 285  <fail>](#53-longest-substring-of-one-repeating-character-2213---hard--2020-03-20-weekly-contest-285--fail)
 - [54. Partition Labels (#763) - medium / python / 2H](#54-partition-labels-763---medium--python--2h)
-- [55. Smallest String With A Given Numeric Value (#1663) - medium / python](#55-smallest-string-with-a-given-numeric-value-1663---medium--python)
+- [55. Smallest String With A Given Numeric Value (#1663) - medium / python / 2H](#55-smallest-string-with-a-given-numeric-value-1663---medium--python--2h)
+- [56. Broken Calculator (#991) - medium / python / 3H](#56-broken-calculator-991---medium--python--3h)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -953,7 +954,7 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
                 stack[c] = 0  # push    
     ```
 
-# 55. Smallest String With A Given Numeric Value (#1663) - medium / python
+# 55. Smallest String With A Given Numeric Value (#1663) - medium / python / 2H
 - medium
 - problem :
   - The numeric value of a lowercase character is defined as its position (1-indexed) in the alphabet, so the numeric value of a is 1, the numeric value of b is 2, the numeric value of c is 3, and so on.
@@ -968,8 +969,20 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - find z counts until remainK - remianN < 26
   - ord() chr()
 
-
-
+# 56. Broken Calculator (#991) - medium / python / 3H
+- medium
+- problem :
+  - There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:
+    - multiply the number on display by 2, or
+    - subtract 1 from the number on display.
+  - Given two integers startValue and target, return the minimum number of operations needed to display target on the calculator.
+- https://leetcode.com/problems/broken-calculator/
+- [brokenCalc.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/brokenCalc.py) : passed (3H)
+- algorithm :
+  - if target is odd , target + 1 and count + 1
+  - first of all , we reduce the target as half.  target//2 and count+1. then if target//2 is odd , target//2 + 1 and count + 1 until target//2 is greater than startValue.
+- best : [C++] || iterative || 100% faster || O(1) space
+  - https://leetcode.com/problems/broken-calculator/discuss/1875138/C%2B%2B-oror-iterative-oror-100-faster-oror-O(1)-space
 
 
 
