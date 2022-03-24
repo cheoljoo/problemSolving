@@ -68,6 +68,7 @@
 - [54. Partition Labels (#763) - medium / python / 2H](#54-partition-labels-763---medium--python--2h)
 - [55. Smallest String With A Given Numeric Value (#1663) - medium / python / 2H](#55-smallest-string-with-a-given-numeric-value-1663---medium--python--2h)
 - [56. Broken Calculator (#991) - medium / python / 3H](#56-broken-calculator-991---medium--python--3h)
+- [57. Boats to Save People (#881) - medium / python / 1H](#57-boats-to-save-people-881---medium--python--1h)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -984,9 +985,18 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
 - best : [C++] || iterative || 100% faster || O(1) space
   - https://leetcode.com/problems/broken-calculator/discuss/1875138/C%2B%2B-oror-iterative-oror-100-faster-oror-O(1)-space
 
-
-
-
+# 57. Boats to Save People (#881) - medium / python / 1H
+- medium
+- problem :
+  - You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.
+  - Return the minimum number of boats to carry every given person.
+- https://leetcode.com/problems/boats-to-save-people/
+- [numRescueBoats.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/numRescueBoats.py) : passed (1H)
+  - Runtime: 690 ms, faster than 32.63% of Python3 online submissions for Boats to Save People.
+  - Memory Usage: 20.9 MB, less than 80.59% of Python3 online submissions for Boats to Save People.
+- algorithm :
+  - one moves maximum two people . it is NP problem if some people.
+  - maxium weight should ride with minimum weight. 
 
 
 
