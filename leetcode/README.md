@@ -69,6 +69,7 @@
 - [55. Smallest String With A Given Numeric Value (#1663) - medium / python / 2H](#55-smallest-string-with-a-given-numeric-value-1663---medium--python--2h)
 - [56. Broken Calculator (#991) - medium / python / 3H](#56-broken-calculator-991---medium--python--3h)
 - [57. Boats to Save People (#881) - medium / python / 1H](#57-boats-to-save-people-881---medium--python--1h)
+- [58. Two City Scheduling (#1029) - medium / python / 1H](#58-two-city-scheduling-1029---medium--python--1h)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -998,14 +999,18 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - one moves maximum two people . it is NP problem if some people.
   - maxium weight should ride with minimum weight. 
 
-
-
-
-
-
-
-
-
+# 58. Two City Scheduling (#1029) - medium / python / 1H
+- medium
+- problem :
+  - A company is planning to interview 2n people. Given the array costs where costs[i] = [aCosti, bCosti], the cost of flying the ith person to city a is aCosti, and the cost of flying the ith person to city b is bCosti.
+  - Return the minimum cost to fly every person to a city such that exactly n people arrive in each city.
+- https://leetcode.com/problems/two-city-scheduling/
+- [twoCitySchedCost.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/twoCitySchedCost.py) : passed (1H)
+  - Runtime: 44 ms, faster than 83.79% of Python3 online submissions for Two City Scheduling.
+  - Memory Usage: 14 MB, less than 45.30% of Python3 online submissions for Two City Scheduling.
+- algorithm :
+  - if difference of distance between 2 cities is longer , we should choose this person to get in there with shorter distance.
+  - so get difference , and sort and process from reversed order (from longer distance)
 
 
 
