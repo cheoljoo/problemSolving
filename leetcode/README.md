@@ -1,6 +1,7 @@
 - [1. knowledge](#1-knowledge)
   - [1.1. sort performance](#11-sort-performance)
   - [1.2. sort keys](#12-sort-keys)
+    - [1.2.1. sorted data structure](#121-sorted-data-structure)
   - [1.3. Euclidean-algorithm : 유클리드 호제법](#13-euclidean-algorithm--유클리드-호제법)
   - [1.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#14-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
   - [1.5. hamming weight : number of '1' bits](#15-hamming-weight--number-of-1-bits)
@@ -53,7 +54,7 @@
 - [39. Copy List with Random Pointer (#138) - medium](#39-copy-list-with-random-pointer-138---medium)
 - [40. Find All K-Distant Indices in an Array (#2200) - easy : weekly contest for amazon 2022-03-13](#40-find-all-k-distant-indices-in-an-array-2200---easy--weekly-contest-for-amazon-2022-03-13)
 - [41. Count Artifacts That Can Be Extracted (#2201) - medium : weekly contest for amazon 2022-03-13](#41-count-artifacts-that-can-be-extracted-2201---medium--weekly-contest-for-amazon-2022-03-13)
-- [42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13](#42-maximize-the-topmost-element-after-k-moves-2202---medium--weekly-contest-for-amazon-2022-03-13)
+- [42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13 / <got help>](#42-maximize-the-topmost-element-after-k-moves-2202---medium--weekly-contest-for-amazon-2022-03-13--got-help)
 - [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 <fail>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13-fail)
 - [44. Simplify Path (#71) - medium](#44-simplify-path-71---medium)
 - [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
@@ -70,6 +71,7 @@
 - [56. Broken Calculator (#991) - medium / python / 3H](#56-broken-calculator-991---medium--python--3h)
 - [57. Boats to Save People (#881) - medium / python / 1H](#57-boats-to-save-people-881---medium--python--1h)
 - [58. Two City Scheduling (#1029) - medium / python / 1H](#58-two-city-scheduling-1029---medium--python--1h)
+- [59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <got help>](#59-minimum-operations-to-halve-array-sum-2208---medium--python--got-help)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -105,6 +107,13 @@ leetcode : my introduction https://leetcode.com/cheoljoo/
     >>> sorted(students, key=lambda x: getattr(x, 'grade'), reverse=True)
     [StudentFinal(name='Patty', grade=94), StudentFinal(name='Bill', grade=90), StudentFinal(name='Bart', grade=89)]
 ```
+
+### 1.2.1. sorted data structure
+- sorted data structure : [0] is the smallest number
+    - import heapq  
+    - heapq.heappush(list,value) heapq.heappop(list)   
+    - list[0] is minimal value.   
+    - if you want to maximum value , * -1.0 
 
 ## 1.3. Euclidean-algorithm : 유클리드 호제법
 - https://velog.io/@yerin4847/W1-%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C-%ED%98%B8%EC%A0%9C%EB%B2%95 - good explanation with movie
@@ -722,7 +731,7 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
 - [digArtifacts.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/digArtifacts.py) : passed
 
-# 42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13
+# 42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13 / <got help>
 - medium : <got help> I didn't understand what measn until now. I saw the following article before solving this problem.
   - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/discuss/1844542/Python-or-O(1)-space-O(1)-Time-or-Explanation-or-Comments-added
     - ![picture_explanation](https://assets.leetcode.com/users/images/63265d6c-7a19-4278-b73d-46f0999e47d8_1647147723.9620347.jpeg)
@@ -1012,11 +1021,21 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - if difference of distance between 2 cities is longer , we should choose this person to get in there with shorter distance.
   - so get difference , and sort and process from reversed order (from longer distance)
 
-
-
-
-
-
+# 59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <got help>
+- medium <got help>
+- problem : 
+  - You are given an array nums of positive integers. In one operation, you can choose any number from nums and reduce it to exactly half the number. (Note that you may choose this reduced number in future operations.)
+  - Return the minimum number of operations to reduce the sum of nums by at least half.
+- https://leetcode.com/contest/biweekly-contest-74/problems/minimum-operations-to-halve-array-sum/
+  - https://leetcode.com/problems/minimum-operations-to-halve-array-sum/  
+- [halveArray.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray.py) : 34 / 62 test cases passed.  timeout
+- [halveArray2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray2.py) : slower
+- [halveArray3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray3.py) : passed
+- algorithm :
+  - choose the largest number and set to half  then repeat again until sum is less than half of origin sum.
+  - we need sorted data struture (insert : logN , get the largest number : logN)
+  - <got help> sorted data structure : [0] is the smallest number
+    - import heapq   : heapq.heappush(list,value) heapq.heappop(list)   list[0] is minimal value.   if you want to maximum value , * -1.0 
 
 
 
