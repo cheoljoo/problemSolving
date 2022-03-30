@@ -33,6 +33,10 @@ class Solution:
         size = {}
         prev = ':'
         r = []
+        # 'babacc'
+        # mem['b'] = [[0,1],[2,3]]    size['b'] = [1,1]
+        # mem['a'] = [[1,2],[3,4]]    size['a'] = [1,1]
+        # mem['c'] = [[4,6]]          size['c'] = [2]
         for v in queryCharacters:
             if v not in mem:
                 mem[v] = []
@@ -61,17 +65,6 @@ class Solution:
         s = list(s)
         # print("ss:",s)
         for (i,v) in enumerate(queryIndices) :
-            # print(i,v,s[v])
-            # print(queryCharacters[i])
-            # if s[v-1] == s[v] :
-            #     beforeSame = True
-            # else :
-            #     beforeSame = False
-            # if s[v] == s[v+1] :
-            #     afterSame = True
-            # else :
-            #     afterSame = False
-            # print("s:",s,beforeSame,afterSame)
             # remove s[v] index in string
             if i == 14 :
                 pass
@@ -86,12 +79,17 @@ class Solution:
                         mem[s[v]].append([v+1,end]) 
                     mem[s[v]].sort()  
                     break
+            
+            # recalculate s[v]'s size
             m = 0
             for start,end in mem[s[v]] :
                 if m < end - start :
                     m = end - start
             size[s[v]] = m
-            ch = queryCharacters[i]   # vth insert ch
+            # size[s[v]] = max(mem[s[v]], key= lambda n: n[1]-n[0])
+            
+            # vth insert ch
+            ch = queryCharacters[i]   
             flag = 1
             for idx in reversed(range(len(mem[ch]))):
                 start,end = mem[ch][idx]   # mem[ch] was sorted

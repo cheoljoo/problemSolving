@@ -1,19 +1,23 @@
 - [1. knowledge](#1-knowledge)
   - [1.1. sort performance](#11-sort-performance)
   - [1.2. sort keys](#12-sort-keys)
-    - [1.2.1. sorted data structure](#121-sorted-data-structure)
-  - [1.3. Euclidean-algorithm : 유클리드 호제법](#13-euclidean-algorithm--유클리드-호제법)
-  - [1.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#14-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
-  - [1.5. hamming weight : number of '1' bits](#15-hamming-weight--number-of-1-bits)
-  - [1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#16-find--including-a-among-x1x2---if-x1x2)
-  - [1.7. two dimensional array initialize and set](#17-two-dimensional-array-initialize-and-set)
-  - [1.8. regular expression (import re)](#18-regular-expression-import-re)
-    - [1.8.1. difference between re.search() and re.match()](#181-difference-between-research-and-rematch)
-  - [1.9. format string](#19-format-string)
-  - [1.10. lexicographiacll order](#110-lexicographiacll-order)
-  - [1.11. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#111-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
-  - [1.12. list : python remove element from a list](#112-list--python-remove-element-from-a-list)
-  - [1.13. Books & URL](#113-books--url)
+  - [1.3. sorted data structure](#13-sorted-data-structure)
+    - [1.3.1. bisect](#131-bisect)
+    - [1.3.2. heapq](#132-heapq)
+    - [1.3.3. PriorityQueue](#133-priorityqueue)
+    - [1.3.4. sortedcontainers](#134-sortedcontainers)
+  - [1.4. Euclidean-algorithm : 유클리드 호제법](#14-euclidean-algorithm--유클리드-호제법)
+  - [1.5. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#15-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
+  - [1.6. hamming weight : number of '1' bits](#16-hamming-weight--number-of-1-bits)
+  - [1.7. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#17-find--including-a-among-x1x2---if-x1x2)
+  - [1.8. two dimensional array initialize and set](#18-two-dimensional-array-initialize-and-set)
+  - [1.9. regular expression (import re)](#19-regular-expression-import-re)
+    - [1.9.1. difference between re.search() and re.match()](#191-difference-between-research-and-rematch)
+  - [1.10. format string](#110-format-string)
+  - [1.11. lexicographiacll order](#111-lexicographiacll-order)
+  - [1.12. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#112-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
+  - [1.13. list : python remove element from a list](#113-list--python-remove-element-from-a-list)
+  - [1.14. Books & URL](#114-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -72,6 +76,9 @@
 - [57. Boats to Save People (#881) - medium / python / 1H](#57-boats-to-save-people-881---medium--python--1h)
 - [58. Two City Scheduling (#1029) - medium / python / 1H](#58-two-city-scheduling-1029---medium--python--1h)
 - [59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <got help>](#59-minimum-operations-to-halve-array-sum-2208---medium--python--got-help)
+- [60. Maximize Number of Subsequences in a String (#2207) - medium / python / 1H](#60-maximize-number-of-subsequences-in-a-string-2207---medium--python--1h)
+- [61. Search in Rotated Sorted Array (#33) - medium / python / 2H](#61-search-in-rotated-sorted-array-33---medium--python--2h)
+- [62. Search in Rotated Sorted Array II (#81) - medium / python / 1H](#62-search-in-rotated-sorted-array-ii-81---medium--python--1h)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -108,14 +115,35 @@ leetcode : my introduction https://leetcode.com/cheoljoo/
     [StudentFinal(name='Patty', grade=94), StudentFinal(name='Bill', grade=90), StudentFinal(name='Bart', grade=89)]
 ```
 
-### 1.2.1. sorted data structure
+## 1.3. sorted data structure
+### 1.3.1. bisect
+- import bisect
+- bisect.insort()
+
+### 1.3.2. heapq
 - sorted data structure : [0] is the smallest number
+  - https://www.daleseo.com/python-heapq/
     - import heapq  
     - heapq.heappush(list,value) heapq.heappop(list)   
     - list[0] is minimal value.   
     - if you want to maximum value , * -1.0 
 
-## 1.3. Euclidean-algorithm : 유클리드 호제법
+### 1.3.3. PriorityQueue
+- priority Queue (sorted with priority order)
+  - https://www.daleseo.com/python-priority-queue/
+    - from queue import PriorityQueue
+    - put()
+    - get()
+
+### 1.3.4. sortedcontainers
+- SortedList
+- SortedDict
+- SortedSet
+- URL
+  - https://pythonlang.dev/repo/grantjenks-python-sortedcontainers/ 
+  - https://grantjenks.com/docs/sortedcontainers/
+
+## 1.4. Euclidean-algorithm : 유클리드 호제법
 - https://velog.io/@yerin4847/W1-%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C-%ED%98%B8%EC%A0%9C%EB%B2%95 - good explanation with movie
 ```c
 int GCD(int a, int b){
@@ -129,27 +157,27 @@ int GCD(int a, int b){
 }
 ```
 
-## 1.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree
+## 1.5. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree
 - https://www.programiz.com/dsa/avl-tree
 - [avl.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/avl.py)
 
-## 1.5. hamming weight : number of '1' bits
+## 1.6. hamming weight : number of '1' bits
 - Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the [Hamming weight](http://shumin.co.kr/algorithm-hamming-weight-bit-count/)).
 
-## 1.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2 
+## 1.7. find (?,?) including A among [(x1,x2) , ....] if x1>x2 
 - 27. The Skyline Problem (#218) - Hard
 - korean : [(x1,x2) , ....] 에서 A를 포함하는 것들을 구하시요.
 - sort by x1 -> find x1 : 0 .. A .. x1 -> calulate
 - if A is another sorted list [A1,A2...] , 0 .. A1 .. x1 and x2 A1 (sorted by x2) -> when we find pairs for A2 , we can skip until x2   
 
-## 1.7. two dimensional array initialize and set
+## 1.8. two dimensional array initialize and set
 - ln = [[0] * 101] * (query_row+1)
   - ln[0][0]=2 then all row's [0] were changed into 2
 - ln = [[0 for c in range(101)] for r in range(query_row+1)]
   - it is right solution to initialize two dimensional array
   - https://www.kite.com/python/answers/how-to-initialize-a-2d-array-in-python
   
-## 1.8. regular expression (import re)
+## 1.9. regular expression (import re)
 - https://www.programiz.com/python-programming/regex
 - https://emilkwak.github.io/python-re-named-group
 ```python
@@ -181,29 +209,29 @@ int GCD(int a, int b){
 """, re.VERBOSE)
 ```
 
-### 1.8.1. difference between re.search() and re.match()
+### 1.9.1. difference between re.search() and re.match()
 - https://www.geeksforgeeks.org/python-re-search-vs-re-match/
 - re.match() searches only from the beginning of the string and return match object if found. But if a match of substring is found somewhere in the middle of the string, it returns none.
 
-## 1.9. format string
+## 1.10. format string
 - https://hyjykelly.tistory.com/65
 - performance comparison : https://brownbears.tistory.com/421
 
-## 1.10. lexicographiacll order
+## 1.11. lexicographiacll order
 - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
 - https://leetcode.com/problems/remove-duplicate-letters/submissions/
 
-## 1.11. dictionary : Python Remove Key from a Dictionary: A Complete Guide
+## 1.12. dictionary : Python Remove Key from a Dictionary: A Complete Guide
 - dictionary.pop(key_to_remove, not_found)
   - https://careerkarma.com/blog/python-remove-key-from-a-dictionary/#:~:text=To%20remove%20a%20key%20from,item%20after%20the%20del%20keyword.
 
-## 1.12. list : python remove element from a list 
+## 1.13. list : python remove element from a list 
 - thislist.remove("banana")
 - thislist.pop(1)
 - del thislist[0]
 - thislist.clear()
   - https://www.w3schools.com/python/python_lists_remove.asp
-## 1.13. Books & URL
+## 1.14. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - 
@@ -937,7 +965,11 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - Return an array lengths of length k where lengths[i] is the length of the longest substring of s consisting of only one repeating character after the ith query is performed.
 - https://leetcode.com/problems/longest-substring-of-one-repeating-character/
 - [longestRepeating.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestRepeating.py) : timeout  47 / 56 test cases passed.
-- [longestRepeating2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestRepeating2.py) : 
+- [longestRepeating2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestRepeating2.py) : SortedList timeout 47 / 57 test cases passed.
+  - longestRepeating problem : total_time1 :  820.4899926185608 -> ERROR([0]) -> 91541 63248 63248
+- algorithm :
+  - ```for char, i in zip(queryCharacters, queryIndices):```
+  - from sortedcontainers import SortedList
 
 # 54. Partition Labels (#763) - medium / python / 2H
 - medium
@@ -1022,20 +1054,86 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - so get difference , and sort and process from reversed order (from longer distance)
 
 # 59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <got help>
-- medium <got help>
+- medium
 - problem : 
   - You are given an array nums of positive integers. In one operation, you can choose any number from nums and reduce it to exactly half the number. (Note that you may choose this reduced number in future operations.)
   - Return the minimum number of operations to reduce the sum of nums by at least half.
 - https://leetcode.com/contest/biweekly-contest-74/problems/minimum-operations-to-halve-array-sum/
   - https://leetcode.com/problems/minimum-operations-to-halve-array-sum/  
 - [halveArray.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray.py) : 34 / 62 test cases passed.  timeout
+  - len: 6151 total_time1 :  0.0009927749633789062 ->  total_time1 :  0.18049407005310059 -> SUCCESS -> 4741 1566
+  - len: 55140 total_time1 :  0.011967897415161133 ->  total_time1 :  16.77672529220581 -> ERROR(0) -> 42729 13876
 - [halveArray2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray2.py) : slower
-- [halveArray3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray3.py) : passed
-- algorithm :
+  - total_time1 :  2.7269339561462402 -> SUCCESS -> 4741 6150
+- [halveArray3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray3.py) : passed <got help>
+  - len: 6151 total_time1 :  0.0009980201721191406 ->  total_time1 :  0.009979724884033203 -> SUCCESS -> 4741 1566
+  - len: 55140 total_time1 :  0.010994911193847656 ->  total_time1 :  0.10970282554626465 -> ERROR(0) -> 42729 13876
+- algorithm : https://www.daleseo.com/python-heapq/
   - choose the largest number and set to half  then repeat again until sum is less than half of origin sum.
   - we need sorted data struture (insert : logN , get the largest number : logN)
   - <got help> sorted data structure : [0] is the smallest number
     - import heapq   : heapq.heappush(list,value) heapq.heappop(list)   list[0] is minimal value.   if you want to maximum value , * -1.0 
+
+# 60. Maximize Number of Subsequences in a String (#2207) - medium / python / 1H
+- medium
+- problem :
+  - You are given a 0-indexed string text and another 0-indexed string pattern of length 2, both of which consist of only lowercase English letters.
+  - You can add either pattern[0] or pattern[1] anywhere in text exactly once. Note that the character can be added even at the beginning or at the end of text.
+  - Return the maximum number of times pattern can occur as a subsequence of the modified text.
+    - A subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.
+- https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string/
+- [maximumSubsequenceCount.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumSubsequenceCount.py) : passed
+  - Runtime: 430 ms, faster than 50.97% of Python3 online submissions for Maximize Number of Subsequences in a String.
+  - Memory Usage: 19.7 MB, less than 17.05% of Python3 online submissions for Maximize Number of Subsequences in a String.
+- algorithm :
+  - A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).  https://leetcode.com/problems/is-subsequence/
+  - if pattern[0] == pattern[1] ,  n!
+  - if not , pattern[0]+text or text+pattern[1]. then count pair.
+
+# 61. Search in Rotated Sorted Array (#33) - medium / python / 2H
+- medium 
+- problem :
+  - There is an integer array nums sorted in ascending order (with distinct values).
+  - Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
+  - Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
+  - You must write an algorithm with O(log n) runtime complexity.
+- https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+- [search.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/search.py) : passed
+  - Runtime: 40 ms, faster than 94.48% of Python3 online submissions for Search in Rotated Sorted Array.
+  - Memory Usage: 14.4 MB, less than 22.57% of Python3 online submissions for Search in Rotated Sorted Array.
+- algorithm :
+  - find index of max value or min value within O(logN)
+
+# 62. Search in Rotated Sorted Array II (#81) - medium / python / 1H
+- medium 
+- problem :
+  - There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).
+  - Before being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,4,4,5,6,6,7] might be rotated at pivot index 5 and become [4,5,6,6,7,0,1,2,4,4].
+  - Given the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.
+  - You must decrease the overall operation steps as much as possible.
+  - Follow up: This problem is similar to Search in Rotated Sorted Array, but nums may contain duplicates. Would this affect the runtime complexity? How and why?
+- https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
+- [search-Duplicatable.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/search-Duplicatable.py) : passed
+- algorithm :
+  - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
