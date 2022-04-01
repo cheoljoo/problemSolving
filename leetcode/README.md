@@ -1115,9 +1115,9 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
 - https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 - [search-Duplicatable.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/search-Duplicatable.py) : passed
 - algorithm :
--  if sample is 1,1,1,1,1,1,1,1,1,1,1,1,1,1  
--  we can not find the direction from mid position.
--  so O(N) is the solution in the worst case.
+  -  if sample is 1,1,1,1,1,1,1,1,1,1,1,1,1,1  
+  -  we can not find the direction from mid position.
+  -  so O(N) is the solution in the worst case.
 
 
 

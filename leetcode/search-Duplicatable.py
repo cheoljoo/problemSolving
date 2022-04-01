@@ -27,6 +27,10 @@ timeFlag = 0
 debugFlag = 0
 import math
 
+
+# if sample is 1,1,1,1,1,1,1,1,1,1,1,1,1,1  
+# we can not find the direction from mid position.
+# so O(N) is the solution in the worst case.
 class Solution:
     def search(self, nums: List[int], target: int) -> bool:
         if target in nums:
