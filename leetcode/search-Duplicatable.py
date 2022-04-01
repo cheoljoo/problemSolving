@@ -28,31 +28,10 @@ debugFlag = 0
 import math
 
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
-        # find max location or min location in logN
-        self.len = len(nums)
-        self.nums = nums
-        start = 0
-        end = len(nums)-1
-        if start == end:
-            minIndex = 0
+    def search(self, nums: List[int], target: int) -> bool:
+        if target in nums:
+            return True
         else :
-            minIndex = 0
-            while nums[start] >= nums[end]:
-                mid = (start+end)//2
-                if start+1 == end:
-                    if nums[start] == target:
-                        return True
-                    elif nums[end] == target:
-                        return True
-                    else :
-                        return False
-                if target == nums[mid]:
-                    return True
-                if nums[0] <= target and target < nums[mid]: # left
-                    end = mid
-                else : # right
-                    start = mid
             return False
         
            

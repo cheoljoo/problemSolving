@@ -78,7 +78,7 @@
 - [59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <got help>](#59-minimum-operations-to-halve-array-sum-2208---medium--python--got-help)
 - [60. Maximize Number of Subsequences in a String (#2207) - medium / python / 1H](#60-maximize-number-of-subsequences-in-a-string-2207---medium--python--1h)
 - [61. Search in Rotated Sorted Array (#33) - medium / python / 2H](#61-search-in-rotated-sorted-array-33---medium--python--2h)
-- [62. Search in Rotated Sorted Array II (#81) - medium / python / 1H](#62-search-in-rotated-sorted-array-ii-81---medium--python--1h)
+- [62. Search in Rotated Sorted Array II (#81) - medium / python / 2D](#62-search-in-rotated-sorted-array-ii-81---medium--python--2d)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1104,7 +1104,7 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
 - algorithm :
   - find index of max value or min value within O(logN)
 
-# 62. Search in Rotated Sorted Array II (#81) - medium / python / 1H
+# 62. Search in Rotated Sorted Array II (#81) - medium / python / 2D
 - medium 
 - problem :
   - There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).
@@ -1115,7 +1115,9 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
 - https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 - [search-Duplicatable.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/search-Duplicatable.py) : passed
 - algorithm :
-  - 
+-  if sample is 1,1,1,1,1,1,1,1,1,1,1,1,1,1  
+-  we can not find the direction from mid position.
+-  so O(N) is the solution in the worst case.
 
 
 
