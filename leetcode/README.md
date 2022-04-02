@@ -79,6 +79,7 @@
 - [60. Maximize Number of Subsequences in a String (#2207) - medium / python / 1H](#60-maximize-number-of-subsequences-in-a-string-2207---medium--python--1h)
 - [61. Search in Rotated Sorted Array (#33) - medium / python / 2H](#61-search-in-rotated-sorted-array-33---medium--python--2h)
 - [62. Search in Rotated Sorted Array II (#81) - medium / python / 2D](#62-search-in-rotated-sorted-array-ii-81---medium--python--2d)
+- [](#)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1121,7 +1122,12 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   -  we can not find the direction from mid position.
   -  so O(N) is the solution in the worst case.
 
-
+# 63. Valid Palindrome II (#680) - easy / python / 1H
+- easy
+- problem :
+  - Given a string s, return true if the s can be palindrome after deleting at most one character from it.
+- https://leetcode.com/problems/valid-palindrome-ii/
+- [validPalindrome.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/validPalindrome.py) : passed
 
 
 
