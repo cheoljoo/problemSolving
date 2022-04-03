@@ -27,18 +27,16 @@ import heapq
 class Solution:
     def minimumWeight(self, n: int, edges: List[List[int]], src1: int, src2: int, dest: int) -> int:
         graph = {}
+        for i in range(n):
+            graph[i] = []
         for f,t,w in edges:
-            # print(f,t,w)
-            if f not in graph:
-                graph[f] = []
             graph[f].append([t,w])
         src1_result = self.dijkstra(n,graph,src1)
         src2_result = self.dijkstra(n,graph,src2)
         graph = {}
+        for i in range(n):
+            graph[i] = []
         for f,t,w in edges:
-            #print(f,t,w)
-            if t not in graph:
-                graph[t] = []
             graph[t].append([f,w])
         dest_result = self.dijkstra(n,graph,dest)
         
@@ -50,23 +48,48 @@ class Solution:
         return ans
     
     def dijkstra(self,n: int, graph: Dict[int,Tuple[int,int]], f: int): 
+        # result = [math.inf for _ in range(n)]
+        # q = [(0,f)]   # (total weight,node)
+        # while q:
+        #     weight, start = heapq.heappop(q)
+        #     if result[start]  != math.inf :
+        #         continue
+        #     result[start] = weight
+        #     if start in graph:
+        #         for nxt,w in graph[start]:
+        #             if result[nxt] == math.inf:
+        #                 heapq.heappush(q,(weight + w,nxt))
+        # return result
+    
+        # what is wrong ::
+        # 
         result = [math.inf for _ in range(n)]
-        result[f] = 0
-        q = [(0,f)]   # (node,total weight)
+        q = [(0,f)]   # (total weight,node)
         visited = set()
         while len(q):
             weight, start = heapq.heappop(q)
+            if start in visited:
+                continue
+            result[start] = weight
+            visited.add(start)
 
-            if start in graph:
-                
-                for nxt,w in graph[start]:
-                    if nxt in visited:
-                        continue
-                    if result[nxt] > (weight + w):
-                        result[nxt] = weight + w
-                        heapq.heappush(q,(result[nxt],nxt))
-                        visited.add(nxt)
+            for nxt,w in graph[start]:
+                if result[nxt] > (weight + w):
+                    result[nxt] = weight + w
+                    heapq.heappush(q,(result[nxt],nxt))
+                        
         return result
+    
+    # def Dijkstra(G, dist, src):
+    #     heap = [(0, src)]
+    # while heap:
+    #     c, v = heappop(heap)
+    #     if dist[v] != float('inf'):
+    #         continue
+    #     dist[v] = c
+    #     for w, cw in G[v]:
+    #         if dist[w]==float('inf'):
+    #             heappush(heap,(c+cw,w))
 
 def run(n,s,src1,src2,dest,expect):
     ismatch = Solution()
@@ -93,7 +116,7 @@ if (__name__ == "__main__"):
     if not debug:
         debug = 0
 
-
+    run(6,[[0,1,22],[0,5,11],[0,2,7],[4,3,4],[5,3,48],[5,3,17],[4,3,45]],4,0,3,32)
     run(6,[[0,2,2],[0,5,6],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,1]],1,0,5,9)
     run(3,[[0,1,1],[2,1,1]],0,1,2,-1)
     run(6,[[0,2,2],[0,5,2],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,2],[3,0,1]],3,1,5,6)

@@ -774,17 +774,30 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
 - [maximumTop.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumTop.py) : passed
 
-# 43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 <fail>
-- hard : I did not solve this probelm within contest. I can not try it because i can not understand the meaning of #2202.
+# 43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 / <got help>
+- hard : <got help>
+  - I did not solve this probelm within contest. I can not try it because i can not understand the meaning of #2202.
 - You are given an integer n denoting the number of nodes of a weighted directed graph. The nodes are numbered from 0 to n - 1.
   - You are also given a 2D integer array edges where edges[i] = [fromi, toi, weighti] denotes that there exists a directed edge from fromi to toi with weight weighti.
   - Lastly, you are given three distinct integers src1, src2, and dest denoting three distinct nodes of the graph.
   - Return the minimum weight of a subgraph of the graph such that it is possible to reach dest from both src1 and src2 via a set of edges of this subgraph. In case such a subgraph does not exist, return -1.
 - https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
 - algorithm : dest -> src1 , dest -> src2
-- [minimumWeight.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight.py) :  
+- [minimumWeight.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight.py) :  failed.  83 / 86 test cases passed.
+- [minimumWeight2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight2.py) : passed
+  - Runtime: 4126 ms, faster than 12.66% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
+  - Memory Usage: 78.7 MB, less than 97.58% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
+- [minimumWeight_dijkstra.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight_dijkstra.py) : passed <got help>
+  - Runtime: 3053 ms, faster than 57.42% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
+  - Memory Usage: 75 MB, less than 99.62% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
 - algorithm :
   - [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)
+    - Src1 src2 dst 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
+    - 이후에 각 노드에서 3개의 목적지로 가는 최소값들을 가진 것이므로  이 합이 가장 작은 것이 세점을 지나는 최소 path가 된다.
+    - 여기 쓴 내용은 방향성이 없을때.  양방향 가능
+    - ![](https://github.com/cheoljoo/problemSolving/images/dijkstra2.jpg)
+  - if graph has direction , src1 -> Vertex (from->to) / src2 -> Vertex (from->to)  / dest -> Vertex (to->from)
+    - src1 -> node and src2 -> node and dest -> node : 각 node를 통해서 가는데의 최소값이 shortest path가 되는 것이다. 
 
 # 44. Simplify Path (#71) - medium
 - medium
