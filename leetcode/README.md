@@ -1169,7 +1169,7 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
 - [validPalindrome.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/validPalindrome.py) : passed
 
 # 64. Next Permutation (#31) - medium / python / 2H
-- medium
+- medium : leetcode check the memory status whether solver returns different memory vs given memory.
 - problem :
   - A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
     - For example, for arr = [1,2,3], the following are considered permutations of arr: [1,2,3], [1,3,2], [3,1,2], [2,3,1].
