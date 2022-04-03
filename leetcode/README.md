@@ -144,6 +144,9 @@ leetcode : my introduction https://leetcode.com/cheoljoo/
   - https://pythonlang.dev/repo/grantjenks-python-sortedcontainers/ 
   - https://grantjenks.com/docs/sortedcontainers/
 
+### 1.3.5. in place sort
+- ```nums[i:] = sorted(nums[i:])   # in place sort```
+
 ## 1.4. Euclidean-algorithm : 유클리드 호제법
 - https://velog.io/@yerin4847/W1-%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C-%ED%98%B8%EC%A0%9C%EB%B2%95 - good explanation with movie
 ```c
@@ -232,7 +235,30 @@ int GCD(int a, int b){
 - del thislist[0]
 - thislist.clear()
   - https://www.w3schools.com/python/python_lists_remove.asp
-## 1.14. Books & URL
+
+## 1.14. graph
+### 1.14.1. dijkstra
+- [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)
+    - Src1 src2 dst 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
+    - 이후에 각 노드에서 3개의 목적지로 가는 최소값들을 가진 것이므로  이 합이 가장 작은 것이 세점을 지나는 최소 path가 된다.
+    - 여기 쓴 내용은 방향성이 없을때.  양방향 가능
+```python
+    def dijkstra(self,n: int, graph: Dict[int,Tuple[int,int]], f: int): 
+        result = [math.inf for _ in range(n)]
+        q = [(0,f)]   # (total weight,node)
+        while q:
+            weight, start = heapq.heappop(q)
+            if result[start]  != math.inf :
+                continue
+            result[start] = weight
+            if start in graph:
+                for nxt,w in graph[start]:
+                    if result[nxt] == math.inf:
+                        heapq.heappush(q,(weight + w,nxt))
+        return result
+```
+
+## 1.15. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - 
@@ -1142,8 +1168,25 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
 - https://leetcode.com/problems/valid-palindrome-ii/
 - [validPalindrome.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/validPalindrome.py) : passed
 
-
-
+# 64. Next Permutation (#31) - medium / python / 2H
+- medium
+- problem :
+  - A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
+    - For example, for arr = [1,2,3], the following are considered permutations of arr: [1,2,3], [1,3,2], [3,1,2], [2,3,1].
+  - The next permutation of an array of integers is the next lexicographically greater permutation of its integer. More formally, if all the permutations of the array are sorted in one container according to their lexicographical order, then the next permutation of that array is the permutation that follows it in the sorted container. If such arrangement is not possible, the array must be rearranged as the lowest possible order (i.e., sorted in ascending order).
+    - For example, the next permutation of arr = [1,2,3] is [1,3,2].
+    - Similarly, the next permutation of arr = [2,3,1] is [3,1,2].
+    - While the next permutation of arr = [3,2,1] is [1,2,3] because [3,2,1] does not have a lexicographical larger rearrangement.
+  - Given an array of integers nums, find the next permutation of nums.
+  - The replacement must be in place and use only constant extra memory.
+- https://leetcode.com/problems/next-permutation/
+- [nextPermutation.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/nextPermutation.py) : passed
+  - Runtime: 79 ms, faster than 16.37% of Python3 online submissions for Next Permutation.
+  - Memory Usage: 14 MB, less than 28.23% of Python3 online submissions for Next Permutation.
+- algorithm : need in-place calculation
+  - first : find decreaing index    ex) [1, 4, 7, 5, 3]   decreasing index nums[2]=7 i=2  so swap i-1 and minimun value among larger than nums[i-1]
+  - second : swap and sort   ex) 4 , 5 swap  -> 7,4,3 sort -> 3,4,7    so answer is 1,5,3,4,7
+  - in-place sort : ```nums[i:] = sorted(nums[i:])```
 
 
 
