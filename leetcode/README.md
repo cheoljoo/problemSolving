@@ -821,7 +821,7 @@ we can predict that denominator is 2**L with Level L.
     - Src1 src2 dst 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
     - 이후에 각 노드에서 3개의 목적지로 가는 최소값들을 가진 것이므로  이 합이 가장 작은 것이 세점을 지나는 최소 path가 된다.
     - 여기 쓴 내용은 방향성이 없을때.  양방향 가능
-    - ![](https://github.com/cheoljoo/problemSolving/images/dijkstra2.jpg)
+    - ![](https://github.com/cheoljoo/problemSolving/blob/master/images/dijkstra2.jpg)
   - if graph has direction , src1 -> Vertex (from->to) / src2 -> Vertex (from->to)  / dest -> Vertex (to->from)
     - src1 -> node and src2 -> node and dest -> node : 각 node를 통해서 가는데의 최소값이 shortest path가 되는 것이다. 
 
