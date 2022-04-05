@@ -6,6 +6,7 @@
     - [1.3.2. heapq](#132-heapq)
     - [1.3.3. PriorityQueue](#133-priorityqueue)
     - [1.3.4. sortedcontainers](#134-sortedcontainers)
+    - [1.3.5. in place sort](#135-in-place-sort)
   - [1.4. Euclidean-algorithm : 유클리드 호제법](#14-euclidean-algorithm--유클리드-호제법)
   - [1.5. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#15-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
   - [1.6. hamming weight : number of '1' bits](#16-hamming-weight--number-of-1-bits)
@@ -17,7 +18,9 @@
   - [1.11. lexicographiacll order](#111-lexicographiacll-order)
   - [1.12. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#112-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
   - [1.13. list : python remove element from a list](#113-list--python-remove-element-from-a-list)
-  - [1.14. Books & URL](#114-books--url)
+  - [1.14. graph](#114-graph)
+    - [1.14.1. dijkstra](#1141-dijkstra)
+  - [1.15. Books & URL](#115-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -59,7 +62,7 @@
 - [40. Find All K-Distant Indices in an Array (#2200) - easy : weekly contest for amazon 2022-03-13](#40-find-all-k-distant-indices-in-an-array-2200---easy--weekly-contest-for-amazon-2022-03-13)
 - [41. Count Artifacts That Can Be Extracted (#2201) - medium : weekly contest for amazon 2022-03-13](#41-count-artifacts-that-can-be-extracted-2201---medium--weekly-contest-for-amazon-2022-03-13)
 - [42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13 / <got help>](#42-maximize-the-topmost-element-after-k-moves-2202---medium--weekly-contest-for-amazon-2022-03-13--got-help)
-- [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 <fail>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13-fail)
+- [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 / <got help>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13--got-help)
 - [44. Simplify Path (#71) - medium](#44-simplify-path-71---medium)
 - [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
 - [46. Validate Stack Sequences (#946) - medium / python / rust](#46-validate-stack-sequences-946---medium--python--rust)
@@ -79,7 +82,9 @@
 - [60. Maximize Number of Subsequences in a String (#2207) - medium / python / 1H](#60-maximize-number-of-subsequences-in-a-string-2207---medium--python--1h)
 - [61. Search in Rotated Sorted Array (#33) - medium / python / 2H](#61-search-in-rotated-sorted-array-33---medium--python--2h)
 - [62. Search in Rotated Sorted Array II (#81) - medium / python / 2D](#62-search-in-rotated-sorted-array-ii-81---medium--python--2d)
-- [](#)
+- [63. Valid Palindrome II (#680) - easy / python / 1H](#63-valid-palindrome-ii-680---easy--python--1h)
+- [64. Next Permutation (#31) - medium / python / 2H](#64-next-permutation-31---medium--python--2h)
+- [65. Container With Most Water(#11) - medium / python / 1H](#65-container-with-most-water11---medium--python--1h)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1187,6 +1192,64 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - first : find decreaing index    ex) [1, 4, 7, 5, 3]   decreasing index nums[2]=7 i=2  so swap i-1 and minimun value among larger than nums[i-1]
   - second : swap and sort   ex) 4 , 5 swap  -> 7,4,3 sort -> 3,4,7    so answer is 1,5,3,4,7
   - in-place sort : ```nums[i:] = sorted(nums[i:])```
+
+# 65. Container With Most Water(#11) - medium / python / 1H
+- medium
+- problem : 
+  - You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+  - Find two lines that together with the x-axis form a container, such that the container contains the most water.
+  - Return the maximum amount of water a container can store.
+  - Notice that you may not slant the container.
+- https://leetcode.com/problems/container-with-most-water/
+- [maxArea.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxArea.py) : passed  O(NlogN)
+  - Runtime: 2113 ms, faster than 5.00% of Python3 online submissions for Container With Most Water.
+  - Memory Usage: 31.4 MB, less than 17.98% of Python3 online submissions for Container With Most Water.
+- algorithm :
+  - sort with height
+  - start from higher bar then calculate area with location.  we can know the minimum and maximum location.
+  - height * area [ max of abs(min or max - cur_location) ]
+- best :
+  - Time: O(n) , Space: O(1)
+```python
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        l, r, area = 0, len(height) - 1, 0
+        while l < r:
+            area = max(area, (r - l) * min(height[l], height[r]))
+            if height[l] < height[r]:
+				l += 1
+            else:
+				r -= 1
+        return area
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
