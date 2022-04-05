@@ -26,3 +26,5 @@
 7: 7.py
 	echo "18115211" | python3 ./7.py --debug
 
+marathon: marathon.py marathon.data
+	cat  marathon.data | python3 ./marathon.py
