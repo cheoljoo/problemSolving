@@ -85,6 +85,7 @@
 - [63. Valid Palindrome II (#680) - easy / python / 1H](#63-valid-palindrome-ii-680---easy--python--1h)
 - [64. Next Permutation (#31) - medium / python / 2H](#64-next-permutation-31---medium--python--2h)
 - [65. Container With Most Water(#11) - medium / python / 1H](#65-container-with-most-water11---medium--python--1h)
+- [66. Kth Largest Element in a Stream (#703) - easy / python / 1H](#66-kth-largest-element-in-a-stream-703---easy--python--1h)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1208,8 +1209,8 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - sort with height
   - start from higher bar then calculate area with location.  we can know the minimum and maximum location.
   - height * area [ max of abs(min or max - cur_location) ]
-- best :
-  - Time: O(n) , Space: O(1)
+- best : 
+  - Time: O(n) , Space: O(1) - https://leetcode.com/problems/container-with-most-water/discuss/1915108/Python3-GREEDY-TWO-POINTERS-~(~)-Explained
 ```python
 class Solution:
     def maxArea(self, height: List[int]) -> int:
@@ -1223,8 +1224,21 @@ class Solution:
         return area
 ```
 
-
-
+# 66. Kth Largest Element in a Stream (#703) - easy / python / 1H
+- easy
+- problem : 
+  - Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+  - Implement KthLargest class:
+    - KthLargest(int k, int[] nums) Initializes the object with the integer k and the stream of integers nums.
+    - int add(int val) Appends the integer val to the stream and returns the element representing the kth largest element in the stream.
+- https://leetcode.com/problems/kth-largest-element-in-a-stream/
+- [KthLargest.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/KthLargest.py) : passed
+  - Runtime: 128 ms, faster than 62.88% of Python3 online submissions for Kth Largest Element in a Stream.
+  - Memory Usage: 18.3 MB, less than 55.88% of Python3 online submissions for Kth Largest Element in a Stream.
+- algorithm :
+  - sort and pick largest to kth largest
+  - to get kth largest element , we will use heapq
+  - ***caution : test case is important.  first time , testcase is started from []. and they will add kth element.***
 
 
 
