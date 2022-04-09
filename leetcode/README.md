@@ -86,6 +86,8 @@
 - [64. Next Permutation (#31) - medium / python / 2H](#64-next-permutation-31---medium--python--2h)
 - [65. Container With Most Water(#11) - medium / python / 1H](#65-container-with-most-water11---medium--python--1h)
 - [66. Kth Largest Element in a Stream (#703) - easy / python / 1H](#66-kth-largest-element-in-a-stream-703---easy--python--1h)
+- [67. 3Sum With Multiplicity (#923) - medium / python / 1H](#67-3sum-with-multiplicity-923---medium--python--1h)
+- [68. Top K Frequent Elements (#347) - medium / python / 1H](#68-top-k-frequent-elements-347---medium--python--1h)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1240,9 +1242,33 @@ class Solution:
   - to get kth largest element , we will use heapq
   - ***caution : test case is important.  first time , testcase is started from []. and they will add kth element.***
 
+# 67. 3Sum With Multiplicity (#923) - medium / python / 1H
+- medium
+- problem :
+  - Given an integer array arr, and an integer target, return the number of tuples i, j, k such that i < j < k and arr[i] + arr[j] + arr[k] == target.
+  - As the answer can be very large, return it modulo 10^9 + 7.
+- https://leetcode.com/problems/3sum-with-multiplicity/
+- [threeSumMulti.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/threeSumMulti.py) : passed
+  - Runtime: 103 ms, faster than 78.10% of Python3 online submissions for 3Sum With Multiplicity.
+  - Memory Usage: 14.4 MB, less than 7.07% of Python3 online submissions for 3Sum With Multiplicity.
+- algorithm :
+  - make distict array and sort
+  - i == j == k 
+  - i == j != k
+  - i != j == j
+  - i != j != k 
 
-
-
+# 68. Top K Frequent Elements (#347) - medium / python / 1H
+- medium
+- problem :
+  - Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+- https://leetcode.com/problems/top-k-frequent-elements
+- [topKFrequent.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/topKFrequent.py) : passed
+  - Runtime: 100 ms, faster than 96.24% of Python3 online submissions for Top K Frequent Elements.
+  - Memory Usage: 18.7 MB, less than 68.16% of Python3 online submissions for Top K Frequent Elements.
+- algorithm :
+  - count & reversed sort
+  - choose k element : ```ans = [key for (i,(value,key)) in enumerate(kfreq) if i < k ]```
 
 
 
