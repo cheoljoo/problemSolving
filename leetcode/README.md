@@ -88,6 +88,10 @@
 - [66. Kth Largest Element in a Stream (#703) - easy / python / 1H](#66-kth-largest-element-in-a-stream-703---easy--python--1h)
 - [67. 3Sum With Multiplicity (#923) - medium / python / 1H](#67-3sum-with-multiplicity-923---medium--python--1h)
 - [68. Top K Frequent Elements (#347) - medium / python / 1H](#68-top-k-frequent-elements-347---medium--python--1h)
+- [69. Largest Number After Digit Swaps by Parity (#2231) - easy / python / 20M / 2020-04-10 Weekly Contest 288 (Airwallex)](#69-largest-number-after-digit-swaps-by-parity-2231---easy--python--20m--2020-04-10-weekly-contest-288-airwallex)
+- [70. Minimize Result by Adding Parentheses to Expression (#2232) - medium / python / 34M / 2020-04-10 Weekly Contest 288 (Airwallex)](#70-minimize-result-by-adding-parentheses-to-expression-2232---medium--python--34m--2020-04-10-weekly-contest-288-airwallex)
+- [71. Maximum Product After K Increments (#2233) - medium / python / 22M / 2020-04-10 Weekly Contest 288 (Airwallex)](#71-maximum-product-after-k-increments-2233---medium--python--22m--2020-04-10-weekly-contest-288-airwallex)
+- [72. Maximum Total Beauty of the Gardens (#2234) - hard / python / <fail>  / 2020-04-10 Weekly Contest 288 (Airwallex)](#72-maximum-total-beauty-of-the-gardens-2234---hard--python--fail---2020-04-10-weekly-contest-288-airwallex)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1270,14 +1274,65 @@ class Solution:
   - count & reversed sort
   - choose k element : ```ans = [key for (i,(value,key)) in enumerate(kfreq) if i < k ]```
 
+# 69. Largest Number After Digit Swaps by Parity (#2231) - easy / python / 20M / 2020-04-10 Weekly Contest 288 (Airwallex)
+- easy : 2020-04-10 Weekly Contest 288 (Airwallex)
+- my best score of leetcode contest : ![](https://github.com/cheoljoo/problemSolving/blob/master/images/contest288.jpg)
+- problem :
+  - You are given a positive integer num. You may swap any two digits of num that have the same parity (i.e. both odd digits or both even digits).
+  - Return the largest possible value of num after any number of swaps.
+- https://leetcode.com/contest/weekly-contest-288/problems/largest-number-after-digit-swaps-by-parity/
+  - https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/
+- [largestInteger.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/largestInteger.py) : passed
+- algorithm :
+  - distinguish between odd and even.  and reverse sort odd / even list separately.
+  - record the odd or even each position.
+  - put odd/even number according to position.
 
 
+# 70. Minimize Result by Adding Parentheses to Expression (#2232) - medium / python / 34M / 2020-04-10 Weekly Contest 288 (Airwallex)
+- medium : 2020-04-10 Weekly Contest 288 (Airwallex)
+- problem :
+  - You are given a 0-indexed string expression of the form "<num1>+<num2>" where <num1> and <num2> represent positive integers.
+  - Add a pair of parentheses to expression such that after the addition of parentheses, expression is a valid mathematical expression and evaluates to the smallest possible value. The left parenthesis must be added to the left of '+' and the right parenthesis must be added to the right of '+'.
+  - Return expression after adding a pair of parentheses such that expression evaluates to the smallest possible value. If there are multiple answers that yield the same result, return any of them.
+  - The input has been generated such that the original value of expression, and the value of expression after adding any pair of parentheses that meets the requirements fits within a signed 32-bit integer.
+- https://leetcode.com/contest/weekly-contest-288/problems/minimize-result-by-adding-parentheses-to-expression/
+  - https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/
+- [minimizeResult.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimizeResult.py) : passed
+  - Runtime: 35 ms
+- algorithm :
+  - split into two number
+  - first number : get all cases with (left part of parenthese , right part of parenthese , first 1 is the digit or not of number)
+  -  ex) 247 -> (1, 247,1) (2,47,0) (24,7,0)
+  -  ex) 12 -> (1,12,1) (1,2,0)
+-  second number : get all cases
+   -  ex) 38 -> (38,1,1) (3,8,0)
 
-
-
-
-
-
+# 71. Maximum Product After K Increments (#2233) - medium / python / 22M / 2020-04-10 Weekly Contest 288 (Airwallex)
+- medium : 2020-04-10 Weekly Contest 288 (Airwallex)
+- problem :
+  - You are given an array of non-negative integers nums and an integer k. In one operation, you may choose any element from nums and increment it by 1.
+  - Return the maximum product of nums after at most k operations. Since the answer may be very large, return it modulo 109 + 7.
+- https://leetcode.com/contest/weekly-contest-288/problems/maximum-product-after-k-increments/
+  - https://leetcode.com/problems/maximum-product-after-k-increments/
+- [maximumProduct.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumProduct.py) : passed
+  - Runtime : 3081 ms  :  all solutions have the same algorithm. this time depends on computer status.
+  
+# 72. Maximum Total Beauty of the Gardens (#2234) - hard / python / <fail>  / 2020-04-10 Weekly Contest 288 (Airwallex)
+- hard : 2020-04-10 Weekly Contest 288 (Airwallex)
+- problem :
+  - Alice is a caretaker of n gardens and she wants to plant flowers to maximize the total beauty of all her gardens.
+  - You are given a 0-indexed integer array flowers of size n, where flowers[i] is the number of flowers already planted in the ith garden. Flowers that are already planted cannot be removed. You are then given another integer newFlowers, which is the maximum number of flowers that Alice can additionally plant. You are also given the integers target, full, and partial.
+  - A garden is considered complete if it has at least target flowers. The total beauty of the gardens is then determined as the sum of the following:
+    - The number of complete gardens multiplied by full.
+    - The minimum number of flowers in any of the incomplete gardens multiplied by partial. If there are no incomplete gardens, then this value will be 0.
+  - Return the maximum total beauty that Alice can obtain after planting at most newFlowers flowers.
+- https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/
+- [maximumBeauty.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBeauty.py) : 50 / 77 test cases passed.
+- [maximumBeauty2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBeauty2.py) : timeout 69 / 77 test cases passed.  fail 800 sec
+  - O(N^2) : generally  it is timeout.
+- [maximumBeauty3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBeauty3.py) : timeout 69 / 77 test cases passed.  fail 12sec
+  - O(NlogN) : but it is timeout
 
 
 
