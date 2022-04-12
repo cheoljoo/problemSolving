@@ -28,3 +28,9 @@
 
 marathon: marathon.py marathon.data
 	cat  marathon.data | python3 ./marathon.py
+
+coaltar : coalTar.py
+	python3 ./coalTar.py
+
+histgram: histogram2.py histogram.data
+	cat  histogram.data | python3 ./histogram2.py

@@ -92,6 +92,7 @@
 - [70. Minimize Result by Adding Parentheses to Expression (#2232) - medium / python / 34M / 2020-04-10 Weekly Contest 288 (Airwallex)](#70-minimize-result-by-adding-parentheses-to-expression-2232---medium--python--34m--2020-04-10-weekly-contest-288-airwallex)
 - [71. Maximum Product After K Increments (#2233) - medium / python / 22M / 2020-04-10 Weekly Contest 288 (Airwallex)](#71-maximum-product-after-k-increments-2233---medium--python--22m--2020-04-10-weekly-contest-288-airwallex)
 - [72. Maximum Total Beauty of the Gardens (#2234) - hard / python / <fail>  / 2020-04-10 Weekly Contest 288 (Airwallex)](#72-maximum-total-beauty-of-the-gardens-2234---hard--python--fail---2020-04-10-weekly-contest-288-airwallex)
+- [73. Game of Life (#289) - medium / python / 15M](#73-game-of-life-289---medium--python--15m)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1333,14 +1334,29 @@ class Solution:
   - O(N^2) : generally  it is timeout.
 - [maximumBeauty3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBeauty3.py) : timeout 69 / 77 test cases passed.  fail 12sec
   - O(NlogN) : but it is timeout
+- algorithm : <got help>
+  - https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/discuss/1931085/Python-Explanation-with-pictures-Greedy.
+  - I had the same idea. but i can not archive the goal.
+- learning point :
+  - use bisect : do not make the code for binary search
 
 
-
-
-
-
-
-
+# 73. Game of Life (#289) - medium / python / 15M 
+- medium 
+- problem :
+  - According to Wikipedia's article: "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970."
+  - The board is made up of an m x n grid of cells, where each cell has an initial state: live (represented by a 1) or dead (represented by a 0). Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules (taken from the above Wikipedia article):
+    - Any live cell with fewer than two live neighbors dies as if caused by under-population.
+    - Any live cell with two or three live neighbors lives on to the next generation.
+    - Any live cell with more than three live neighbors dies, as if by over-population.
+    - Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+  - The next state is created by applying the above rules simultaneously to every cell in the current state, where births and deaths occur simultaneously. Given the current state of the m x n grid board, return the next state.
+- https://leetcode.com/problems/game-of-life/
+- [gameOfLife.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/gameOfLife.py) : passed
+  - Runtime: 36 ms, faster than 85.68% of Python3 online submissions for Game of Life.
+  - Memory Usage: 14 MB, less than 12.69% of Python3 online submissions for Game of Life.
+- algorithm :
+  - make bigger board with border to calculate easily
 
 
 
