@@ -93,6 +93,7 @@
 - [71. Maximum Product After K Increments (#2233) - medium / python / 22M / 2020-04-10 Weekly Contest 288 (Airwallex)](#71-maximum-product-after-k-increments-2233---medium--python--22m--2020-04-10-weekly-contest-288-airwallex)
 - [72. Maximum Total Beauty of the Gardens (#2234) - hard / python / <fail>  / 2020-04-10 Weekly Contest 288 (Airwallex)](#72-maximum-total-beauty-of-the-gardens-2234---hard--python--fail---2020-04-10-weekly-contest-288-airwallex)
 - [73. Game of Life (#289) - medium / python / 15M](#73-game-of-life-289---medium--python--15m)
+- [74. Spiral Matrix II (#59) - medium / python / 15M](#74-spiral-matrix-ii-59---medium--python--15m)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1358,8 +1359,16 @@ class Solution:
 - algorithm :
   - make bigger board with border to calculate easily
 
-
-
+# 74. Spiral Matrix II (#59) - medium / python / 15M
+- medium 
+- problem :
+  - Given a positive integer n, generate an n x n matrix filled with elements from 1 to n^2 in spiral order.
+- https://leetcode.com/problems/spiral-matrix-ii/
+- [generateMatrix.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/generateMatrix.py) : passed
+  - Runtime: 30 ms, faster than 92.84% of Python3 online submissions for Spiral Matrix II.
+  - Memory Usage: 13.9 MB, less than 85.84% of Python3 online submissions for Spiral Matrix II.
+- algorithm :
+  - have direction (clockwise)
 
 
 
