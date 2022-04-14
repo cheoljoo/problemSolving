@@ -403,6 +403,8 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
 
 # 콜타르 채우기
 - make coaltar
+- O(NlogN) : coalTar.py
+- O(N) : coalTar2.py
 
 # histogram  : 제일 큰 직사각형 만들기
 - make histogram
