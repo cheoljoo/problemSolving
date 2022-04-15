@@ -94,6 +94,7 @@
 - [72. Maximum Total Beauty of the Gardens (#2234) - hard / python / <fail>  / 2020-04-10 Weekly Contest 288 (Airwallex)](#72-maximum-total-beauty-of-the-gardens-2234---hard--python--fail---2020-04-10-weekly-contest-288-airwallex)
 - [73. Game of Life (#289) - medium / python / 15M](#73-game-of-life-289---medium--python--15m)
 - [74. Spiral Matrix II (#59) - medium / python / 15M](#74-spiral-matrix-ii-59---medium--python--15m)
+- [75. Trim a Binary Search Tree (#669) - medium / python / 10M](#75-trim-a-binary-search-tree-669---medium--python--10m)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -133,7 +134,13 @@ leetcode : my introduction https://leetcode.com/cheoljoo/
 ## 1.3. sorted data structure
 ### 1.3.1. bisect
 - import bisect
+- from bisect import bisect_right , bisect_left
 - bisect.insort()
+- bisect.bisect_left()
+- bisect.bisect_right()
+- [bisect.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/bisect.py)
+```txt
+```
 
 ### 1.3.2. heapq
 - sorted data structure : [0] is the smallest number
@@ -1360,7 +1367,7 @@ class Solution:
   - make bigger board with border to calculate easily
 
 # 74. Spiral Matrix II (#59) - medium / python / 15M
-- medium 
+- medium : matrix
 - problem :
   - Given a positive integer n, generate an n x n matrix filled with elements from 1 to n^2 in spiral order.
 - https://leetcode.com/problems/spiral-matrix-ii/
@@ -1370,9 +1377,18 @@ class Solution:
 - algorithm :
   - have direction (clockwise)
 
-
-
-
+# 75. Trim a Binary Search Tree (#669) - medium / python / 10M
+- medium : tree
+- problem :
+  - Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high]. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node's descendant should remain a descendant). It can be proven that there is a unique answer.
+  - Return the root of the trimmed binary search tree. Note that the root may change depending on the given bounds.
+- https://leetcode.com/problems/trim-a-binary-search-tree/
+- [trimBST.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/trimBST.py) : passed
+  - Runtime: 44 ms, faster than 98.59% of Python3 online submissions for Trim a Binary Search Tree.
+  - Memory Usage: 18.1 MB, less than 11.70% of Python3 online submissions for Trim a Binary Search Tree.
+- algorithm : show the source code
+  - if node.val is less than low , node.left do not need it. because all elements of node.left tree are less than low.
+  - high is the same process.   less -> greater / low -> high / left -> right
 
 
 
