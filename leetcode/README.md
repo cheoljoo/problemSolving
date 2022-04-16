@@ -95,6 +95,7 @@
 - [73. Game of Life (#289) - medium / python / 15M](#73-game-of-life-289---medium--python--15m)
 - [74. Spiral Matrix II (#59) - medium / python / 15M](#74-spiral-matrix-ii-59---medium--python--15m)
 - [75. Trim a Binary Search Tree (#669) - medium / python / 10M](#75-trim-a-binary-search-tree-669---medium--python--10m)
+- [76. Convert BST to Greater Tree (#538) - medium / python / 2H](#76-convert-bst-to-greater-tree-538---medium--python--2h)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -138,8 +139,15 @@ leetcode : my introduction https://leetcode.com/cheoljoo/
 - bisect.insort()
 - bisect.bisect_left()
 - bisect.bisect_right()
-- [bisect.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/bisect.py)
-```txt
+- [bisectExample.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/bisectExample.py)
+  - caution : it makes module error when you make the file as bisect.py.
+  - Do NOT use the same filename with import module name.
+```python
+python3 bisectExample.py
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6] n: 4 bisect_left: 2
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6] n: 4 bisect_right: 2
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6] n: 5 bisect_left: 2
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6] n: 5 bisect_right: 9
 ```
 
 ### 1.3.2. heapq
@@ -1390,8 +1398,20 @@ class Solution:
   - if node.val is less than low , node.left do not need it. because all elements of node.left tree are less than low.
   - high is the same process.   less -> greater / low -> high / left -> right
 
-
-
+# 76. Convert BST to Greater Tree (#538) - medium / python / 2H
+- medium : tree
+- problem :
+  - iven the root of a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus the sum of all keys greater than the original key in BST.
+  - As a reminder, a binary search tree is a tree that satisfies these constraints:
+    - The left subtree of a node contains only nodes with keys less than the node's key.
+    - The right subtree of a node contains only nodes with keys greater than the node's key.
+    - Both the left and right subtrees must also be binary search trees.
+- https://leetcode.com/problems/convert-bst-to-greater-tree/
+- [convertBST.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/convertBST.py) : passed
+  - Runtime: 89 ms, faster than 79.93% of Python3 online submissions for Convert BST to Greater Tree.
+  - Memory Usage: 16.6 MB, less than 97.31% of Python3 online submissions for Convert BST to Greater Tree.
+- algorithm :
+  - sum of traverse order : this is tree traverse problem
 
 
 
