@@ -1347,12 +1347,12 @@ class Solution:
 - https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/
 - [maximumBeauty.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBeauty.py) : 50 / 77 test cases passed.
 - [maximumBeauty2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBeauty2.py) : timeout 69 / 77 test cases passed.  fail 800 sec
-  - O(N^2) : generally  it is timeout.
+  - O(N^2) : generally  it is timeout. -> wrong answer
 - [maximumBeauty3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBeauty3.py) : timeout 69 / 77 test cases passed.  fail 12sec
-  - O(NlogN) : but it is timeout
+  - O(NlogN) : but it is timeout  -> wrong answer
 - algorithm : <got help>
   - https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/discuss/1931085/Python-Explanation-with-pictures-Greedy.
-  - I had the same idea. but i can not archive the goal.
+  - I had the same idea. but i could not archive the goal.
 - learning point :
   - use bisect : do not make the code for binary search
 
@@ -1413,8 +1413,18 @@ class Solution:
 - algorithm :
   - sum of traverse order : this is tree traverse problem
 
-
-
+# Merge k Sorted Lists (#23) - hard / python / 3H
+- hard : linked list
+- problem :
+  - You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+  - Merge all the linked-lists into one sorted linked-list and return it.
+- https://leetcode.com/problems/merge-k-sorted-lists/
+- [mergeKLists.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/mergeKLists.py) : passed
+  - Runtime: 104 ms, faster than 91.25% of Python3 online submissions for Merge k Sorted Lists.
+  - Memory Usage: 18.1 MB, less than 44.92% of Python3 online submissions for Merge k Sorted Lists.
+- algorithm :
+  - find minimum value -> use heapq
+  - keep the node -> reuse the node : not create the node
 
 
 
