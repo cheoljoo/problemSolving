@@ -104,6 +104,8 @@
 - [76. Convert BST to Greater Tree (#538) - medium / python / 2H](#76-convert-bst-to-greater-tree-538---medium--python--2h)
 - [77. Merge k Sorted Lists (#23) - hard / python / 3H](#77-merge-k-sorted-lists-23---hard--python--3h)
 - [78. Increasing Order Search Tree (#897) - easy / python / 20M](#78-increasing-order-search-tree-897---easy--python--20m)
+- [79. Largest Rectangle in Histogram (#84) - hard / python /](#79-largest-rectangle-in-histogram-84---hard--python-)
+- [80. Special 100 Day on leetcode (2002-04-17 Sunday)](#80-special-100-day-on-leetcode-2002-04-17-sunday)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -342,6 +344,7 @@ int GCD(int a, int b){
 ## 1.16. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
+- For Beginners for graph : https://leetcode.com/discuss/study-guide/1808711/Graph-for-Beginers-Problems
 - 
 # 2. Meidan of Two Sorted Arrays - hard
 - hard
@@ -1487,11 +1490,20 @@ class Solution:
   - Runtime: 36 ms, faster than 76.74% of Python3 online submissions for Increasing Order Search Tree.
   - Memory Usage: 14 MB, less than 13.79% of Python3 online submissions for Increasing Order Search Tree.
 
+# 79. Largest Rectangle in Histogram (#84) - hard / python / 
+- hard
+- problem : 
+  - Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+- https://leetcode.com/problems/largest-rectangle-in-histogram/
+- [largestRectangleArea.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/largestRectangleArea.py) : passed O(N^2)
+  - Runtime: 6923 ms, faster than 5.02% of Python3 online submissions for Largest Rectangle in Histogram.
+  - Memory Usage: 28 MB, less than 79.09% of Python3 online submissions for Largest Rectangle in Histogram.
+- algorithm :
+  - gather if colsed histogram has the same height : 1000, 1000 , 1000 >> (1000,3) -> sort
+  - O(N^2)  : caculdate left and right direction if he can go. 
 
-
-
-
-
+# 80. Special 100 Day on leetcode (2002-04-17 Sunday)
+- ![](https://github.com/cheoljoo/problemSolving/blob/master/images/leetcode-100.jpg)
 
 
 
