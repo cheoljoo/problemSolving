@@ -104,7 +104,7 @@
 - [76. Convert BST to Greater Tree (#538) - medium / python / 2H](#76-convert-bst-to-greater-tree-538---medium--python--2h)
 - [77. Merge k Sorted Lists (#23) - hard / python / 3H](#77-merge-k-sorted-lists-23---hard--python--3h)
 - [78. Increasing Order Search Tree (#897) - easy / python / 20M](#78-increasing-order-search-tree-897---easy--python--20m)
-- [79. Largest Rectangle in Histogram (#84) - hard / python /](#79-largest-rectangle-in-histogram-84---hard--python-)
+- [79. Largest Rectangle in Histogram (#84) - hard / python / 2D](#79-largest-rectangle-in-histogram-84---hard--python--2d)
 - [80. Special 100 Day on leetcode (2002-04-17 Sunday)](#80-special-100-day-on-leetcode-2002-04-17-sunday)
 
 --------------------
@@ -1490,7 +1490,7 @@ class Solution:
   - Runtime: 36 ms, faster than 76.74% of Python3 online submissions for Increasing Order Search Tree.
   - Memory Usage: 14 MB, less than 13.79% of Python3 online submissions for Increasing Order Search Tree.
 
-# 79. Largest Rectangle in Histogram (#84) - hard / python / 
+# 79. Largest Rectangle in Histogram (#84) - hard / python / 2D
 - hard
 - problem : 
   - Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
@@ -1501,6 +1501,12 @@ class Solution:
 - algorithm :
   - gather if colsed histogram has the same height : 1000, 1000 , 1000 >> (1000,3) -> sort
   - O(N^2)  : caculdate left and right direction if he can go. 
+- <got help> : https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/1954731/EASY-C%2B%2B-SOLUTION-or-NSR-or-NSL-or-STACK
+  - O(N)
+  - get all left ( 0 -> N)  , get all right (N -> 0)
+  - [largestRectangleArea2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/largestRectangleArea2.py) : passed O(NlogN)
+    - Runtime: 1278 ms, faster than 57.51% of Python3 online submissions for Largest Rectangle in Histogram.
+    - Memory Usage: 27.8 MB, less than 83.45% of Python3 online submissions for Largest Rectangle in Histogram.
 
 # 80. Special 100 Day on leetcode (2002-04-17 Sunday)
 - ![](https://github.com/cheoljoo/problemSolving/blob/master/images/leetcode-100.jpg)
