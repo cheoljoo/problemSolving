@@ -105,7 +105,8 @@
 - [77. Merge k Sorted Lists (#23) - hard / python / 3H](#77-merge-k-sorted-lists-23---hard--python--3h)
 - [78. Increasing Order Search Tree (#897) - easy / python / 20M](#78-increasing-order-search-tree-897---easy--python--20m)
 - [79. Largest Rectangle in Histogram (#84) - hard / python / 2D](#79-largest-rectangle-in-histogram-84---hard--python--2d)
-- [80. Special 100 Day on leetcode (2002-04-17 Sunday)](#80-special-100-day-on-leetcode-2002-04-17-sunday)
+- [80. Special Day solved 100 problems on leetcode (2002-04-17 Sunday)](#80-special-day-solved-100-problems-on-leetcode-2002-04-17-sunday)
+- [81. Remove Invalid Parentheses (#301) - hard / python / 4H  / greedy : O(2^N)](#81-remove-invalid-parentheses-301---hard--python--4h---greedy--o2n)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1508,15 +1509,25 @@ class Solution:
     - Runtime: 1278 ms, faster than 57.51% of Python3 online submissions for Largest Rectangle in Histogram.
     - Memory Usage: 27.8 MB, less than 83.45% of Python3 online submissions for Largest Rectangle in Histogram.
 
-# 80. Special 100 Day on leetcode (2002-04-17 Sunday)
+# 80. Special Day solved 100 problems on leetcode (2002-04-17 Sunday)
 - ![](https://github.com/cheoljoo/problemSolving/blob/master/images/leetcode-100.jpg)
 
 
-
-
-
-
-
+# 81. Remove Invalid Parentheses (#301) - hard / python / 4H  / greedy : O(2^N)
+- hard : greedy algorithm  O(2^N)  len < 50
+- problem :
+  - Given a string s that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.
+  - Return all the possible results. You may return the answer in any order.
+- https://leetcode.com/problems/remove-invalid-parentheses/
+- [removeInvalidParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeInvalidParentheses.py) : passed O(2^N)
+  - Runtime: 538 ms, faster than 46.19% of Python3 online submissions for Remove Invalid Parentheses.
+  - Memory Usage: 14 MB, less than 64.31% of Python3 online submissions for Remove Invalid Parentheses.
+- algorithm : greedy algorithm  O(2^N)  len < 50
+  - remove mis-order of start with ')' and end with '('. becasue it should be removed
+  - greedy algorithm
+    - check the finalization : if recursive reaches the end  and it is valid , this is the smallest removeCount.
+    - if not end
+      - copy stack and run recursive with both stay and remove.
 
 
 
