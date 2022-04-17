@@ -20,7 +20,13 @@
   - [1.13. list : python remove element from a list](#113-list--python-remove-element-from-a-list)
   - [1.14. graph](#114-graph)
     - [1.14.1. dijkstra](#1141-dijkstra)
-  - [1.15. Books & URL](#115-books--url)
+  - [1.15. greedy algorithm](#115-greedy-algorithm)
+    - [1.15.1. dijkstra's algorithm](#1151-dijkstras-algorithm)
+    - [1.15.2. Ford-Fulkerson Algorithm](#1152-ford-fulkerson-algorithm)
+    - [1.15.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics](#1153-kruskals-algorithm--find-minimum-spanning-tree--optimal-graph-connected-all-vertics)
+    - [1.15.4. Prim's Algorithm : find minimum spanning tree](#1154-prims-algorithm--find-minimum-spanning-tree)
+    - [1.15.5. Huffman Coding : a technique of compressing data to reduce its size](#1155-huffman-coding--a-technique-of-compressing-data-to-reduce-its-size)
+  - [1.16. Books & URL](#116-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -96,6 +102,8 @@
 - [74. Spiral Matrix II (#59) - medium / python / 15M](#74-spiral-matrix-ii-59---medium--python--15m)
 - [75. Trim a Binary Search Tree (#669) - medium / python / 10M](#75-trim-a-binary-search-tree-669---medium--python--10m)
 - [76. Convert BST to Greater Tree (#538) - medium / python / 2H](#76-convert-bst-to-greater-tree-538---medium--python--2h)
+- [77. Merge k Sorted Lists (#23) - hard / python / 3H](#77-merge-k-sorted-lists-23---hard--python--3h)
+- [78. Increasing Order Search Tree (#897) - easy / python / 20M](#78-increasing-order-search-tree-897---easy--python--20m)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -287,7 +295,51 @@ int GCD(int a, int b){
         return result
 ```
 
-## 1.15. Books & URL
+## 1.15. greedy algorithm
+- Greedy Choice Property : If an optimal solution to the problem can be found by choosing the best choice at each step without reconsidering the previous steps once chosen, the problem can be solved using a greedy approach. This property is called greedy choice property.
+  - Problem: You have to make a change of an amount using the smallest possible number of coins.
+    - Amount: $18
+    - Available coins are
+      -   $5 coin
+      -   $2 coin
+      -   $1 coin
+    - There is no limit to the number of each coin you can use.
+### 1.15.1. dijkstra's algorithm
+- [1.14.1. dijkstra](#1141-dijkstra)
+
+### 1.15.2. Ford-Fulkerson Algorithm
+- Ford-Fulkerson algorithm is a greedy approach for calculating the maximum possible flow in a network or a graph.
+- Each pipe has a certain capacity of liquid it can transfer at an instance. For this algorithm, we are going to find how much liquid can be flowed from the source to the sink at an instance using the network.
+  - ![](https://cdn.programiz.com/sites/tutorial2program/files/flow-network.png)
+- algorithm :
+  1. find path with BFS (parent is path from sink.)
+  2. sum path flow
+  3. change graph (substract graph capacity when they used from sink)
+  4. goto 1
+
+### 1.15.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics
+- We start from the edges with the lowest weight and keep adding edges until we reach our goal. The steps for implementing Kruskal's algorithm are as follows:
+  - Sort all the edges from low weight to high
+  - Take the edge with the lowest weight and add it to the spanning tree. **If adding the edge created a cycle,** then reject this edge.
+  - Keep adding edges until we reach all vertices.
+  - ![](https://cdn.programiz.com/sites/tutorial2program/files/ka-1.png)
+- algorithm :
+  - checking the loop is key factor. if both vertics of edge are in current graph , it is loop.  <-  i think it is faster than suggested code.
+
+### 1.15.4. Prim's Algorithm : find minimum spanning tree
+- i do not know what is difference with kruskal's algorithm
+  
+### 1.15.5. Huffman Coding : a technique of compressing data to reduce its size
+- Using the Huffman Coding technique, we can compress the string to a smaller size. Huffman coding first creates a tree using the frequencies of the character and then generates code for each character.
+| Character       | Frequency | Code | Size     |
+| --------------- | --------- | ---- | -------- |
+| A               | 5         | 11   | 5*2 = 10 |
+| B               | 1         | 100  | 1*3 = 3  |
+| C               | 6         | 0    | 6*1 = 6  |
+| D               | 3         | 101  | 3*3 = 9  |
+| 4 * 8 = 32 bits | 15 bits   |      | 28 bits  |
+
+## 1.16. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - 
@@ -1413,7 +1465,7 @@ class Solution:
 - algorithm :
   - sum of traverse order : this is tree traverse problem
 
-# Merge k Sorted Lists (#23) - hard / python / 3H
+# 77. Merge k Sorted Lists (#23) - hard / python / 3H
 - hard : linked list
 - problem :
   - You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
@@ -1426,9 +1478,14 @@ class Solution:
   - find minimum value -> use heapq
   - keep the node -> reuse the node : not create the node
 
-
-
-
+# 78. Increasing Order Search Tree (#897) - easy / python / 20M
+- easy : tree traverse
+- problem :
+  - Given the root of a binary search tree, rearrange the tree in in-order so that the leftmost node in the tree is now the root of the tree, and every node has no left child and only one right child.
+- https://leetcode.com/problems/increasing-order-search-tree/
+- [increasingBST.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/increasingBST.py) : passed
+  - Runtime: 36 ms, faster than 76.74% of Python3 online submissions for Increasing Order Search Tree.
+  - Memory Usage: 14 MB, less than 13.79% of Python3 online submissions for Increasing Order Search Tree.
 
 
 
