@@ -110,6 +110,7 @@
 - [80. Special Day solved 100 problems on leetcode (2002-04-17 Sunday)](#80-special-day-solved-100-problems-on-leetcode-2002-04-17-sunday)
 - [81. Remove Invalid Parentheses (#301) - hard / python / 4H  / greedy : O(2^N)](#81-remove-invalid-parentheses-301---hard--python--4h---greedy--o2n)
 - [82. Kth Smallest Element in a BST (#230) - medium / python / 30M](#82-kth-smallest-element-in-a-bst-230---medium--python--30m)
+- [83. Longest Common Subsequence (#1143) - medium / python / <got help>](#83-longest-common-subsequence-1143---medium--python--got-help)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -350,7 +351,21 @@ int GCD(int a, int b){
 - This technique of storing the value of subproblems is called memoization. By saving the values in the array, we save time for computations of sub-problems we have already come across.
 
 ### 1.16.1. Longest Common Subsequence
+- https://riptutorial.com/algorithm/example/24007/longest-common-subsequence-explanation
+- O(MN) 
+- Table[2][3] represents the length of the longest common subsequence between "ac" and "abc".
 - 
+    |     |     |   0 |   1 |   2 |   3 |   4 |   5 |   6 |
+    |-----|-----|-----|-----|-----|-----|-----|-----|-----|
+    |     | chʳ |     |  a  |  b  |  c  |  d  |  a  |  f  |
+    |  0  |     |  0  |  0  |  0  |  0  |  0  |  0  |  0  |
+    |  1  |  a  |  0  |  1  |  1  |  1  |  1  |  1  |  1  |
+    |  2  |  c  |  0  |  1  |     |     |     |     |     |
+    |  3  |  b  |  0  |     |     |     |     |     |     |
+    |  4  |  c  |  0  |     |     |     |     |     |     |
+    |  5  |  f  |  0  |     |     |     |     |     |     |
+- if s2[i] is not equal to s1[j] =>   Table[i][j] = max(Table[i-1][j], Table[i][j-1]
+- if s2[i] equals to s1[j]       =>   Table[i][j] = Table[i-1][j-1] + 1
 
 ## 1.17. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
@@ -1542,14 +1557,30 @@ class Solution:
 # 82. Kth Smallest Element in a BST (#230) - medium / python / 30M
 - medium
 - problem :
-- Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
+  - Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
 - https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 - [kthSmallest.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/kthSmallest.py) : passed
   - Runtime: 47 ms, faster than 96.14% of Python3 online submissions for Kth Smallest Element in a BST.
   - Memory Usage: 18 MB, less than 48.12% of Python3 online submissions for Kth Smallest Element in a BST.
 
-
-
+# 83. Longest Common Subsequence (#1143) - medium / python / <got help>
+- medium
+- problem :
+  - Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
+  - A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
+    - For example, "ace" is a subsequence of "abcde".
+  - A common subsequence of two strings is a subsequence that is common to both strings.
+- https://leetcode.com/problems/longest-common-subsequence/
+- [longestCommonSubsequence.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestCommonSubsequence.py) : passed <got help>
+  - Runtime: 416 ms, faster than 86.70% of Python3 online submissions for Longest Common Subsequence.
+  - Memory Usage: 22 MB, less than 77.27% of Python3 online submissions for Longest Common Subsequence.
+- algorithm : 
+  - [1.16.1. Longest Common Subsequence](#1161-longest-common-subsequence) : 
+    - https://riptutorial.com/algorithm/example/24007/longest-common-subsequence-explanation
+    - https://leetcode.com/problems/longest-common-subsequence/discuss/1944428/C%2B%2B-Easy-brute-force-and-simple-DP-solution
+  - if s2[i] is not equal to s1[j] =>   Table[i][j] = max(Table[i-1][j], Table[i][j-1]
+  - if s2[i] equals to s1[j]       =>   Table[i][j] = Table[i-1][j-1] + 1
+  
 
 
 
