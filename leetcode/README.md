@@ -1598,10 +1598,18 @@ class Solution:
 - [recoverTree.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/recoverTree.py) : passed  O(n) space , O(NlogN) time complexity
   - Runtime: 76 ms, faster than 86.88% of Python3 online submissions for Recover Binary Search Tree.
   - Memory Usage: 14.3 MB, less than 65.76% of Python3 online submissions for Recover Binary Search Tree.
+- [recoverTree2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/recoverTree2.py) : passed  O(1) space , O(N) time complexity
+  - Runtime: 83 ms, faster than 71.70% of Python3 online submissions for Recover Binary Search Tree.
+  - Memory Usage: 14.4 MB, less than 28.16% of Python3 online submissions for Recover Binary Search Tree.
 - algorithm :
   - method 1: O(n) space , O(NlogN) time complexity 
     - traverse with sorted order.
     - if this order is not proper , it is mistake for swapping.
+  - method 2 : O(1) space , O(N) time complexity
+    - traverse twice
+        - 1. get list  and check what is mistake
+        - 2. change value
+    - it has strange result. method 2 is slower than method 1.  -> I guess tree traverse is slower than sort or arrary (list) operation.
 
 
 
