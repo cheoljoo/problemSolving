@@ -28,6 +28,7 @@
     - [1.15.5. Huffman Coding : a technique of compressing data to reduce its size](#1155-huffman-coding--a-technique-of-compressing-data-to-reduce-its-size)
   - [1.16. Dynamic Programming](#116-dynamic-programming)
     - [1.16.1. Longest Common Subsequence](#1161-longest-common-subsequence)
+    - [1.16.2. Floyd-Warshall Algorithm](#1162-floyd-warshall-algorithm)
   - [1.17. Books & URL](#117-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
@@ -110,7 +111,8 @@
 - [80. Special Day solved 100 problems on leetcode (2002-04-17 Sunday)](#80-special-day-solved-100-problems-on-leetcode-2002-04-17-sunday)
 - [81. Remove Invalid Parentheses (#301) - hard / python / 4H  / greedy : O(2^N)](#81-remove-invalid-parentheses-301---hard--python--4h---greedy--o2n)
 - [82. Kth Smallest Element in a BST (#230) - medium / python / 30M](#82-kth-smallest-element-in-a-bst-230---medium--python--30m)
-- [83. Longest Common Subsequence (#1143) - medium / python / <got help>](#83-longest-common-subsequence-1143---medium--python--got-help)
+- [83. Longest Common Subsequence (#1143) - medium / python / 1H / <got help>](#83-longest-common-subsequence-1143---medium--python--1h--got-help)
+- [84. Recover Binary Search Tree (#99) - medium / python / 30M](#84-recover-binary-search-tree-99---medium--python--30m)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -366,6 +368,12 @@ int GCD(int a, int b){
     |  5  |  f  |  0  |     |     |     |     |     |     |
 - if s2[i] is not equal to s1[j] =>   Table[i][j] = max(Table[i-1][j], Table[i][j-1]
 - if s2[i] equals to s1[j]       =>   Table[i][j] = Table[i-1][j-1] + 1
+
+### 1.16.2. Floyd-Warshall Algorithm
+- https://www.programiz.com/dsa/floyd-warshall-algorithm
+- Floyd-Warshall Algorithm is an algorithm for finding the shortest path between all the pairs of vertices in a weighted graph. This algorithm works for both the directed and undirected weighted graphs. 
+- ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Graph.png)  ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-1.png) ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-2.png)
+- O(N^3)
 
 ## 1.17. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
@@ -1563,7 +1571,7 @@ class Solution:
   - Runtime: 47 ms, faster than 96.14% of Python3 online submissions for Kth Smallest Element in a BST.
   - Memory Usage: 18 MB, less than 48.12% of Python3 online submissions for Kth Smallest Element in a BST.
 
-# 83. Longest Common Subsequence (#1143) - medium / python / <got help>
+# 83. Longest Common Subsequence (#1143) - medium / python / 1H / <got help>
 - medium
 - problem :
   - Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
@@ -1575,14 +1583,25 @@ class Solution:
   - Runtime: 416 ms, faster than 86.70% of Python3 online submissions for Longest Common Subsequence.
   - Memory Usage: 22 MB, less than 77.27% of Python3 online submissions for Longest Common Subsequence.
 - algorithm : 
-  - [1.16.1. Longest Common Subsequence](#1161-longest-common-subsequence) : 
+  - [1.16.1. Longest Common Subsequence](#1161-longest-common-subsequence)
     - https://riptutorial.com/algorithm/example/24007/longest-common-subsequence-explanation
     - https://leetcode.com/problems/longest-common-subsequence/discuss/1944428/C%2B%2B-Easy-brute-force-and-simple-DP-solution
   - if s2[i] is not equal to s1[j] =>   Table[i][j] = max(Table[i-1][j], Table[i][j-1]
   - if s2[i] equals to s1[j]       =>   Table[i][j] = Table[i-1][j-1] + 1
   
-
-
+# 84. Recover Binary Search Tree (#99) - medium / python / 30M
+- medium
+- problem :
+  - You are given the root of a binary search tree (BST), where the values of exactly two nodes of the tree were swapped by mistake. Recover the tree without changing its structure.
+  - Follow up: A solution using O(n) space is pretty straight-forward. Could you devise a constant O(1) space solution?
+- https://leetcode.com/problems/recover-binary-search-tree/
+- [recoverTree.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/recoverTree.py) : passed  O(n) space , O(NlogN) time complexity
+  - Runtime: 76 ms, faster than 86.88% of Python3 online submissions for Recover Binary Search Tree.
+  - Memory Usage: 14.3 MB, less than 65.76% of Python3 online submissions for Recover Binary Search Tree.
+- algorithm :
+  - method 1: O(n) space , O(NlogN) time complexity 
+    - traverse with sorted order.
+    - if this order is not proper , it is mistake for swapping.
 
 
 
