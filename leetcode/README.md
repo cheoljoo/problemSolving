@@ -113,8 +113,8 @@
 - [82. Kth Smallest Element in a BST (#230) - medium / python / 30M](#82-kth-smallest-element-in-a-bst-230---medium--python--30m)
 - [83. Longest Common Subsequence (#1143) - medium / python / 1H / <got help>](#83-longest-common-subsequence-1143---medium--python--1h--got-help)
 - [84. Recover Binary Search Tree (#99) - medium / python / 30M](#84-recover-binary-search-tree-99---medium--python--30m)
-- [Longest Valid Parentheses (#32) - hard / python /](#longest-valid-parentheses-32---hard--python-)
-- [Binary Search Tree Iterator (#173) - medium / c++ / 10M](#binary-search-tree-iterator-173---medium--c--10m)
+- [85. Longest Valid Parentheses (#32) - hard / python / 4H](#85-longest-valid-parentheses-32---hard--python--4h)
+- [86. Binary Search Tree Iterator (#173) - medium / c++ / 10M](#86-binary-search-tree-iterator-173---medium--c--10m)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1613,16 +1613,28 @@ class Solution:
         - 2. change value
     - it has strange result. method 2 is slower than method 1.  -> I guess tree traverse is slower than sort or arrary (list) operation.
 
-# Longest Valid Parentheses (#32) - hard / python / 
+# 85. Longest Valid Parentheses (#32) - hard / python / 4H
 - hard
 - problem :
   - Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
   - longest continuous substring
 - https://leetcode.com/problems/longest-valid-parentheses/
-- [longestValidParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestValidParentheses.py) : 
-  - 
+- [longestValidParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestValidParentheses.py) : passed  O(N)
+  - Runtime: 66 ms, faster than 45.88% of Python3 online submissions for Longest Valid Parentheses.
+  - Memory Usage: 15.9 MB, less than 7.48% of Python3 online submissions for Longest Valid Parentheses.
+- algorithm :
+  - use 2 stack : one is for parethesis and the other is for count.
+  - stack :
+    - () -> ['s',2]
+    - (()) -> when input is last ')' , then stack is [ ['(',2] , ['s',2] ] .   so we backtrace to reach '('.  => stack is [ ['s',4 ] ]
+  - pStack : we use it to check whether '(' remains or not.
+- best :  use distance instead of () counts.
+  - [Simple O(n) memory and time Python using stack in 10 lines](https://leetcode.com/problems/longest-valid-parentheses/discuss/1905363/Simple-O(n)-memory-and-time-Python-using-stack-in-10-lines)
+  - The idea is to find the **distance** between the current close paranethesis and the last [potentially] unmatched close paranthese.
+  - To avoid edge cases, we initialize the stack with -1, meaning that initially no sign of misalignment exists.
 
-# Binary Search Tree Iterator (#173) - medium / c++ / 10M
+
+# 86. Binary Search Tree Iterator (#173) - medium / c++ / 10M
 - medium : binary search tree
 - problem : 
   - Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):
