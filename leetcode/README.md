@@ -115,6 +115,7 @@
 - [84. Recover Binary Search Tree (#99) - medium / python / 30M](#84-recover-binary-search-tree-99---medium--python--30m)
 - [85. Longest Valid Parentheses (#32) - hard / python / 4H](#85-longest-valid-parentheses-32---hard--python--4h)
 - [86. Binary Search Tree Iterator (#173) - medium / c++ / 10M](#86-binary-search-tree-iterator-173---medium--c--10m)
+- [87. Reverse Nodes in k-Group (#25) - hard / c++ / 20M / Top 100 Liked Questions](#87-reverse-nodes-in-k-group-25---hard--c--20m--top-100-liked-questions)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1648,8 +1649,22 @@ class Solution:
   - Runtime: 54 ms, faster than 18.47% of C++ online submissions for Binary Search Tree Iterator.
   - Memory Usage: 24.3 MB, less than 22.22% of C++ online submissions for Binary Search Tree Iterator.
 
-
-
+# 87. Reverse Nodes in k-Group (#25) - hard / c++ / 20M / Top 100 Liked Questions
+- hard : linked list
+- problem : 
+  - Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.
+  - k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.
+  - You may not alter the values in the list's nodes, only nodes themselves may be changed.
+  - Follow-up: Can you solve the problem in O(1) extra memory space?
+- https://leetcode.com/problems/reverse-nodes-in-k-group/
+- [reverseKGroup.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/reverseKGroup.cpp) : passed  space:O(K) time-complexity:O(N)
+  - Runtime: 12 ms, faster than 94.30% of C++ online submissions for Reverse Nodes in k-Group.
+  - Memory Usage: 11.8 MB, less than 8.01% of C++ online submissions for Reverse Nodes in k-Group.
+- algorithm :
+  - // go to k-th next node
+    - // remain node count is less than k  -> keep it (not change)
+  - // change node values
+  - goto loop
 
 
 
