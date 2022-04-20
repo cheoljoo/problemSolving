@@ -41,7 +41,7 @@ class Solution:
 
            
 def run(s,expect):
-    print(s,end="")
+    print(len(s),end="")
     start = time.time()
     A = Solution()
     r = A.countBits(s)

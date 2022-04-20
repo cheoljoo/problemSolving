@@ -113,6 +113,8 @@
 - [82. Kth Smallest Element in a BST (#230) - medium / python / 30M](#82-kth-smallest-element-in-a-bst-230---medium--python--30m)
 - [83. Longest Common Subsequence (#1143) - medium / python / 1H / <got help>](#83-longest-common-subsequence-1143---medium--python--1h--got-help)
 - [84. Recover Binary Search Tree (#99) - medium / python / 30M](#84-recover-binary-search-tree-99---medium--python--30m)
+- [Longest Valid Parentheses (#32) - hard / python /](#longest-valid-parentheses-32---hard--python-)
+- [Binary Search Tree Iterator (#173) - medium / c++ / 10M](#binary-search-tree-iterator-173---medium--c--10m)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1611,9 +1613,28 @@ class Solution:
         - 2. change value
     - it has strange result. method 2 is slower than method 1.  -> I guess tree traverse is slower than sort or arrary (list) operation.
 
+# Longest Valid Parentheses (#32) - hard / python / 
+- hard
+- problem :
+  - Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+  - longest continuous substring
+- https://leetcode.com/problems/longest-valid-parentheses/
+- [longestValidParentheses.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestValidParentheses.py) : 
+  - 
 
-
-
+# Binary Search Tree Iterator (#173) - medium / c++ / 10M
+- medium : binary search tree
+- problem : 
+  - Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):
+    - BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST.
+    - boolean hasNext() Returns true if there exists a number in the traversal to the right of the pointer, otherwise returns false.
+    - int next() Moves the pointer to the right, then returns the number at the pointer.
+  - Notice that by initializing the pointer to a non-existent smallest number, the first call to next() will return the smallest element in the BST.
+  - You may assume that next() calls will always be valid. That is, there will be at least a next number in the in-order traversal when next() is called.
+- https://leetcode.com/problems/binary-search-tree-iterator/
+- [BSTIterator.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/BSTIterator.cpp) : passed
+  - Runtime: 54 ms, faster than 18.47% of C++ online submissions for Binary Search Tree Iterator.
+  - Memory Usage: 24.3 MB, less than 22.22% of C++ online submissions for Binary Search Tree Iterator.
 
 
 
