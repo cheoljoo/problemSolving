@@ -117,6 +117,7 @@
 - [86. Binary Search Tree Iterator (#173) - medium / c++ / 10M](#86-binary-search-tree-iterator-173---medium--c--10m)
 - [87. Reverse Nodes in k-Group (#25) - hard / c++ / 20M / Top 100 Liked Questions](#87-reverse-nodes-in-k-group-25---hard--c--20m--top-100-liked-questions)
 - [88. First Missing Positive (#41) - hard / python / 20M / Top 100 Liked Questions](#88-first-missing-positive-41---hard--python--20m--top-100-liked-questions)
+- [89. Trapping Rain Water (#42) - hard / python / 30M / Top 100 Liked Questions / coalTar](#89-trapping-rain-water-42---hard--python--30m--top-100-liked-questions--coaltar)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1684,8 +1685,19 @@ class Solution:
   - if nums[i] is negative or is greater than 500000, we throw away it.
   - mem[0:500001] will set the value of nums[]
 
-
-
+# 89. Trapping Rain Water (#42) - hard / python / 30M / Top 100 Liked Questions / coalTar
+- hard : coalTar
+- problem :
+  - Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+- https://leetcode.com/problems/trapping-rain-water/
+- [trap.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/trap.cpp) : passed   O(N)
+  - Runtime: 100 ms, faster than 91.15% of Python3 online submissions for Trapping Rain Water.
+  - Memory Usage: 15.7 MB, less than 92.92% of Python3 online submissions for Trapping Rain Water.
+- algorithm :
+  - find max (leftIndex , RightIndex of Max)
+  - Left Trap
+  - Max .. Max Trap
+  - Right Trap
 
 
 
