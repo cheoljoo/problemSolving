@@ -116,6 +116,7 @@
 - [85. Longest Valid Parentheses (#32) - hard / python / 4H](#85-longest-valid-parentheses-32---hard--python--4h)
 - [86. Binary Search Tree Iterator (#173) - medium / c++ / 10M](#86-binary-search-tree-iterator-173---medium--c--10m)
 - [87. Reverse Nodes in k-Group (#25) - hard / c++ / 20M / Top 100 Liked Questions](#87-reverse-nodes-in-k-group-25---hard--c--20m--top-100-liked-questions)
+- [88. First Missing Positive (#41) - hard / python / 20M / Top 100 Liked Questions](#88-first-missing-positive-41---hard--python--20m--top-100-liked-questions)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1666,8 +1667,22 @@ class Solution:
   - // change node values
   - goto loop
 
-
-
+# 88. First Missing Positive (#41) - hard / python / 20M / Top 100 Liked Questions
+- hard
+- problem :
+  - Given an unsorted integer array nums, return the smallest missing positive integer.
+  - You must implement an algorithm that runs in O(n) time and uses constant extra space.
+- https://leetcode.com/problems/first-missing-positive/
+- [firstMissingPositive.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/firstMissingPositive.cpp) : passed   O(N) - long initiating time
+  - Runtime: 5172 ms, faster than 5.02% of Python3 online submissions for First Missing Positive.
+  - Memory Usage: 62.8 MB, less than 47.28% of Python3 online submissions for First Missing Positive.
+- ```M = 5*(10**5)+1``` -> ```M = len(nums)+1``` : passed O(N)
+  - Runtime: 969 ms, faster than 79.09% of Python3 online submissions for First Missing Positive.
+  - Memory Usage: 63.2 MB, less than 46.60% of Python3 online submissions for First Missing Positive.
+- algorithm :
+  - key is that maximum length of list is 500000. so i reserved the memory.
+  - if nums[i] is negative or is greater than 500000, we throw away it.
+  - mem[0:500001] will set the value of nums[]
 
 
 
