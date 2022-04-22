@@ -15,13 +15,13 @@
   - [9.2. string](#92-string)
   - [9.3. Hash Map](#93-hash-map)
 - [10. error handling](#10-error-handling)
-- [Generic Types, Traits, and Lifetimes](#generic-types-traits-and-lifetimes)
-  - [Generic](#generic)
-  - [trait](#trait)
-  - [lifetime](#lifetime)
-- [자동화된 테스트 작성하기](#자동화된-테스트-작성하기)
-  - [테스트의 실행 방식 제어하기](#테스트의-실행-방식-제어하기)
-  - [테스트 조직화](#테스트-조직화)
+- [11. Generic Types, Traits, and Lifetimes](#11-generic-types-traits-and-lifetimes)
+  - [11.1. Generic](#111-generic)
+  - [11.2. trait](#112-trait)
+  - [11.3. lifetime](#113-lifetime)
+- [12. 자동화된 테스트 작성하기](#12-자동화된-테스트-작성하기)
+  - [12.1. 테스트의 실행 방식 제어하기](#121-테스트의-실행-방식-제어하기)
+  - [12.2. 테스트 조직화](#122-테스트-조직화)
 
 --------
 
@@ -388,7 +388,7 @@ impl Guess {
 }
 ```
 
-# Generic Types, Traits, and Lifetimes
+# 11. Generic Types, Traits, and Lifetimes
 - Every programming language has tools for effectively handling the duplication of concepts. In Rust, one such tool is generics.  모든 프로그래밍 언어는 컨셉의 복제를 효율적으로 다루기 위한 도구를 가지고 있습니다; 러스트에서, 그러한 도구 중 하나가 바로 제네릭(generic) 입니다.  ex. Option<T>
 - Traits (속성) : traits to define behavior in a generic way.  트레잇(trait) 에 대하여 논의할 것인데, 이는 동작을 제네릭 한 방식으로 정의하는
 방법을 말합니다. 트레잇은 제네릭 타입과 결합되어 제네릭 타입에 대해 아무 타입이나 허용하지 않고,
@@ -397,7 +397,7 @@ impl Guess {
 us to borrow values in many situations while still enabling the compiler to
 check that the references are valid. 라이프타임은 수많은 상황에서 값을 빌릴 수 있도록 허용해 주고도 여전히 참조자들이 유효할지를 컴파일러가 검증하도록 해주는 러스트의 지능입니다.
 
-## Generic
+## 11.1. Generic
 - C++ template
 - generic2.rs
 ```rust
@@ -438,12 +438,12 @@ enum Result<T, E> {
 ```
 - 제네릭을 이용한 코드의 성능 : 구체적인 타입을 명시했을 때와 비교해 전혀 느려지지 않을 것이란 점입니다!  어떠한 런타임 비용도 없음을 의미합니다
 
-## trait
+## 11.2. trait
 - 정의 : 어떤 타입의 동작은 우리가 해당 타입 상에서 호출할 수 있는 메소드들로 구성되어 있습니다. 만일 우리가 서로 다른 타입에 대해 모두 동일한j 메소드를 호출할 수 있다면 이 타입들은 동일한 동작을 공유하는 것입니다. 트레잇의 정의는 어떠한 목적을 달성하기 위해 필요한 동작의 집합을 정의하기 위해 메소드 시그니처들을 함께 묶는 방법입니다.
 - 트레잇은 한 줄 당 하나의 메소드 시그니처와 각 줄의 끝에 세미콜론을 갖도록 함으로써, 본체 내에 여러 개의 메소드를 가질 수 있습니다.
 - 트레잇 구현과 함께 기억할 한 가지 제한사항이 있습니다: 트레잇 혹은 타입이 우리의 크레이트 내의 것일 경우에만 해당 타입에서의 트레잇을 정의할 수 있습니다. 바꿔 말하면, 외부의 타입에 대한 외부 트레잇을 구현하는 것은 허용되지 않습니다. 예를 들어, Vec에 대한 Display 트레잇은 구현이 불가능한데, Display와 Vec 모두 표준 라이브러리 내에 정의되어 있기 때문입니다. 우리의 aggregator 크레이트 기능의 일부로서 Tweet과 같은 커스텀 타입에 대한 Display와 같은 표준 라이브러리 트레잇을 구현하는 것은 허용됩니다. 또한 우리의 aggregator 크레이트 내에서 Vec에 대한 Summarizable을 구현하는 것도 가능한데, 이는 우리 크레이트 내에 Summarizable이 정의되어 있기 때문입니다. 이러한 제한은 고아 규칙(orphan rule) 이라고 불리는 것의 일부인데, 이는 타입 이론에 흥미가 있다면 찾아볼 수 있습니다. 간단하게 말하면, 부모 타입이 존재하지 않기 때문에 고아 규칙이라고 부릅니다. 이 규칙이 없다면, 두 크레이트는 동일한 타입에 대해 동일한 트레잇을 구현할 수 있게 되고, 이 두 구현체가 충돌을 일으킬 것입니다: 러스트는 어떤 구현을 이용할 것인지 알지 못할 것입니다. 러스트가 고아 규칙을 강제하기 때문에, 다른 사람의 코드는 여러분의 코드를 망가뜨리지 못하고 반대의 경우도 마찬가지입니다.
 
-## lifetime
+## 11.3. lifetime
 - 라이프타임은 댕글링 참조자를 방지합니다
   - 스코프 밖으로 벗어난 값에 대한 참조자를 사용하는 시도
 
@@ -470,12 +470,12 @@ enum Result<T, E> {
   3. 만일 여러 개의 입력 라이프타임 파라미터가 있는데, 메소드라서 그중 하나가 &self 혹은 &mut self라고 한다면, self의 라이프타임이 모든 출력 라이프타임 파라미터에 대입됩니다. 이는 메소드의 작성을 더욱 멋지게 만들어줍니다.
 
 
-# 자동화된 테스트 작성하기
+# 12. 자동화된 테스트 작성하기
 - 러스트 내의 테스트란 test 속성(attribute)이 주석으로 달려진 (annotated) 함수입니다. 속성은 러스트 코드 조각에 대한 메타데이터입니다: 한 가지 예로 5장에서 우리가 구조체와 함께 사용했던 derive 속성이 있습니다. 함수를 테스트 함수로 변경하기 위해서는, fn 전 라인에 #[test]를 추가합니다. cargo test 커맨드를 사용하여 테스트를 실행시키면, 러스트는 test 속성이 달려있는 함수들을 실행하고 각 테스트 함수가 성공 혹은 실패했는지를 보고하는 테스트 실행용 바이너리를 빌드할 것입니다.
 - cd rust-linux/adder
   - cargo test
 
-## 테스트의 실행 방식 제어하기
+## 12.1. 테스트의 실행 방식 제어하기
 - cargo test -- --help를 실행하는 것은 구분자 -- 이후에 나올 수 있는
 옵션을 표시합니다.
 - 기본적으로 스레드를 이용하여 병렬적으로 수행됩니다. 
@@ -487,7 +487,7 @@ enum Result<T, E> {
 - ```$ cargo test -- --ignored``` : ignored 들만 test
 - 비공개 함수 테스트하기 : 기본이 비공개 함수도 test됨 (internal_adder)
   
-## 테스트 조직화
+## 12.2. 테스트 조직화
 - 통합 test
   - rust-linux/adder/tests/integration_test.rs
   - tests directory는 integration test를 말하며,  이것은 unit test가 모두 성공했을때만 수행된다. 
@@ -496,4 +496,5 @@ enum Result<T, E> {
     - ```cargo test --test integration_test``` -> ```cargo test --test integration_test```
 - 우리의 프로젝트가 src/lib.rs 파일이 없고 src/main.rs 파일만 갖고 있는 바이너리 프로젝트라면, tests 디렉토리 내에 통합 테스트를 만들어서 src/main.rs에 정의된 함수를 가져오기 위하여 extern crate를 이용할 수 없습니다. 오직 라이브러리 크레이트만 다른 크레이트에서 호출하고 사용할 수 있는 함수들을 노출시킵니다; 바이너리 크레이트는 그 스스로 실행될 것으로 여겨집니다.
 - 이는 바이너리를 제공하는 러스트 프로젝트들이 src/lib.rs에 위치한 로직을 호출하는 간단한 형태의 src/main.rs를 가지고 있는 이유 중 하나입니다. 이러한 구조와 함께라면, extern crate를 이용하여 중요한 기능들을 커버하도록 하기 위해 통합 테스트가 라이브러리 크레이트를 테스트할 수 있습니다. 만일 중요 기능이 작동한다면, src/main.rs 내의 소량의 코드 또한 동작할 것이고, 이 소량의 코드는 테스트할 필요가 없습니다.
-- 
+
+# 

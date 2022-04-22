@@ -118,6 +118,7 @@
 - [87. Reverse Nodes in k-Group (#25) - hard / c++ / 20M / Top 100 Liked Questions](#87-reverse-nodes-in-k-group-25---hard--c--20m--top-100-liked-questions)
 - [88. First Missing Positive (#41) - hard / python / 20M / Top 100 Liked Questions](#88-first-missing-positive-41---hard--python--20m--top-100-liked-questions)
 - [89. Trapping Rain Water (#42) - hard / python / 30M / Top 100 Liked Questions / coalTar](#89-trapping-rain-water-42---hard--python--30m--top-100-liked-questions--coaltar)
+- [90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions](#90-edit-distance-72---hard--python--3h--got-help--top-100-liked-questions)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1699,8 +1700,20 @@ class Solution:
   - Max .. Max Trap
   - Right Trap
 
-
-
+# 90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions
+- hard
+- problem :
+  - Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
+  - You have the following three operations permitted on a word:
+    - Insert a character
+    - Delete a character
+    - Replace a character
+- https://leetcode.com/problems/edit-distance/
+- [minDistance.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDistance.cpp) : passed  DP:O(MN)
+  - Runtime: 187 ms, faster than 67.86% of Python3 online submissions for Edit Distance.
+  - Memory Usage: 16.1 MB, less than 91.66% of Python3 online submissions for Edit Distance.
+- algorithm : greedy O(2^N) , DP O(MN)  <got help>
+  - https://leetcode.com/problems/edit-distance/discuss/1955895/Python-oror-Faster-than-95.38-oror-Easy-to-Understand-Solution
 
 
 
