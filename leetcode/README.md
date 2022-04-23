@@ -118,7 +118,8 @@
 - [87. Reverse Nodes in k-Group (#25) - hard / c++ / 20M / Top 100 Liked Questions](#87-reverse-nodes-in-k-group-25---hard--c--20m--top-100-liked-questions)
 - [88. First Missing Positive (#41) - hard / python / 20M / Top 100 Liked Questions](#88-first-missing-positive-41---hard--python--20m--top-100-liked-questions)
 - [89. Trapping Rain Water (#42) - hard / python / 30M / Top 100 Liked Questions / coalTar](#89-trapping-rain-water-42---hard--python--30m--top-100-liked-questions--coaltar)
-- [90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions](#90-edit-distance-72---hard--python--3h--got-help--top-100-liked-questions)
+- [90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions / BEST DP problem](#90-edit-distance-72---hard--python--3h--got-help--top-100-liked-questions--best-dp-problem)
+- [91. Maximal Rectangle (#85) - hard / python / 1D / Top 100 Liked Questions](#91-maximal-rectangle-85---hard--python--1d--top-100-liked-questions)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1541,10 +1542,10 @@ class Solution:
 - algorithm :
   - gather if colsed histogram has the same height : 1000, 1000 , 1000 >> (1000,3) -> sort
   - O(N^2)  : caculdate left and right direction if he can go. 
-- <got help> : https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/1954731/EASY-C%2B%2B-SOLUTION-or-NSR-or-NSL-or-STACK
+- BEST <got help> : https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/1954731/EASY-C%2B%2B-SOLUTION-or-NSR-or-NSL-or-STACK
   - O(N)
   - get all left ( 0 -> N)  , get all right (N -> 0)
-  - [largestRectangleArea2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/largestRectangleArea2.py) : passed O(NlogN)
+  - [largestRectangleArea2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/largestRectangleArea2.py) : passed O(N)
     - Runtime: 1278 ms, faster than 57.51% of Python3 online submissions for Largest Rectangle in Histogram.
     - Memory Usage: 27.8 MB, less than 83.45% of Python3 online submissions for Largest Rectangle in Histogram.
 
@@ -1675,7 +1676,7 @@ class Solution:
   - Given an unsorted integer array nums, return the smallest missing positive integer.
   - You must implement an algorithm that runs in O(n) time and uses constant extra space.
 - https://leetcode.com/problems/first-missing-positive/
-- [firstMissingPositive.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/firstMissingPositive.cpp) : passed   O(N) - long initiating time
+- [firstMissingPositive.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/firstMissingPositive.py) : passed   O(N) - long initiating time
   - Runtime: 5172 ms, faster than 5.02% of Python3 online submissions for First Missing Positive.
   - Memory Usage: 62.8 MB, less than 47.28% of Python3 online submissions for First Missing Positive.
 - ```M = 5*(10**5)+1``` -> ```M = len(nums)+1``` : passed O(N)
@@ -1691,7 +1692,7 @@ class Solution:
 - problem :
   - Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
 - https://leetcode.com/problems/trapping-rain-water/
-- [trap.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/trap.cpp) : passed   O(N)
+- [trap.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/trap.py) : passed   O(N)
   - Runtime: 100 ms, faster than 91.15% of Python3 online submissions for Trapping Rain Water.
   - Memory Usage: 15.7 MB, less than 92.92% of Python3 online submissions for Trapping Rain Water.
 - algorithm :
@@ -1700,8 +1701,8 @@ class Solution:
   - Max .. Max Trap
   - Right Trap
 
-# 90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions
-- hard
+# 90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions / BEST DP problem
+- hard : BEST DP problem
 - problem :
   - Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
   - You have the following three operations permitted on a word:
@@ -1709,16 +1710,29 @@ class Solution:
     - Delete a character
     - Replace a character
 - https://leetcode.com/problems/edit-distance/
-- [minDistance.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDistance.cpp) : passed  DP:O(MN)
+- [minDistance.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDistance.py) : passed  DP:O(MN)
   - Runtime: 187 ms, faster than 67.86% of Python3 online submissions for Edit Distance.
   - Memory Usage: 16.1 MB, less than 91.66% of Python3 online submissions for Edit Distance.
 - algorithm : greedy O(2^N) , DP O(MN)  <got help>
   - https://leetcode.com/problems/edit-distance/discuss/1955895/Python-oror-Faster-than-95.38-oror-Easy-to-Understand-Solution
 
-
-
-
-
+# 91. Maximal Rectangle (#85) - hard / python / 1D / Top 100 Liked Questions
+- hard 
+- problem :
+  - Given a rows x cols binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
+- https://leetcode.com/problems/maximal-rectangle/
+- [maximalRectangle.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximalRectangle.py) : passed O(N^3)
+  - Runtime: 1278 ms, faster than 7.04% of Python3 online submissions for Maximal Rectangle.
+  - Memory Usage: 20.2 MB, less than 5.86% of Python3 online submissions for Maximal Rectangle.
+- algorithm :
+  - make matrix with 0 or 1 , 1's count until the end of 1' row , 1's count until the end of 1's column
+  - for r for c -> get max rectangle with (r,c) --> get xsize and ysize of rectangle with 1
+- BEST <got help> : O(N^2) histogram when we saw above specific row  : largest rectangle in histogram is O(N)
+  - https://leetcode.com/problems/maximal-rectangle/discuss/1904690/illustrated-explanation
+  - ![](https://assets.leetcode.com/users/images/0f9c1431-a088-4d22-b810-5abfd51f4630_1648848619.0584486.png)
+  - [maximalRectangle2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximalRectangle2.py) : passed O(N^2)
+    - Runtime: 360 ms, faster than 57.59% of Python3 online submissions for Maximal Rectangle.
+    - Memory Usage: 15.4 MB, less than 23.70% of Python3 online submissions for Maximal Rectangle.
 
 
 
