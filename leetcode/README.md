@@ -120,6 +120,7 @@
 - [89. Trapping Rain Water (#42) - hard / python / 30M / Top 100 Liked Questions / coalTar](#89-trapping-rain-water-42---hard--python--30m--top-100-liked-questions--coaltar)
 - [90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions / BEST DP problem](#90-edit-distance-72---hard--python--3h--got-help--top-100-liked-questions--best-dp-problem)
 - [91. Maximal Rectangle (#85) - hard / python / 1D / Top 100 Liked Questions](#91-maximal-rectangle-85---hard--python--1d--top-100-liked-questions)
+- [Encode and Decode TinyURL (#535) - medium / python /](#encode-and-decode-tinyurl-535---medium--python-)
 
 --------------------
 leetcode : my introduction https://leetcode.com/cheoljoo/
@@ -1734,8 +1735,18 @@ class Solution:
     - Runtime: 360 ms, faster than 57.59% of Python3 online submissions for Maximal Rectangle.
     - Memory Usage: 15.4 MB, less than 23.70% of Python3 online submissions for Maximal Rectangle.
 
-
-
+# Encode and Decode TinyURL (#535) - medium / python / 
+- medium
+- problem :
+  - Note: This is a companion problem to the System Design problem: Design TinyURL.
+  - TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk. Design a class to encode a URL and decode a tiny URL.
+  - There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.
+  - Implement the Solution class:
+    - Solution() Initializes the object of the system.
+    - String encode(String longUrl) Returns a tiny URL for the given longUrl.
+    - String decode(String shortUrl) Returns the original long URL for the given shortUrl. It is guaranteed that the given shortUrl was encoded by the same object.
+- https://leetcode.com/problems/encode-and-decode-tinyurl/
+- [TinyURL.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/TinyURL.py) :
 
 
 
