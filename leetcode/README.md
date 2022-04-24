@@ -121,9 +121,10 @@
 - [90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions / BEST DP problem](#90-edit-distance-72---hard--python--3h--got-help--top-100-liked-questions--best-dp-problem)
 - [91. Maximal Rectangle (#85) - hard / python / 1D / Top 100 Liked Questions](#91-maximal-rectangle-85---hard--python--1d--top-100-liked-questions)
 - [92. Encode and Decode TinyURL (#535) - medium / python / 5M](#92-encode-and-decode-tinyurl-535---medium--python--5m)
+- [93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-should-be-different-between-variables-and-funciton-names)
 
 --------------------
-leetcode : my introduction https://leetcode.com/cheoljoo/
+leetcode : my profile -> https://leetcode.com/cheoljoo/
 # 1. knowledge
 ## 1.1. sort performance
 - update and sort is faster than update-insert each elements
@@ -1746,8 +1747,30 @@ class Solution:
     - String encode(String longUrl) Returns a tiny URL for the given longUrl.
     - String decode(String shortUrl) Returns the original long URL for the given shortUrl. It is guaranteed that the given shortUrl was encoded by the same object.
 - https://leetcode.com/problems/encode-and-decode-tinyurl/
-- [TinyURL.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/TinyURL.py) :
+- [TinyURL.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/TinyURL.py) : passed
   - Runtime: 48 ms, faster than 45.53% of Python3 online submissions for Encode and Decode TinyURL.
   - Memory Usage: 13.9 MB, less than 69.91% of Python3 online submissions for Encode and Decode TinyURL.
 
-
+# 93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)
+- medium : map
+- problem :
+  - An underground railway system is keeping track of customer travel times between different stations. They are using this data to calculate the average time it takes to travel from one station to another.
+  - Implement the UndergroundSystem class:
+    - void checkIn(int id, string stationName, int t)
+      - A customer with a card ID equal to id, checks in at the station stationName at time t.
+      - A customer can only be checked into one place at a time.
+    - void checkOut(int id, string stationName, int t)
+      - A customer with a card ID equal to id, checks out from the station stationName at time t.
+    - double getAverageTime(string startStation, string endStation)
+      - Returns the average time it takes to travel from startStation to endStation.
+      - The average time is computed from all the previous traveling times from startStation to endStation that happened directly, meaning a check in at startStation followed by a check out from endStation.
+      - The time it takes to travel from startStation to endStation may be different from the time it takes to travel from endStation to startStation.
+      - There will be at least one customer that has traveled from startStation to endStation before getAverageTime is called.
+  - You may assume all calls to the checkIn and checkOut methods are consistent. If a customer checks in at time t1 then checks out at time t2, then t1 < t2. All events happen in chronological order.
+- https://leetcode.com/problems/design-underground-system/
+- [UndergroundSystem.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/UndergroundSystem.py) : passed
+  - Runtime: 268 ms, faster than 71.86% of Python3 online submissions for Design Underground System.
+  - Memory Usage: 25.2 MB, less than 43.66% of Python3 online submissions for Design Underground System.
+- [UndergroundSystem.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/UndergroundSystem.cpp) : passed
+  - Runtime: 156 ms, faster than 82.84% of C++ online submissions for Design Underground System.
+  - Memory Usage: 57.4 MB, less than 88.94% of C++ online submissions for Design Underground System.

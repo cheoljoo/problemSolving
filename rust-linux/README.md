@@ -5,28 +5,28 @@
   - [1.4. compile and run](#14-compile-and-run)
 - [2. Tutorial : Gessing Game](#2-tutorial--gessing-game)
 - [3. ownership](#3-ownership)
-- [4. struct / impl / derived](#4-struct--impl--derived)
-- [5. enum == union in C](#5-enum--union-in-c)
-- [6. Option<T>](#6-optiont)
-- [7. match](#7-match)
-- [8. module](#8-module)
-- [9. collection](#9-collection)
-  - [9.1. vector](#91-vector)
-  - [9.2. string](#92-string)
-  - [9.3. Hash Map](#93-hash-map)
-- [10. error handling](#10-error-handling)
-- [11. Generic Types, Traits, and Lifetimes](#11-generic-types-traits-and-lifetimes)
-  - [11.1. Generic](#111-generic)
-  - [11.2. trait](#112-trait)
-  - [11.3. lifetime](#113-lifetime)
-- [12. 자동화된 테스트 작성하기](#12-자동화된-테스트-작성하기)
-  - [12.1. 테스트의 실행 방식 제어하기](#121-테스트의-실행-방식-제어하기)
-  - [12.2. 테스트 조직화](#122-테스트-조직화)
-- [I/O 프로젝트: 커맨드 라인 프로그램 만들기 (예제)](#io-프로젝트-커맨드-라인-프로그램-만들기-예제)
-  - [커맨드라인 인자 허용하기](#커맨드라인-인자-허용하기)
-  - [파일 읽기](#파일-읽기)
-  - [모듈성과 에러처리의 향상을 위한 **리팩토링**](#모듈성과-에러처리의-향상을-위한-리팩토링)
-  - [테스트 주도 개발로 라이브러리의 기능 개발하기](#테스트-주도-개발로-라이브러리의-기능-개발하기)
+- [4. struct / impl / derived  & enum == union in C](#4-struct--impl--derived---enum--union-in-c)
+- [5. Option<T>](#5-optiont)
+- [6. match](#6-match)
+- [7. module](#7-module)
+- [8. collection](#8-collection)
+  - [8.1. vector](#81-vector)
+  - [8.2. string](#82-string)
+  - [8.3. Hash Map](#83-hash-map)
+- [9. error handling](#9-error-handling)
+- [10. Generic Types, Traits, and Lifetimes](#10-generic-types-traits-and-lifetimes)
+  - [10.1. Generic](#101-generic)
+  - [10.2. trait](#102-trait)
+  - [10.3. lifetime](#103-lifetime)
+- [11. 자동화된 테스트 작성하기](#11-자동화된-테스트-작성하기)
+  - [11.1. 테스트의 실행 방식 제어하기](#111-테스트의-실행-방식-제어하기)
+  - [11.2. 테스트 조직화](#112-테스트-조직화)
+- [12. I/O 프로젝트: 커맨드 라인 프로그램 만들기 (예제)](#12-io-프로젝트-커맨드-라인-프로그램-만들기-예제)
+  - [12.1. 커맨드라인 인자 허용하기](#121-커맨드라인-인자-허용하기)
+  - [12.2. 파일 읽기](#122-파일-읽기)
+  - [12.3. 모듈성과 에러처리의 향상을 위한 **리팩토링**](#123-모듈성과-에러처리의-향상을-위한-리팩토링)
+  - [12.4. 테스트 주도 개발로 라이브러리의 기능 개발하기](#124-테스트-주도-개발로-라이브러리의-기능-개발하기)
+- [13. 함수형 언어의 특성들: 반복자들과 클로저들](#13-함수형-언어의-특성들-반복자들과-클로저들)
 
 --------
 
@@ -136,23 +136,21 @@ fn main() {
 
         For more information about this error, try `rustc --explain E0382`.
 ```
-# 4. struct / impl / derived
-
-# 5. enum == union in C
+# 4. struct / impl / derived  & enum == union in C
 - 서로 다른 type들을 enum안에 넣을수 있음. 
 
-# 6. Option<T>
+# 5. Option<T>
 - T type의 값이 들어가거나 , NULL 값을 가질수 있음.   요즘 types에서 이 부분이 hit
 - null 을 고안한 Tony Hoare 의 "Null 참조 : 10 억 달러의 실수"에서 다음과 같이 말합니다:
   - 나는 그것을 나의 10억 달러의 실수라고 생각한다. 그 당시 객체지향 언어에서 처음 참조를 위한 포괄적인 타입 시스템을 디자인하고 있었다. 내 목표는 컴파일러에 의해 자동으로 수행되는 체크를 통해 모든 참조의 사용은 절대적으로 안전하다는 것을 확인하는 것이었다. 그러나 null 참조를 넣고 싶은 유혹을 참을 수 없었다. 간단한 이유는 구현이 쉽다는 것이었다. 이것은 수없이 많은 오류와 취약점들, 시스템 종료를 유발했고, 지난 40년간 10억 달러의 고통과 손실을 초래했을 수도 있다.
 - T 에 대한 연산을 수행하기 전에 Option<T> 를 T 로 변환해야 합니다. 일반적으로, 이런 방식은 null 과 관련된 가장 흔한 이슈 중 하나를 발견하는데 도움을 줍니다: 실제로 null 일 때, null 이 아니라고 가정하는 경우입니다.
 - null 이 아닌 값을 갖는다는 가정을 놓치는 경우에 대해 걱정할 필요가 없게 되면, 코드에 더 확신을 갖게 됩니다. null 일 수 있는 값을 사용하기 위해서, 명시적으로 값의 타입을 Option<T> 로 만들어 줘야 합니다. 그다음엔 값을 사용할 때 명시적으로 null 인 경우를 처리해야 합니다. 값의 타입이 Option<T> 가 아닌 모든 곳은 값이 null 아 아니라고 안전하게 가정할 수 있습니다. 이것은 null을 너무 많이 사용하는 문제를 제한하고 러스트 코드의 안정성을 높이기 위한 러스트의 의도된 디자인 결정사항입니다.
 
-# 7. match
+# 6. match
 - 모든 case를 만족하지 않으면 compile error
 - _ 은 default: 와 같은 의미
 
-# 8. module
+# 7. module
 - ```cargo new communicator --lib```  : src/lib.rs를 볼수 있다.
 - 파일에 관한 모듈의 규칙을 정리해봅시다:
   - 만일 foo라는 이름의 모듈이 서브모듈을 가지고 있지 않다면, foo.rs라는 이름의 파일 내에 foo에 대한 선언을 집어넣어야 합니다.
@@ -165,8 +163,8 @@ fn main() {
 - use를 사용하여 c++ namespace와 같은 기능 지원
   - ```use TrafficLight::*```
 
-# 9. collection
-## 9.1. vector
+# 8. collection
+## 8.1. vector
 - Vec<T> 
 - 러스트는 편의를 위해 vec! 매크로를 제공합니다. 이 매크로는 우리가 준 값들을 저장하고 있는 새로운 Vec을 생성합니다.
   - !이 있는 것은 Macro인 것을 의미한다. Macro는 함수가 아니기에 ownership이 넘어가는게 아니다.
@@ -235,7 +233,7 @@ fn main() {
     ];
 ```
 
-## 9.2. string
+## 8.2. string
 - 생성하기
 ```rust
     let mut s = String::new();
@@ -274,7 +272,7 @@ fn main() {
     }
 ```
 
-## 9.3. Hash Map
+## 8.3. Hash Map
 - HashMap<K, V>
   - 벡터와 마찬가지로, 해쉬맵도 데이터를 힙에 저장합니다. 
 - 생성하기
@@ -359,7 +357,7 @@ for (key, value) in &scores {
         // {"world": 2, "hello": 1, "wonderful": 1}를 출력
     ```
 
-# 10. error handling
+# 9. error handling
 - 러스트는 에러를 두 가지 범주로 묶습니다: 복구 가능한(recoverable) 에러와 복구 불가능한(unrecoverable) 에러입니다. 복구 가능한 에러는 사용자에게 문제를 보고하고 연산을 재시도하는 것이 보통 합리적인 경우인데, 이를테면 파일을 찾지 못하는 에러가 그렇습니다. 복구 불가능한 에러는 언제나 버그의 증상이 나타나는데, 예를 들면 배열의 끝을 넘어선 위치의 값에 접근하려고 시도하는 경우가 그렇습니다.
 - 복구 가능한 에러를 위한 Result<T, E> 값과 복구 불가능한 에러가 발생했을 때 실행을 멈추는 panic! 매크로를 가지고 있습니다. 이번 장에서는 panic!을 호출하는 것을 먼저 다룬 뒤, Result<T, E> 값을 반환하는 것에 대해 이야기 하겠습니다.
 - backtrace on : ```$ RUST_BACKTRACE=1 cargo run```
@@ -393,7 +391,7 @@ impl Guess {
 }
 ```
 
-# 11. Generic Types, Traits, and Lifetimes
+# 10. Generic Types, Traits, and Lifetimes
 - Every programming language has tools for effectively handling the duplication of concepts. In Rust, one such tool is generics.  모든 프로그래밍 언어는 컨셉의 복제를 효율적으로 다루기 위한 도구를 가지고 있습니다; 러스트에서, 그러한 도구 중 하나가 바로 제네릭(generic) 입니다.  ex. Option<T>
 - Traits (속성) : traits to define behavior in a generic way.  트레잇(trait) 에 대하여 논의할 것인데, 이는 동작을 제네릭 한 방식으로 정의하는
 방법을 말합니다. 트레잇은 제네릭 타입과 결합되어 제네릭 타입에 대해 아무 타입이나 허용하지 않고,
@@ -402,7 +400,7 @@ impl Guess {
 us to borrow values in many situations while still enabling the compiler to
 check that the references are valid. 라이프타임은 수많은 상황에서 값을 빌릴 수 있도록 허용해 주고도 여전히 참조자들이 유효할지를 컴파일러가 검증하도록 해주는 러스트의 지능입니다.
 
-## 11.1. Generic
+## 10.1. Generic
 - C++ template
 - generic2.rs
 ```rust
@@ -443,12 +441,12 @@ enum Result<T, E> {
 ```
 - 제네릭을 이용한 코드의 성능 : 구체적인 타입을 명시했을 때와 비교해 전혀 느려지지 않을 것이란 점입니다!  어떠한 런타임 비용도 없음을 의미합니다
 
-## 11.2. trait
+## 10.2. trait
 - 정의 : 어떤 타입의 동작은 우리가 해당 타입 상에서 호출할 수 있는 메소드들로 구성되어 있습니다. 만일 우리가 서로 다른 타입에 대해 모두 동일한j 메소드를 호출할 수 있다면 이 타입들은 동일한 동작을 공유하는 것입니다. 트레잇의 정의는 어떠한 목적을 달성하기 위해 필요한 동작의 집합을 정의하기 위해 메소드 시그니처들을 함께 묶는 방법입니다.
 - 트레잇은 한 줄 당 하나의 메소드 시그니처와 각 줄의 끝에 세미콜론을 갖도록 함으로써, 본체 내에 여러 개의 메소드를 가질 수 있습니다.
 - 트레잇 구현과 함께 기억할 한 가지 제한사항이 있습니다: 트레잇 혹은 타입이 우리의 크레이트 내의 것일 경우에만 해당 타입에서의 트레잇을 정의할 수 있습니다. 바꿔 말하면, 외부의 타입에 대한 외부 트레잇을 구현하는 것은 허용되지 않습니다. 예를 들어, Vec에 대한 Display 트레잇은 구현이 불가능한데, Display와 Vec 모두 표준 라이브러리 내에 정의되어 있기 때문입니다. 우리의 aggregator 크레이트 기능의 일부로서 Tweet과 같은 커스텀 타입에 대한 Display와 같은 표준 라이브러리 트레잇을 구현하는 것은 허용됩니다. 또한 우리의 aggregator 크레이트 내에서 Vec에 대한 Summarizable을 구현하는 것도 가능한데, 이는 우리 크레이트 내에 Summarizable이 정의되어 있기 때문입니다. 이러한 제한은 고아 규칙(orphan rule) 이라고 불리는 것의 일부인데, 이는 타입 이론에 흥미가 있다면 찾아볼 수 있습니다. 간단하게 말하면, 부모 타입이 존재하지 않기 때문에 고아 규칙이라고 부릅니다. 이 규칙이 없다면, 두 크레이트는 동일한 타입에 대해 동일한 트레잇을 구현할 수 있게 되고, 이 두 구현체가 충돌을 일으킬 것입니다: 러스트는 어떤 구현을 이용할 것인지 알지 못할 것입니다. 러스트가 고아 규칙을 강제하기 때문에, 다른 사람의 코드는 여러분의 코드를 망가뜨리지 못하고 반대의 경우도 마찬가지입니다.
 
-## 11.3. lifetime
+## 10.3. lifetime
 - 라이프타임은 댕글링 참조자를 방지합니다
   - 스코프 밖으로 벗어난 값에 대한 참조자를 사용하는 시도
 
@@ -475,12 +473,12 @@ enum Result<T, E> {
   3. 만일 여러 개의 입력 라이프타임 파라미터가 있는데, 메소드라서 그중 하나가 &self 혹은 &mut self라고 한다면, self의 라이프타임이 모든 출력 라이프타임 파라미터에 대입됩니다. 이는 메소드의 작성을 더욱 멋지게 만들어줍니다.
 
 
-# 12. 자동화된 테스트 작성하기
+# 11. 자동화된 테스트 작성하기
 - 러스트 내의 테스트란 test 속성(attribute)이 주석으로 달려진 (annotated) 함수입니다. 속성은 러스트 코드 조각에 대한 메타데이터입니다: 한 가지 예로 5장에서 우리가 구조체와 함께 사용했던 derive 속성이 있습니다. 함수를 테스트 함수로 변경하기 위해서는, fn 전 라인에 #[test]를 추가합니다. cargo test 커맨드를 사용하여 테스트를 실행시키면, 러스트는 test 속성이 달려있는 함수들을 실행하고 각 테스트 함수가 성공 혹은 실패했는지를 보고하는 테스트 실행용 바이너리를 빌드할 것입니다.
 - cd rust-linux/adder
   - cargo test
 
-## 12.1. 테스트의 실행 방식 제어하기
+## 11.1. 테스트의 실행 방식 제어하기
 - cargo test -- --help를 실행하는 것은 구분자 -- 이후에 나올 수 있는
 옵션을 표시합니다.
 - 기본적으로 스레드를 이용하여 병렬적으로 수행됩니다. 
@@ -492,7 +490,7 @@ enum Result<T, E> {
 - ```$ cargo test -- --ignored``` : ignored 들만 test
 - 비공개 함수 테스트하기 : 기본이 비공개 함수도 test됨 (internal_adder)
   
-## 12.2. 테스트 조직화
+## 11.2. 테스트 조직화
 - 통합 test
   - rust-linux/adder/tests/integration_test.rs
   - tests directory는 integration test를 말하며,  이것은 unit test가 모두 성공했을때만 수행된다. 
@@ -502,15 +500,21 @@ enum Result<T, E> {
 - 우리의 프로젝트가 src/lib.rs 파일이 없고 src/main.rs 파일만 갖고 있는 바이너리 프로젝트라면, tests 디렉토리 내에 통합 테스트를 만들어서 src/main.rs에 정의된 함수를 가져오기 위하여 extern crate를 이용할 수 없습니다. 오직 라이브러리 크레이트만 다른 크레이트에서 호출하고 사용할 수 있는 함수들을 노출시킵니다; 바이너리 크레이트는 그 스스로 실행될 것으로 여겨집니다.
 - 이는 바이너리를 제공하는 러스트 프로젝트들이 src/lib.rs에 위치한 로직을 호출하는 간단한 형태의 src/main.rs를 가지고 있는 이유 중 하나입니다. 이러한 구조와 함께라면, extern crate를 이용하여 중요한 기능들을 커버하도록 하기 위해 통합 테스트가 라이브러리 크레이트를 테스트할 수 있습니다. 만일 중요 기능이 작동한다면, src/main.rs 내의 소량의 코드 또한 동작할 것이고, 이 소량의 코드는 테스트할 필요가 없습니다.
 
-# I/O 프로젝트: 커맨드 라인 프로그램 만들기 (예제)
-## 커맨드라인 인자 허용하기
+# 12. I/O 프로젝트: 커맨드 라인 프로그램 만들기 (예제)
+- [greprs](https://github.com/cheoljoo/problemSolving/tree/master/rust-linux/greprs)
+## 12.1. 커맨드라인 인자 허용하기
 - crates.io 참조
 - std::env::args. 이 함수는 반복자(iterator) 형식으로 커맨드라인 인자들을 우리 프로그램에 전달해줍니다. 
   - 반복자는 하나의 연속된 값을 생성합니다.
   - 반복자에 collect 함수 호출을 통해 반복자가 생성하는 일련의 값을 벡터로 변환할 수 있습니다.
-## 파일 읽기
+## 12.2. 파일 읽기
 - main에 에러 처리 없이 구현 해봄.
-## 모듈성과 에러처리의 향상을 위한 **리팩토링**
+## 12.3. 모듈성과 에러처리의 향상을 위한 **리팩토링**
 - lib.rs 로 떼어내고 , Result<(),Box<dyn Error>> 로 error나 Ok(())를 return하게 하는 것도 만들었다.
-## 테스트 주도 개발로 라이브러리의 기능 개발하기
+## 12.4. 테스트 주도 개발로 라이브러리의 기능 개발하기
+- cargo test
+- contains 메소드에 인자로 query를 전달할 때 contains의 선언이 문자열 slice를 인자로 받게 정의되어 있으니 앰퍼샌드(&)를 추가해야합니다.
+- CASE_SENSITIVE=1 cargo run to poem.txt  <- in my case it is not working
+
+# 13. 함수형 언어의 특성들: 반복자들과 클로저들
 - 
