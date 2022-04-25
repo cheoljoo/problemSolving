@@ -122,6 +122,7 @@
 - [91. Maximal Rectangle (#85) - hard / python / 1D / Top 100 Liked Questions](#91-maximal-rectangle-85---hard--python--1d--top-100-liked-questions)
 - [92. Encode and Decode TinyURL (#535) - medium / python / 5M](#92-encode-and-decode-tinyurl-535---medium--python--5m)
 - [93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-should-be-different-between-variables-and-funciton-names)
+- [94. Peeking Iterator (#284) - medium / python / c++ / 1H](#94-peeking-iterator-284---medium--python--c--1h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -383,6 +384,7 @@ int GCD(int a, int b){
 - Floyd-Warshall Algorithm is an algorithm for finding the shortest path between all the pairs of vertices in a weighted graph. This algorithm works for both the directed and undirected weighted graphs. 
 - ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Graph.png)  ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-1.png) ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-2.png)
 - O(N^3)
+
 
 ## 1.17. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
@@ -1774,3 +1776,22 @@ class Solution:
 - [UndergroundSystem.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/UndergroundSystem.cpp) : passed
   - Runtime: 156 ms, faster than 82.84% of C++ online submissions for Design Underground System.
   - Memory Usage: 57.4 MB, less than 88.94% of C++ online submissions for Design Underground System.
+
+# 94. Peeking Iterator (#284) - medium / python / c++ / 1H
+- medium
+- problem :
+  - Design an iterator that supports the peek operation on an existing iterator in addition to the hasNext and the next operations.
+  - Implement the PeekingIterator class:
+    - PeekingIterator(Iterator<int> nums) Initializes the object with the given integer iterator iterator.
+    - int next() Returns the next element in the array and moves the pointer to the next element.
+    - boolean hasNext() Returns true if there are still elements in the array.
+    - int peek() Returns the next element in the array without moving the pointer.
+  - Note: Each language may have a different implementation of the constructor and Iterator, but they all support the int next() and boolean hasNext() functions.
+- https://leetcode.com/problems/peeking-iterator/
+- [PeekingIterator.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/PeekingIterator.py) : passed
+  - Runtime: 40 ms , Your runtime beats 66.01 % of python3 submissions.
+  - Memory Usage: 14.1 MB, Your memory usage beats 73.29 % of python3 submissions.
+- [PeekingIterator.cpp](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/PeekingIterator.cpp) : passed
+  - Runtime: 3 ms, faster than 79.17% of C++ online submissions for Peeking Iterator.
+  - Memory Usage: 7.6 MB, less than 34.07% of C++ online submissions for Peeking Iterator.
+

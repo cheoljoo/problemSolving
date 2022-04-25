@@ -1,2 +1,6 @@
-Cargo.lock
+*.lock
 target
+.vscode
+__pycache__
+2022/Pipfile
+2022/a/

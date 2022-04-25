@@ -26,25 +26,38 @@ timeFlag = 0
 debugFlag = 0
 import math
 
-# countBits.py : https://github.com/cheoljoo/problemSolving/tree/master/leetcode
+
+# minWindow.py : https://github.com/cheoljoo/problemSolving/tree/master/leetcode
+# make dictionary of index of s , t
+# self.loc (s) , self.target (t) 
+# 1. check length of charater in target
+#   it chooses the length of characters
+# 2. search all combination.
 
 class Solution:
-    def countBits(self, n: int) -> List[int]:
-        r = []
-        for i in range(n+1):
-            count = 0
-            while i:
-                i &= i - 1
-                count += 1
-            r.append(count)
-        return r
+    def minWindow(self, s: str, t: str) -> str:
+        self.loc = {}
+        for i in range(len(s)):
+            v = s[i]
+            if v in self.loc:
+                self.loc[v].append(i)
+            else :
+                self.loc[v] = [i]
+        self.target = {}
+        for i in range(len(t)):
+            v = t[i]
+            if v in self.target:
+                self.target[v].append(i)
+            else :
+                self.target[v] = [i]
+        return ""
 
            
-def run(s,expect):
+def run(s,t,expect):
     print(len(s),end="")
     start = time.time()
     A = Solution()
-    r = A.countBits(s)
+    r = A.minWindow(s,t)
     print(" total_time1 : ", time.time() - start , "-> ", end="") 
     
     if r == expect:
@@ -56,9 +69,9 @@ def run(s,expect):
 
 if (__name__ == "__main__"):
     parser = argparse.ArgumentParser(
-        prog='countBits.py',
+        prog='minWindow.py',
         description=
-        'countBits'
+        'minWindow'
     )
     parser.add_argument( '--debug', '-d' , action='store_const' , const=1 , help='debug on')
 
@@ -67,6 +80,8 @@ if (__name__ == "__main__"):
     if not debug:
         debug = 0
 
-    print('countBits problem :')
+    print('minWindow problem :')
 
-    run(2,[0,1,1])
+    run("ADOBECODEBANC","ABC","BANC")
+    run("a","a","a")
+    run("a","aa","")
