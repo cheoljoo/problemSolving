@@ -123,6 +123,8 @@
 - [92. Encode and Decode TinyURL (#535) - medium / python / 5M](#92-encode-and-decode-tinyurl-535---medium--python--5m)
 - [93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-should-be-different-between-variables-and-funciton-names)
 - [94. Peeking Iterator (#284) - medium / python / c++ / 1H](#94-peeking-iterator-284---medium--python--c--1h)
+- [95. Min Cost to Connect All Points (#1584) - medium / python / 3H](#95-min-cost-to-connect-all-points-1584---medium--python--3h)
+- [96. Minimum Window Substring (#76) - hard / python / 2D](#96-minimum-window-substring-76---hard--python--2d)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -1795,3 +1797,33 @@ class Solution:
   - Runtime: 3 ms, faster than 79.17% of C++ online submissions for Peeking Iterator.
   - Memory Usage: 7.6 MB, less than 34.07% of C++ online submissions for Peeking Iterator.
 
+# 95. Min Cost to Connect All Points (#1584) - medium / python / 3H
+- medium
+- problem :
+  - You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi].
+  - The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val.
+  - Return the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points.
+- https://leetcode.com/problems/min-cost-to-connect-all-points/
+- [minCostConnectPoints.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minCostConnectPoints.py) : passed
+  - Runtime: 1913 ms, faster than 69.45% of Python3 online submissions for Min Cost to Connect All Points.
+  - Memory Usage: 80.9 MB, less than 75.10% of Python3 online submissions for Min Cost to Connect All Points.
+- algorithm : 
+  - input length 1000
+    - 1.15.3. Kruskal's Algorithm : find minimum spanning tree
+    - 1.15.4. Prim's Algorithm : find minimum spanning tree
+  - sort by distance
+  - put the same group if two vertices have edge.
+  - use all hash to find faster whether it is in or not.
+  - groupVertex[f] = v   f:vertext number , v : group number
+  - group[v] has hash {from:to} ,  v : group number
+  - if two vertices are in different groups , combine into one.  (delete group of [to])
+- BEST : solution was opened. https://leetcode.com/problems/min-cost-to-connect-all-points/solution/
+
+# 96. Minimum Window Substring (#76) - hard / python / 2D
+- hard
+- problem :
+  - Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+  - The testcases will be generated such that the answer is unique.
+  - A substring is a contiguous sequence of characters within the string.
+- https://leetcode.com/problems/minimum-window-substring/
+- [minWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minWindow.py)
