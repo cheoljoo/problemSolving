@@ -70,8 +70,8 @@
 - [39. Copy List with Random Pointer (#138) - medium](#39-copy-list-with-random-pointer-138---medium)
 - [40. Find All K-Distant Indices in an Array (#2200) - easy : weekly contest for amazon 2022-03-13](#40-find-all-k-distant-indices-in-an-array-2200---easy--weekly-contest-for-amazon-2022-03-13)
 - [41. Count Artifacts That Can Be Extracted (#2201) - medium : weekly contest for amazon 2022-03-13](#41-count-artifacts-that-can-be-extracted-2201---medium--weekly-contest-for-amazon-2022-03-13)
-- [42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13 / <got help>](#42-maximize-the-topmost-element-after-k-moves-2202---medium--weekly-contest-for-amazon-2022-03-13--got-help)
-- [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 / <got help>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13--got-help)
+- [42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13 / <<got help>>](#42-maximize-the-topmost-element-after-k-moves-2202---medium--weekly-contest-for-amazon-2022-03-13--got-help)
+- [43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 / <<got help>>](#43-minimum-weighted-subgraph-with-the-required-paths-2203---hard--weekly-contest-for-amazon-2022-03-13--got-help)
 - [44. Simplify Path (#71) - medium](#44-simplify-path-71---medium)
 - [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
 - [46. Validate Stack Sequences (#946) - medium / python / rust](#46-validate-stack-sequences-946---medium--python--rust)
@@ -87,7 +87,7 @@
 - [56. Broken Calculator (#991) - medium / python / 3H](#56-broken-calculator-991---medium--python--3h)
 - [57. Boats to Save People (#881) - medium / python / 1H](#57-boats-to-save-people-881---medium--python--1h)
 - [58. Two City Scheduling (#1029) - medium / python / 1H](#58-two-city-scheduling-1029---medium--python--1h)
-- [59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <got help>](#59-minimum-operations-to-halve-array-sum-2208---medium--python--got-help)
+- [59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <<got help>>](#59-minimum-operations-to-halve-array-sum-2208---medium--python--got-help)
 - [60. Maximize Number of Subsequences in a String (#2207) - medium / python / 1H](#60-maximize-number-of-subsequences-in-a-string-2207---medium--python--1h)
 - [61. Search in Rotated Sorted Array (#33) - medium / python / 2H](#61-search-in-rotated-sorted-array-33---medium--python--2h)
 - [62. Search in Rotated Sorted Array II (#81) - medium / python / 2D](#62-search-in-rotated-sorted-array-ii-81---medium--python--2d)
@@ -111,14 +111,14 @@
 - [80. Special Day solved 100 problems on leetcode (2002-04-17 Sunday)](#80-special-day-solved-100-problems-on-leetcode-2002-04-17-sunday)
 - [81. Remove Invalid Parentheses (#301) - hard / python / 4H  / greedy : O(2^N)](#81-remove-invalid-parentheses-301---hard--python--4h---greedy--o2n)
 - [82. Kth Smallest Element in a BST (#230) - medium / python / 30M](#82-kth-smallest-element-in-a-bst-230---medium--python--30m)
-- [83. Longest Common Subsequence (#1143) - medium / python / 1H / <got help>](#83-longest-common-subsequence-1143---medium--python--1h--got-help)
+- [83. Longest Common Subsequence (#1143) - medium / python / 1H / <<got help>>](#83-longest-common-subsequence-1143---medium--python--1h--got-help)
 - [84. Recover Binary Search Tree (#99) - medium / python / 30M](#84-recover-binary-search-tree-99---medium--python--30m)
 - [85. Longest Valid Parentheses (#32) - hard / python / 4H](#85-longest-valid-parentheses-32---hard--python--4h)
 - [86. Binary Search Tree Iterator (#173) - medium / c++ / 10M](#86-binary-search-tree-iterator-173---medium--c--10m)
 - [87. Reverse Nodes in k-Group (#25) - hard / c++ / 20M / Top 100 Liked Questions](#87-reverse-nodes-in-k-group-25---hard--c--20m--top-100-liked-questions)
 - [88. First Missing Positive (#41) - hard / python / 20M / Top 100 Liked Questions](#88-first-missing-positive-41---hard--python--20m--top-100-liked-questions)
 - [89. Trapping Rain Water (#42) - hard / python / 30M / Top 100 Liked Questions / coalTar](#89-trapping-rain-water-42---hard--python--30m--top-100-liked-questions--coaltar)
-- [90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions / BEST DP problem](#90-edit-distance-72---hard--python--3h--got-help--top-100-liked-questions--best-dp-problem)
+- [90. Edit Distance (#72) - hard / python / 3H / <<got help>> / Top 100 Liked Questions / BEST DP problem](#90-edit-distance-72---hard--python--3h--got-help--top-100-liked-questions--best-dp-problem)
 - [91. Maximal Rectangle (#85) - hard / python / 1D / Top 100 Liked Questions](#91-maximal-rectangle-85---hard--python--1d--top-100-liked-questions)
 - [92. Encode and Decode TinyURL (#535) - medium / python / 5M](#92-encode-and-decode-tinyurl-535---medium--python--5m)
 - [93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-should-be-different-between-variables-and-funciton-names)
@@ -126,7 +126,7 @@
 - [95. Min Cost to Connect All Points (#1584) - medium / python / 3H](#95-min-cost-to-connect-all-points-1584---medium--python--3h)
 - [96. Minimum Window Substring (#76) - hard / python / 2D / <fail>](#96-minimum-window-substring-76---hard--python--2d--fail)
 - [97. Smallest String With Swaps (#1202) - medium / python / <fail>](#97-smallest-string-with-swaps-1202---medium--python--fail)
-- [98. Path With Minimum Effort (#1631) - medium / python / <got help> : Dijkstra](#98-path-with-minimum-effort-1631---medium--python--got-help--dijkstra)
+- [98. Path With Minimum Effort (#1631) - medium / python / <<got help>> : Dijkstra](#98-path-with-minimum-effort-1631---medium--python--got-help--dijkstra)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -919,8 +919,8 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
 - [digArtifacts.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/digArtifacts.py) : passed
 
-# 42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13 / <got help>
-- medium : <got help> I didn't understand what measn until now. I saw the following article before solving this problem.
+# 42. Maximize the Topmost Element After K Moves (#2202) - medium : weekly contest for amazon 2022-03-13 / <<got help>>
+- medium : <<got help>> I didn't understand what measn until now. I saw the following article before solving this problem.
   - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/discuss/1844542/Python-or-O(1)-space-O(1)-Time-or-Explanation-or-Comments-added
     - ![picture_explanation](https://assets.leetcode.com/users/images/63265d6c-7a19-4278-b73d-46f0999e47d8_1647147723.9620347.jpeg)
   - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/discuss/1844225/Python-Solution-by-Analyzing-All-Cases.
@@ -933,8 +933,8 @@ we can predict that denominator is 2**L with Level L.
 - https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
 - [maximumTop.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumTop.py) : passed
 
-# 43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 / <got help>
-- hard : <got help>
+# 43. Minimum Weighted Subgraph With the Required Paths (#2203) - hard : weekly contest for amazon 2022-03-13 / <<got help>>
+- hard : <<got help>>
   - I did not solve this probelm within contest. I can not try it because i can not understand the meaning of #2202.
 - You are given an integer n denoting the number of nodes of a weighted directed graph. The nodes are numbered from 0 to n - 1.
   - You are also given a 2D integer array edges where edges[i] = [fromi, toi, weighti] denotes that there exists a directed edge from fromi to toi with weight weighti.
@@ -946,7 +946,7 @@ we can predict that denominator is 2**L with Level L.
 - [minimumWeight2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight2.py) : passed
   - Runtime: 4126 ms, faster than 12.66% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
   - Memory Usage: 78.7 MB, less than 97.58% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
-- [minimumWeight_dijkstra.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight_dijkstra.py) : passed <got help>
+- [minimumWeight_dijkstra.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumWeight_dijkstra.py) : passed <<got help>>
   - Runtime: 3053 ms, faster than 57.42% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
   - Memory Usage: 75 MB, less than 99.62% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
 - algorithm :
@@ -1228,7 +1228,7 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - if difference of distance between 2 cities is longer , we should choose this person to get in there with shorter distance.
   - so get difference , and sort and process from reversed order (from longer distance)
 
-# 59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <got help>
+# 59. Minimum Operations to Halve Array Sum (#2208) - medium / python / <<got help>>
 - medium
 - problem : 
   - You are given an array nums of positive integers. In one operation, you can choose any number from nums and reduce it to exactly half the number. (Note that you may choose this reduced number in future operations.)
@@ -1240,13 +1240,13 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
   - len: 55140 total_time1 :  0.011967897415161133 ->  total_time1 :  16.77672529220581 -> ERROR(0) -> 42729 13876
 - [halveArray2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray2.py) : slower
   - total_time1 :  2.7269339561462402 -> SUCCESS -> 4741 6150
-- [halveArray3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray3.py) : passed <got help>
+- [halveArray3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/halveArray3.py) : passed <<got help>>
   - len: 6151 total_time1 :  0.0009980201721191406 ->  total_time1 :  0.009979724884033203 -> SUCCESS -> 4741 1566
   - len: 55140 total_time1 :  0.010994911193847656 ->  total_time1 :  0.10970282554626465 -> ERROR(0) -> 42729 13876
 - algorithm : https://www.daleseo.com/python-heapq/
   - choose the largest number and set to half  then repeat again until sum is less than half of origin sum.
   - we need sorted data struture (insert : logN , get the largest number : logN)
-  - <got help> sorted data structure : [0] is the smallest number
+  - <<got help>> sorted data structure : [0] is the smallest number
     - import heapq   : heapq.heappush(list,value) heapq.heappop(list)   list[0] is minimal value.   if you want to maximum value , * -1.0 
 
 # 60. Maximize Number of Subsequences in a String (#2207) - medium / python / 1H
@@ -1454,7 +1454,7 @@ class Solution:
   - O(N^2) : generally  it is timeout. -> wrong answer
 - [maximumBeauty3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumBeauty3.py) : timeout 69 / 77 test cases passed.  fail 12sec
   - O(NlogN) : but it is timeout  -> wrong answer
-- algorithm : <got help>
+- algorithm : <<got help>>
   - https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/discuss/1931085/Python-Explanation-with-pictures-Greedy.
   - I had the same idea. but i could not archive the goal.
 - learning point :
@@ -1550,7 +1550,7 @@ class Solution:
 - algorithm :
   - gather if colsed histogram has the same height : 1000, 1000 , 1000 >> (1000,3) -> sort
   - O(N^2)  : caculdate left and right direction if he can go. 
-- BEST <got help> : https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/1954731/EASY-C%2B%2B-SOLUTION-or-NSR-or-NSL-or-STACK
+- BEST <<got help>> : https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/1954731/EASY-C%2B%2B-SOLUTION-or-NSR-or-NSL-or-STACK
   - O(N)
   - get all left ( 0 -> N)  , get all right (N -> 0)
   - [largestRectangleArea2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/largestRectangleArea2.py) : passed O(N)
@@ -1586,7 +1586,7 @@ class Solution:
   - Runtime: 47 ms, faster than 96.14% of Python3 online submissions for Kth Smallest Element in a BST.
   - Memory Usage: 18 MB, less than 48.12% of Python3 online submissions for Kth Smallest Element in a BST.
 
-# 83. Longest Common Subsequence (#1143) - medium / python / 1H / <got help>
+# 83. Longest Common Subsequence (#1143) - medium / python / 1H / <<got help>>
 - medium
 - problem :
   - Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
@@ -1594,7 +1594,7 @@ class Solution:
     - For example, "ace" is a subsequence of "abcde".
   - A common subsequence of two strings is a subsequence that is common to both strings.
 - https://leetcode.com/problems/longest-common-subsequence/
-- [longestCommonSubsequence.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestCommonSubsequence.py) : passed <got help>
+- [longestCommonSubsequence.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestCommonSubsequence.py) : passed <<got help>>
   - Runtime: 416 ms, faster than 86.70% of Python3 online submissions for Longest Common Subsequence.
   - Memory Usage: 22 MB, less than 77.27% of Python3 online submissions for Longest Common Subsequence.
 - algorithm : 
@@ -1709,7 +1709,7 @@ class Solution:
   - Max .. Max Trap
   - Right Trap
 
-# 90. Edit Distance (#72) - hard / python / 3H / <got help> / Top 100 Liked Questions / BEST DP problem
+# 90. Edit Distance (#72) - hard / python / 3H / <<got help>> / Top 100 Liked Questions / BEST DP problem
 - hard : BEST DP problem
 - problem :
   - Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
@@ -1721,7 +1721,7 @@ class Solution:
 - [minDistance.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDistance.py) : passed  DP:O(MN)
   - Runtime: 187 ms, faster than 67.86% of Python3 online submissions for Edit Distance.
   - Memory Usage: 16.1 MB, less than 91.66% of Python3 online submissions for Edit Distance.
-- algorithm : greedy O(2^N) , DP O(MN)  <got help>
+- algorithm : greedy O(2^N) , DP O(MN)  <<got help>>
   - https://leetcode.com/problems/edit-distance/discuss/1955895/Python-oror-Faster-than-95.38-oror-Easy-to-Understand-Solution
 
 # 91. Maximal Rectangle (#85) - hard / python / 1D / Top 100 Liked Questions
@@ -1735,7 +1735,7 @@ class Solution:
 - algorithm :
   - make matrix with 0 or 1 , 1's count until the end of 1' row , 1's count until the end of 1's column
   - for r for c -> get max rectangle with (r,c) --> get xsize and ysize of rectangle with 1
-- BEST <got help> : O(N^2) histogram when we saw above specific row  : largest rectangle in histogram is O(N)
+- BEST <<got help>> : O(N^2) histogram when we saw above specific row  : largest rectangle in histogram is O(N)
   - https://leetcode.com/problems/maximal-rectangle/discuss/1904690/illustrated-explanation
   - ![](https://assets.leetcode.com/users/images/0f9c1431-a088-4d22-b810-5abfd51f4630_1648848619.0584486.png)
   - [maximalRectangle2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximalRectangle2.py) : passed O(N^2)
@@ -1839,8 +1839,8 @@ class Solution:
 - https://leetcode.com/problems/smallest-string-with-swaps/
 - [smallestStringWithSwaps.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/smallestStringWithSwaps.py) : 
 
-# 98. Path With Minimum Effort (#1631) - medium / python / <got help> : Dijkstra
-- medium : <got help>
+# 98. Path With Minimum Effort (#1631) - medium / python / <<got help>> : Dijkstra
+- medium : <<got help>>
 - problem :
   - You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.
   - A route's effort is the maximum absolute difference in heights between two consecutive cells of the route.
@@ -1851,7 +1851,7 @@ class Solution:
 - [minimumEffortPath2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumEffortPath2.py) : fail 
   - need DP -> (n-1,n-1) -> (n-2,n-2) -> (n-3,n-3)
   - (n-1,n-1) 부터 위로 사각형을 만들어가며 , 최적의 숫자를 찾으려 했지만, 실제로 답이 예제 3번과 같이 사각형을 뚫고 나갔다 들어가는 경우는 해결이 안됨. 오히려 1번 푼 내용이 모든 내용이 맞음.
-- [minimumEffortPath3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumEffortPath3.py) : passed <got help>
+- [minimumEffortPath3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumEffortPath3.py) : passed <<got help>>
   - each room is vertex. difference between room's value is weight of edge.
   - 아래 BEST를 재구현을 해 봄.  아직 응용력이 부족함.
 - BEST : https://leetcode.com/problems/path-with-minimum-effort/discuss/1989185/Dijkstra-Python-3
