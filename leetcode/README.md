@@ -81,7 +81,7 @@
 - [50. Minimum Domino Rotations For Equal Row (#1007) - medium / python](#50-minimum-domino-rotations-for-equal-row-1007---medium--python)
 - [51. Count Collisions on a Road (#2211) - medium / python : 2020-03-20 Weekly Contest 285](#51-count-collisions-on-a-road-2211---medium--python--2020-03-20-weekly-contest-285)
 - [52. Maximum Points in an Archery Competition (#2212) - medium / python : 2020-03-20 Weekly Contest 285 (3H)](#52-maximum-points-in-an-archery-competition-2212---medium--python--2020-03-20-weekly-contest-285-3h)
-- [53. Longest Substring of One Repeating Character (#2213) - hard : 2020-03-20 Weekly Contest 285  <fail>](#53-longest-substring-of-one-repeating-character-2213---hard--2020-03-20-weekly-contest-285--fail)
+- [53. Longest Substring of One Repeating Character (#2213) - hard : 2020-03-20 Weekly Contest 285  (fail)](#53-longest-substring-of-one-repeating-character-2213---hard--2020-03-20-weekly-contest-285--fail)
 - [54. Partition Labels (#763) - medium / python / 2H](#54-partition-labels-763---medium--python--2h)
 - [55. Smallest String With A Given Numeric Value (#1663) - medium / python / 2H](#55-smallest-string-with-a-given-numeric-value-1663---medium--python--2h)
 - [56. Broken Calculator (#991) - medium / python / 3H](#56-broken-calculator-991---medium--python--3h)
@@ -100,7 +100,7 @@
 - [69. Largest Number After Digit Swaps by Parity (#2231) - easy / python / 20M / 2020-04-10 Weekly Contest 288 (Airwallex)](#69-largest-number-after-digit-swaps-by-parity-2231---easy--python--20m--2020-04-10-weekly-contest-288-airwallex)
 - [70. Minimize Result by Adding Parentheses to Expression (#2232) - medium / python / 34M / 2020-04-10 Weekly Contest 288 (Airwallex)](#70-minimize-result-by-adding-parentheses-to-expression-2232---medium--python--34m--2020-04-10-weekly-contest-288-airwallex)
 - [71. Maximum Product After K Increments (#2233) - medium / python / 22M / 2020-04-10 Weekly Contest 288 (Airwallex)](#71-maximum-product-after-k-increments-2233---medium--python--22m--2020-04-10-weekly-contest-288-airwallex)
-- [72. Maximum Total Beauty of the Gardens (#2234) - hard / python / <fail>  / 2020-04-10 Weekly Contest 288 (Airwallex)](#72-maximum-total-beauty-of-the-gardens-2234---hard--python--fail---2020-04-10-weekly-contest-288-airwallex)
+- [72. Maximum Total Beauty of the Gardens (#2234) - hard / python / (fail)  / 2020-04-10 Weekly Contest 288 (Airwallex)](#72-maximum-total-beauty-of-the-gardens-2234---hard--python--fail---2020-04-10-weekly-contest-288-airwallex)
 - [73. Game of Life (#289) - medium / python / 15M](#73-game-of-life-289---medium--python--15m)
 - [74. Spiral Matrix II (#59) - medium / python / 15M](#74-spiral-matrix-ii-59---medium--python--15m)
 - [75. Trim a Binary Search Tree (#669) - medium / python / 10M](#75-trim-a-binary-search-tree-669---medium--python--10m)
@@ -124,8 +124,8 @@
 - [93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-should-be-different-between-variables-and-funciton-names)
 - [94. Peeking Iterator (#284) - medium / python / c++ / 1H](#94-peeking-iterator-284---medium--python--c--1h)
 - [95. Min Cost to Connect All Points (#1584) - medium / python / 3H](#95-min-cost-to-connect-all-points-1584---medium--python--3h)
-- [96. Minimum Window Substring (#76) - hard / python / 2D / <fail>](#96-minimum-window-substring-76---hard--python--2d--fail)
-- [97. Smallest String With Swaps (#1202) - medium / python / <fail>](#97-smallest-string-with-swaps-1202---medium--python--fail)
+- [96. Minimum Window Substring (#76) - hard / python / 2D / (fail)](#96-minimum-window-substring-76---hard--python--2d--fail)
+- [97. Smallest String With Swaps (#1202) - medium / python / (fail)](#97-smallest-string-with-swaps-1202---medium--python--fail)
 - [98. Path With Minimum Effort (#1631) - medium / python / (got help) : Dijkstra](#98-path-with-minimum-effort-1631---medium--python--got-help--dijkstra)
 
 --------------------
@@ -1131,7 +1131,7 @@ If there are multiple ways for Bob to earn the maximum total points, return any 
       - self.dp(numArrows- (aliceArrows[scoring_section]+1) , mask , scoring_section-1 , score , aliceArrows[:-1])
       - self.dp(numArrows , mask , scoring_section-1 , score , aliceArrows[:-1])
 
-# 53. Longest Substring of One Repeating Character (#2213) - hard : 2020-03-20 Weekly Contest 285  <fail>
+# 53. Longest Substring of One Repeating Character (#2213) - hard : 2020-03-20 Weekly Contest 285  (fail)
 - 2020-03-20 Weekly Contest 285 : https://leetcode.com/contest/weekly-contest-285/
 - hard : 
 - problem :
@@ -1439,7 +1439,7 @@ class Solution:
 - [maximumProduct.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumProduct.py) : passed
   - Runtime : 3081 ms  :  all solutions have the same algorithm. this time depends on computer status.
   
-# 72. Maximum Total Beauty of the Gardens (#2234) - hard / python / <fail>  / 2020-04-10 Weekly Contest 288 (Airwallex)
+# 72. Maximum Total Beauty of the Gardens (#2234) - hard / python / (fail)  / 2020-04-10 Weekly Contest 288 (Airwallex)
 - hard : 2020-04-10 Weekly Contest 288 (Airwallex)
 - problem :
   - Alice is a caretaker of n gardens and she wants to plant flowers to maximize the total beauty of all her gardens.
@@ -1821,7 +1821,7 @@ class Solution:
   - if two vertices are in different groups , combine into one.  (delete group of [to])
 - BEST : solution was opened. https://leetcode.com/problems/min-cost-to-connect-all-points/solution/
 
-# 96. Minimum Window Substring (#76) - hard / python / 2D / <fail>
+# 96. Minimum Window Substring (#76) - hard / python / 2D / (fail)
 - hard
 - problem :
   - Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
@@ -1830,7 +1830,7 @@ class Solution:
 - https://leetcode.com/problems/minimum-window-substring/
 - [minWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minWindow.py) : 
 
-# 97. Smallest String With Swaps (#1202) - medium / python / <fail>
+# 97. Smallest String With Swaps (#1202) - medium / python / (fail)
 - medium
 - problem :
   - You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
