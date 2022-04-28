@@ -15,7 +15,7 @@
   - [1.9. regular expression (import re)](#19-regular-expression-import-re)
     - [1.9.1. difference between re.search() and re.match()](#191-difference-between-research-and-rematch)
   - [1.10. format string](#110-format-string)
-  - [1.11. lexicographiacll order](#111-lexicographiacll-order)
+  - [1.11. lexicographical order](#111-lexicographical-order)
   - [1.12. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#112-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
   - [1.13. list : python remove element from a list](#113-list--python-remove-element-from-a-list)
   - [1.14. graph](#114-graph)
@@ -124,7 +124,9 @@
 - [93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-should-be-different-between-variables-and-funciton-names)
 - [94. Peeking Iterator (#284) - medium / python / c++ / 1H](#94-peeking-iterator-284---medium--python--c--1h)
 - [95. Min Cost to Connect All Points (#1584) - medium / python / 3H](#95-min-cost-to-connect-all-points-1584---medium--python--3h)
-- [96. Minimum Window Substring (#76) - hard / python / 2D](#96-minimum-window-substring-76---hard--python--2d)
+- [96. Minimum Window Substring (#76) - hard / python / 2D / <fail>](#96-minimum-window-substring-76---hard--python--2d--fail)
+- [97. Smallest String With Swaps (#1202) - medium / python / <fail>](#97-smallest-string-with-swaps-1202---medium--python--fail)
+- [98. Path With Minimum Effort (#1631) - medium / python / <got help> : Dijkstra](#98-path-with-minimum-effort-1631---medium--python--got-help--dijkstra)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -279,7 +281,7 @@ int GCD(int a, int b){
 - https://hyjykelly.tistory.com/65
 - performance comparison : https://brownbears.tistory.com/421
 
-## 1.11. lexicographiacll order
+## 1.11. lexicographical order
 - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
 - https://leetcode.com/problems/remove-duplicate-letters/submissions/
 
@@ -297,8 +299,8 @@ int GCD(int a, int b){
 ## 1.14. graph
 ### 1.14.1. dijkstra
 - [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)
-    - Src1 src2 dst 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
-    - 이후에 각 노드에서 3개의 목적지로 가는 최소값들을 가진 것이므로  이 합이 가장 작은 것이 세점을 지나는 최소 path가 된다.
+    - Src1 src2 -> dst 으로 갈때의 최소 path를 구하라. : 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
+    - 어떤 노드에서 3개의 목적지로 가는 최소값들을 가진 것 (src1 -> node , src2 -> node , dst -> node) 일때의 합이 최소가 되는 것이 src1,src2->node->dst로 가는 최소값이 된다.  node는 모든 node를 넣어볼수 있다. src1,src2,dst도 node가 될수 있다. 
     - 여기 쓴 내용은 방향성이 없을때.  양방향 가능
 ```python
     def dijkstra(self,n: int, graph: Dict[int,Tuple[int,int]], f: int): 
@@ -949,12 +951,12 @@ we can predict that denominator is 2**L with Level L.
   - Memory Usage: 75 MB, less than 99.62% of Python3 online submissions for Minimum Weighted Subgraph With the Required Paths.
 - algorithm :
   - [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)
-    - Src1 src2 dst 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
-    - 이후에 각 노드에서 3개의 목적지로 가는 최소값들을 가진 것이므로  이 합이 가장 작은 것이 세점을 지나는 최소 path가 된다.
+    - Src1 src2 -> dst 으로 갈때의 최소 path를 구하라. : 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
+    - 어떤 노드에서 3개의 목적지로 가는 최소값들을 가진 것 (src1 -> node , src2 -> node , dst -> node) 일때의 합이 최소가 되는 것이 src1,src2->node->dst로 가는 최소값이 된다.  node는 모든 node를 넣어볼수 있다. src1,src2,dst도 node가 될수 있다. 
     - 여기 쓴 내용은 방향성이 없을때.  양방향 가능
     - ![](https://github.com/cheoljoo/problemSolving/blob/master/images/dijkstra2.jpg)
   - if graph has direction , src1 -> Vertex (from->to) / src2 -> Vertex (from->to)  / dest -> Vertex (to->from)
-    - src1 -> node and src2 -> node and dest -> node : 각 node를 통해서 가는데의 최소값이 shortest path가 되는 것이다. 
+    - src1 -> node and src2 -> node and dest -> node : 이 최소가 되는 node를 통해서 가는 것이 shortest path가 되는 것이다. 
 
 # 44. Simplify Path (#71) - medium
 - medium
@@ -1819,11 +1821,41 @@ class Solution:
   - if two vertices are in different groups , combine into one.  (delete group of [to])
 - BEST : solution was opened. https://leetcode.com/problems/min-cost-to-connect-all-points/solution/
 
-# 96. Minimum Window Substring (#76) - hard / python / 2D
+# 96. Minimum Window Substring (#76) - hard / python / 2D / <fail>
 - hard
 - problem :
   - Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
   - The testcases will be generated such that the answer is unique.
   - A substring is a contiguous sequence of characters within the string.
 - https://leetcode.com/problems/minimum-window-substring/
-- [minWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minWindow.py)
+- [minWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minWindow.py) : 
+
+# 97. Smallest String With Swaps (#1202) - medium / python / <fail>
+- medium
+- problem :
+  - You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
+  - You can swap the characters at any pair of indices in the given pairs any number of times.
+  - Return the lexicographically smallest string that s can be changed to after using the swaps.
+- https://leetcode.com/problems/smallest-string-with-swaps/
+- [smallestStringWithSwaps.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/smallestStringWithSwaps.py) : 
+
+# 98. Path With Minimum Effort (#1631) - medium / python / <got help> : Dijkstra
+- medium : <got help>
+- problem :
+  - You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.
+  - A route's effort is the maximum absolute difference in heights between two consecutive cells of the route.
+  - Return the minimum effort required to travel from the top-left cell to the bottom-right cell.
+- https://leetcode.com/problems/path-with-minimum-effort/
+- [minimumEffortPath.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumEffortPath.py) : 15 / 75 test cases passed.  Status: Time Limit Exceeded
+  - 모든 내용이 확실히 풀릴 것으로 보이나 timeout
+- [minimumEffortPath2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumEffortPath2.py) : fail 
+  - need DP -> (n-1,n-1) -> (n-2,n-2) -> (n-3,n-3)
+  - (n-1,n-1) 부터 위로 사각형을 만들어가며 , 최적의 숫자를 찾으려 했지만, 실제로 답이 예제 3번과 같이 사각형을 뚫고 나갔다 들어가는 경우는 해결이 안됨. 오히려 1번 푼 내용이 모든 내용이 맞음.
+- [minimumEffortPath3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumEffortPath3.py) : passed <got help>
+  - each room is vertex. difference between room's value is weight of edge.
+  - 아래 BEST를 재구현을 해 봄.  아직 응용력이 부족함.
+- BEST : https://leetcode.com/problems/path-with-minimum-effort/discuss/1989185/Dijkstra-Python-3
+  - algorithm : Dijkstra (shortest weight path)
+    1. start 에서 출발할때 각 노드까지 가는 가장 빠른 weight를 계산 
+    2. start 에서 출발하여 edge가 작은 것부터 연결해가면서 q에 계속 넣어주면 결국 목적지에 도달하는 값이 나오게 된다. 이때 여기서는 weight 중 최대만을 찾는 것이므로 ,push시 weight를 넣었지만, path의 weight의 합일 경우에는 wegiht의 합으로 넣어서 계산을 하게 된다.
+

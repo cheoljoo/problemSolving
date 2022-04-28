@@ -47,11 +47,15 @@ class Solution:
         for i in range(len(t)):
             v = t[i]
             if v in self.target:
-                self.target[v].append(i)
+                self.target[v].append((i,self.loc[v]))
             else :
-                self.target[v] = [i]
-        
-        
+                self.target[v] = ([i],self.loc[v])
+        self.loc['A'] = [1,2]
+        self.loc['B'][0] = -1
+        # for target in self.target.keys():
+        #     targetLength = self.target[target].len()
+        #     go ()
+        # go()
         return ""
 
            
