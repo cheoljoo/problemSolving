@@ -121,12 +121,13 @@
 - [90. Edit Distance (#72) - hard / python / 3H / (got help) / Top 100 Liked Questions / BEST DP problem](#90-edit-distance-72---hard--python--3h--got-help--top-100-liked-questions--best-dp-problem)
 - [91. Maximal Rectangle (#85) - hard / python / 1D / Top 100 Liked Questions](#91-maximal-rectangle-85---hard--python--1d--top-100-liked-questions)
 - [92. Encode and Decode TinyURL (#535) - medium / python / 5M](#92-encode-and-decode-tinyurl-535---medium--python--5m)
-- [93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-should-be-different-between-variables-and-funciton-names)
+- [93. Design Underground System (#1396) - medium / python / c++ / 30M (caution : should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-caution--should-be-different-between-variables-and-funciton-names)
 - [94. Peeking Iterator (#284) - medium / python / c++ / 1H](#94-peeking-iterator-284---medium--python--c--1h)
 - [95. Min Cost to Connect All Points (#1584) - medium / python / 3H](#95-min-cost-to-connect-all-points-1584---medium--python--3h)
-- [96. Minimum Window Substring (#76) - hard / python / 2D / (fail)](#96-minimum-window-substring-76---hard--python--2d--fail)
-- [97. Smallest String With Swaps (#1202) - medium / python / (fail)](#97-smallest-string-with-swaps-1202---medium--python--fail)
-- [98. Path With Minimum Effort (#1631) - medium / python / (got help) : Dijkstra](#98-path-with-minimum-effort-1631---medium--python--got-help--dijkstra)
+- [96. Minimum Window Substring (#76) - hard / python / 2D / (got help) : sliding window / Top 100 Liked Questions](#96-minimum-window-substring-76---hard--python--2d--got-help--sliding-window--top-100-liked-questions)
+- [97. Smallest String With Swaps (#1202) - medium / python / 2D / (got help) : grouping](#97-smallest-string-with-swaps-1202---medium--python--2d--got-help--grouping)
+- [98. Path With Minimum Effort (#1631) - medium / python / 1D / (got help) : Dijkstra](#98-path-with-minimum-effort-1631---medium--python--1d--got-help--dijkstra)
+- [99. Is Graph Bipartite? (#785) - medium / python / 3H / black&white](#99-is-graph-bipartite-785---medium--python--3h--blackwhite)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -1757,7 +1758,7 @@ class Solution:
   - Runtime: 48 ms, faster than 45.53% of Python3 online submissions for Encode and Decode TinyURL.
   - Memory Usage: 13.9 MB, less than 69.91% of Python3 online submissions for Encode and Decode TinyURL.
 
-# 93. Design Underground System (#1396) - medium / python / c++ / 30M (should be different between variables and funciton names)
+# 93. Design Underground System (#1396) - medium / python / c++ / 30M (caution : should be different between variables and funciton names)
 - medium : map
 - problem :
   - An underground railway system is keeping track of customer travel times between different stations. They are using this data to calculate the average time it takes to travel from one station to another.
@@ -1821,25 +1822,104 @@ class Solution:
   - if two vertices are in different groups , combine into one.  (delete group of [to])
 - BEST : solution was opened. https://leetcode.com/problems/min-cost-to-connect-all-points/solution/
 
-# 96. Minimum Window Substring (#76) - hard / python / 2D / (fail)
+# 96. Minimum Window Substring (#76) - hard / python / 2D / (got help) : sliding window / Top 100 Liked Questions
 - hard
 - problem :
   - Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
   - The testcases will be generated such that the answer is unique.
   - A substring is a contiguous sequence of characters within the string.
 - https://leetcode.com/problems/minimum-window-substring/
-- [minWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minWindow.py) : 
+- [minWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minWindow.py) : 224 / 266 test cases passed. timeout
+- [minWindow2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minWindow2.py) : passed (got help)
+  - sliding window
+    - Runtime: 251 ms, faster than 25.94% of Python3 online submissions for Minimum Window Substring.
+    - Memory Usage: 18.3 MB, less than 5.05% of Python3 online submissions for Minimum Window Substring.
+- BEST : sliding window
+  - https://leetcode.com/problems/minimum-window-substring/solution/
+  1. calculate left and right including target (target를 포함하는 left / right를 구한다.)
+  2. left -> left+? until exists target. then right changes the position to include old removed chararcter of old left position.  (left를 한번 움직이면 , 기존에 있던 left위치의 문제가 없어지므로 , right에서 해당 문자를 추가하는 곳까지 가주어야 한다. )
+  3. if removed left character does not filled with right position, old optiomizaed left/right is the answer. (right가 더 이상 갈게 없게 될때, left가 오른쪽으로 갈때 더이상 채워질 문자가 없어지게 될때, 그 전까지의 최적화된 것이 답)
 
-# 97. Smallest String With Swaps (#1202) - medium / python / (fail)
+# 97. Smallest String With Swaps (#1202) - medium / python / 2D / (got help) : grouping  
 - medium
 - problem :
   - You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
   - You can swap the characters at any pair of indices in the given pairs any number of times.
   - Return the lexicographically smallest string that s can be changed to after using the swaps.
 - https://leetcode.com/problems/smallest-string-with-swaps/
-- [smallestStringWithSwaps.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/smallestStringWithSwaps.py) : 
+- [smallestStringWithSwaps.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/smallestStringWithSwaps.py) : 5 / 36 test cases passed.
+- [smallestStringWithSwaps2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/smallestStringWithSwaps2.py) : 35 / 36 test cases passed. timeout
+  - (korean) 같이 연결된 것은 같은 group으로 해당 그룹안의 것은 sort된 것으로 처리 가능
+  - the same group if they connected.   
+  - disadvantage in my implementation. i guess it is the reason of timeout.
+    - **union** : big slow
+    - sort 2 times (char , index)
+- [smallestStringWithSwaps3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/smallestStringWithSwaps3.py) : passed (got help)
+  - union을 만들어 써야 함. parent를 찾아서 가는 방식을 사용해야 한다. 이것이 전체적으로 찾거나 하는 숫자의 차이가 있다. 
+  - source smallestStringWithSwaps2.py 와 smallestStringWithSwaps3.py 을 비교할 것이다.  계산되는 횟수의 차이가 크다. 
+  - This is fast code. 
+    - n = 100000 total_time2 :  0.21922087669372559 c1:764287 c2:83863
+  - ```python
+        # Start of Union Find Data Structure
+        p = list(range(len(s)))  # parent
+        # each element in the pairs == node
+        # used to store each node's parent based on its index
+        # eg. pairs = [[0,3],[1,2]], p = [0, 1, 1, 0]
+        # element 3 in pairs == p index 3 == 0 (because parent node of 3 is 0)
 
-# 98. Path With Minimum Effort (#1631) - medium / python / (got help) : Dijkstra
+        def find(x):
+            self.c1 += 1
+            if x != p[x]:
+                p[x] = find(p[x])
+            return p[x]
+
+        def union(x, y):
+            px = find(x)
+            py = find(y)
+            if px != py:
+                p[py] = px
+                self.c2 += 1
+                
+        # End of Union Find Data Structure
+
+        # Grouping
+        for x, y in pairs:
+            union(x, y)
+    ```
+  - This is slow code : union and set with 'for' are slow
+    - n = 100000 total_time2 :  35.675060510635376 c1:234347858 c2:21803
+  - ```python
+        for p in pairs:
+            sg , eg = self.whichGroup(p[0]) , self.whichGroup(p[1])
+            s,e = p[0],p[1]
+            if sg == None and eg == None:
+                self.group[s] = self.groupCount
+                self.group[e] = self.groupCount
+                self.groupList[self.groupCount] = {s,e}
+                self.groupCount += 1
+            elif sg == None:
+                self.group[s] = self.group[e]
+                self.groupList[self.group[e]].add(s)
+            elif eg == None:
+                self.group[e] = self.group[s]
+                self.groupList[self.group[s]].add(e)
+            else:
+                if sg == eg:
+                    pass
+                else :
+                    # union
+                    t,f = self.group[s] , self.group[e]
+                    for i in self.groupList[f]:
+                        self.group[i] = t
+                        c1 += 1
+                    self.groupList[t] = self.groupList[t].union(self.groupList[f])
+                    self.groupList[f].clear()
+                    c2 += 1
+    ```
+- algorithm :
+  - (korean) 같이 연결된 것은 같은 group으로 해당 그룹안의 것은 sort된 것으로 처리 가능.  group을 만들때 기본 set의 union을 사용하는 것보다 find / union을 만들어서 사용하는 방식이 훨씬 빠르다.
+
+# 98. Path With Minimum Effort (#1631) - medium / python / 1D / (got help) : Dijkstra
 - medium : (got help)
 - problem :
   - You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0), and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed). You can move up, down, left, or right, and you wish to find a route that requires the minimum effort.
@@ -1859,3 +1939,18 @@ class Solution:
     1. start 에서 출발할때 각 노드까지 가는 가장 빠른 weight를 계산 
     2. start 에서 출발하여 edge가 작은 것부터 연결해가면서 q에 계속 넣어주면 결국 목적지에 도달하는 값이 나오게 된다. 이때 여기서는 weight 중 최대만을 찾는 것이므로 ,push시 weight를 넣었지만, path의 weight의 합일 경우에는 wegiht의 합으로 넣어서 계산을 하게 된다.
 
+# 99. Is Graph Bipartite? (#785) - medium / python / 3H / black&white
+- medium
+- problem :
+  - There is an undirected graph with n nodes, where each node is numbered between 0 and n - 1. You are given a 2D array graph, where graph[u] is an array of nodes that node u is adjacent to. More formally, for each v in graph[u], there is an undirected edge between node u and node v. The graph has the following properties:
+    - There are no self-edges (graph[u] does not contain u).
+    - There are no parallel edges (graph[u] does not contain duplicate values).
+    - If v is in graph[u], then u is in graph[v] (the graph is undirected).
+    - The graph may not be connected, meaning there may be two nodes u and v such that there is no path between them.
+  - A graph is bipartite if the nodes can be partitioned into two independent sets A and B such that every edge in the graph connects a node in set A and a node in set B.
+  - Return true if and only if it is bipartite.
+- https://leetcode.com/problems/is-graph-bipartite/
+- [minimumEffortPath.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumEffortPath.py) : passed
+  - Runtime: 263 ms, faster than 39.11% of Python3 online submissions for Is Graph Bipartite?.
+  - Memory Usage: 14.4 MB, less than 50.28% of Python3 online submissions for Is Graph Bipartite?.
+- algorithm : black & white like othello game

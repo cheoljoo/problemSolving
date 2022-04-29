@@ -36,27 +36,55 @@ import math
 
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
+        self.minCount = [math.inf,0,0]
         self.loc = {}
+        
         for i in range(len(s)):
             v = s[i]
             if v in self.loc:
                 self.loc[v].append(i)
             else :
                 self.loc[v] = [i]
-        self.target = {}
+        self.targets = {}
         for i in range(len(t)):
             v = t[i]
-            if v in self.target:
-                self.target[v].append((i,self.loc[v]))
+            if v in self.targets:
+                self.targets[v][0] += 1
             else :
-                self.target[v] = ([i],self.loc[v])
-        self.loc['A'] = [1,2]
-        self.loc['B'][0] = -1
-        # for target in self.target.keys():
-        #     targetLength = self.target[target].len()
-        #     go ()
-        # go()
-        return ""
+                if v in self.loc:
+                    self.targets[v] = [1,self.loc[v]]
+                else:
+                    return ""
+        # self.loc['A'] = [1,2]  # 전체를 set하면 그것만 변경
+        # self.loc['B'][0] = -1  # 내부의 한개만 변경하면 같이 변경됨.
+        self.t = []
+        for i,target in enumerate(self.targets.keys()):
+            self.t.append([self.targets[target][0] , len(self.targets[target][1]), self.targets[target][1]])
+            if self.targets[target][0] > len(self.targets[target][1]):
+                return ""
+        # print(self.t)
+        self.loop(0,len(self.targets),0,0)
+        return s[self.minCount[1]:self.minCount[2]+1]
+    def loop(self,r,mx,f,t):
+        if r == mx:
+            if self.minCount[0] > t - f:
+                self.minCount[0] = t - f
+                self.minCount[1] = f
+                self.minCount[2] = t
+            return
+        if t - f > self.minCount[0]:
+            return
+        for i in range(self.t[r][1]-self.t[r][0]+1):
+            size = self.t[r][0]
+            start = self.t[r][2][i]
+            end = self.t[r][2][i+size-1]
+            if r != 0:  # check f,t
+                if start > f :
+                    start = f
+                if end < t :
+                    end = t
+            self.loop(r+1,mx,start,end)
+
 
            
 def run(s,t,expect):
@@ -88,6 +116,8 @@ if (__name__ == "__main__"):
 
     print('minWindow problem :')
 
+    run("a","b","")
+    run("ADOBECAODABEABDANCBAC","ABCCDAA","ABDANCBAC")
     run("ADOBECODEBANC","ABC","BANC")
     run("a","a","a")
     run("a","aa","")
