@@ -29,7 +29,9 @@
   - [1.16. Dynamic Programming](#116-dynamic-programming)
     - [1.16.1. Longest Common Subsequence](#1161-longest-common-subsequence)
     - [1.16.2. Floyd-Warshall Algorithm](#1162-floyd-warshall-algorithm)
-  - [1.17. Books & URL](#117-books--url)
+  - [1.17. grouping : find & union](#117-grouping--find--union)
+  - [1.18. deque](#118-deque)
+  - [1.19. Books & URL](#119-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -124,10 +126,12 @@
 - [93. Design Underground System (#1396) - medium / python / c++ / 30M (caution : should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-caution--should-be-different-between-variables-and-funciton-names)
 - [94. Peeking Iterator (#284) - medium / python / c++ / 1H](#94-peeking-iterator-284---medium--python--c--1h)
 - [95. Min Cost to Connect All Points (#1584) - medium / python / 3H](#95-min-cost-to-connect-all-points-1584---medium--python--3h)
-- [96. Minimum Window Substring (#76) - hard / python / 2D / (got help) : sliding window / Top 100 Liked Questions](#96-minimum-window-substring-76---hard--python--2d--got-help--sliding-window--top-100-liked-questions)
+- [96. Minimum Window Substring (#76) - hard / python / 2D / (got help) : sliding window (left->right) / Top 100 Liked Questions](#96-minimum-window-substring-76---hard--python--2d--got-help--sliding-window-left-right--top-100-liked-questions)
 - [97. Smallest String With Swaps (#1202) - medium / python / 2D / (got help) : grouping](#97-smallest-string-with-swaps-1202---medium--python--2d--got-help--grouping)
 - [98. Path With Minimum Effort (#1631) - medium / python / 1D / (got help) : Dijkstra](#98-path-with-minimum-effort-1631---medium--python--1d--got-help--dijkstra)
 - [99. Is Graph Bipartite? (#785) - medium / python / 3H / black&white](#99-is-graph-bipartite-785---medium--python--3h--blackwhite)
+- [100. Evaluate Division(#399) - medium / python / 3H / grouping : find&union](#100-evaluate-division399---medium--python--3h--grouping--findunion)
+- [101. Sliding Window Maximum (#239) - hard / python / sliding : left->right : deque / Top 100 Liked Questions (got help)](#101-sliding-window-maximum-239---hard--python--sliding--left-right--deque--top-100-liked-questions-got-help)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -390,8 +394,38 @@ int GCD(int a, int b){
 - ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Graph.png)  ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-1.png) ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-2.png)
 - O(N^3)
 
+## 1.17. grouping : find & union
+- it is faster than union() in set.
+```python
+        p = list(range(len(s)))  # parent
+        def find(x):
+            if x != p[x]:
+                p[x] = find(p[x])
+            return p[x]
+        def union(x, y):
+            px = find(x)
+            py = find(y)
+            if px != py:
+                p[py] = px
+        # Grouping
+        for x, y in pairs:
+            union(x, y)
+        for i in range(len(p)):
+            p[i] = find(p[i])    
+```
 
-## 1.17. Books & URL
+## 1.18. deque
+- https://leonkong.cc/posts/python-deque.html
+  - deque.append(item): item을 데크의 오른쪽 끝에 삽입한다.
+  - deque.appendleft(item): item을 데크의 왼쪽 끝에 삽입한다.
+  - deque.pop(): 데크의 오른쪽 끝 엘리먼트를 가져오는 동시에 데크에서 삭제한다.
+  - deque.popleft(): 데크의 왼쪽 끝 엘리먼트를 가져오는 동시에 데크에서 삭제한다.
+  - deque.extend(array): 주어진 배열(array)을 순환하면서 데크의 오른쪽에 추가한다.
+  - deque.extendleft(array): 주어진 배열(array)을 순환하면서 데크의 왼쪽에 추가한다.
+  - deque.remove(item): item을 데크에서 찾아 삭제한다.
+  - deque.rotate(num): 데크를 num만큼 회전한다(양수면 오른쪽, 음수면 왼쪽).
+
+## 1.19. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - For Beginners for graph : https://leetcode.com/discuss/study-guide/1808711/Graph-for-Beginers-Problems
@@ -1822,7 +1856,7 @@ class Solution:
   - if two vertices are in different groups , combine into one.  (delete group of [to])
 - BEST : solution was opened. https://leetcode.com/problems/min-cost-to-connect-all-points/solution/
 
-# 96. Minimum Window Substring (#76) - hard / python / 2D / (got help) : sliding window / Top 100 Liked Questions
+# 96. Minimum Window Substring (#76) - hard / python / 2D / (got help) : sliding window (left->right) / Top 100 Liked Questions
 - hard
 - problem :
   - Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
@@ -1950,7 +1984,41 @@ class Solution:
   - A graph is bipartite if the nodes can be partitioned into two independent sets A and B such that every edge in the graph connects a node in set A and a node in set B.
   - Return true if and only if it is bipartite.
 - https://leetcode.com/problems/is-graph-bipartite/
-- [minimumEffortPath.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumEffortPath.py) : passed
+- [isBipartite.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isBipartite.py) : passed
   - Runtime: 263 ms, faster than 39.11% of Python3 online submissions for Is Graph Bipartite?.
   - Memory Usage: 14.4 MB, less than 50.28% of Python3 online submissions for Is Graph Bipartite?.
 - algorithm : black & white like othello game
+
+# 100. Evaluate Division(#399) - medium / python / 3H / grouping : find&union
+- medium
+- problem :
+  - you are given an array of variable pairs equations and an array of real numbers values, where equations[i] = [Ai, Bi] and values[i] represent the equation Ai / Bi = values[i]. Each Ai or Bi is a string that represents a single variable.
+  - You are also given some queries, where queries[j] = [Cj, Dj] represents the jth query where you must find the answer for Cj / Dj = ?.
+  - Return the answers to all queries. If a single answer cannot be determined, return -1.0.
+  - Note: The input is always valid. You may assume that evaluating the queries will not result in division by zero and that there is no contradiction.
+- https://leetcode.com/problems/evaluate-division/
+- [calcEquation.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/calcEquation.py) : passed
+  - Runtime: 52 ms, faster than 28.73% of Python3 online submissions for Evaluate Division.
+  - Memory Usage: 14 MB, less than 16.96% of Python3 online submissions for Evaluate Division.
+- algorithm : grouping
+  - make a group
+  - calculate each variables of each group
+  - can not calculae when each variables not in same group.  return -1.0
+
+# 101. Sliding Window Maximum (#239) - hard / python / sliding : left->right : deque / Top 100 Liked Questions (got help) 
+- hard
+- problem :
+  - You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+  - Return the max sliding window.
+- https://leetcode.com/problems/sliding-window-maximum/
+- [maxSlidingWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSlidingWindow.py) : 58 / 61 test cases passed.  timeout  
+  - 40000 total_time1 : 2.07 seconds
+- [maxSlidingWindow2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSlidingWindow2.py) : (got help)
+  - 40000 total_time1 : 0.01 seconds
+    - Runtime: 2183 ms, faster than 59.64% of Python3 online submissions for Sliding Window Maximum.
+    - Memory Usage: 29.7 MB, less than 79.71% of Python3 online submissions for Sliding Window Maximum.
+- algorithm : 
+  - keep sorted list but not sorted all.
+  - first of all, find max. sorted sky line of histogram.
+  - sliding의 경우는 left , right로 처리하면 잘된다. 
+

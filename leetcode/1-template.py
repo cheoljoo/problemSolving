@@ -1,5 +1,6 @@
 from collections import defaultdict
 from collections import Counter
+from collections import deque
 import collections
 import enum
 from re import A
@@ -21,6 +22,7 @@ from typing import Set
 
 import time
 import heapq
+from bisect import bisect_left , bisect_right
 
 timeFlag = 0
 debugFlag = 0
@@ -69,4 +71,4 @@ if (__name__ == "__main__"):
 
     print('countBits problem :')
 
-    run(2,[0,1,1])
+    run([3,3],8)
