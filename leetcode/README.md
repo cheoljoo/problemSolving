@@ -132,6 +132,7 @@
 - [99. Is Graph Bipartite? (#785) - medium / python / 3H / black&white](#99-is-graph-bipartite-785---medium--python--3h--blackwhite)
 - [100. Evaluate Division(#399) - medium / python / 3H / grouping : find&union](#100-evaluate-division399---medium--python--3h--grouping--findunion)
 - [101. Sliding Window Maximum (#239) - hard / python / sliding : left->right : deque / Top 100 Liked Questions (got help)](#101-sliding-window-maximum-239---hard--python--sliding--left-right--deque--top-100-liked-questions-got-help)
+- [102. hiking - hard / python / dijkstra / 1D / SW_TEST](#102-hiking---hard--python--dijkstra--1d--sw_test)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -303,7 +304,7 @@ int GCD(int a, int b){
 
 ## 1.14. graph
 ### 1.14.1. dijkstra
-- [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)
+- [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)  O(E Log V)
     - Src1 src2 -> dst 으로 갈때의 최소 path를 구하라. : 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
     - 어떤 노드에서 3개의 목적지로 가는 최소값들을 가진 것 (src1 -> node , src2 -> node , dst -> node) 일때의 합이 최소가 되는 것이 src1,src2->node->dst로 가는 최소값이 된다.  node는 모든 node를 넣어볼수 있다. src1,src2,dst도 node가 될수 있다. 
     - 여기 쓴 내용은 방향성이 없을때.  양방향 가능
@@ -359,6 +360,7 @@ int GCD(int a, int b){
   
 ### 1.15.5. Huffman Coding : a technique of compressing data to reduce its size
 - Using the Huffman Coding technique, we can compress the string to a smaller size. Huffman coding first creates a tree using the frequencies of the character and then generates code for each character.
+
 | Character       | Frequency | Code | Size     |
 | --------------- | --------- | ---- | -------- |
 | A               | 5         | 11   | 5*2 = 10 |
@@ -2011,14 +2013,41 @@ class Solution:
   - You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
   - Return the max sliding window.
 - https://leetcode.com/problems/sliding-window-maximum/
-- [maxSlidingWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSlidingWindow.py) : 58 / 61 test cases passed.  timeout  
+- [maxSlidingWindow.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSlidingWindow.py) : 58 / 61 test cases passed.  timeout  O(N^2)
   - 40000 total_time1 : 2.07 seconds
-- [maxSlidingWindow2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSlidingWindow2.py) : (got help)
+- [maxSlidingWindow2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxSlidingWindow2.py) : (got help)   O(N)
   - 40000 total_time1 : 0.01 seconds
     - Runtime: 2183 ms, faster than 59.64% of Python3 online submissions for Sliding Window Maximum.
     - Memory Usage: 29.7 MB, less than 79.71% of Python3 online submissions for Sliding Window Maximum.
 - algorithm : 
   - keep sorted list but not sorted all.
   - first of all, find max. sorted sky line of histogram.
-  - sliding의 경우는 left , right로 처리하면 잘된다. 
+  - sliding의 경우는 left , right로 처리하면 잘된다.
+    -  part1 : 0 .. k-1 : find max and sorted stack
+    -  part2 : 0 .. len()-k+1 -> k-1 ~ len()
+       -  if i > index of max -> pop of max
+       -  pop while sorted_stack is less than added value
+       -  push added value in sorted_stack 
+
+# 102. hiking - hard / python / dijkstra / 1D / SW_TEST
+- hard : [1.14.1. dijkstra](#1141-dijkstra)
+- problem :
+  - n×n의 행렬로 지형도가 표시된 산이 있다. 행렬의 원소의 값은 양의 정수 값으로 그 위치에서의 높이를 말해준다.등산가들은 산의 바깥지역(높이 0)으로부터 목적지에 도달하기 위하여 가장 경제적인 루트를 탐색하려고 한다. 경제적인 경로란 힘을 가장 적게 들이고 목적지까지 올라갈 수 있는 길을 말한다.
+  - 예를 보면서 설명해보자. 다음은 행렬 Mount[5,5]로 표시된 산악지형이다. 산의 목적지는 Mount[3,3]의 위치에 있으며, 그 높이는 6이다. 그리고 이 산의 바깥지역은 모두 해발이 0이다. 등산가가 산에 오르는 시작점의 위치는 산의 바깥지역의 어디에서 시작해도 좋다.
+  - 등산가는 어떤 한 지역에서 그 위치에 인접한 네 방향(위, 아래, 왼쪽, 오른쪽)으로만 움직일 수 있다. 인접한 지역으로 움직일 수 있는 경우는 (1) 평지로 이동할 경우, (2) 내려갈 경우, (3) 올라갈 경우의 세 가지이다. 이 세 가지 경우에 필요한 "힘"의 양은 다음과 같이 표현될 수 있다.
+    - (1)인접한 같은 높이의 지역을 수평 이동할 경우에는 그냥 평지를 걸어가면 되므로 힘이 전혀 들지 않는다고 가정한다. 예를 들면 Mount[5,2]에서 Mount[5,3]으로 이동하는 경우와 Mount[4,5]에서 Mount[5,5]로 이동하는 경우에는 전혀 힘이 들지 않는다.
+    - (2)내리막길을 따라갈 경우(예를 들면, Mount[2,3]에서 Mount[2,2]로 갈 때)에는 그 높이 차이만큼의 힘이 든다. 즉 이 경우에는 5-3=2만큼의 힘이 든다.
+    - (3)오르막길을 오를 경우에는 이동할 두 지역의 높이 차의 제곱만큼의 힘이 든다. 즉 Mount[1,2]에서 Mount[1,3]으로 갈 경우는 (4-2)2=4 만큼의 힘이 든다.
+  - Input
+    - 첫째 줄에는 산의 크기인 Mount[n,n]의 n값이 주어지고, 두 번째 줄에는 목적지의 위치 Mount[y,x]의 y, x값이 주어진다.
+    - 단, Mount[n,n]에서 n은 100이하이고, 각 지형의 최대 높이는 50이하라고 가정한다.
+    - 그 다음 n개의 줄은 산의 크기에 따른 각 지점의 높이가 양의 정수 값으로 주어진다.
+  - Output
+    - 첫째 줄에 목적지까지 도달하는 가장 경제적인 경로를 따라 올라가는데 사용된 힘을 출력한다.
+- http://collab.lge.com/main/pages/viewpage.action?pageId=1629825838
+- [hiking_Dijkstra.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hiking_Dijkstra.py) : passed  (only 2 example in codes)
+  - (방안1) 가능하면 더 많은 것을 넣은후에 비교하도록 ...  더 많은 것에서 최소를 찾게 ...  
+- [hiking_Dijkstra2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hiking_Dijkstra2.py) : passed  (only 2 example in codes)
+  - (방안2) 넣어가면서 비교하도록...   
+  - 결국 맨 마지막줄까지 가야 하는 것으로 결과는 방안1,2가 예제에서의 결과는 같았다. 
 
