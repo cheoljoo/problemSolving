@@ -133,6 +133,8 @@
 - [100. Evaluate Division(#399) - medium / python / 3H / grouping : find&union](#100-evaluate-division399---medium--python--3h--grouping--findunion)
 - [101. Sliding Window Maximum (#239) - hard / python / sliding : left->right : deque / Top 100 Liked Questions (got help)](#101-sliding-window-maximum-239---hard--python--sliding--left-right--deque--top-100-liked-questions-got-help)
 - [102. hiking - hard / python / dijkstra / 1D / SW_TEST](#102-hiking---hard--python--dijkstra--1d--sw_test)
+- [103. Binary Tree Maximum Path Sum (#124) - hard / python / 3H / tree : dfs : left,right,root,leftroot,rightroot,leftrootright / Top 100 Liked Questions](#103-binary-tree-maximum-path-sum-124---hard--python--3h--tree--dfs--leftrightrootleftrootrightrootleftrootright--top-100-liked-questions)
+- [104. Find Median from Data Stream (#295) - hard / python / 2H / bisect / Top 100 Liked Questions](#104-find-median-from-data-stream-295---hard--python--2h--bisect--top-100-liked-questions)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2051,3 +2053,32 @@ class Solution:
   - (방안2) 넣어가면서 비교하도록...   
   - 결국 맨 마지막줄까지 가야 하는 것으로 결과는 방안1,2가 예제에서의 결과는 같았다. 
 
+# 103. Binary Tree Maximum Path Sum (#124) - hard / python / 3H / tree : dfs : left,right,root,leftroot,rightroot,leftrootright / Top 100 Liked Questions
+- hard : tree
+- problem :
+  - A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
+  - The path sum of a path is the sum of the node's values in the path.
+  - Given the root of a binary tree, return the maximum path sum of any non-empty path.
+  - ![](https://assets.leetcode.com/uploads/2020/10/13/exx2.jpg)
+    - Input: root = [-10,9,20,null,null,15,7]
+    - Output: 42
+    - Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.
+- https://leetcode.com/problems/binary-tree-maximum-path-sum/
+- [maxPathSum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxPathSum.py) : passed  (tree traverse : DFS)
+  - Runtime: 159 ms, faster than 17.42% of Python3 online submissions for Binary Tree Maximum Path Sum.
+  - Memory Usage: 26.7 MB, less than 5.28% of Python3 online submissions for Binary Tree Maximum Path Sum.
+
+# 104. Find Median from Data Stream (#295) - hard / python / 2H / bisect / Top 100 Liked Questions
+- hard : bisect
+- problem :
+  - The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value and the median is the mean of the two middle values.
+    - For example, for arr = [2,3,4], the median is 3.
+    - For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5.
+  - Implement the MedianFinder class:
+    - MedianFinder() initializes the MedianFinder object.
+    - void addNum(int num) adds the integer num from the data stream to the data structure.
+    - double findMedian() returns the median of all elements so far. Answers within 10-5 of the actual answer will be accepted.
+- https://leetcode.com/problems/find-median-from-data-stream/
+- [MedianFinder.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/MedianFinder.py) : passed
+  - Runtime: 2025 ms, faster than 12.13% of Python3 online submissions for Find Median from Data Stream.
+  - Memory Usage: 35.9 MB, less than 75.03% of Python3 online submissions for Find Median from Data Stream.
