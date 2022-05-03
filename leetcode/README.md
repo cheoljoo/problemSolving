@@ -132,9 +132,10 @@
 - [99. Is Graph Bipartite? (#785) - medium / python / 3H / black&white](#99-is-graph-bipartite-785---medium--python--3h--blackwhite)
 - [100. Evaluate Division(#399) - medium / python / 3H / grouping : find&union](#100-evaluate-division399---medium--python--3h--grouping--findunion)
 - [101. Sliding Window Maximum (#239) - hard / python / sliding : left->right : deque / Top 100 Liked Questions (got help)](#101-sliding-window-maximum-239---hard--python--sliding--left-right--deque--top-100-liked-questions-got-help)
-- [102. hiking - hard / python / dijkstra / 1D / SW_TEST](#102-hiking---hard--python--dijkstra--1d--sw_test)
+- [102. hiking - hard / python / dijkstra / 1D / SW_TEST  (fail)](#102-hiking---hard--python--dijkstra--1d--sw_test--fail)
 - [103. Binary Tree Maximum Path Sum (#124) - hard / python / 3H / tree : dfs : left,right,root,leftroot,rightroot,leftrootright / Top 100 Liked Questions](#103-binary-tree-maximum-path-sum-124---hard--python--3h--tree--dfs--leftrightrootleftrootrightrootleftrootright--top-100-liked-questions)
 - [104. Find Median from Data Stream (#295) - hard / python / 2H / bisect / Top 100 Liked Questions](#104-find-median-from-data-stream-295---hard--python--2h--bisect--top-100-liked-questions)
+- [Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H](#shortest-unsorted-continuous-subarray-581---medium--python--1h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2031,7 +2032,7 @@ class Solution:
        -  pop while sorted_stack is less than added value
        -  push added value in sorted_stack 
 
-# 102. hiking - hard / python / dijkstra / 1D / SW_TEST
+# 102. hiking - hard / python / dijkstra / 1D / SW_TEST  (fail)
 - hard : [1.14.1. dijkstra](#1141-dijkstra)
 - problem :
   - n×n의 행렬로 지형도가 표시된 산이 있다. 행렬의 원소의 값은 양의 정수 값으로 그 위치에서의 높이를 말해준다.등산가들은 산의 바깥지역(높이 0)으로부터 목적지에 도달하기 위하여 가장 경제적인 루트를 탐색하려고 한다. 경제적인 경로란 힘을 가장 적게 들이고 목적지까지 올라갈 수 있는 길을 말한다.
@@ -2082,3 +2083,20 @@ class Solution:
 - [MedianFinder.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/MedianFinder.py) : passed
   - Runtime: 2025 ms, faster than 12.13% of Python3 online submissions for Find Median from Data Stream.
   - Memory Usage: 35.9 MB, less than 75.03% of Python3 online submissions for Find Median from Data Stream.
+
+# Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H 
+- medium 
+- problem :
+  - Given an integer array nums, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order.
+  - Return the shortest such subarray and output its length.
+- https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
+- [findUnsortedSubarray.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findUnsortedSubarray.py) : passed
+  - Runtime: 247 ms, faster than 67.57% of Python3 online submissions for Shortest Unsorted Continuous Subarray.
+  - Memory Usage: 15.3 MB, less than 54.83% of Python3 online submissions for Shortest Unsorted Continuous Subarray.
+- algorithm :
+  - find minimum value (mn) after starting down from 0 index
+  - find index (startIndex) for this minimum value from starting position
+  - find maximum value (mx) after starting up from last index
+  - find index (lastIndex) for this maximum value from last position
+  - calculate difference between startIndex and lastIndex (lastIndex - startIndex + 1)
+
