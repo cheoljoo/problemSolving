@@ -132,10 +132,10 @@
 - [99. Is Graph Bipartite? (#785) - medium / python / 3H / black&white](#99-is-graph-bipartite-785---medium--python--3h--blackwhite)
 - [100. Evaluate Division(#399) - medium / python / 3H / grouping : find&union](#100-evaluate-division399---medium--python--3h--grouping--findunion)
 - [101. Sliding Window Maximum (#239) - hard / python / sliding : left->right : deque / Top 100 Liked Questions (got help)](#101-sliding-window-maximum-239---hard--python--sliding--left-right--deque--top-100-liked-questions-got-help)
-- [102. hiking - hard / python / dijkstra / 1D / SW_TEST  (fail)](#102-hiking---hard--python--dijkstra--1d--sw_test--fail)
+- [102. hiking - hard / python / dijkstra / 1D / SW_TEST](#102-hiking---hard--python--dijkstra--1d--sw_test)
 - [103. Binary Tree Maximum Path Sum (#124) - hard / python / 3H / tree : dfs : left,right,root,leftroot,rightroot,leftrootright / Top 100 Liked Questions](#103-binary-tree-maximum-path-sum-124---hard--python--3h--tree--dfs--leftrightrootleftrootrightrootleftrootright--top-100-liked-questions)
 - [104. Find Median from Data Stream (#295) - hard / python / 2H / bisect / Top 100 Liked Questions](#104-find-median-from-data-stream-295---hard--python--2h--bisect--top-100-liked-questions)
-- [Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H](#shortest-unsorted-continuous-subarray-581---medium--python--1h)
+- [105. Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H](#105-shortest-unsorted-continuous-subarray-581---medium--python--1h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2032,7 +2032,7 @@ class Solution:
        -  pop while sorted_stack is less than added value
        -  push added value in sorted_stack 
 
-# 102. hiking - hard / python / dijkstra / 1D / SW_TEST  (fail)
+# 102. hiking - hard / python / dijkstra / 1D / SW_TEST 
 - hard : [1.14.1. dijkstra](#1141-dijkstra)
 - problem :
   - n×n의 행렬로 지형도가 표시된 산이 있다. 행렬의 원소의 값은 양의 정수 값으로 그 위치에서의 높이를 말해준다.등산가들은 산의 바깥지역(높이 0)으로부터 목적지에 도달하기 위하여 가장 경제적인 루트를 탐색하려고 한다. 경제적인 경로란 힘을 가장 적게 들이고 목적지까지 올라갈 수 있는 길을 말한다.
@@ -2050,9 +2050,14 @@ class Solution:
 - http://collab.lge.com/main/pages/viewpage.action?pageId=1629825838
 - [hiking_Dijkstra.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hiking_Dijkstra.py) : passed  (only 2 example in codes)
   - (방안1) 가능하면 더 많은 것을 넣은후에 비교하도록 ...  더 많은 것에서 최소를 찾게 ...  
-- [hiking_Dijkstra2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hiking_Dijkstra2.py) : passed  (only 2 example in codes)
-  - (방안2) 넣어가면서 비교하도록...   
-  - 결국 맨 마지막줄까지 가야 하는 것으로 결과는 방안1,2가 예제에서의 결과는 같았다. 
+- [hiking_Dijkstra2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hiking_Dijkstra2.py) : passed  (all cases)
+  - (방안2) Dijkstra로 풀었음. 둘레로 0을 넣어서 푸는 것도 가능하나, 이러면 edges수가 증가하므로 , 둘레는 붙이지 않고 푼다. 
+    - 둘레를 붙이지 않고 푸는 대신, 마지막에 0 인 바닥에서 각 칸으로 올라갈때의 값을 더해주어야 한다.  (+차이**2)
+  - 방안 1에서 특별 case들에 대해서 infinite loop를 도는 것은 if result[node] <= w: continue를 할때 <=  대신 <  을 사용했기 때문이다.  같을때도 다시 확장할 필요가 없다. 
+  - 앞으로 optimization이 가능한 부분
+    - q , nextQ로 하는 것을 하나로 합치기
+    - heappush 하기 전에 먼저 check해서 아예 heap도 넣지 않게 하는 것
+    - 같은 코드들은 변수에 대입시켜 사용하므로 실제 계산 횟수를 줄이기
 
 # 103. Binary Tree Maximum Path Sum (#124) - hard / python / 3H / tree : dfs : left,right,root,leftroot,rightroot,leftrootright / Top 100 Liked Questions
 - hard : tree
@@ -2084,7 +2089,7 @@ class Solution:
   - Runtime: 2025 ms, faster than 12.13% of Python3 online submissions for Find Median from Data Stream.
   - Memory Usage: 35.9 MB, less than 75.03% of Python3 online submissions for Find Median from Data Stream.
 
-# Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H 
+# 105. Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H 
 - medium 
 - problem :
   - Given an integer array nums, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order.

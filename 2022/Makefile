@@ -35,8 +35,8 @@ coaltar : coalTar.py
 histgram: histogram2.py histogram.data
 	cat  histogram.data | python3 ./histogram2.py
 
-hiking: hiking_Dijkstra.py
-	python3 ./hiking_Dijkstra.py
+hiking: hiking_Dijkstra2.py
+	python3 ./hiking_Dijkstra2.py
 
 main_word_searching: main_word_searching.py
 	python3 main_word_searching.py
