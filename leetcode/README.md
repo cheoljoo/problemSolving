@@ -136,6 +136,7 @@
 - [103. Binary Tree Maximum Path Sum (#124) - hard / python / 3H / tree : dfs : left,right,root,leftroot,rightroot,leftrootright / Top 100 Liked Questions](#103-binary-tree-maximum-path-sum-124---hard--python--3h--tree--dfs--leftrightrootleftrootrightrootleftrootright--top-100-liked-questions)
 - [104. Find Median from Data Stream (#295) - hard / python / 2H / bisect / Top 100 Liked Questions](#104-find-median-from-data-stream-295---hard--python--2h--bisect--top-100-liked-questions)
 - [105. Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H](#105-shortest-unsorted-continuous-subarray-581---medium--python--1h)
+- [106. Max Number of K-Sum Pairs (#1679) - medium / python / 1H](#106-max-number-of-k-sum-pairs-1679---medium--python--1h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -997,7 +998,21 @@ we can predict that denominator is 2**L with Level L.
     - ![](https://github.com/cheoljoo/problemSolving/blob/master/images/dijkstra2.jpg)
   - if graph has direction , src1 -> Vertex (from->to) / src2 -> Vertex (from->to)  / dest -> Vertex (to->from)
     - src1 -> node and src2 -> node and dest -> node : 이 최소가 되는 node를 통해서 가는 것이 shortest path가 되는 것이다. 
-
+```python
+    def dijkstra(self,n: int, graph: Dict[int,Tuple[int,int]], f: int): 
+        result = [math.inf for _ in range(n)]
+        q = [(0,f)]   # (total weight,node)
+        while q:
+            weight, start = heapq.heappop(q)
+            if result[start]  != math.inf :
+                continue
+            result[start] = weight
+            if start in graph:
+                for nxt,w in graph[start]:
+                    if result[nxt] == math.inf:
+                        heapq.heappush(q,(weight + w,nxt))
+        return result
+```
 # 44. Simplify Path (#71) - medium
 - medium
 - Given a string path, which is an absolute path (starting with a slash '/') to a file or directory in a Unix-style file system, convert it to the simplified canonical path.
@@ -1977,7 +1992,21 @@ class Solution:
   - algorithm : Dijkstra (shortest weight path)
     1. start 에서 출발할때 각 노드까지 가는 가장 빠른 weight를 계산 
     2. start 에서 출발하여 edge가 작은 것부터 연결해가면서 q에 계속 넣어주면 결국 목적지에 도달하는 값이 나오게 된다. 이때 여기서는 weight 중 최대만을 찾는 것이므로 ,push시 weight를 넣었지만, path의 weight의 합일 경우에는 wegiht의 합으로 넣어서 계산을 하게 된다.
-
+  - visit 한 것이면 처리하지 않는 이유는 이보다 큰 path를 처리를 할 필요가 없는데 , heapq를 사용하며 처리를 하므로 visit에는 항상 최소값이 들어가게 된다. 이중 while loop를 돌릴 필요가 없다.
+    - weight의 합이 아니므로 , 딱 그 값만을 보고 결정하므로 이러헥 처리가 가능함.
+```python
+          while q:
+            w,r,c = heapq.heappop(q)
+            if (r,c) in visit:
+                continue
+            visit.add((r,c))
+            if r == maxR-1 and c == maxC-1:
+                return w
+            for rp,cp in [(1,0),(0,1),(0,-1),(-1,0)]:
+                nr,nc = r+rp , c+cp
+                if 0 <= nr < maxR and 0 <= nc < maxC and (nr,nc) not in visit:
+                    heapq.heappush(q,(max(w,self.diff([nr,nc],[r,c])),nr,nc))
+```
 # 99. Is Graph Bipartite? (#785) - medium / python / 3H / black&white
 - medium
 - problem :
@@ -2058,6 +2087,28 @@ class Solution:
     - q , nextQ로 하는 것을 하나로 합치기
     - heappush 하기 전에 먼저 check해서 아예 heap도 넣지 않게 하는 것
     - 같은 코드들은 변수에 대입시켜 사용하므로 실제 계산 횟수를 줄이기
+```python
+    def dijkstra(self,row : int , col : int , graph:Dict[Tuple[int,int],int],startNode:int) -> List[int]: # n : nodecount , graph[(x,y)] = (w,x1,y1) , from : (x,y)
+        result = [math.inf for _ in range(row*col)]
+        q = [(0,startNode)]
+        while q:
+            nextQ = []
+            while q:
+                w,node = heapq.heappop(q)
+                if result[node] <= w:
+                    continue
+                result[node] = w
+                # north : node - col , south : node + col , west : node - 1 , east : node + 1
+                if node-col >= 0 :
+                    heapq.heappush(nextQ,(w+graph[(node,node-col)],node-col))
+                if node+col < row*col :
+                    heapq.heappush(nextQ,(w+graph[(node,node+col)],node+col))
+                if node%col != 0 :
+                    heapq.heappush(nextQ,(w+graph[(node,node-1)],node-1))
+                if node%col != col-1 :
+                    heapq.heappush(nextQ,(w+graph[(node,node+1)],node+1))
+            q = nextQ
+```
 
 # 103. Binary Tree Maximum Path Sum (#124) - hard / python / 3H / tree : dfs : left,right,root,leftroot,rightroot,leftrootright / Top 100 Liked Questions
 - hard : tree
@@ -2104,4 +2155,15 @@ class Solution:
   - find maximum value (mx) after starting up from last index
   - find index (lastIndex) for this maximum value from last position
   - calculate difference between startIndex and lastIndex (lastIndex - startIndex + 1)
+
+# 106. Max Number of K-Sum Pairs (#1679) - medium / python / 1H
+- medium
+- problem :
+  - You are given an integer array nums and an integer k.
+  - In one operation, you can pick two numbers from the array whose sum equals k and remove them from the array.
+  - Return the maximum number of operations you can perform on the array.
+- https://leetcode.com/problems/max-number-of-k-sum-pairs/
+- [maxOperations.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxOperations.py) : passed
+  - Runtime: 971 ms, faster than 29.02% of Python3 online submissions for Max Number of K-Sum Pairs.
+  - Memory Usage: 27.1 MB, less than 54.91% of Python3 online submissions for Max Number of K-Sum Pairs.
 
