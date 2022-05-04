@@ -44,3 +44,6 @@ main_word_searching: main_word_searching.py
 decoding: decoding.py
 	python3 decoding.py
 
+plant_trees: plant_trees.py
+	python3 plant_trees.py
+
