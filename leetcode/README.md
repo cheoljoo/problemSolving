@@ -137,6 +137,7 @@
 - [104. Find Median from Data Stream (#295) - hard / python / 2H / bisect / Top 100 Liked Questions](#104-find-median-from-data-stream-295---hard--python--2h--bisect--top-100-liked-questions)
 - [105. Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H](#105-shortest-unsorted-continuous-subarray-581---medium--python--1h)
 - [106. Max Number of K-Sum Pairs (#1679) - medium / python / 1H](#106-max-number-of-k-sum-pairs-1679---medium--python--1h)
+- [107. Wildcard Matching (#44) - hard / python / 1D](#107-wildcard-matching-44---hard--python--1d)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2167,3 +2168,22 @@ class Solution:
   - Runtime: 971 ms, faster than 29.02% of Python3 online submissions for Max Number of K-Sum Pairs.
   - Memory Usage: 27.1 MB, less than 54.91% of Python3 online submissions for Max Number of K-Sum Pairs.
 
+# 107. Wildcard Matching (#44) - hard / python / 1D
+- hard 
+- problem:
+  - Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*' where:
+    - '?' Matches any single character.
+    - '*' Matches any sequence of characters (including the empty sequence).
+  - The matching should cover the entire input string (not partial).
+- https://leetcode.com/problems/wildcard-matching/
+- [wildcardMatching.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/wildcardMatching.py) : 
+1725 / 1811 test cases passed.
+- [wildcardMatching2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/wildcardMatching2.py) : passed
+  - Runtime: 517 ms, faster than 77.45% of Python3 online submissions for Wildcard Matching.
+  - Memory Usage: 14.4 MB, less than 79.48% of Python3 online submissions for Wildcard Matching.
+- algorithm :
+  - first of all , you reduce the problem.  이것을 안하고 했더니 뒤에서 더 많은 처리를 해야한다.  맞는 것을 일단 없애고 처리하자.
+    - if you reduce the string and pattern , it is not complicated
+  - if pattern has more than one asterrisk
+  - if one of both directions is satisfied , it is True.
+    - check whether this charter is in * or not.
