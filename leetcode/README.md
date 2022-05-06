@@ -137,7 +137,8 @@
 - [104. Find Median from Data Stream (#295) - hard / python / 2H / bisect / Top 100 Liked Questions](#104-find-median-from-data-stream-295---hard--python--2h--bisect--top-100-liked-questions)
 - [105. Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H](#105-shortest-unsorted-continuous-subarray-581---medium--python--1h)
 - [106. Max Number of K-Sum Pairs (#1679) - medium / python / 1H](#106-max-number-of-k-sum-pairs-1679---medium--python--1h)
-- [107. Wildcard Matching (#44) - hard / python / 1D](#107-wildcard-matching-44---hard--python--1d)
+- [107. Wildcard Matching (#44) - hard / python / 1D / Top Interview Questions](#107-wildcard-matching-44---hard--python--1d--top-interview-questions)
+- [108. Remove All Adjacent Duplicates in String II (#1209) - medium / python / 2H](#108-remove-all-adjacent-duplicates-in-string-ii-1209---medium--python--2h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2168,7 +2169,7 @@ class Solution:
   - Runtime: 971 ms, faster than 29.02% of Python3 online submissions for Max Number of K-Sum Pairs.
   - Memory Usage: 27.1 MB, less than 54.91% of Python3 online submissions for Max Number of K-Sum Pairs.
 
-# 107. Wildcard Matching (#44) - hard / python / 1D
+# 107. Wildcard Matching (#44) - hard / python / 1D / Top Interview Questions
 - hard 
 - problem:
   - Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*' where:
@@ -2187,3 +2188,43 @@ class Solution:
   - if pattern has more than one asterrisk
   - if one of both directions is satisfied , it is True.
     - check whether this charter is in * or not.
+
+# 108. Remove All Adjacent Duplicates in String II (#1209) - medium / python / 2H
+- medium 
+- problem :
+  - You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.
+  - We repeatedly make k duplicate removals on s until we no longer can.
+  - Return the final string after all such duplicate removals have been made. It is guaranteed that the answer is unique.
+  - ```
+      Input: s = "deeedbbcccbdaa", k = 3
+      Output: "aa"
+      Explanation: 
+      First delete "eee" and "ccc", get "ddbbbdaa"
+      Then delete "bbb", get "dddaa"
+      Finally delete "ddd", get "aa"
+    ```
+- https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/
+- [removeDuplicates1209.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/removeDuplicates1209.py) : passed O(N)
+  - Runtime: 566 ms, faster than 7.63% of Python3 online submissions for Remove All Adjacent Duplicates in String II.
+  - Memory Usage: 24.2 MB, less than 9.09% of Python3 online submissions for Remove All Adjacent Duplicates in String II.
+- algorithm : O(N)
+  - make a list with length stack = [ ['a',3], ...]
+  - scan and change it :
+    - if length is more than k , remove it.
+    - if i-1 and i 's character are same , combine it
+- BEST : (got help) https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/discuss/2012330/python-3-oror-simple-stack-solution-oror-O(n)O(n)
+```python
+class Solution:
+    def removeDuplicates(self, s: str, k: int) -> str:
+        stack = []
+        for c in s:
+            if stack and c == stack[-1][0]:
+                if stack[-1][1] == k - 1: 
+                    stack.pop()
+                else:
+                    stack[-1][1] += 1
+            else:
+                stack.append([c, 1])
+        return ''.join(c * count for c, count in stack)
+```
+
