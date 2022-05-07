@@ -139,6 +139,7 @@
 - [106. Max Number of K-Sum Pairs (#1679) - medium / python / 1H](#106-max-number-of-k-sum-pairs-1679---medium--python--1h)
 - [107. Wildcard Matching (#44) - hard / python / 1D / Top Interview Questions](#107-wildcard-matching-44---hard--python--1d--top-interview-questions)
 - [108. Remove All Adjacent Duplicates in String II (#1209) - medium / python / 2H](#108-remove-all-adjacent-duplicates-in-string-ii-1209---medium--python--2h)
+- [132 Pattern (#456) - medium / python / 1D (got help)](#132-pattern-456---medium--python--1d-got-help)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2228,3 +2229,46 @@ class Solution:
         return ''.join(c * count for c, count in stack)
 ```
 
+
+# 132 Pattern (#456) - medium / python / 1D (got help)
+- medium
+- problem :
+  - Given an array of n integers nums, a 132 pattern is a subsequence of three integers nums[i], nums[j] and nums[k] such that i < j < k and nums[i] < nums[k] < nums[j].
+  - Return true if there is a 132 pattern in nums, otherwise, return false.
+  - ```
+      Input: nums = [-1,3,2,0]
+      Output: true
+      Explanation: There are three 132 patterns in the sequence: [-1, 3, 2], [-1, 3, 0] and [-1, 2, 0].
+    ```
+- https://leetcode.com/problems/132-pattern/
+- [find132pattern.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/find132pattern.py) : 100 / 102 test cases passed.
+- [find132pattern-2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/find132pattern-2.py) : 101 / 102 test cases passed.
+- [find132pattern-3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/find132pattern-3.py) : passe (got help)
+  - Runtime: 497 ms, faster than 41.75% of Python3 online submissions for 132 Pattern.
+  - Memory Usage: 35.3 MB, less than 5.61% of Python3 online submissions for 132 Pattern.
+- algorithm :
+  - k 중심으로 생각해서 , 왼쪽의 최소값을 구한다. (이 최소값은 k보다는 커야 한다.) 오른쪽의 최대값을 구한다. (이 최대값은 왼쪽의 최소값보다는 커야 한다.)
+  - left , right 값을 구한다. 
+  - 연속 동일한 숫자 삭제
+  - left[] : O(N)
+  - right[] : O(N^2)  <- how to reduce it.
+    - O(N)   (got hlep)  get right[] ==>  popped until stack[-1] > left[i] , right[i] = stack[-1] , then append nums[i] into stack to go next
+    - ```python
+        left = [math.inf for _ in range(len(nums))]
+        right = [-math.inf for _ in range(len(nums))]
+        mn = math.inf
+        for i in range(len(nums)):
+            left[i] = mn
+            mn = min(mn,nums[i])
+        stack = []
+        for i in reversed(range(1,len(nums))):
+            while stack and stack[-1] <= left[i]:
+                stack.pop()
+            if stack :
+                right[i] = stack[-1]
+            stack.append(nums[i])
+        for i in range(len(nums)):
+            if left[i] < nums[i] and left[i] < right[i] and nums[i] > right[i]:
+                return True
+        return False
+      ```
