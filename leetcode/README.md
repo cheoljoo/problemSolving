@@ -139,7 +139,8 @@
 - [106. Max Number of K-Sum Pairs (#1679) - medium / python / 1H](#106-max-number-of-k-sum-pairs-1679---medium--python--1h)
 - [107. Wildcard Matching (#44) - hard / python / 1D / Top Interview Questions](#107-wildcard-matching-44---hard--python--1d--top-interview-questions)
 - [108. Remove All Adjacent Duplicates in String II (#1209) - medium / python / 2H](#108-remove-all-adjacent-duplicates-in-string-ii-1209---medium--python--2h)
-- [132 Pattern (#456) - medium / python / 1D (got help)](#132-pattern-456---medium--python--1d-got-help)
+- [109. 132 Pattern (#456) - medium / python / 1D (got help)](#109-132-pattern-456---medium--python--1d-got-help)
+- [110. Flatten Nested List Iterator (#341) - medium / python / 2H](#110-flatten-nested-list-iterator-341---medium--python--2h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2229,8 +2230,7 @@ class Solution:
         return ''.join(c * count for c, count in stack)
 ```
 
-
-# 132 Pattern (#456) - medium / python / 1D (got help)
+# 109. 132 Pattern (#456) - medium / python / 1D (got help)
 - medium
 - problem :
   - Given an array of n integers nums, a 132 pattern is a subsequence of three integers nums[i], nums[j] and nums[k] such that i < j < k and nums[i] < nums[k] < nums[j].
@@ -2246,13 +2246,14 @@ class Solution:
 - [find132pattern-3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/find132pattern-3.py) : passe (got help)
   - Runtime: 497 ms, faster than 41.75% of Python3 online submissions for 132 Pattern.
   - Memory Usage: 35.3 MB, less than 5.61% of Python3 online submissions for 132 Pattern.
-- algorithm :
+- algorithm : [79. Largest Rectangle in Histogram (#84) - hard / python / 2D](#79-largest-rectangle-in-histogram-84---hard--python--2d)
   - k 중심으로 생각해서 , 왼쪽의 최소값을 구한다. (이 최소값은 k보다는 커야 한다.) 오른쪽의 최대값을 구한다. (이 최대값은 왼쪽의 최소값보다는 커야 한다.)
   - left , right 값을 구한다. 
   - 연속 동일한 숫자 삭제
   - left[] : O(N)
   - right[] : O(N^2)  <- how to reduce it.
-    - O(N)   (got hlep)  get right[] ==>  popped until stack[-1] > left[i] , right[i] = stack[-1] , then append nums[i] into stack to go next
+    - right[] : O(N) using stack
+  - process [i] : left[i] -> nums[i] -> pop when stack[-1] is less than left[i] -> right[i] -> add nums[i] into stack 
     - ```python
         left = [math.inf for _ in range(len(nums))]
         right = [-math.inf for _ in range(len(nums))]
@@ -2272,3 +2273,59 @@ class Solution:
                 return True
         return False
       ```
+
+        | [0]  | [1] | [2] | [3] | [4] | [5]  | [6]  | [7]   | index       |
+        | ---- | --- | --- | --- | --- | ---- | ---- | ----- | -----------:|
+        | inf  | 4   | 3   | 3   | 3   | 3    | 3    | 2     | -> left     |
+        | 4    | 3   | 4   | 5   | 6   | 5    | 2    | 3<- > | nums        |
+        | all  | 4   | x   | x   | x   | 2    | 3    | x     | <- pop      |
+        | -inf | 5   | 5   | 6   | 5   | -inf | -inf | -inf  | <- right    |
+        |      | 3   | 4   |     |     |      |      |       | stack[3]    |
+        |      | 5   | 5   | 5   |     |      |      |       | stack[2]    |
+        |      | 6   | 6   | 6   | 6   |      |      |       | stack[1]    |
+        | 4    | 5   | 5   | 5   | 5   | 5    | 2    | 3     | <- stack[0] |
+- BEST :
+  - https://leetcode.com/problems/132-pattern/discuss/2015969/Python-Solution-using-stack
+  - https://leetcode.com/problems/132-pattern/discuss/2015130/Going-from-O(N3)-greater-O(N2)-greater-O(N)-%2B-MEME
+    - O(N)   (got hlep)  get right[] ==>  popped until stack[-1] > left[i] , right[i] = stack[-1] , then append nums[i] into stack to go next
+
+# 110. Flatten Nested List Iterator (#341) - medium / python / 2H
+- medium
+- problem :
+  - You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
+  - Implement the NestedIterator class:
+    - NestedIterator(List<NestedInteger> nestedList) Initializes the iterator with the nested list nestedList.
+    - int next() Returns the next integer in the nested list.
+    - boolean hasNext() Returns true if there are still some integers in the nested list and false otherwise.
+  - Your code will be tested with the following pseudocode:
+    - initialize iterator with nestedList
+    - res = []
+    - while iterator.hasNext()
+    -     append iterator.next() to the end of res
+    - return res
+  - If res matches the expected flattened list, then your code will be judged as correct.
+  - ```
+      Input: nestedList = [[1,2],3,[4,5]]
+      Output: [1,2,3,4,5]
+      Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1,2,3,4,5].
+    ```
+- https://leetcode.com/problems/flatten-nested-list-iterator/submissions/
+- [NestedInteger.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/NestedInteger.py) : passed
+  - Runtime: 115 ms, faster than 21.00% of Python3 online submissions for Flatten Nested List Iterator.
+  - Memory Usage: 17.9 MB, less than 41.16% of Python3 online submissions for Flatten Nested List Iterator.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
