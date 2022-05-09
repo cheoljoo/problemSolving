@@ -141,6 +141,7 @@
 - [108. Remove All Adjacent Duplicates in String II (#1209) - medium / python / 2H](#108-remove-all-adjacent-duplicates-in-string-ii-1209---medium--python--2h)
 - [109. 132 Pattern (#456) - medium / python / 1D (got help)](#109-132-pattern-456---medium--python--1d-got-help)
 - [110. Flatten Nested List Iterator (#341) - medium / python / 2H](#110-flatten-nested-list-iterator-341---medium--python--2h)
+- [111. Letter Combinations of a Phone Number (#17) - medium / python / 1H](#111-letter-combinations-of-a-phone-number-17---medium--python--1h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2313,6 +2314,27 @@ class Solution:
 - [NestedInteger.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/NestedInteger.py) : passed
   - Runtime: 115 ms, faster than 21.00% of Python3 online submissions for Flatten Nested List Iterator.
   - Memory Usage: 17.9 MB, less than 41.16% of Python3 online submissions for Flatten Nested List Iterator.
+
+# 111. Letter Combinations of a Phone Number (#17) - medium / python / 1H
+- medium
+- problem :
+  - Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
+  - A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+  - ```
+        self.table = {'2':['a','b','c'],
+                 '3':['d','e','f'],
+                 '4':['g','h','i'],
+                 '5':['j','k','l'],
+                 '6':['m','n','o'],
+                 '7':['p','q','r','s'],
+                 '8':['t','u','v'],
+                 '9':['w','x','y','z']
+    ```
+- https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+- [letterCombinations.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/letterCombinations.py) : passed
+  - Runtime: 37 ms, faster than 67.10% of Python3 online submissions for Letter Combinations of a Phone Number.
+  - Memory Usage: 13.9 MB, less than 79.68% of Python3 online submissions for Letter Combinations of a Phone Number.
+- next challenges : Generate Parentheses / Combination Sum / Binary Watch / Count Number of Texts
 
 
 
