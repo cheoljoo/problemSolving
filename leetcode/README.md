@@ -144,6 +144,7 @@
 - [111. Letter Combinations of a Phone Number (#17) - medium / python / 1H](#111-letter-combinations-of-a-phone-number-17---medium--python--1h)
 - [112. Word Ladder (#127) - hard / python / 3D / BFS / Top Interview Questions / (got help) / (fail)](#112-word-ladder-127---hard--python--3d--bfs--top-interview-questions--got-help--fail)
 - [113. Count Sorted Vowel Strings (#1641) - medium / python / 1H](#113-count-sorted-vowel-strings-1641---medium--python--1h)
+- [114. Combination Sum III (#216) - medium / python / 1H](#114-combination-sum-iii-216---medium--python--1h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2379,6 +2380,7 @@ class Solution:
   - diff:11850 q:16548
 - algorithm :
   - _를 중간에 넣어서 특정 word에서 변경될수 있는 모든 word를 찾는 것을 한번에 할수 있는 data structure를 생성한다.
+- next challenges : Hash Table / String / Breadth-First Search
 
 # 113. Count Sorted Vowel Strings (#1641) - medium / python / 1H
 - medium
@@ -2409,8 +2411,26 @@ class Solution:
         n = 2 => a:5 + e:4 + i:3 + o:2 + u:1 => a:f5(1) + e:f4(1) + i:f3(1) + o:f2(1) + u:f1(1)
         n = 3 => a:f5(2) + e:f4(2) + i:f3(2) + o:f2(2) + u:f1(2)
     ```
+- next challenges : Dynamic Programming
 
-
+# 114. Combination Sum III (#216) - medium / python / 1H
+- medium
+- problem :
+  - Find all valid combinations of k numbers that sum up to n such that the following conditions are true:
+    - Only numbers 1 through 9 are used.
+    - Each number is used at most once.
+  - Return a list of all possible valid combinations. The list must not contain the same combination twice, and the combinations may be returned in any order.
+  - ```
+      Input: k = 3, n = 9
+      Output: [[1,2,6],[1,3,5],[2,3,4]]
+      Input: k = 4, n = 1
+      Output: []
+    ```
+- https://leetcode.com/problems/combination-sum-iii/
+- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) : passed
+  - Runtime: 50 ms, faster than 35.44% of Python3 online submissions for Combination Sum III.
+  - Memory Usage: 13.9 MB, less than 79.02% of Python3 online submissions for Combination Sum III.
+- next challenges : Combination Sum
 
 
 
