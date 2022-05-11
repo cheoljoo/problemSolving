@@ -29,6 +29,7 @@
 - [13. 함수형 언어의 특성들: 반복자들과 클로저들](#13-함수형-언어의-특성들-반복자들과-클로저들)
   - [13.1. closure : 익명 함수](#131-closure--익명-함수)
   - [13.2. 반복자로 일련의 항목들 처리하기](#132-반복자로-일련의-항목들-처리하기)
+  - [13.3. I/O 프로젝트 개선하기](#133-io-프로젝트-개선하기)
 - [14. (Appendix) miscellaneous](#14-appendix-miscellaneous)
   - [14.1. code coverage](#141-code-coverage)
 
@@ -579,8 +580,43 @@ let expensive_closure = |num| {
   - FnMut 값들을 가변으로 빌려오기 때문에 그 환경을 변경할 수 있습니다.
 
 ## 13.2. 반복자로 일련의 항목들 처리하기
-- 
+- iterator
+  ```rust
+  let v1 = vec![1, 2, 3];
+  let v1_iter = v1.iter();
+  for val in v1_iter {
+      println!("Got: {}", val);
+  }
+  ```
+- Iterator trait and next method
+  ```rust
+  trait Iterator {
+      type Item;
+      fn next(&mut self) -> Option<Self::Item>;
+      // methods with default implementations elided
+  } 
+  ```
+- next 호출로 얻어온 값들은 벡터 안에 있는 값들에 대한 불변 참조라는 점 역시
+유의 하세요. iter 메서드는 불변 참조에 대한 반복자를 만듭니다. 만약 v1 의
+소유권을 갖고 소유된 값들을 반환하도록 하고 싶다면, iter 대신 into_iter 를
+호출해야 합니다. 비슷하게, 가변 참조에 대한 반복자를 원한다면, iter 대신
+iter_mut 을 호출할 수 있습니다.
+  - [iter.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/iter.rs)
+  - ```v1_iter.sum();``` 반복자의 모든 항목에 대한 합계를 얻기 위해 sum 메서드 호출 하기. sum 은 호출한 반복자의 소유권을 갖기 때문에, sum 을 호출한 후 v1_iter 은 사용할 수 없습니다.
+- 다른 반복자를 생성하는 메서드들 (ex. map)
+  - iterator가 lazy이므로 그냥 선언만 하면 안되고 , collect() 같은 것을 직접 호출해주는게 있어야 한다.
+  - map 은 클로저를 인자로 받기 때문에, 각 항목에 대해 수행하기를 원하는 어떤 연산도 기술할 수 있습니다. 이것은 Iterator 트레잇이 제공하는 반복자 행위를 재사용 하면서 클로저가 어떻게 일부 행위를 맞춤 조작할 수 있는지를 보여주는 굉장한 예제 입니다.
+  ```rust
+  let v1: Vec<i32> = vec![1, 2, 3];
+  let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();
+  assert_eq!(v2, vec![2, 3, 4]);
+  ```
+- 환경을 캡쳐하는 클로저 사용하기 (ex. filter)
+  - 반복자의 filter 메서드는 반복자로 부터 각 항목을 받아 Boolean 을 반환하는 클로저를 인자로 받습니다.
+- Iterator trait으로 자신만의 반복자 만들기
+  - [counterIter.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/counterIter.rs)
 
+## 13.3. I/O 프로젝트 개선하기
 
 
 # 14. (Appendix) miscellaneous 
