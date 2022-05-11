@@ -142,6 +142,7 @@
 - [109. 132 Pattern (#456) - medium / python / 1D (got help)](#109-132-pattern-456---medium--python--1d-got-help)
 - [110. Flatten Nested List Iterator (#341) - medium / python / 2H](#110-flatten-nested-list-iterator-341---medium--python--2h)
 - [111. Letter Combinations of a Phone Number (#17) - medium / python / 1H](#111-letter-combinations-of-a-phone-number-17---medium--python--1h)
+- [112. Word Ladder (#127) - hard / python / 3D / BFS / Top Interview Questions / (got help) / (fail)](#112-word-ladder-127---hard--python--3d--bfs--top-interview-questions--got-help--fail)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2335,6 +2336,56 @@ class Solution:
   - Runtime: 37 ms, faster than 67.10% of Python3 online submissions for Letter Combinations of a Phone Number.
   - Memory Usage: 13.9 MB, less than 79.68% of Python3 online submissions for Letter Combinations of a Phone Number.
 - next challenges : Generate Parentheses / Combination Sum / Binary Watch / Count Number of Texts
+
+# 112. Word Ladder (#127) - hard / python / 3D / BFS / Top Interview Questions / (got help) / (fail)
+- hard
+- problem :
+  - A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:
+    - Every adjacent pair of words differs by a single letter.
+    - Every si for 1 <= i <= k is in wordList. Note that beginWord does not need to be in wordList.
+    - sk == endWord
+  - Given two words, beginWord and endWord, and a dictionary wordList, return the number of words in the shortest transformation sequence from beginWord to endWord, or 0 if no such sequence exists.
+  - ```
+      Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+      Output: 5
+      Explanation: One shortest transformation sequence is "hit" -> "hot" -> "dot" -> "dog" -> cog", which is 5 words long.
+    ```
+- https://leetcode.com/problems/word-ladder/
+- [ladderLength.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/ladderLength.py) : 36 / 50 test cases passed. timeout
+  - Runtime: 1456 ms  <- 2370 items  with "passed" in "Run Code" 
+  - 2370  tcount: 4273   **table :  1.4275891780853271** ->  while :  0.00419926643371582 ->  **total_time1 :  1.4318492412567139** -> SUCCESS -> 21 1757 catch
+    - makeDiffTable() spent most of time. it was timeout because of it. we should reduce the time.
+    - methods : 
+      - In this case we calculate edges between all words. Then we calculate shortest path.
+      - but , we do not need to search all cases. if you reach to target, we can stop it.
+      - so combine search and makeDiffTable with BFS.
+- [ladderLength_2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/ladderLength_2.py) : timeout
+  - It took more time. it is useless.
+  - 2370 table :  2.384185791015625e-07 ->  while :  3967 2.0570247173309326 ->  **total_time1 :  2.0571084022521973** -> SUCCESS -> 21 0 catch
+- [ladderLength_best.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/ladderLength_best.py) : (got help)
+  - string 을 비교하는 것에서 시간이 많이 소모된다.  diff count를 줄이고 , diff하는 시간을 줄이는 것이 관건!
+    - ladderLength.py : 4273 q.append , 2807265 diff
+    - ladderLength_2.py : 3967 q.append , 4119060 diff
+  - 더 빠르게 diff하는 방법이 뭘까? (got help)  [discussion](https://leetcode.com/problems/word-ladder/discuss/1767680/Python-3-or-Faster-than-93-or-BFS-solution-orEasy-to-understand)
+    - hot 라고 하면 h_t 라고 쓰고 , **nei{h_t , [hot,...]}**
+    - 해당 문자에 대해서 hot 라고 하면 _ot , h_t , ho_ 으로 변경되는  word들을 가질 수 있으며,
+    - _ot 에 해당되는 word들을 q에 넣어서 한칸 더 가라는 것이다. 
+    - diff 를 해서 찾을수 있는 것을 바로 찾을수 있다. 
+    - q.append : 1745 ,  neiCount : 11855
+- [ladderLength_3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/ladderLength_3.py) : 
+  - Runtime: 300 ms, faster than 52.38% of Python3 online submissions for Word Ladder.
+  - Memory Usage: 20.2 MB, less than 5.17% of Python3 online submissions for Word Ladder.
+  - diff:11850 q:16548
+- algorithm :
+  - _를 중간에 넣어서 특정 word에서 변경될수 있는 모든 word를 찾는 것을 한번에 할수 있는 data structure를 생성한다.
+
+
+
+
+
+
+
+
 
 
 
