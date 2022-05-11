@@ -143,6 +143,7 @@
 - [110. Flatten Nested List Iterator (#341) - medium / python / 2H](#110-flatten-nested-list-iterator-341---medium--python--2h)
 - [111. Letter Combinations of a Phone Number (#17) - medium / python / 1H](#111-letter-combinations-of-a-phone-number-17---medium--python--1h)
 - [112. Word Ladder (#127) - hard / python / 3D / BFS / Top Interview Questions / (got help) / (fail)](#112-word-ladder-127---hard--python--3d--bfs--top-interview-questions--got-help--fail)
+- [113. Count Sorted Vowel Strings (#1641) - medium / python / 1H](#113-count-sorted-vowel-strings-1641---medium--python--1h)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2372,18 +2373,42 @@ class Solution:
     - _ot 에 해당되는 word들을 q에 넣어서 한칸 더 가라는 것이다. 
     - diff 를 해서 찾을수 있는 것을 바로 찾을수 있다. 
     - q.append : 1745 ,  neiCount : 11855
-- [ladderLength_3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/ladderLength_3.py) : 
+- [ladderLength_3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/ladderLength_3.py) : passed
   - Runtime: 300 ms, faster than 52.38% of Python3 online submissions for Word Ladder.
   - Memory Usage: 20.2 MB, less than 5.17% of Python3 online submissions for Word Ladder.
   - diff:11850 q:16548
 - algorithm :
   - _를 중간에 넣어서 특정 word에서 변경될수 있는 모든 word를 찾는 것을 한번에 할수 있는 data structure를 생성한다.
 
-
-
-
-
-
+# 113. Count Sorted Vowel Strings (#1641) - medium / python / 1H
+- medium
+- problem :
+  - Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted.
+  - A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet.
+  - ```
+      Input: n = 2
+      Output: 15
+      Explanation: The 15 sorted strings that consist of vowels only are
+      ["aa","ae","ai","ao","au","ee","ei","eo","eu","ii","io","iu","oo","ou","uu"].
+      Note that "ea" is not a valid string since 'e' comes after 'a' in the alphabet.
+    ```
+- https://leetcode.com/problems/count-sorted-vowel-strings/
+- [countVowelStrings.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/countVowelStrings.py) : passed
+  - Runtime: 39 ms, faster than 64.17% of Python3 online submissions for Count Sorted Vowel Strings.
+  - Memory Usage: 13.8 MB, less than 65.31% of Python3 online submissions for Count Sorted Vowel Strings.
+- algorithm :
+  - f1 : a , f2 : e , f3 : e  , f4 : o , f5 : u
+  - ```
+        f1(1) = 1
+        f1(n) = 1
+        f2(1) = 2
+        f2(n) = f2(n-1) + f1(n-1)
+        f3(n) = f3(n-1) + f2(n-1) + f1(n-1)
+        f5(n) = f5(n-1) + f4(n-1) + f3(n-1) + f2(n-1) + f1(n-1)
+        n = 1 => a:1 + e:1 + i:1 + o:1 + u:1
+        n = 2 => a:5 + e:4 + i:3 + o:2 + u:1 => a:f5(1) + e:f4(1) + i:f3(1) + o:f2(1) + u:f1(1)
+        n = 3 => a:f5(2) + e:f4(2) + i:f3(2) + o:f2(2) + u:f1(2)
+    ```
 
 
 
