@@ -145,8 +145,9 @@
 - [112. Word Ladder (#127) - hard / python / 3D / BFS / Top Interview Questions / (got help) / (fail)](#112-word-ladder-127---hard--python--3d--bfs--top-interview-questions--got-help--fail)
 - [113. Count Sorted Vowel Strings (#1641) - medium / python / 1H](#113-count-sorted-vowel-strings-1641---medium--python--1h)
 - [114. Combination Sum III (#216) - medium / python / 1H](#114-combination-sum-iii-216---medium--python--1h)
-- [115. Longest Increasing Path in a Matrix (#329) - hard / python / dynamic programming / Top Interview Questions](#115-longest-increasing-path-in-a-matrix-329---hard--python--dynamic-programming--top-interview-questions)
-- [116. template (# ) - medium / python /  (ing)](#116-template-----medium--python---ing)
+- [115. Longest Increasing Path in a Matrix (#329) - hard / python / 2H / dynamic programming / Top Interview Questions](#115-longest-increasing-path-in-a-matrix-329---hard--python--2h--dynamic-programming--top-interview-questions)
+- [116. Permutations II (#47) - medium / python / 1H](#116-permutations-ii-47---medium--python--1h)
+- [117. template (# ) - medium / python /  (ing)](#117-template-----medium--python---ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2434,7 +2435,7 @@ class Solution:
   - Memory Usage: 13.9 MB, less than 79.02% of Python3 online submissions for Combination Sum III.
 - next challenges : Combination Sum
 
-# 115. Longest Increasing Path in a Matrix (#329) - hard / python / dynamic programming / Top Interview Questions
+# 115. Longest Increasing Path in a Matrix (#329) - hard / python / 2H / dynamic programming / Top Interview Questions
 - hard
 - problem : 
   - Given an m x n integers matrix, return the length of the longest increasing path in matrix.
@@ -2448,12 +2449,24 @@ class Solution:
   - DFS traverse (recursive max depth in related to stack size : m*n)
 - next challenges : Count Ways to Build Rooms in an Ant Colony / Minimum Number of Days to Eat N Oranges / Maximum Cost of Trip With K Highways
 
+# 116. Permutations II (#47) - medium / python / 1H
+- medium
+- problem :
+  - Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.
+  - ```
+      Input: nums = [1,2,3]
+      Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+    ```
+- https://leetcode.com/problems/permutations-ii/
+- [permuteUnique.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/permuteUnique.py) :
+  - Runtime: 132 ms, faster than 28.83% of Python3 online submissions for Permutations II.
+  - Memory Usage: 14.2 MB, less than 60.03% of Python3 online submissions for Permutations II.
+- next challenges : Permutations / Palindrome Permutation II / Number of Squareful Arrays
 
 
 
 
-
-# 116. template (# ) - medium / python /  (ing)
+# 117. template (# ) - medium / python /  (ing)
 - medium
 - problem :
 - link
