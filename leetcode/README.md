@@ -145,6 +145,8 @@
 - [112. Word Ladder (#127) - hard / python / 3D / BFS / Top Interview Questions / (got help) / (fail)](#112-word-ladder-127---hard--python--3d--bfs--top-interview-questions--got-help--fail)
 - [113. Count Sorted Vowel Strings (#1641) - medium / python / 1H](#113-count-sorted-vowel-strings-1641---medium--python--1h)
 - [114. Combination Sum III (#216) - medium / python / 1H](#114-combination-sum-iii-216---medium--python--1h)
+- [115. Longest Increasing Path in a Matrix (#329) - hard / python / dynamic programming / Top Interview Questions](#115-longest-increasing-path-in-a-matrix-329---hard--python--dynamic-programming--top-interview-questions)
+- [116. template (# ) - medium / python /  (ing)](#116-template-----medium--python---ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2432,15 +2434,32 @@ class Solution:
   - Memory Usage: 13.9 MB, less than 79.02% of Python3 online submissions for Combination Sum III.
 - next challenges : Combination Sum
 
+# 115. Longest Increasing Path in a Matrix (#329) - hard / python / dynamic programming / Top Interview Questions
+- hard
+- problem : 
+  - Given an m x n integers matrix, return the length of the longest increasing path in matrix.
+  - From each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).
+- https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+- [longestIncreasingPath.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestIncreasingPath.py) : passed
+  - Runtime: 514 ms, faster than 73.78% of Python3 online submissions for Longest Increasing Path in a Matrix.
+  - Memory Usage: 14.7 MB, less than 86.30% of Python3 online submissions for Longest Increasing Path in a Matrix.
+- algorithm : dynamic programming
+  - Directed Graph (no infinite loop)
+  - DFS traverse (recursive max depth in related to stack size : m*n)
+- next challenges : Count Ways to Build Rooms in an Ant Colony / Minimum Number of Days to Eat N Oranges / Maximum Cost of Trip With K Highways
 
 
 
 
 
 
-
-
-
+# 116. template (# ) - medium / python /  (ing)
+- medium
+- problem :
+- link
+- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
+- algorithm :
+- next challenges : 
 
 
 
