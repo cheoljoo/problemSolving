@@ -146,8 +146,9 @@
 - [113. Count Sorted Vowel Strings (#1641) - medium / python / 1H](#113-count-sorted-vowel-strings-1641---medium--python--1h)
 - [114. Combination Sum III (#216) - medium / python / 1H](#114-combination-sum-iii-216---medium--python--1h)
 - [115. Longest Increasing Path in a Matrix (#329) - hard / python / 2H / dynamic programming / Top Interview Questions](#115-longest-increasing-path-in-a-matrix-329---hard--python--2h--dynamic-programming--top-interview-questions)
-- [116. Permutations II (#47) - medium / python / 1H](#116-permutations-ii-47---medium--python--1h)
-- [117. template (# ) - medium / python /  (ing)](#117-template-----medium--python---ing)
+- [116. Permutations II (#47) - medium / python / 30M](#116-permutations-ii-47---medium--python--30m)
+- [117. Populating Next Right Pointers in Each Node II (#117) - medium / python / BFS / find sibling node / 20M](#117-populating-next-right-pointers-in-each-node-ii-117---medium--python--bfs--find-sibling-node--20m)
+- [118. template (# ) - medium / python /  (ing)](#118-template-----medium--python---ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2449,7 +2450,7 @@ class Solution:
   - DFS traverse (recursive max depth in related to stack size : m*n)
 - next challenges : Count Ways to Build Rooms in an Ant Colony / Minimum Number of Days to Eat N Oranges / Maximum Cost of Trip With K Highways
 
-# 116. Permutations II (#47) - medium / python / 1H
+# 116. Permutations II (#47) - medium / python / 30M
 - medium
 - problem :
   - Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.
@@ -2463,13 +2464,33 @@ class Solution:
   - Memory Usage: 14.2 MB, less than 60.03% of Python3 online submissions for Permutations II.
 - next challenges : Permutations / Palindrome Permutation II / Number of Squareful Arrays
 
-
-
-
-# 117. template (# ) - medium / python /  (ing)
+# 117. Populating Next Right Pointers in Each Node II (#117) - medium / python / BFS / find sibling node / 20M
 - medium
 - problem :
-- link
+  - Given a binary tree
+  - ```
+      struct Node {
+        int val;
+        Node *left;
+        Node *right;
+        Node *next;
+      }
+    ```
+  - Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+  - Initially, all next pointers are set to NULL.
+  - Explanation: Given the above binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B. The serialized output is in level order as connected by the next pointers, with '#' signifying the end of each level.
+- https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
+- [connect.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/connect.py) : passed
+  - Runtime: 57 ms, faster than 68.35% of Python3 online submissions for Populating Next Right Pointers in Each Node II.
+  - Memory Usage: 15.4 MB, less than 48.93% of Python3 online submissions for Populating Next Right Pointers in Each Node II.
+- algorithm : BFS / find sibling node 
+- next challenges : Populating Next Right Pointers in Each Node
+
+
+# 118. template (# ) - medium / python /  (ing)
+- medium
+- problem :
+- 
 - [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
 - algorithm :
 - next challenges : 
