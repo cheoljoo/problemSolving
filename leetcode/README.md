@@ -148,7 +148,8 @@
 - [115. Longest Increasing Path in a Matrix (#329) - hard / python / 2H / dynamic programming / Top Interview Questions](#115-longest-increasing-path-in-a-matrix-329---hard--python--2h--dynamic-programming--top-interview-questions)
 - [116. Permutations II (#47) - medium / python / 30M](#116-permutations-ii-47---medium--python--30m)
 - [117. Populating Next Right Pointers in Each Node II (#117) - medium / python / BFS / find sibling node / 20M](#117-populating-next-right-pointers-in-each-node-ii-117---medium--python--bfs--find-sibling-node--20m)
-- [118. template (# ) - medium / python /  (ing)](#118-template-----medium--python---ing)
+- [118. Daily Temperatures (#739) - medium / python / stack / 15M](#118-daily-temperatures-739---medium--python--stack--15m)
+- [119. template (#) - medium / python /  (ing)](#119-template----medium--python---ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2486,13 +2487,32 @@ class Solution:
 - algorithm : BFS / find sibling node 
 - next challenges : Populating Next Right Pointers in Each Node
 
+# 118. Daily Temperatures (#739) - medium / python / stack / 15M
+- medium
+- problem :
+  - Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
+  - ```
+      Input: temperatures = [73,74,75,71,69,72,76,73]
+      Output: [1,1,4,2,1,1,0,0]
+      Input: temperatures = [30,40,50,60]
+      Output: [1,1,1,0]
+    ```
+- https://leetcode.com/problems/daily-temperatures/
+- [dailyTemperatures.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/dailyTemperatures.py) : passed
+  - Runtime: 1348 ms, faster than 67.45% of Python3 online submissions for Daily Temperatures.
+  - Memory Usage: 25.4 MB, less than 23.98% of Python3 online submissions for Daily Temperatures.
+- algorithm : stack
+- complexity : O(N)
+- next challenges : Next Greater Element I /  Online Stock Span
 
-# 118. template (# ) - medium / python /  (ing)
+
+# 119. template (#) - medium / python /  (ing)
 - medium
 - problem :
 - 
 - [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
 - algorithm :
+- complexity :
 - next challenges : 
 
 
