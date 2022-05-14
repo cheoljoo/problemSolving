@@ -150,6 +150,7 @@
 - [117. Populating Next Right Pointers in Each Node II (#117) - medium / python / BFS / find sibling node / 20M](#117-populating-next-right-pointers-in-each-node-ii-117---medium--python--bfs--find-sibling-node--20m)
 - [118. Daily Temperatures (#739) - medium / python / stack / 15M / Top 100 Liked Questions](#118-daily-temperatures-739---medium--python--stack--15m--top-100-liked-questions)
 - [119. Subarray Sum Equals K (#560) - medium / python / Top 100 Liked Questions / (got help)](#119-subarray-sum-equals-k-560---medium--python--top-100-liked-questions--got-help)
+- [120. Network Delay Time (#743) - medium / python / graph / dijkstra](#120-network-delay-time-743---medium--python--graph--dijkstra)
 - [121. template (#) - medium / python /  (ing)](#121-template----medium--python---ing)
 
 --------------------
@@ -2530,6 +2531,24 @@ class Solution:
 - complexity : O(N^2) -> O(N)
 - next challenges : Continuous Subarray Sum  / Subarray Product Less Than K / Find Pivot Index / Subarray Sums Divisible by K / Minimum Operations to Reduce X to Zero / K Radius Subarray Averages / Maximum Sum Score of Array
 
+# 120. Network Delay Time (#743) - medium / python / graph / dijkstra 
+- medium
+- problem :
+  - You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target.
+  - We will send a signal from a given node k. Return the time it takes for all the n nodes to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.
+  - ```
+      Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
+      Output: 2
+      Input: times = [[1,2,1]], n = 2, k = 2
+      Output: -1
+    ```
+- [networkDelayTime.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/networkDelayTime.py) : passed
+  - Runtime: 659 ms, faster than 38.98% of Python3 online submissions for Network Delay Time.
+  - Memory Usage: 16 MB, less than 92.16% of Python3 online submissions for Network Delay Time.
+- algorithm : graph / dijkstra 
+- BEST : it has the same algorithm with the solution of best performance.
+- complexity : O(N + ELogN) -Standard Time complexity of Dijkstra's algorithm
+- next challenges : The Time When the Network Becomes Idle / Second Minimum Time to Reach Destination
 
 
 
