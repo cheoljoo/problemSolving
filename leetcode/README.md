@@ -45,7 +45,7 @@
 - [12. Convert Sorted Array to Binary Search Tree (Trees : Height-Balanced Binary Search Trees) - easy](#12-convert-sorted-array-to-binary-search-tree-trees--height-balanced-binary-search-trees---easy)
 - [13. is Balanced Binary Tree - easy](#13-is-balanced-binary-tree---easy)
 - [14. First Bad Version : Sorting and Searching - easy](#14-first-bad-version--sorting-and-searching---easy)
-- [15. Maximum Subarray : DP - easy but hard](#15-maximum-subarray--dp---easy-but-hard)
+- [15. Maximum Subarray : DP - easy but hard (got help)](#15-maximum-subarray--dp---easy-but-hard-got-help)
 - [16. Remove Outermost Parentheses (#1021) -easy](#16-remove-outermost-parentheses-1021--easy)
 - [17. Zigzag Conversion (#6) - medium](#17-zigzag-conversion-6---medium)
 - [18. House Robber (#198) - medium](#18-house-robber-198---medium)
@@ -148,8 +148,9 @@
 - [115. Longest Increasing Path in a Matrix (#329) - hard / python / 2H / dynamic programming / Top Interview Questions](#115-longest-increasing-path-in-a-matrix-329---hard--python--2h--dynamic-programming--top-interview-questions)
 - [116. Permutations II (#47) - medium / python / 30M](#116-permutations-ii-47---medium--python--30m)
 - [117. Populating Next Right Pointers in Each Node II (#117) - medium / python / BFS / find sibling node / 20M](#117-populating-next-right-pointers-in-each-node-ii-117---medium--python--bfs--find-sibling-node--20m)
-- [118. Daily Temperatures (#739) - medium / python / stack / 15M](#118-daily-temperatures-739---medium--python--stack--15m)
-- [119. template (#) - medium / python /  (ing)](#119-template----medium--python---ing)
+- [118. Daily Temperatures (#739) - medium / python / stack / 15M / Top 100 Liked Questions](#118-daily-temperatures-739---medium--python--stack--15m--top-100-liked-questions)
+- [119. Subarray Sum Equals K (#560) - medium / python / Top 100 Liked Questions / (got help)](#119-subarray-sum-equals-k-560---medium--python--top-100-liked-questions--got-help)
+- [121. template (#) - medium / python /  (ing)](#121-template----medium--python---ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -546,7 +547,7 @@ int GCD(int a, int b){
 - At first time I try to find sequentially.  but time exceeded.
 - [firstBadVersion.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/firstBadVersion.py) : passed
 
-# 15. Maximum Subarray : DP - easy but hard
+# 15. Maximum Subarray : DP - easy but hard (got help)
 - easy : DP dynamic programming  (나는 hard)
 - Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 - A subarray is a contiguous part of an array.
@@ -2487,7 +2488,7 @@ class Solution:
 - algorithm : BFS / find sibling node 
 - next challenges : Populating Next Right Pointers in Each Node
 
-# 118. Daily Temperatures (#739) - medium / python / stack / 15M
+# 118. Daily Temperatures (#739) - medium / python / stack / 15M / Top 100 Liked Questions
 - medium
 - problem :
   - Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
@@ -2505,11 +2506,42 @@ class Solution:
 - complexity : O(N)
 - next challenges : Next Greater Element I /  Online Stock Span
 
-
-# 119. template (#) - medium / python /  (ing)
+# 119. Subarray Sum Equals K (#560) - medium / python / Top 100 Liked Questions / (got help)
 - medium
 - problem :
-- 
+  - Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+  - ```
+      Input: nums = [1,1,1], k = 2
+      Output: 2
+      Input: nums = [1,2,3], k = 3
+      Output: 2
+    ```
+- [subarraySum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/subarraySum.py) : 72 / 90 test cases passed.  timeout O(N^2)
+  - **20000** total_time1 :  **19.059290885925293** -> SUCCESS -> 4012 200010000
+- [subarraySum_2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/subarraySum_2.py) : (got help)  O(N)
+  - https://leetcode.com/problems/subarray-sum-equals-k/discuss/1761064/C%2B%2B-Solution-oror-Code-%2B-Explanation
+  - prefixSum[i] 는 i 까지의 합을 미리 계산한다.
+  - i 부터 이후의 값 어디까지인가까자의 합이 k가 되어야 한다. prefixSum을 이용하는 경우는 i-1까지의 합 + k 가 되는 값이 i 이후에 있는지를 보면 된다.
+  - **20000** total_time1 :  **0.010038614273071289** -> SUCCESS -> 4012 0
+    - Runtime: 297 ms, faster than 62.84% of Python3 online submissions for Subarray Sum Equals K.
+    - Memory Usage: 16.7 MB, less than 32.85% of Python3 online submissions for Subarray Sum Equals K.
+- algorithm :
+  - O(N) : prefixSum[i] 는 i 까지의 합을 미리 계산한다. i 부터 이후의 값 어디까지인가까자의 합이 k가 되어야 한다. prefixSum을 이용하는 경우는 i-1까지의 합 + k 가 되는 값이 i 이후에 있는지를 보면 된다.
+- complexity : O(N^2) -> O(N)
+- next challenges : Continuous Subarray Sum  / Subarray Product Less Than K / Find Pivot Index / Subarray Sums Divisible by K / Minimum Operations to Reduce X to Zero / K Radius Subarray Averages / Maximum Sum Score of Array
+
+
+
+
+
+
+
+
+
+# 121. template (#) - medium / python /  (ing)
+- medium
+- problem :
+  - 
 - [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
 - algorithm :
 - complexity :
