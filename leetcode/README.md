@@ -151,7 +151,8 @@
 - [118. Daily Temperatures (#739) - medium / python / stack / 15M / Top 100 Liked Questions](#118-daily-temperatures-739---medium--python--stack--15m--top-100-liked-questions)
 - [119. Subarray Sum Equals K (#560) - medium / python / Top 100 Liked Questions / (got help)](#119-subarray-sum-equals-k-560---medium--python--top-100-liked-questions--got-help)
 - [120. Network Delay Time (#743) - medium / python / graph / dijkstra](#120-network-delay-time-743---medium--python--graph--dijkstra)
-- [121. template (#) - medium / python /  (ing)](#121-template----medium--python---ing)
+- [121. Deepest Leaves Sum (#1302) - medium / python / dfs / tree traverse / 20M](#121-deepest-leaves-sum-1302---medium--python--dfs--tree-traverse--20m)
+- [122. template (#) - medium / python / (ing)](#122-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2550,17 +2551,37 @@ class Solution:
 - complexity : O(N + ELogN) -Standard Time complexity of Dijkstra's algorithm
 - next challenges : The Time When the Network Becomes Idle / Second Minimum Time to Reach Destination
 
+# 121. Deepest Leaves Sum (#1302) - medium / python / dfs / tree traverse / 20M
+- medium
+- problem :
+  - Given the root of a binary tree, return the sum of values of its deepest leaves.
+  - ```
+      Input: root = [1,2,3,4,5,null,6,7,null,null,null,null,8]
+      Output: 15
+      Input: root = [6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]
+      Output: 19
+    ```
+- https://leetcode.com/problems/deepest-leaves-sum/
+- [deepestLeavesSum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/deepestLeavesSum.py) : passed
+  - Runtime: 237 ms, faster than 76.76% of Python3 online submissions for Deepest Leaves Sum.
+  - Memory Usage: 17.7 MB, less than 66.46% of Python3 online submissions for Deepest Leaves Sum.
+- algorithm : dfs / tree traverse
+- complexity : O(N)
+- next challenges : Maximum Width of Binary Tree / Sentence Similarity II / Time Needed to Inform All Employees
 
 
 
 
 
 
-
-# 121. template (#) - medium / python /  (ing)
+# 122. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
+  - ```
+
+    ```
+- 
 - [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
 - algorithm :
 - complexity :
