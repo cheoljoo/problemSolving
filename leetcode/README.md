@@ -152,7 +152,8 @@
 - [119. Subarray Sum Equals K (#560) - medium / python / Top 100 Liked Questions / (got help)](#119-subarray-sum-equals-k-560---medium--python--top-100-liked-questions--got-help)
 - [120. Network Delay Time (#743) - medium / python / graph / dijkstra](#120-network-delay-time-743---medium--python--graph--dijkstra)
 - [121. Deepest Leaves Sum (#1302) - medium / python / dfs / tree traverse / 20M](#121-deepest-leaves-sum-1302---medium--python--dfs--tree-traverse--20m)
-- [122. template (#) - medium / python / (ing)](#122-template----medium--python--ing)
+- [122. Shortest Path in Binary Matrix (#1091) - medium / python /  bfs / 1D](#122-shortest-path-in-binary-matrix-1091---medium--python---bfs--1d)
+- [123. template (#) - medium / python / (ing)](#123-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -188,6 +189,8 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     >>> sorted(students, key=lambda x: getattr(x, 'grade'), reverse=True)
     [StudentFinal(name='Patty', grade=94), StudentFinal(name='Bill', grade=90), StudentFinal(name='Bart', grade=89)]
 ```
+- dictionary sort
+  - ```sorted_dict = sorted(my_dict.items(), key = lambda item: item[1])```
 
 ## 1.3. sorted data structure
 ### 1.3.1. bisect
@@ -2569,12 +2572,63 @@ class Solution:
 - complexity : O(N)
 - next challenges : Maximum Width of Binary Tree / Sentence Similarity II / Time Needed to Inform All Employees
 
+# 122. Shortest Path in Binary Matrix (#1091) - medium / python /  bfs / 1D
+- medium
+- problem :
+  - Given an n x n binary matrix grid, return the length of the shortest clear path in the matrix. If there is no clear path, return -1.
+  - A clear path in a binary matrix is a path from the top-left cell (i.e., (0, 0)) to the bottom-right cell (i.e., (n - 1, n - 1)) such that:
+    - All the visited cells of the path are 0.
+    - All the adjacent cells of the path are 8-directionally connected (i.e., they are different and they share an edge or a corner).
+  - The length of a clear path is the number of visited cells of this path.
+  - ```
+      Input: grid = [[0,1],[1,0]]
+      Output: 2
+      Input: grid = [[0,0,0],[1,1,0],[1,1,0]]
+      Output: 4
+      Input: grid = [[1,0,0],[1,1,0],[1,1,0]]
+      Output: -1
+    ```
+- https://leetcode.com/problems/shortest-path-in-binary-matrix/
+- [shortestPathBinaryMatrix.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathBinaryMatrix.py) : dfs 64 / 88 test cases passed. timeout
+- [shortestPathBinaryMatrix_2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/shortestPathBinaryMatrix_2.py) : bfs passed
+  - Runtime: 726 ms, faster than 68.46% of Python3 online submissions for Shortest Path in Binary Matrix.
+  - Memory Usage: 14.4 MB, less than 57.79% of Python3 online submissions for Shortest Path in Binary Matrix.
+  - different while loop count : 88 vs 24 in case of ```[[0, 0, 1, 1, 0, 0], [0, 0, 0, 0, 1, 1], [1, 0, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0], [0, 0, 0, 0, 1, 0], [0, 0, 1, 0, 1, 0]]```
+    - q에 넣으면서 visit도 check해주는게 가장 빠르다. 이미 넣었으므로 방문한 것으로 간주
+  - ```
+        q = [(1,sr,sc)]
+        while q : 
+            pc,sr,sc = q.pop(0)
+            visit[sr][sc] = 1
+            if sr == tr and sc == tc:        return pc
+            for r in self.di:     for c in self.di: 
+                    if r != 0 or c != 0:  if g[sr+r][sc+c] == 0 and visit[sr+r][sc+c] == math.inf:
+                            q.append((pc+1,sr+r,sc+c))
+    ```
+  - ```
+        q = [(1,sr,sc)]
+        visit[sr][sc] = 1
+        while q : 
+            pc,sr,sc = q.pop(0)
+            if sr == tr and sc == tc:        return pc
+            for r in self.di:     for c in self.di: 
+                    if r != 0 or c != 0:  if g[sr+r][sc+c] == 0 and visit[sr+r][sc+c] == math.inf:
+                            visit[sr+r][sc+c] = 1
+                            q.append((pc+1,sr+r,sc+c))
+    ```
+
+- algorithm : bfs
+- complexity : O(BOX) = O(N**2)
+- next challenges : Strobogrammatic Number II / Trapping Rain Water II / Web Crawler Multithreaded
 
 
 
 
 
-# 122. template (#) - medium / python / (ing)
+
+
+
+# 123. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
