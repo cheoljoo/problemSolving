@@ -153,6 +153,7 @@
 - [120. Network Delay Time (#743) - medium / python / graph / dijkstra](#120-network-delay-time-743---medium--python--graph--dijkstra)
 - [121. Deepest Leaves Sum (#1302) - medium / python / dfs / tree traverse / 20M](#121-deepest-leaves-sum-1302---medium--python--dfs--tree-traverse--20m)
 - [122. Shortest Path in Binary Matrix (#1091) - medium / python /  bfs / 1D](#122-shortest-path-in-binary-matrix-1091---medium--python---bfs--1d)
+- [123. Target Sum (#494) - medium / python / dp / Top 100 Liked Questions / 45M](#123-target-sum-494---medium--python--dp--top-100-liked-questions--45m)
 - [123. template (#) - medium / python / (ing)](#123-template----medium--python--ing)
 
 --------------------
@@ -2616,10 +2617,43 @@ class Solution:
                             visit[sr+r][sc+c] = 1
                             q.append((pc+1,sr+r,sc+c))
     ```
-
 - algorithm : bfs
 - complexity : O(BOX) = O(N**2)
 - next challenges : Strobogrammatic Number II / Trapping Rain Water II / Web Crawler Multithreaded
+
+# 123. Target Sum (#494) - medium / python / dp / Top 100 Liked Questions / 45M
+- medium
+- problem :
+  - ou are given an integer array nums and an integer target.
+  - You want to build an expression out of nums by adding one of the symbols '+' and '-' before each integer in nums and then concatenate all the integers.
+    - For example, if nums = [2, 1], you can add a '+' before 2 and a '-' before 1 and concatenate them to build the expression "+2-1".
+  - Return the number of different expressions that you can build, which evaluates to target.
+  - ```
+        Input: nums = [1,1,1,1,1], target = 3
+        Output: 5
+        Explanation: There are 5 ways to assign symbols to make the sum of nums be target 3.
+        -1 + 1 + 1 + 1 + 1 = 3
+        +1 - 1 + 1 + 1 + 1 = 3
+        +1 + 1 - 1 + 1 + 1 = 3
+        +1 + 1 + 1 - 1 + 1 = 3
+        +1 + 1 + 1 + 1 - 1 = 3
+    ```
+- https://leetcode.com/problems/target-sum/
+- [findTargetSumWays.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findTargetSumWays.py) : passed
+  - Runtime: 798 ms, faster than 9.48% of Python3 online submissions for Target Sum.
+  - Memory Usage: 15 MB, less than 53.89% of Python3 online submissions for Target Sum.
+- algorithm : dynamic programming
+- complexity : O(2**N)
+- next challenges : Expression Add Operators
+
+
+
+
+
+
+
+
+
 
 
 
