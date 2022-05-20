@@ -154,7 +154,9 @@
 - [121. Deepest Leaves Sum (#1302) - medium / python / dfs / tree traverse / 20M](#121-deepest-leaves-sum-1302---medium--python--dfs--tree-traverse--20m)
 - [122. Shortest Path in Binary Matrix (#1091) - medium / python /  bfs / 1D](#122-shortest-path-in-binary-matrix-1091---medium--python---bfs--1d)
 - [123. Target Sum (#494) - medium / python / dp / Top 100 Liked Questions / 45M](#123-target-sum-494---medium--python--dp--top-100-liked-questions--45m)
-- [123. template (#) - medium / python / (ing)](#123-template----medium--python--ing)
+- [124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (ing)](#124-critical-connections-in-a-network-1192---hard--python--graph--loop--ing)
+- [125. Unique Paths II (#63) - medium / python / dfs / dp / 5H](#125-unique-paths-ii-63---medium--python--dfs--dp--5h)
+- [126. template (#) - medium / python / (ing)](#126-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2646,6 +2648,52 @@ class Solution:
 - complexity : O(2**N)
 - next challenges : Expression Add Operators
 
+# 124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (ing)
+- hard
+- problem :
+  - There are n servers numbered from 0 to n - 1 connected by undirected server-to-server connections forming a network where connections[i] = [ai, bi] represents a connection between servers ai and bi. Any server can reach other servers directly or indirectly through the network.
+  - A critical connection is a connection that, if removed, will make some servers unable to reach some other server.
+  - Return all critical connections in the network in any order.
+  - ```
+      Input: n = 4, connections = [[0,1],[1,2],[2,0],[1,3]]
+      Output: [[1,3]]
+      Explanation: [[3,1]] is also accepted.
+    ```
+- https://leetcode.com/problems/critical-connections-in-a-network/
+- [criticalConnections.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/criticalConnections.py) : 9 / 17 test cases passed. timeout
+  - 한개의 edge를 빼고 처리했을때 , 그 edge의 양 node가 같은 group에 있는지로 판별
+  - node : 1000 , edge : 55787 -> timeout  O(E * E * N)
+- algorithm : graph and loop and grouping problem
+  - if this edge connects two different group , this is critial edge.
+  - and consider with one node as group
+- complexity :
+- next challenges : 
+
+# 125. Unique Paths II (#63) - medium / python / dfs / dp / 5H
+- medium
+- problem :
+  - You are given an m x n integer array grid. There is a robot initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m-1][n-1]). The robot can only move either down or right at any point in time.
+  - An obstacle and space are marked as 1 or 0 respectively in grid. A path that the robot takes cannot include any square that is an obstacle.
+  - Return the number of possible unique paths that the robot can take to reach the bottom-right corner.
+  - The testcases are generated so that the answer will be less than or equal to 2 * 109.
+  - ```
+      Input: obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
+      Output: 2
+      Explanation: There is one obstacle in the middle of the 3x3 grid above.
+      There are two ways to reach the bottom-right corner:
+      1. Right -> Right -> Down -> Down
+      2. Down -> Down -> Right -> Right
+    ```
+- https://leetcode.com/problems/unique-paths-ii/
+- [uniquePathsWithObstacles.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/uniquePathsWithObstacles.py) : passed
+  - Runtime: 74 ms, faster than 22.35% of Python3 online submissions for Unique Paths II.
+  - Memory Usage: 13.9 MB, less than 74.88% of Python3 online submissions for Unique Paths II.
+- algorithm : dfs / dp 
+  - if remove unreachable mark , it takes more time. 74 ms -> 464ms (remove self.u)
+  - dp : v -> visited (do you have how many path from here to target)
+    - M:3,N:4 -> v[1][1] includes the path count from (1,1) to (2,3)
+- complexity : O(M*N)
+- next challenges : Unique Paths / Unique Paths III
 
 
 
@@ -2660,9 +2708,7 @@ class Solution:
 
 
 
-
-
-# 123. template (#) - medium / python / (ing)
+# 126. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
@@ -2671,6 +2717,7 @@ class Solution:
     ```
 - 
 - [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
+  - 
 - algorithm :
 - complexity :
 - next challenges : 

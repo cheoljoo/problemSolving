@@ -47,3 +47,5 @@ decoding: decoding.py
 plant_trees: plant_trees.py
 	python3 plant_trees.py
 
+fisher: fisher.py fisher.data
+	python3 fisher.py  < fisher.data
