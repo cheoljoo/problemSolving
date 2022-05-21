@@ -154,9 +154,10 @@
 - [121. Deepest Leaves Sum (#1302) - medium / python / dfs / tree traverse / 20M](#121-deepest-leaves-sum-1302---medium--python--dfs--tree-traverse--20m)
 - [122. Shortest Path in Binary Matrix (#1091) - medium / python /  bfs / 1D](#122-shortest-path-in-binary-matrix-1091---medium--python---bfs--1d)
 - [123. Target Sum (#494) - medium / python / dp / Top 100 Liked Questions / 45M](#123-target-sum-494---medium--python--dp--top-100-liked-questions--45m)
-- [124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (ing)](#124-critical-connections-in-a-network-1192---hard--python--graph--loop--ing)
+- [124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (fail)](#124-critical-connections-in-a-network-1192---hard--python--graph--loop--fail)
 - [125. Unique Paths II (#63) - medium / python / dfs / dp / 5H](#125-unique-paths-ii-63---medium--python--dfs--dp--5h)
-- [126. template (#) - medium / python / (ing)](#126-template----medium--python--ing)
+- [126. fisher - hard / python / binary / 1D / SW_TEST / (got help)](#126-fisher---hard--python--binary--1d--sw_test--got-help)
+- [127. template (#) - medium / python / (ing)](#127-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2647,8 +2648,28 @@ class Solution:
 - algorithm : dynamic programming
 - complexity : O(2**N)
 - next challenges : Expression Add Operators
+- BEST : https://leetcode.com/problems/target-sum/discuss/2038918/Python-DP-Solution
+  - alternative method for cache
+  - from functools import cache
+  - @cache
+  - ```
+      class Solution:
+          def findTargetSumWays(self, nums: List[int], target: int) -> int:
+              N = len(nums)
+              @lru_cache(maxsize = None)
+              def recurse(idx, currSum):
+                  if idx == N:
+                      if currSum == target:
+                          return 1
+                      return 0
+                  res = 0
+                  res += recurse(idx + 1, currSum + nums[idx])
+                  res += recurse(idx + 1, currSum - nums[idx])
+                  return res
+              return recurse(0, 0)
+    ```
 
-# 124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (ing)
+# 124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (fail)
 - hard
 - problem :
   - There are n servers numbered from 0 to n - 1 connected by undirected server-to-server connections forming a network where connections[i] = [ai, bi] represents a connection between servers ai and bi. Any server can reach other servers directly or indirectly through the network.
@@ -2666,7 +2687,7 @@ class Solution:
 - algorithm : graph and loop and grouping problem
   - if this edge connects two different group , this is critial edge.
   - and consider with one node as group
-- complexity :
+- complexity : 
 - next challenges : 
 
 # 125. Unique Paths II (#63) - medium / python / dfs / dp / 5H
@@ -2694,6 +2715,26 @@ class Solution:
     - M:3,N:4 -> v[1][1] includes the path count from (1,1) to (2,3)
 - complexity : O(M*N)
 - next challenges : Unique Paths / Unique Paths III
+- BEST : 8 lines solution : https://leetcode.com/problems/unique-paths-ii/discuss/2055343/c%2B%2B-8-line-solution
+  - ```dp[0][0] = 0 , dp[0][1] = 1 , dp[1][0] = 1 , dp[i][j] = d[i-1][j] + d[i][j-1]```
+
+# 126. fisher - hard / python / binary / 1D / SW_TEST / (got help)
+- hard
+- problem :
+  - 한 작은 나라에서는 대부분의 시민들이 어부이며, 그 나라의 모든 마을은 직선 해변을 따라 건설된 직선 도로에 위치해 있다.
+  - 마을의 어부들은 엄청난 양의 물고기를 잡았으나 예전처럼 물고기를 좋아하지 않아서 이웃 나라의 가난하고 배고픈 아이들을 입양하기로 결정했다.
+  - 하나의 긴 직선 도로가 해변을 따라 모든 마을을 연결한다. 따라서 각 도시(첫 번째와 마지막 도시는 제외)는 두 이웃 마을에 직접 연결된다. 1년에 한 명의 어린이가 1톤의 물고기를 먹는다. 어떤 마을에서 잡힌 물고기의 양은 그 마을에서 먹거나 다른 마을로 옮길 수 있다.
+  - 도로를 이용해서 옮겨야 하는데 이용에 따른 세금이 부과된다. 1km당 1톤의 물고기를 세금으로 내야 한다.
+각 마을마다 동등한 수의 가난한 아이들이 입양되기를 원한다. 각 마을에 수용될 수 있는 아이들의 최대 수를 결정하는 프로그램을 작성하시오. 모든 물고기가 잡히고 저렴하게 운반된 물고기를 먹을 수 있다는 조건이다.
+  - ```
+      input = [[1,0],[2,21],[4,0]]   N=3
+      2번 마을에서 6톤+1톤(세금) = 7톤을 1번 마을로 보내고, 4번 마을에 6톤+2톤(세금) = 8톤을 보낼 수 있다. 남은 6톤을 2번 마을 아이들을 먹일 수 있으므로 최대 수는 6명이다.
+    ```
+- [fisher.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/fisher.py)
+- algorithm :
+  - binary search from min to max of fish count
+  - each village (i) sent the remaining fish and got the shortage from the next village (i+1).
+- complexity : O(NlogN)
 
 
 
@@ -2706,9 +2747,7 @@ class Solution:
 
 
 
-
-
-# 126. template (#) - medium / python / (ing)
+# 127. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
