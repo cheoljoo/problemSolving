@@ -156,7 +156,8 @@
 - [123. Target Sum (#494) - medium / python / dp / Top 100 Liked Questions / 45M](#123-target-sum-494---medium--python--dp--top-100-liked-questions--45m)
 - [124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (fail)](#124-critical-connections-in-a-network-1192---hard--python--graph--loop--fail)
 - [125. Unique Paths II (#63) - medium / python / dfs / dp / 5H](#125-unique-paths-ii-63---medium--python--dfs--dp--5h)
-- [126. fisher - hard / python / binary / 1D / SW_TEST / (got help)](#126-fisher---hard--python--binary--1d--sw_test--got-help)
+- [126. fisher - hard / python / binary / SW_TEST / (got help)](#126-fisher---hard--python--binary--sw_test--got-help)
+- [127. Coin Change (#322) - medium / python / dp / (got help) (fail)](#127-coin-change-322---medium--python--dp--got-help-fail)
 - [127. template (#) - medium / python / (ing)](#127-template----medium--python--ing)
 
 --------------------
@@ -2718,7 +2719,7 @@ class Solution:
 - BEST : 8 lines solution : https://leetcode.com/problems/unique-paths-ii/discuss/2055343/c%2B%2B-8-line-solution
   - ```dp[0][0] = 0 , dp[0][1] = 1 , dp[1][0] = 1 , dp[i][j] = d[i-1][j] + d[i][j-1]```
 
-# 126. fisher - hard / python / binary / 1D / SW_TEST / (got help)
+# 126. fisher - hard / python / binary / SW_TEST / (got help)
 - hard
 - problem :
   - 한 작은 나라에서는 대부분의 시민들이 어부이며, 그 나라의 모든 마을은 직선 해변을 따라 건설된 직선 도로에 위치해 있다.
@@ -2730,11 +2731,58 @@ class Solution:
       input = [[1,0],[2,21],[4,0]]   N=3
       2번 마을에서 6톤+1톤(세금) = 7톤을 1번 마을로 보내고, 4번 마을에 6톤+2톤(세금) = 8톤을 보낼 수 있다. 남은 6톤을 2번 마을 아이들을 먹일 수 있으므로 최대 수는 6명이다.
     ```
+- http://collab.lge.com/main/pages/viewpage.action?pageId=1644886647&showComments=true
 - [fisher.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/fisher.py)
 - algorithm :
   - binary search from min to max of fish count
   - each village (i) sent the remaining fish and got the shortage from the next village (i+1).
 - complexity : O(NlogN)
+
+# 127. Coin Change (#322) - medium / python / dp / (got help) (fail)
+- medium
+- problem :
+  - You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+  - Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+  - You may assume that you have an infinite number of each kind of coin.
+  - ```
+      Input: coins = [1,2,5], amount = 11
+      Output: 3
+      Explanation: 11 = 5 + 5 + 1
+      Input: coins = [2], amount = 3
+      Output: -1
+    ```
+- https://leetcode.com/problems/coin-change/
+- [coinChange.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/coinChange.py) : 106 / 188 test cases passed. timeout
+- [coinChange_2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/coinChange_2.py) : decrease self.count
+  - O((amount // coins[i]) ** 12)   , amount <= 10^4 , len(coins) <= 12
+- [coinChange_3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/coinChange_3.py) : (solution) (got help)
+  - optimization들이 짜 맞춘듯 (artifical answer)
+  - O(amount * 12)  , amount <= 10^4 , len(coins) <= 12
+- [coinChange_4.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/coinChange_4.py) : (solution) (got help)
+- algorithm : BEST => https://leetcode.com/problems/coin-change/discuss/2059283/Python-Simple-Python-Solution-Using-DP-oror-82-Faster
+- complexity : O(amount * 12)  , amount <= 10^4 , len(coins) <= 12
+  - ```python
+        def coinChange(self, coins: List[int], amount: int) -> int:
+            dp = [ math.inf for _ in range(amount + 1) ]
+            dp[0] = 0
+            for i in range(amount+1):
+                for coin in coins:
+                    if coin <= i:
+                        dp[i] = min(dp[i],1 + dp[i-coin])
+            return -1 if dp[-1] == math.inf else dp[-1] 
+    ```
+- Next challenges: Minimum Cost For Tickets/ Maximum Value of K Coins From Piles / Minimum Number of Operations to Convert Time
+
+
+
+
+
+
+
+
+
+
+
 
 
 
