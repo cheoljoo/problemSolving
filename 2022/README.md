@@ -15,7 +15,12 @@
   - [1.8. 잃어버린 괄호](#18-잃어버린-괄호)
   - [1.9. 뒤집어진 소수](#19-뒤집어진-소수)
   - [1.10. 2020+Online+Code+Jam+2 A번 - 해적과보석 : [python]](#110-2020onlinecodejam2-a번---해적과보석--python)
-- [2020+Online+Code+Jam+2 B번 장난감 동맹군 : [python]](#2020onlinecodejam2-b번-장난감-동맹군--python)
+- [2. 2020+Online+Code+Jam+2 B번 장난감 동맹군 : [python]](#2-2020onlinecodejam2-b번-장난감-동맹군--python)
+- [3. 마라톤 대회(Bronze) (역량인증)](#3-마라톤-대회bronze-역량인증)
+- [4. 콜타르 채우기](#4-콜타르-채우기)
+- [5. histogram  : 제일 큰 직사각형 만들기](#5-histogram---제일-큰-직사각형-만들기)
+- [6. 2022년 SW역량 4회차 기출문제 2번 : 머그컵](#6-2022년-sw역량-4회차-기출문제-2번--머그컵)
+- [7. 2022년 SW역량 4회차 기출문제 3번 : TV 모델수](#7-2022년-sw역량-4회차-기출문제-3번--tv-모델수)
 
 ----------
 
@@ -380,7 +385,7 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
   - 각테스트케이스에 대하여 두사람이 최선을 다해 게임을 플레이했을때, (ScoreA - ScoreB) 값을구하여출력한다.
 - [pirateJewel.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/pirateJewel.py) : passed
 
-# 2020+Online+Code+Jam+2 B번 장난감 동맹군 : [python]
+# 2. 2020+Online+Code+Jam+2 B번 장난감 동맹군 : [python]
 - 2개의 동맹으로 나눌 수 있는지? YES or NO
 - [toyAlly.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/toyAlly.py) : passed
 - [toyAlly2.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/toyAlly2.py) : passed   optimized to find starting node each group
@@ -390,7 +395,7 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
     - 각 group이 모두 잘 분류가 되어져있는지 판단한다.
 
 
-# 마라톤 대회(Bronze) (역량인증)
+# 3. 마라톤 대회(Bronze) (역량인증)
 - problem :
     - 학생들이 건강하지 못하다고 생각한 선생님은 학생들을 위한 마라톤 대회를 열었고, 우승 후보인 기연이도 이 대회에 참가할 예정이다.
     - 마라톤 코스는 N(3≤N≤100,000)개의 체크 포인트로 구성되어 있으며, 1번 체크포인트에서 시작해서 모든 체크 포인트를 순서대로 방문한 후 N번 체크포인트에서 마라톤이 끝난다. 기연이는 우승해야 한다는 부담감 때문에 중간에 있는 체크포인트 한 개를 몰래 건너 뛰려고 한다. 단, 1번과 N번 체크포인트는 건너 뛰지 않을 생각이다.
@@ -401,11 +406,37 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
     - move difference is (x0,y0) -> (x1,y1) -> (x2,y2) -  (x0,y0) -> (x2,y2)
 - ```make marathon```
 
-# 콜타르 채우기
+# 4. 콜타르 채우기
 - make coaltar
 - O(NlogN) : coalTar.py
 - O(N) : coalTar2.py
 
-# histogram  : 제일 큰 직사각형 만들기
+# 5. histogram  : 제일 큰 직사각형 만들기
 - make histogram
 
+# 6. 2022년 SW역량 4회차 기출문제 2번 : 머그컵
+- problem:
+  - 입력은 출발점에서 가게까지의 거리와 머그컵의 가격이 주어진다. 
+  - 구매 조건
+    - 현재 가게의 가격보다 다음 방문할 가게에 더 싼 머그컵이 있다면 가격이 싼 첫 번째 가게에서 구매한다.
+    - 방문할 다음 가게에 더 싼 머그컵이 없다면 현재 가게에서 구매한다.
+    - 마지막 가게인 경우 다음 가게가 없으므로 그 가게에서 구매한다. 
+  - 설명 : 
+    - 첫 번째 Test Case의 경우 출발점에서 가까운 순서데로 정리하면
+      - 2       5       7         9
+      - 15     46     12       7
+    - 이 된다.
+    - 가격이 가장 싼 경우는 7원 이지만 문제에서는 가격이 싼 첫번째 가게에서 구매한다고 되어 있으므로 구매할 가격을 정리하면 12 12 7 7 이 되어 38원이 정답이 된다.
+- http://collab.lge.com/main/pages/viewpage.action?pageId=1652529841
+- [mugCup.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/mugCup.py)
+- Complexity : O(N)
+
+# 7. 2022년 SW역량 4회차 기출문제 3번 : TV 모델수
+- problem:
+  - LG는 고객 그룹의 요구조건을 정리하여 출시할 TV의 모델 수를 최소로 하고 싶어한다.
+  - 고객 그룹의 요구조건은 최소와 최대로 주어지며 각 (-1000<= 요구조건 <= 1000 )의 값을 가진다.
+  - 선호도가 겹치는 경우를 잘 찾아서 최소 모델 수를 구하는 문제
+  - 각 고객의 요구조건이 아래와 같을 경우 TV는 요구조건 10과 100으로 하면 2대로 4개 고객그룹의 요구조건을 만족할 수 있다.
+- http://collab.lge.com/main/pages/viewpage.action?pageId=1652532232
+- [tvModel.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/tvModel.py)
+- Complexity : O(N^2*logN)
