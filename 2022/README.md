@@ -439,4 +439,8 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
   - 각 고객의 요구조건이 아래와 같을 경우 TV는 요구조건 10과 100으로 하면 2대로 4개 고객그룹의 요구조건을 만족할 수 있다.
 - http://collab.lge.com/main/pages/viewpage.action?pageId=1652532232
 - [tvModel.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/tvModel.py)
-- Complexity : O(N^2*logN)
+  - Complexity : O(N^2*(N+logN)) = O(N^3)
+- [tvModel_2.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/tvModel_2.py) : (got help)
+  - []   , [[1,3]]
+
+
