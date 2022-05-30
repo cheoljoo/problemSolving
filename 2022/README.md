@@ -442,5 +442,6 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
   - Complexity : O(N^2*(N+logN)) = O(N^3)
 - [tvModel_2.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/tvModel_2.py) : (got help)
   - []   , [[1,3]]
+  - Complexity : O(NlogN + N)
 
 

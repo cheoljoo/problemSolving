@@ -43,7 +43,7 @@ class Solution:
 
            
 def run(s,expect):
-    print(len(s)," ",end="")
+    # print(len(s)," ",end="")
     start = time.time()
     A = Solution()
     r = A.countBits(s)
@@ -71,4 +71,4 @@ if (__name__ == "__main__"):
 
     print('countBits problem :')
 
-    run([3,3],8)
+    run(8,[3,3])

@@ -154,10 +154,11 @@
 - [121. Deepest Leaves Sum (#1302) - medium / python / dfs / tree traverse / 20M](#121-deepest-leaves-sum-1302---medium--python--dfs--tree-traverse--20m)
 - [122. Shortest Path in Binary Matrix (#1091) - medium / python /  bfs / 1D](#122-shortest-path-in-binary-matrix-1091---medium--python---bfs--1d)
 - [123. Target Sum (#494) - medium / python / dp / Top 100 Liked Questions / 45M](#123-target-sum-494---medium--python--dp--top-100-liked-questions--45m)
-- [124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (fail)](#124-critical-connections-in-a-network-1192---hard--python--graph--loop--fail)
+- [124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (fail) (ing)](#124-critical-connections-in-a-network-1192---hard--python--graph--loop--fail-ing)
 - [125. Unique Paths II (#63) - medium / python / dfs / dp / 5H](#125-unique-paths-ii-63---medium--python--dfs--dp--5h)
 - [126. fisher - hard / python / binary / SW_TEST / (got help)](#126-fisher---hard--python--binary--sw_test--got-help)
-- [127. Coin Change (#322) - medium / python / dp / (got help) (fail)](#127-coin-change-322---medium--python--dp--got-help-fail)
+- [127. Coin Change (#322) - medium / python / dp / (got help) (got solution)](#127-coin-change-322---medium--python--dp--got-help-got-solution)
+- [127. Divide Two Integers (#29) - medium / python / 2H](#127-divide-two-integers-29---medium--python--2h)
 - [127. template (#) - medium / python / (ing)](#127-template----medium--python--ing)
 
 --------------------
@@ -2670,7 +2671,7 @@ class Solution:
               return recurse(0, 0)
     ```
 
-# 124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (fail)
+# 124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (fail) (ing)
 - hard
 - problem :
   - There are n servers numbered from 0 to n - 1 connected by undirected server-to-server connections forming a network where connections[i] = [ai, bi] represents a connection between servers ai and bi. Any server can reach other servers directly or indirectly through the network.
@@ -2738,7 +2739,7 @@ class Solution:
   - each village (i) sent the remaining fish and got the shortage from the next village (i+1).
 - complexity : O(NlogN)
 
-# 127. Coin Change (#322) - medium / python / dp / (got help) (fail)
+# 127. Coin Change (#322) - medium / python / dp / (got help) (got solution)
 - medium
 - problem :
   - You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
@@ -2759,6 +2760,8 @@ class Solution:
   - optimization들이 짜 맞춘듯 (artifical answer)
   - O(amount * 12)  , amount <= 10^4 , len(coins) <= 12
 - [coinChange_4.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/coinChange_4.py) : (solution) (got help)
+  - Runtime: 2769 ms, faster than 15.81% of Python3 online submissions for Coin Change.
+  - Memory Usage: 13.7 MB, less than 99.92% of Python3 online submissions for Coin Change.
 - algorithm : BEST => https://leetcode.com/problems/coin-change/discuss/2059283/Python-Simple-Python-Solution-Using-DP-oror-82-Faster
 - complexity : O(amount * 12)  , amount <= 10^4 , len(coins) <= 12
   - ```python
@@ -2773,8 +2776,29 @@ class Solution:
     ```
 - Next challenges: Minimum Cost For Tickets/ Maximum Value of K Coins From Piles / Minimum Number of Operations to Convert Time
 
+# 127. Divide Two Integers (#29) - medium / python / 2H
+- medium
+- problem :
+  - Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.
+  - The integer division should truncate toward zero, which means losing its fractional part. For example, 8.345 would be truncated to 8, and -2.7335 would be truncated to -2.
+  - Return the quotient after dividing dividend by divisor.
+  - Note: Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For this problem, if the quotient is strictly greater than 231 - 1, then return 231 - 1, and if the quotient is strictly less than -231, then return -231.
+  - ```
+      Input: dividend = 10, divisor = 3
+      Output: 3
+      Explanation: 10/3 = 3.33333.. which is truncated to 3.
 
-
+      Input: dividend = 7, divisor = -3
+      Output: -2
+      Explanation: 7/-3 = -2.33333.. which is truncated to -2.
+    ```
+- https://leetcode.com/problems/divide-two-integers/
+- [divide.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/divide.py) :
+  - Runtime: 62 ms, faster than 18.09% of Python3 online submissions for Divide Two Integers.
+  - Memory Usage: 13.9 MB, less than 25.68% of Python3 online submissions for Divide Two Integers.
+- algorithm : shift operator
+- complexity : O(logN)
+- next challenges : Numbers With Repeated Digits / Armstrong Number / Count Largest Group
 
 
 
