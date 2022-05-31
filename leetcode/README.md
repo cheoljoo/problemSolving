@@ -158,8 +158,9 @@
 - [125. Unique Paths II (#63) - medium / python / dfs / dp / 5H](#125-unique-paths-ii-63---medium--python--dfs--dp--5h)
 - [126. fisher - hard / python / binary / SW_TEST / (got help)](#126-fisher---hard--python--binary--sw_test--got-help)
 - [127. Coin Change (#322) - medium / python / dp / (got help) (got solution)](#127-coin-change-322---medium--python--dp--got-help-got-solution)
-- [127. Divide Two Integers (#29) - medium / python / 2H](#127-divide-two-integers-29---medium--python--2h)
-- [127. template (#) - medium / python / (ing)](#127-template----medium--python--ing)
+- [128. Divide Two Integers (#29) - medium / python / 2H](#128-divide-two-integers-29---medium--python--2h)
+- [129. Check If a String Contains All Binary Codes of Size K (#1461) - medium / python / 1H](#129-check-if-a-string-contains-all-binary-codes-of-size-k-1461---medium--python--1h)
+- [130. template (#) - medium / python / (ing)](#130-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2776,7 +2777,7 @@ class Solution:
     ```
 - Next challenges: Minimum Cost For Tickets/ Maximum Value of K Coins From Piles / Minimum Number of Operations to Convert Time
 
-# 127. Divide Two Integers (#29) - medium / python / 2H
+# 128. Divide Two Integers (#29) - medium / python / 2H
 - medium
 - problem :
   - Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.
@@ -2800,6 +2801,26 @@ class Solution:
 - complexity : O(logN)
 - next challenges : Numbers With Repeated Digits / Armstrong Number / Count Largest Group
 
+# 129. Check If a String Contains All Binary Codes of Size K (#1461) - medium / python / 1H
+- medium
+- problem :
+  - Given a binary string s and an integer k, return true if every binary code of length k is a substring of s. Otherwise, return false.
+  - ```
+      Input: s = "00110110", k = 2
+      Output: true
+      Explanation: The binary codes of length 2 are "00", "01", "10" and "11". They can be all found as substrings at indices 0, 1, 3 and 2 respectively.
+
+      Input: s = "0110", k = 2
+      Output: false
+      Explanation: The binary code "00" is of length 2 and does not exist in the array.
+    ```
+- https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/
+- [hasAllCodes.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hasAllCodes.py) :
+  - Runtime: 388 ms, faster than 81.66% of Python3 online submissions for Check If a String Contains All Binary Codes of Size K.
+  - Memory Usage: 27.3 MB, less than 26.20% of Python3 online submissions for Check If a String Contains All Binary Codes of Size K.
+- algorithm : true if he has all cases. so we use set()
+- complexity : O(N)
+- next challenges : Fraction to Recurring Decimal / Number of Matching Subsequences / Prison Cells After N Days
 
 
 
@@ -2819,7 +2840,8 @@ class Solution:
 
 
 
-# 127. template (#) - medium / python / (ing)
+
+# 130. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
