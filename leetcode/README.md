@@ -160,7 +160,8 @@
 - [127. Coin Change (#322) - medium / python / dp / (got help) (got solution)](#127-coin-change-322---medium--python--dp--got-help-got-solution)
 - [128. Divide Two Integers (#29) - medium / python / 2H](#128-divide-two-integers-29---medium--python--2h)
 - [129. Check If a String Contains All Binary Codes of Size K (#1461) - medium / python / 1H](#129-check-if-a-string-contains-all-binary-codes-of-size-k-1461---medium--python--1h)
-- [130. template (#) - medium / python / (ing)](#130-template----medium--python--ing)
+- [130. Longest Substring Without Repeating Characters (#3) - medium / python / 1H](#130-longest-substring-without-repeating-characters-3---medium--python--1h)
+- [131. template (#) - medium / python / (ing)](#131-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2822,6 +2823,27 @@ class Solution:
 - complexity : O(N)
 - next challenges : Fraction to Recurring Decimal / Number of Matching Subsequences / Prison Cells After N Days
 
+# 130. Longest Substring Without Repeating Characters (#3) - medium / python / 1H
+- medium
+- problem :
+  - Given a string s, find the length of the longest substring without repeating characters.
+  - ```
+      Input: s = "abcabcbb"
+      Output: 3
+      Explanation: The answer is "abc", with the length of 3.
+
+      Input: s = "pwwkew"
+      Output: 3
+      Explanation: The answer is "wke", with the length of 3.
+      Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+    ```
+- https://leetcode.com/problems/longest-substring-without-repeating-characters/
+- [lengthOfLongestSubstring.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/lengthOfLongestSubstring.py) :
+  - Runtime: 116 ms, faster than 35.70% of Python3 online submissions for Longest Substring Without Repeating Characters.
+  - Memory Usage: 14 MB, less than 49.19% of Python3 online submissions for Longest Substring Without Repeating Characters.
+- algorithm : window slide
+- complexity : O(N)
+- next challenges : Longest Substring with At Most Two Distinct Characters / Longest Substring with At Most K Distinct Characters / Subarrays with K / ifferent Integers / Maximum Erasure Value / Number of Equal Count Substrings / Minimum Consecutive Cards to Pick Up
 
 
 
@@ -2841,7 +2863,14 @@ class Solution:
 
 
 
-# 130. template (#) - medium / python / (ing)
+
+
+
+
+
+
+
+# 131. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
