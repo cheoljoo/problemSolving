@@ -160,8 +160,9 @@
 - [127. Coin Change (#322) - medium / python / dp / (got help) (got solution)](#127-coin-change-322---medium--python--dp--got-help-got-solution)
 - [128. Divide Two Integers (#29) - medium / python / 2H](#128-divide-two-integers-29---medium--python--2h)
 - [129. Check If a String Contains All Binary Codes of Size K (#1461) - medium / python / 1H](#129-check-if-a-string-contains-all-binary-codes-of-size-k-1461---medium--python--1h)
-- [130. Longest Substring Without Repeating Characters (#3) - medium / python / 1H](#130-longest-substring-without-repeating-characters-3---medium--python--1h)
-- [131. template (#) - medium / python / (ing)](#131-template----medium--python--ing)
+- [130. Longest Substring Without Repeating Characters (#3) - medium / python / 30M](#130-longest-substring-without-repeating-characters-3---medium--python--30m)
+- [131. Two Sum II - Input Array Is Sorted (#167) - medium / python / 30M](#131-two-sum-ii---input-array-is-sorted-167---medium--python--30m)
+- [132. template (#) - medium / python / (ing)](#132-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2823,7 +2824,7 @@ class Solution:
 - complexity : O(N)
 - next challenges : Fraction to Recurring Decimal / Number of Matching Subsequences / Prison Cells After N Days
 
-# 130. Longest Substring Without Repeating Characters (#3) - medium / python / 1H
+# 130. Longest Substring Without Repeating Characters (#3) - medium / python / 30M
 - medium
 - problem :
   - Given a string s, find the length of the longest substring without repeating characters.
@@ -2845,6 +2846,29 @@ class Solution:
 - complexity : O(N)
 - next challenges : Longest Substring with At Most Two Distinct Characters / Longest Substring with At Most K Distinct Characters / Subarrays with K / ifferent Integers / Maximum Erasure Value / Number of Equal Count Substrings / Minimum Consecutive Cards to Pick Up
 
+# 131. Two Sum II - Input Array Is Sorted (#167) - medium / python / 30M
+- medium
+- problem :
+  - Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
+  - Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
+  - The tests are generated such that there is exactly one solution. You may not use the same element twice.
+  - Your solution must use only constant extra space.
+  - ```
+      Input: numbers = [2,3,4], target = 6
+      Output: [1,3]
+      Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].
+
+      Input: numbers = [-1,0], target = -1
+      Output: [1,2]
+      Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
+    ```
+- https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+- [twoSum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/twoSum.py) :
+  - Runtime: 213 ms, faster than 31.09% of Python3 online submissions for Two Sum II - Input Array Is Sorted.
+  - Memory Usage: 14.8 MB, less than 88.98% of Python3 online submissions for Two Sum II - Input Array Is Sorted.
+- algorithm : window slide
+- complexity : O(N)
+- next challenges : Two Sum IV - Input is a BST / Two Sum Less Than K
 
 
 
@@ -2870,7 +2894,8 @@ class Solution:
 
 
 
-# 131. template (#) - medium / python / (ing)
+
+# 132. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
