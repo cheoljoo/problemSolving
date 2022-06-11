@@ -163,7 +163,8 @@
 - [130. Longest Substring Without Repeating Characters (#3) - medium / python / 30M](#130-longest-substring-without-repeating-characters-3---medium--python--30m)
 - [131. Two Sum II - Input Array Is Sorted (#167) - medium / python / 30M](#131-two-sum-ii---input-array-is-sorted-167---medium--python--30m)
 - [132. Minimum Operations to Reduce X to Zero (#1658) - medium / python / 2H](#132-minimum-operations-to-reduce-x-to-zero-1658---medium--python--2h)
-- [132. template (#) - medium / python / (ing)](#132-template----medium--python--ing)
+- [133. Diameter of Binary Tree (#543) - easy / python / 30M / Top 100 Liked Questions / tree traverse](#133-diameter-of-binary-tree-543---easy--python--30m--top-100-liked-questions--tree-traverse)
+- [134. template (#) - medium / python / (ing)](#134-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2897,6 +2898,26 @@ class Solution:
 - complexity : O(N)
 - next challenges : Minimum Size Subarray Sum / Minimum Operations to Convert Number / Removing Minimum Number of Magic Beans
 
+# 133. Diameter of Binary Tree (#543) - easy / python / 30M / Top 100 Liked Questions / tree traverse
+- easy
+- problem :
+  - Given the root of a binary tree, return the length of the diameter of the tree.
+  - The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+  - The length of a path between two nodes is represented by the number of edges between them.
+  - ```
+      Input: root = [1,2,3,4,5]
+      Output: 3
+      Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
+    ```
+- https://leetcode.com/problems/diameter-of-binary-tree/
+- [diameterOfBinaryTree.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/diameterOfBinaryTree.py) : passed
+  - Runtime: 74 ms, faster than 33.57% of Python3 online submissions for Diameter of Binary Tree.
+  - Memory Usage: 16.2 MB, less than 83.83% of Python3 online submissions for Diameter of Binary Tree.
+- algorithm : tree traverse
+  - traverse and count left / right longest edges' length
+  - the answer is maximum sum of left and right edges' length
+- complexity : O(N)
+- next challenges : Diameter of N-Ary Tree / Longest Path With Different Adjacent Characters
 
 
 
@@ -2925,9 +2946,7 @@ class Solution:
 
 
 
-
-
-# 132. template (#) - medium / python / (ing)
+# 134. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
