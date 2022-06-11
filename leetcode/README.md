@@ -162,6 +162,7 @@
 - [129. Check If a String Contains All Binary Codes of Size K (#1461) - medium / python / 1H](#129-check-if-a-string-contains-all-binary-codes-of-size-k-1461---medium--python--1h)
 - [130. Longest Substring Without Repeating Characters (#3) - medium / python / 30M](#130-longest-substring-without-repeating-characters-3---medium--python--30m)
 - [131. Two Sum II - Input Array Is Sorted (#167) - medium / python / 30M](#131-two-sum-ii---input-array-is-sorted-167---medium--python--30m)
+- [132. Minimum Operations to Reduce X to Zero (#1658) - medium / python / 2H](#132-minimum-operations-to-reduce-x-to-zero-1658---medium--python--2h)
 - [132. template (#) - medium / python / (ing)](#132-template----medium--python--ing)
 
 --------------------
@@ -2796,7 +2797,7 @@ class Solution:
       Explanation: 7/-3 = -2.33333.. which is truncated to -2.
     ```
 - https://leetcode.com/problems/divide-two-integers/
-- [divide.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/divide.py) :
+- [divide.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/divide.py) : passed
   - Runtime: 62 ms, faster than 18.09% of Python3 online submissions for Divide Two Integers.
   - Memory Usage: 13.9 MB, less than 25.68% of Python3 online submissions for Divide Two Integers.
 - algorithm : shift operator
@@ -2817,7 +2818,7 @@ class Solution:
       Explanation: The binary code "00" is of length 2 and does not exist in the array.
     ```
 - https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/
-- [hasAllCodes.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hasAllCodes.py) :
+- [hasAllCodes.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/hasAllCodes.py) : passed
   - Runtime: 388 ms, faster than 81.66% of Python3 online submissions for Check If a String Contains All Binary Codes of Size K.
   - Memory Usage: 27.3 MB, less than 26.20% of Python3 online submissions for Check If a String Contains All Binary Codes of Size K.
 - algorithm : true if he has all cases. so we use set()
@@ -2839,7 +2840,7 @@ class Solution:
       Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
     ```
 - https://leetcode.com/problems/longest-substring-without-repeating-characters/
-- [lengthOfLongestSubstring.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/lengthOfLongestSubstring.py) :
+- [lengthOfLongestSubstring.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/lengthOfLongestSubstring.py) : passed
   - Runtime: 116 ms, faster than 35.70% of Python3 online submissions for Longest Substring Without Repeating Characters.
   - Memory Usage: 14 MB, less than 49.19% of Python3 online submissions for Longest Substring Without Repeating Characters.
 - algorithm : window slide
@@ -2863,12 +2864,43 @@ class Solution:
       Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
     ```
 - https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
-- [twoSum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/twoSum.py) :
+- [twoSum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/twoSum.py) : passed
   - Runtime: 213 ms, faster than 31.09% of Python3 online submissions for Two Sum II - Input Array Is Sorted.
   - Memory Usage: 14.8 MB, less than 88.98% of Python3 online submissions for Two Sum II - Input Array Is Sorted.
 - algorithm : window slide
 - complexity : O(N)
 - next challenges : Two Sum IV - Input is a BST / Two Sum Less Than K
+
+# 132. Minimum Operations to Reduce X to Zero (#1658) - medium / python / 2H
+- medium
+- problem :
+  - You are given an integer array nums and an integer x. In one operation, you can either remove the leftmost or the rightmost element from the array nums and subtract its value from x. Note that this modifies the array for future operations.
+  - Return the minimum number of operations to reduce x to exactly 0 if it is possible, otherwise, return -1.
+  - ```
+      Input: nums = [1,1,4,2,3], x = 5
+      Output: 2
+      Explanation: The optimal solution is to remove the last two elements to reduce x to zero.
+
+      Input: nums = [3,2,20,1,1,3], x = 10
+      Output: 5
+      Explanation: The optimal solution is to remove the last three elements and the first two elements (5 operations in total) to reduce x to zero.
+    ```
+- https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/
+- [minOperations.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minOperations.py) : 65 / 93 test cases passed.
+- [minOperations2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minOperations2.py) : passed
+  - Runtime: 2785 ms, faster than 5.20% of Python3 online submissions for Minimum Operations to Reduce X to Zero.
+  - Memory Usage: 53.4 MB, less than 5.90% of Python3 online submissions for Minimum Operations to Reduce X to Zero.
+- [minOperations3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minOperations3.py) : passed
+  - Runtime: 1472 ms, faster than 64.16% of Python3 online submissions for Minimum Operations to Reduce X to Zero.
+  - Memory Usage: 47.1 MB, less than 5.90% of Python3 online submissions for Minimum Operations to Reduce X to Zero.
+- algorithm : left sum + right sum == k
+- complexity : O(N)
+- next challenges : Minimum Size Subarray Sum / Minimum Operations to Convert Number / Removing Minimum Number of Magic Beans
+
+
+
+
+
 
 
 
