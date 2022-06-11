@@ -458,11 +458,14 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
   - 전체 테스트 데이터의 20%는 N≤30
   - 전체 테스트 데이터의 50%는 N≤10,000
 - http://collab.lge.com/main/pages/viewpage.action?pageId=1662689380
-- [princess.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/princess.py)
+- [princess.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/princess.py)  <- 3번째 문제의 답은 3이어야 정상임. 틀림
   - data : https://github.com/cheoljoo/problemSolving/blob/master/2022/princess.data
+- [princess2.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/princess2.py)
+  - make princess2  답은 3
 - algorithm :
   - 먼저 값이 0일때를 걸르고 , 
-  - 이후에는 위의 'TV 모델수' 문제로 푼다. 
+  - 이후에는 위의 'TV 모델수' 문제로 푼다.  <- 이렇게 풀면 안됨. slide window를 사용하는게 맞을 듯!  <- 이건 아님
+  - princess2.py로 sort를 한 후에 max 기준으로 찾으면서 내부에 포함된 것은 skip 하며 count한다. 
 
 # 9. [ACT] 참외 밭
 - problem :

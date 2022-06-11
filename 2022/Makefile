@@ -53,5 +53,8 @@ fisher: fisher.py fisher.data
 princess : princess.py
 	python3 princess.py < princess.data
 
+princess2 : princess2.py
+	python3 princess2.py < princess2.data
+
 kmelon : kmelon.py
 	python3 kmelon.py
