@@ -164,6 +164,7 @@
 - [131. Two Sum II - Input Array Is Sorted (#167) - medium / python / 30M](#131-two-sum-ii---input-array-is-sorted-167---medium--python--30m)
 - [132. Minimum Operations to Reduce X to Zero (#1658) - medium / python / 2H](#132-minimum-operations-to-reduce-x-to-zero-1658---medium--python--2h)
 - [133. Diameter of Binary Tree (#543) - easy / python / 30M / Top 100 Liked Questions / tree traverse](#133-diameter-of-binary-tree-543---easy--python--30m--top-100-liked-questions--tree-traverse)
+- [134. Maximum Erasure Value (#1695) - medium / python / 1H / window slide](#134-maximum-erasure-value-1695---medium--python--1h--window-slide)
 - [134. template (#) - medium / python / (ing)](#134-template----medium--python--ing)
 
 --------------------
@@ -2918,6 +2919,32 @@ class Solution:
   - the answer is maximum sum of left and right edges' length
 - complexity : O(N)
 - next challenges : Diameter of N-Ary Tree / Longest Path With Different Adjacent Characters
+
+# 134. Maximum Erasure Value (#1695) - medium / python / 1H / window slide
+- medium
+- problem :
+  - You are given an array of positive integers nums and want to erase a subarray containing unique elements. The score you get by erasing the subarray is equal to the sum of its elements.
+  - Return the maximum score you can get by erasing exactly one subarray.
+  - An array b is called to be a subarray of a if it forms a contiguous subsequence of a, that is, if it is equal to a[l],a[l+1],...,a[r] for some (l,r).
+  - ```
+      Input: nums = [4,2,4,5,6]
+      Output: 17
+      Explanation: The optimal subarray here is [2,4,5,6].
+
+      Input: nums = [5,2,1,2,5,2,1,2,5]
+      Output: 8
+      Explanation: The optimal subarray here is [5,2,1] or [1,2,5].
+    ```
+- https://leetcode.com/problems/maximum-erasure-value/
+- [maximumUniqueSubarray.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maximumUniqueSubarray.py) : passed
+  - Runtime: 1742 ms, faster than 54.71% of Python3 online submissions for Maximum Erasure Value.
+  - Memory Usage: 27.7 MB, less than 50.11% of Python3 online submissions for Maximum Erasure Value.
+- algorithm : window slide
+- complexity : O(N)
+- next challenges : Minimum Number of K Consecutive Bit Flips / Number of Ways Where Square of Number Is Equal to Product of Two Numbers / Solving Questions With Brainpower
+
+
+
 
 
 
