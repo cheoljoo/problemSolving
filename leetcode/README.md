@@ -16,22 +16,23 @@
     - [1.9.1. difference between re.search() and re.match()](#191-difference-between-research-and-rematch)
   - [1.10. format string](#110-format-string)
   - [1.11. lexicographical order](#111-lexicographical-order)
-  - [1.12. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#112-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
-  - [1.13. list : python remove element from a list](#113-list--python-remove-element-from-a-list)
-  - [1.14. graph](#114-graph)
-    - [1.14.1. dijkstra](#1141-dijkstra)
-  - [1.15. greedy algorithm](#115-greedy-algorithm)
-    - [1.15.1. dijkstra's algorithm](#1151-dijkstras-algorithm)
-    - [1.15.2. Ford-Fulkerson Algorithm](#1152-ford-fulkerson-algorithm)
-    - [1.15.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics](#1153-kruskals-algorithm--find-minimum-spanning-tree--optimal-graph-connected-all-vertics)
-    - [1.15.4. Prim's Algorithm : find minimum spanning tree](#1154-prims-algorithm--find-minimum-spanning-tree)
-    - [1.15.5. Huffman Coding : a technique of compressing data to reduce its size](#1155-huffman-coding--a-technique-of-compressing-data-to-reduce-its-size)
-  - [1.16. Dynamic Programming](#116-dynamic-programming)
-    - [1.16.1. Longest Common Subsequence](#1161-longest-common-subsequence)
-    - [1.16.2. Floyd-Warshall Algorithm](#1162-floyd-warshall-algorithm)
-  - [1.17. grouping : find & union](#117-grouping--find--union)
-  - [1.18. deque](#118-deque)
-  - [1.19. Books & URL](#119-books--url)
+  - [1.12. palindromic](#112-palindromic)
+  - [1.13. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#113-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
+  - [1.14. list : python remove element from a list](#114-list--python-remove-element-from-a-list)
+  - [1.15. graph](#115-graph)
+    - [1.15.1. dijkstra](#1151-dijkstra)
+  - [1.16. greedy algorithm](#116-greedy-algorithm)
+    - [1.16.1. dijkstra's algorithm](#1161-dijkstras-algorithm)
+    - [1.16.2. Ford-Fulkerson Algorithm](#1162-ford-fulkerson-algorithm)
+    - [1.16.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics](#1163-kruskals-algorithm--find-minimum-spanning-tree--optimal-graph-connected-all-vertics)
+    - [1.16.4. Prim's Algorithm : find minimum spanning tree](#1164-prims-algorithm--find-minimum-spanning-tree)
+    - [1.16.5. Huffman Coding : a technique of compressing data to reduce its size](#1165-huffman-coding--a-technique-of-compressing-data-to-reduce-its-size)
+  - [1.17. Dynamic Programming](#117-dynamic-programming)
+    - [1.17.1. Longest Common Subsequence](#1171-longest-common-subsequence)
+    - [1.17.2. Floyd-Warshall Algorithm](#1172-floyd-warshall-algorithm)
+  - [1.18. grouping : find & union](#118-grouping--find--union)
+  - [1.19. deque](#119-deque)
+  - [1.20. Books & URL](#120-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -165,7 +166,8 @@
 - [132. Minimum Operations to Reduce X to Zero (#1658) - medium / python / 2H](#132-minimum-operations-to-reduce-x-to-zero-1658---medium--python--2h)
 - [133. Diameter of Binary Tree (#543) - easy / python / 30M / Top 100 Liked Questions / tree traverse](#133-diameter-of-binary-tree-543---easy--python--30m--top-100-liked-questions--tree-traverse)
 - [134. Maximum Erasure Value (#1695) - medium / python / 1H / window slide](#134-maximum-erasure-value-1695---medium--python--1h--window-slide)
-- [134. template (#) - medium / python / (ing)](#134-template----medium--python--ing)
+- [135. Longest Palindromic Substring (#5) - medium / python / 1H / palindrome / Top 100 Liked Questions](#135-longest-palindromic-substring-5---medium--python--1h--palindrome--top-100-liked-questions)
+- [135. template (#) - medium / python / (ing)](#135-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -326,19 +328,23 @@ int GCD(int a, int b){
 - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
 - https://leetcode.com/problems/remove-duplicate-letters/submissions/
 
-## 1.12. dictionary : Python Remove Key from a Dictionary: A Complete Guide
+## 1.12. palindromic 
+- a word, phrase, sentence, or number that reads the same backward or forward "Step on no pets" is a palindrome.
+- [63. Valid Palindrome II (#680) - easy / python / 1H](#63-valid-palindrome-ii-680---easy--python--1h)
+
+## 1.13. dictionary : Python Remove Key from a Dictionary: A Complete Guide
 - dictionary.pop(key_to_remove, not_found)
   - https://careerkarma.com/blog/python-remove-key-from-a-dictionary/#:~:text=To%20remove%20a%20key%20from,item%20after%20the%20del%20keyword.
 
-## 1.13. list : python remove element from a list 
+## 1.14. list : python remove element from a list 
 - thislist.remove("banana")
 - thislist.pop(1)
 - del thislist[0]
 - thislist.clear()
   - https://www.w3schools.com/python/python_lists_remove.asp
 
-## 1.14. graph
-### 1.14.1. dijkstra
+## 1.15. graph
+### 1.15.1. dijkstra
 - [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)  O(E Log V)
     - Src1 src2 -> dst 으로 갈때의 최소 path를 구하라. : 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
     - 어떤 노드에서 3개의 목적지로 가는 최소값들을 가진 것 (src1 -> node , src2 -> node , dst -> node) 일때의 합이 최소가 되는 것이 src1,src2->node->dst로 가는 최소값이 된다.  node는 모든 node를 넣어볼수 있다. src1,src2,dst도 node가 될수 있다. 
@@ -359,7 +365,7 @@ int GCD(int a, int b){
         return result
 ```
 
-## 1.15. greedy algorithm
+## 1.16. greedy algorithm
 - Greedy Choice Property : If an optimal solution to the problem can be found by choosing the best choice at each step without reconsidering the previous steps once chosen, the problem can be solved using a greedy approach. This property is called greedy choice property.
   - Problem: You have to make a change of an amount using the smallest possible number of coins.
     - Amount: $18
@@ -368,10 +374,10 @@ int GCD(int a, int b){
       -   $2 coin
       -   $1 coin
     - There is no limit to the number of each coin you can use.
-### 1.15.1. dijkstra's algorithm
+### 1.16.1. dijkstra's algorithm
 - [1.14.1. dijkstra](#1141-dijkstra)
 
-### 1.15.2. Ford-Fulkerson Algorithm
+### 1.16.2. Ford-Fulkerson Algorithm
 - Ford-Fulkerson algorithm is a greedy approach for calculating the maximum possible flow in a network or a graph.
 - Each pipe has a certain capacity of liquid it can transfer at an instance. For this algorithm, we are going to find how much liquid can be flowed from the source to the sink at an instance using the network.
   - ![](https://cdn.programiz.com/sites/tutorial2program/files/flow-network.png)
@@ -381,7 +387,7 @@ int GCD(int a, int b){
   3. change graph (substract graph capacity when they used from sink)
   4. goto 1
 
-### 1.15.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics
+### 1.16.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics
 - We start from the edges with the lowest weight and keep adding edges until we reach our goal. The steps for implementing Kruskal's algorithm are as follows:
   - Sort all the edges from low weight to high
   - Take the edge with the lowest weight and add it to the spanning tree. **If adding the edge created a cycle,** then reject this edge.
@@ -390,10 +396,10 @@ int GCD(int a, int b){
 - algorithm :
   - checking the loop is key factor. if both vertics of edge are in current graph , it is loop.  <-  i think it is faster than suggested code.
 
-### 1.15.4. Prim's Algorithm : find minimum spanning tree
+### 1.16.4. Prim's Algorithm : find minimum spanning tree
 - i do not know what is difference with kruskal's algorithm
   
-### 1.15.5. Huffman Coding : a technique of compressing data to reduce its size
+### 1.16.5. Huffman Coding : a technique of compressing data to reduce its size
 - Using the Huffman Coding technique, we can compress the string to a smaller size. Huffman coding first creates a tree using the frequencies of the character and then generates code for each character.
 
 | Character       | Frequency | Code | Size     |
@@ -404,11 +410,11 @@ int GCD(int a, int b){
 | D               | 3         | 101  | 3*3 = 9  |
 | 4 * 8 = 32 bits | 15 bits   |      | 28 bits  |
 
-## 1.16. Dynamic Programming
+## 1.17. Dynamic Programming
 - if there are overlapping among these subproblems, then the solutions to these subproblems can be saved for future reference. 
 - This technique of storing the value of subproblems is called memoization. By saving the values in the array, we save time for computations of sub-problems we have already come across.
 
-### 1.16.1. Longest Common Subsequence
+### 1.17.1. Longest Common Subsequence
 - https://riptutorial.com/algorithm/example/24007/longest-common-subsequence-explanation
 - O(MN) 
 - Table[2][3] represents the length of the longest common subsequence between "ac" and "abc".
@@ -425,13 +431,13 @@ int GCD(int a, int b){
 - if s2[i] is not equal to s1[j] =>   Table[i][j] = max(Table[i-1][j], Table[i][j-1]
 - if s2[i] equals to s1[j]       =>   Table[i][j] = Table[i-1][j-1] + 1
 
-### 1.16.2. Floyd-Warshall Algorithm
+### 1.17.2. Floyd-Warshall Algorithm
 - https://www.programiz.com/dsa/floyd-warshall-algorithm
 - Floyd-Warshall Algorithm is an algorithm for finding the shortest path between all the pairs of vertices in a weighted graph. This algorithm works for both the directed and undirected weighted graphs. 
 - ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Graph.png)  ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-1.png) ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-2.png)
 - O(N^3)
 
-## 1.17. grouping : find & union
+## 1.18. grouping : find & union
 - it is faster than union() in set.
 ```python
         p = list(range(len(s)))  # parent
@@ -451,7 +457,7 @@ int GCD(int a, int b){
             p[i] = find(p[i])    
 ```
 
-## 1.18. deque
+## 1.19. deque
 - https://leonkong.cc/posts/python-deque.html
   - deque.append(item): item을 데크의 오른쪽 끝에 삽입한다.
   - deque.appendleft(item): item을 데크의 왼쪽 끝에 삽입한다.
@@ -462,7 +468,7 @@ int GCD(int a, int b){
   - deque.remove(item): item을 데크에서 찾아 삭제한다.
   - deque.rotate(num): 데크를 num만큼 회전한다(양수면 오른쪽, 음수면 왼쪽).
 
-## 1.19. Books & URL
+## 1.20. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - For Beginners for graph : https://leetcode.com/discuss/study-guide/1808711/Graph-for-Beginers-Problems
@@ -2944,6 +2950,26 @@ class Solution:
 - next challenges : Minimum Number of K Consecutive Bit Flips / Number of Ways Where Square of Number Is Equal to Product of Two Numbers / Solving Questions With Brainpower
 
 
+# 135. Longest Palindromic Substring (#5) - medium / python / 1H / palindrome / Top 100 Liked Questions
+- medium
+- problem :
+  - Given a string s, return the longest palindromic substring in s.
+    - a word, phrase, sentence, or number that reads the same backward or forward "Step on no pets" is a palindrome.
+  - ```
+      Input: s = "babad"
+      Output: "bab"
+      Explanation: "aba" is also a valid answer.
+
+      Input: s = "cbbd"
+      Output: "bb"
+    ```
+- https://leetcode.com/problems/longest-palindromic-substring/
+- [longestPalindrome.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/longestPalindrome.py) : passed
+  - Runtime: 561 ms, faster than 92.34% of Python3 online submissions for Longest Palindromic Substring.
+  - Memory Usage: 14.1 MB, less than 29.28% of Python3 online submissions for Longest Palindromic Substring.
+- algorithm : N^2 * 2 (odd/even)  , skip when expected result is less than lmax (already calculated).
+- complexity : O(N^2)
+- next challenges : Shortest Palindrome / Palindrome Permutation / Palindrome Pairs / Longest Palindromic Subsequence / Palindromic Substrings
 
 
 
@@ -2973,7 +2999,16 @@ class Solution:
 
 
 
-# 134. template (#) - medium / python / (ing)
+
+
+
+
+
+
+
+
+
+# 135. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
@@ -2986,9 +3021,3 @@ class Solution:
 - algorithm :
 - complexity :
 - next challenges : 
-
-
-
-
-
-
