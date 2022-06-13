@@ -167,7 +167,8 @@
 - [133. Diameter of Binary Tree (#543) - easy / python / 30M / Top 100 Liked Questions / tree traverse](#133-diameter-of-binary-tree-543---easy--python--30m--top-100-liked-questions--tree-traverse)
 - [134. Maximum Erasure Value (#1695) - medium / python / 1H / window slide](#134-maximum-erasure-value-1695---medium--python--1h--window-slide)
 - [135. Longest Palindromic Substring (#5) - medium / python / 1H / palindrome / Top 100 Liked Questions](#135-longest-palindromic-substring-5---medium--python--1h--palindrome--top-100-liked-questions)
-- [135. template (#) - medium / python / (ing)](#135-template----medium--python--ing)
+- [136. Triangle (#120) - medium / python / 1H](#136-triangle-120---medium--python--1h)
+- [137. template (#) - medium / python / (ing)](#137-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -2971,6 +2972,48 @@ class Solution:
 - complexity : O(N^2)
 - next challenges : Shortest Palindrome / Palindrome Permutation / Palindrome Pairs / Longest Palindromic Subsequence / Palindromic Substrings
 
+# 136. Triangle (#120) - medium / python / 1H
+- medium
+- problem :
+  - Given a triangle array, return the minimum path sum from top to bottom.
+  - For each step, you may move to an adjacent number of the row below. More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row.
+  - Follow up: Could you do this using only O(n) extra space, where n is the total number of rows in the triangle?
+  - ```
+      Input: triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+      Output: 11
+      Explanation: The triangle looks like:
+         2
+        3 4
+       6 5 7
+      4 1 8 3
+      The minimum path sum from top to bottom is 2 + 3 + 5 + 1 = 11 (underlined above).
+
+      Input: triangle = [[-10]]
+      Output: -10
+
+      -104 <= triangle[i][j] <= 104
+    ```
+- https://leetcode.com/problems/triangle/
+- [minimumTotal.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumTotal.py) : timeout   
+  - 42 / 44 test cases passed.
+- [minimumTotal2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumTotal2.py) : passed , no extra space
+  - Runtime: 101 ms, faster than 43.43% of Python3 online submissions for Triangle.
+  - Memory Usage: 15 MB, less than 60.15% of Python3 online submissions for Triangle.
+- [minimumTotal3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumTotal3.py) : passed , 1 extra space
+  - Runtime: 95 ms, faster than 50.39% of Python3 online submissions for Triangle.
+  - Memory Usage: 15.1 MB, less than 37.66% of Python3 online submissions for Triangle.
+- algorithm : accumulate from top to bottom.  we choose minimum value.
+  - ```
+      2                  2
+      3 4                5    6
+                         2+3  2+4
+      6 5 7     =>       11   10   13
+                         5+6  5+5  6+7
+      4 1 8 3            15   11   18   16
+                         11+4 10+1 10+8 13+3
+    ```
+- complexity : O(N) perfornance , O(1) extra space
+- next challenges : Missing Ranges / Reshape the Matrix / Best Sightseeing Pair
 
 
 
@@ -3007,8 +3050,7 @@ class Solution:
 
 
 
-
-# 135. template (#) - medium / python / (ing)
+# 137. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
