@@ -43,11 +43,19 @@ for i in reversed(range(1,len(d))):
     if d[i-1][0] == d[i][0]:
         d[i-1][1] = d[i][1]
 print(d)
-mx = 0
-for i in range(len(d)):
-    print(end,i,sol,d)
-    if d[i][1] > mx:
-        mx = d[i][1]
+mx = d[0][1]
+mx1 = d[0][1]
+sol = 1
+i = 1
+while i < len(d):
+    mx1 = 0
+    print("-",i,sol,d,mx,mx1)
+    while i < len(d) and d[i][0] < mx:
+        mx1 = max(mx1, d[i][1])
+        i += 1
+    print("+",i,sol,d,mx,mx1)
+    if mx < mx1:
+        mx = mx1
         sol += 1
     
  
@@ -80,4 +88,18 @@ print(sol)
 # 1 1 6 1
 # 6 1 8 31
 # 6 10 12 10
+# => 3
+
+# 3
+# 3 1 8 1
+# 4 1 7 1
+# 6 1 12 1
+# => 2
+
+# 5
+# 3 1 7 1
+# 4 1 8 1
+# 6 1 9 1
+# 7 15 8 15
+# 7 20 12 1
 # => 3

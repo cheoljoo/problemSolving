@@ -466,6 +466,14 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
   - 먼저 값이 0일때를 걸르고 , 
   - 이후에는 위의 'TV 모델수' 문제로 푼다.  <- 이렇게 풀면 안됨. slide window를 사용하는게 맞을 듯!  <- 이건 아님
   - princess2.py로 sort를 한 후에 max 기준으로 찾으면서 내부에 포함된 것은 skip 하며 count한다. 
+    - 1. 전의 max의 내부에 포함된 것은 skip
+    - 2. 더 큰게 있다면 그 중에서 max를 찾아서 1번을 다시 수행  (sol += 1)
+    - 3. 다 끝나면 sol이 답
+- algorithm 2 : 강영규 씨
+  - 365일에 창안
+  - Input을 365의 dictionary로 최장만 기억
+  - for 문을 돌때 365일을 0 ~ 364까지 loop를 하여 , sort하지 않고 처리
+  - [princess3.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/princess3.py)
 
 # 9. [ACT] 참외 밭
 - problem :
