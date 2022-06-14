@@ -23,6 +23,7 @@
 - [7. 2022년 SW역량 4회차 기출문제 3번 : TV 모델수](#7-2022년-sw역량-4회차-기출문제-3번--tv-모델수)
 - [8. [ACT] 공주님의 정원](#8-act-공주님의-정원)
 - [9. [ACT] 참외 밭](#9-act-참외-밭)
+- [10. [ACT] 사회적 거리두기](#10-act-사회적-거리두기)
 
 ----------
 
@@ -482,10 +483,38 @@ Alice는총 102 달러만큼보물을챙기고 Bob은 총 5달러 만큼 보물�
   - 1㎡의 넓이에 자라는 참외의 개수와, 참외밭을 이루는 6개의 각 변의 길이를 임의의 한 꼭지점에서 출발하여 반시계방향으로 둘레를 돌면서 지나는 변의 방향과 길이가 순서대로 주어질 때 이 참외밭에서 자라는 참외의 수를 구하는 프로그램을 작성하시오. (주의: 참외밭의 둘레를 구하는 것이 아니라 면적을 구해야 함)
   - 변의 방향에서 동쪽은 1, 서쪽은 2, 남쪽은 3, 북쪽은 4로 표시한다.
 - http://collab.lge.com/main/pages/viewpage.action?pageId=1662701118
-- [kmelon.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/kmelon.py)
+- [kmelon.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/kmelon.py) : make kmelon
 - algotithm : 
   - 처음을 (0,0)으로 set하여 그림을 그리고 , 각 9개의 점 중에서 없는 점을 구하고 없는 점에서의 작은 사각형을 구해서 뺀다.
 
-
+# 10. [ACT] 사회적 거리두기
+- problem :
+  - 농부 John은 전염성이 높은 COWVID-19이 발생한 이후, 소들의 건강이 걱정되었다. 
+  - 병의 전염을 막기 위해서, 농부 John의 N마리 소들은 '사회적 거리두기'를 실행하기로 결정하고 농장 전체에 흩어졌다. (2<=N<=105)
+  - 농부 John의 농장은 1차원 직선의 모양으로, M개의 서로 분리된 구간의 방목할 잔디가 구성되어 있다. (1<=M<=105)
+  - 소는 D의 값을 최대화하기 위해 각각 잔디구간의 정수 지점에 위치하려고 한다. 여기서 D는 가장 가까운 소 두 마리 사이의 거리를 말한다. 소가 D의 가능한 가장 큰 값을 가질수 있도록 도와주자.
+  - (입력 예시에 대한 상황이 아래 '부가정보'에 그림으로 잘 표현되어 있다. 해당 내용을 참고하자.)
+- input :
+  - 첫째 줄에는 N과 M이 주어진다. (2<=N<=105, 1<=M<=105)
+  - 다음 M개 줄에는 잔디구간을 나타내는 두개의 정수 a,b가 주어진다.(0<=a<=b<=1018)
+  - 구간이 겹치거나 같은 지점에서 만나는 경우는 존재하지 않는다. 그리고 소들은 각 구간의 끝지점에도 서있을 수 있다.
+- output :
+  - 가능 최대값 D를 출력하라. 모든 소들의 쌍은 D이상 떨어져 있어야 한다.
+  - 모든 입력은 0보다 큰 D값이 항상 존재한다.
+- ```
+    5 3
+    0 2
+    4 7
+    9 9
+    => 답 2
+  ```
+- http://collab.lge.com/main/pages/viewpage.action?pageId=1669212041
+- [socialDistance.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/socialDistance.py) : make socialDistance
+- algotithm : 
+  - 제일 작은 distance : 전체 cow가 위치할수 있는 땅  / cow 수   or 1
+  - 최대 distance : (위치할수 있는 땅 + 빈땅 )의 최대값 or M
+  - binary search : N
+  - O(NlogN)
+    - O ( N log 10^18 )  :  log 10^18 이 너무 크려나요?   18 / log2 = 59.x   이므로 max 60번 계산   => 계산 MAX : 10^5 * 60
 
 

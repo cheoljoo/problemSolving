@@ -58,3 +58,6 @@ princess2 : princess2.py
 
 kmelon : kmelon.py
 	python3 kmelon.py
+
+socialDistance : socialDistance.py
+	python3 socialDistance.py < socialDistance.data
