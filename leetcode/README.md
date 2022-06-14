@@ -168,7 +168,9 @@
 - [134. Maximum Erasure Value (#1695) - medium / python / 1H / window slide](#134-maximum-erasure-value-1695---medium--python--1h--window-slide)
 - [135. Longest Palindromic Substring (#5) - medium / python / 1H / palindrome / Top 100 Liked Questions](#135-longest-palindromic-substring-5---medium--python--1h--palindrome--top-100-liked-questions)
 - [136. Triangle (#120) - medium / python / 1H](#136-triangle-120---medium--python--1h)
-- [137. template (#) - medium / python / (ing)](#137-template----medium--python--ing)
+- [137. Delete Operation for Two Strings (#583) - medium / python / 1H / Longest Common Subsequence / LCS](#137-delete-operation-for-two-strings-583---medium--python--1h--longest-common-subsequence--lcs)
+- [138. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions](#138-string-to-integer-atoi-8---medium--python--30m--top-interview-questions)
+- [139. template (#) - medium / python / (ing)](#139-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -431,6 +433,43 @@ int GCD(int a, int b){
     |  5  |  f  |  0  |     |     |     |     |     |     |
 - if s2[i] is not equal to s1[j] =>   Table[i][j] = max(Table[i-1][j], Table[i][j-1]
 - if s2[i] equals to s1[j]       =>   Table[i][j] = Table[i-1][j-1] + 1
+- ```python
+        table = [[0 for _ in range(len(word1)+1)] for _ in range(len(word2)+1)]  # col : word1 , row : word2
+        for i in range(1,len(word2)+1):
+            for j in range(1,len(word1)+1):
+                if word2[i-1] == word1[j-1]:
+                    table[i][j] = table[i-1][j-1] + 1
+                else :
+                    table[i][j] = max(table[i-1][j],table[i][j-1])
+        # print(table)
+        return len(word1) + len(word2) - table[len(word2)][len(word1)]*2
+  ```
+
+### 1.17.2. Longest Common Substring (application)
+- O(MN)
+- 
+    |     |     |   0 |   1 |   2 |   3 |   4 |   5 |   6 |
+    |-----|-----|-----|-----|-----|-----|-----|-----|-----|
+    |     | chʳ |     |  a  |  b  |  c  |  d  |  a  |  f  |
+    |  0  |     |  0  |  0  |  0  |  0  |  0  |  0  |  0  |
+    |  1  |  a  |  0  |  1  |  0  |  0  |  0  |  1  |  0  |
+    |  2  |  c  |  0  |  0  |  0  |  1  |  0  |  0  |  0  |
+    |  3  |  b  |  0  |  0  |  1  |  0  |  0  |  0  |  0  |
+    |  4  |  c  |  0  |  0  |  0  |  **2**  |  0  |  0  |  0  |
+    |  5  |  f  |  0  |  0  |  0  |  0  |  0  |  0  |  1  |
+- if s2[i] equals to s1[j]       =>   Table[i][j] = Table[i-1][j-1] + 1
+  - max is 2 . maxsubstring size is 2
+- ```python
+        table = [[0 for _ in range(len(word1)+1)] for _ in range(len(word2)+1)]  # col : word1 , row : word2
+        mx = 0
+        for i in range(1,len(word2)+1):
+            for j in range(1,len(word1)+1):
+                if word2[i-1] == word1[j-1]:
+                    table[i][j] = table[i-1][j-1] + 1
+                    mx = max(mx,table[i][j])
+        print(mx,table)
+        return len(word1) + len(word2) - mx*2   
+  ```
 
 ### 1.17.2. Floyd-Warshall Algorithm
 - https://www.programiz.com/dsa/floyd-warshall-algorithm
@@ -3012,9 +3051,90 @@ class Solution:
       4 1 8 3            15   11   18   16
                          11+4 10+1 10+8 13+3
     ```
-- complexity : O(N) perfornance , O(1) extra space
+- complexity : O(N) performance , O(1) extra space
 - next challenges : Missing Ranges / Reshape the Matrix / Best Sightseeing Pair
 
+# 137. Delete Operation for Two Strings (#583) - medium / python / 1H / Longest Common Subsequence / LCS
+- medium
+- problem :
+  - Given two strings word1 and word2, return the minimum number of steps required to make word1 and word2 the same.
+  - In one step, you can delete exactly one character in either string.
+  - ```
+Input: word1 = "sea", word2 = "eat"
+Output: 2
+Explanation: You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
+
+Input: word1 = "leetcode", word2 = "etco"
+Output: 4
+
+Input: word1 = "park" , word2 = "spake"
+Output : 3   (LCS : "pak")
+    ```
+- https://leetcode.com/problems/delete-operation-for-two-strings/
+- [minDistance_LCS.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDistance_LCS.py) : passed
+  - Runtime: 498 ms, faster than 24.04% of Python3 online submissions for Delete Operation for Two Strings.
+  - Memory Usage: 16.1 MB, less than 54.90% of Python3 online submissions for Delete Operation for Two Strings.
+- algorithm : Longest Common Subsequence (LCS)
+  - find the longest matched substring between word1 and word2
+  - find the longest matched subsequence between word1 and word2
+- complexity : O(MN)
+- next challenges : Minimum ASCII Delete Sum for Two Strings
+
+712. Minimum ASCII Delete Sum for Two Strings
+https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
+```
+    |     |     |   0 |   1 |   2 |   3 |   4 |   5 |   6 |
+    |-----|-----|-----|-----|-----|-----|-----|-----|-----|
+    |     | chʳ |     |  d  |  e  |  l  |  e  |  t  |  e  |
+    |  0  |     |  0  |  0  |  0  |  0  |  0  |  0  |  0  |
+    |  1  |  l  |  0  |  0  |  0  |  1  |  1  |  1  |  1  |
+                                     l     l     l     l
+    |  2  |  e  |  0  |  0  |  1  |  1  |  2  |  2  |  2  |
+                               e    l,e    le    le    le
+    |  3  |  e  |  0  |  0  |  1  |  1  |  2  |  2  |  3  |
+                               e    l,e  le,ee le,ee  lee
+    |  4  |  t  |  0  |  0  |  1  |  1  |  2  |  3  |  3  |
+                               e    l,e  le,ee let,eet lee,let,eet
+```
+
+
+# 138. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions
+- medium
+- problem :
+  - Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
+  - The algorithm for myAtoi(string s) is as follows:
+    - Read in and ignore any leading whitespace.
+    - Check if the next character (if not already at the end of the string) is '-' or '+'. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.
+    - Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored.
+    - Convert these digits into an integer (i.e. "123" -> 123, "0032" -> 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).
+    - If the integer is out of the 32-bit signed integer range [-2^31, 2^31 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -2^31 should be clamped to -2^31, and integers greater than 2^31 - 1 should be clamped to 2^31 - 1.
+    - Return the integer as the final result.
+  - Note:
+    - Only the space character ' ' is considered a whitespace character.
+    - Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
+  - Constraints:
+    - 0 <= s.length <= 200
+    - s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
+  - ```
+      Input: s = "4193 with words"
+      Output: 4193
+      Explanation:
+      Step 1: "4193 with words" (no characters read because there is no leading whitespace)
+              ^
+      Step 2: "4193 with words" (no characters read because there is neither a '-' nor '+')
+              ^
+      Step 3: "4193 with words" ("4193" is read in; reading stops because the next character is a non-digit)
+                  ^
+      The parsed integer is 4193.
+      Since 4193 is in the range [-231, 231 - 1], the final result is 4193.
+    ```
+- https://leetcode.com/problems/string-to-integer-atoi/
+- [myAtoi.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/myAtoi.py) :
+  - Runtime: 50 ms, faster than 50.57% of Python3 online submissions for String to Integer (atoi).
+  - Memory Usage: 14 MB, less than 29.44% of Python3 online submissions for String to Integer (atoi).
+- algorithm :
+- complexity : O(N)
+- next challenges : Valid Number / Check if Numbers Are Ascending in a Sentence
 
 
 
@@ -3045,12 +3165,7 @@ class Solution:
 
 
 
-
-
-
-
-
-# 137. template (#) - medium / python / (ing)
+# 139. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
