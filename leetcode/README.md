@@ -169,7 +169,9 @@
 - [135. Longest Palindromic Substring (#5) - medium / python / 1H / palindrome / Top 100 Liked Questions](#135-longest-palindromic-substring-5---medium--python--1h--palindrome--top-100-liked-questions)
 - [136. Triangle (#120) - medium / python / 1H](#136-triangle-120---medium--python--1h)
 - [137. Delete Operation for Two Strings (#583) - medium / python / 1H / Longest Common Subsequence / LCS](#137-delete-operation-for-two-strings-583---medium--python--1h--longest-common-subsequence--lcs)
+- [139. Minimum ASCII Delete Sum for Two Strings (#712) - medium / python / Longest Common Subsequence / LCS / (ing)](#139-minimum-ascii-delete-sum-for-two-strings-712---medium--python--longest-common-subsequence--lcs--ing)
 - [138. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions](#138-string-to-integer-atoi-8---medium--python--30m--top-interview-questions)
+- [139. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming](#139-prefix-and-suffix-search-745---hard--python--1h--greedy--dynamic-programming)
 - [139. template (#) - medium / python / (ing)](#139-template----medium--python--ing)
 
 --------------------
@@ -3060,15 +3062,15 @@ class Solution:
   - Given two strings word1 and word2, return the minimum number of steps required to make word1 and word2 the same.
   - In one step, you can delete exactly one character in either string.
   - ```
-Input: word1 = "sea", word2 = "eat"
-Output: 2
-Explanation: You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
+      Input: word1 = "sea", word2 = "eat"
+      Output: 2
+      Explanation: You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
 
-Input: word1 = "leetcode", word2 = "etco"
-Output: 4
+      Input: word1 = "leetcode", word2 = "etco"
+      Output: 4
 
-Input: word1 = "park" , word2 = "spake"
-Output : 3   (LCS : "pak")
+      Input: word1 = "park" , word2 = "spake"
+      Output : 3   (LCS : "pak")
     ```
 - https://leetcode.com/problems/delete-operation-for-two-strings/
 - [minDistance_LCS.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minDistance_LCS.py) : passed
@@ -3080,23 +3082,47 @@ Output : 3   (LCS : "pak")
 - complexity : O(MN)
 - next challenges : Minimum ASCII Delete Sum for Two Strings
 
-712. Minimum ASCII Delete Sum for Two Strings
-https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
-```
-    |     |     |   0 |   1 |   2 |   3 |   4 |   5 |   6 |
-    |-----|-----|-----|-----|-----|-----|-----|-----|-----|
-    |     | chʳ |     |  d  |  e  |  l  |  e  |  t  |  e  |
-    |  0  |     |  0  |  0  |  0  |  0  |  0  |  0  |  0  |
-    |  1  |  l  |  0  |  0  |  0  |  1  |  1  |  1  |  1  |
-                                     l     l     l     l
-    |  2  |  e  |  0  |  0  |  1  |  1  |  2  |  2  |  2  |
-                               e    l,e    le    le    le
-    |  3  |  e  |  0  |  0  |  1  |  1  |  2  |  2  |  3  |
-                               e    l,e  le,ee le,ee  lee
-    |  4  |  t  |  0  |  0  |  1  |  1  |  2  |  3  |  3  |
-                               e    l,e  le,ee let,eet lee,let,eet
-```
+# 139. Minimum ASCII Delete Sum for Two Strings (#712) - medium / python / Longest Common Subsequence / LCS / (ing)
+- medium
+- problem :
+  - Given two strings s1 and s2, return the lowest ASCII sum of deleted characters to make two strings equal.
+  - ```
+      Example 1:
+      Input: s1 = "sea", s2 = "eat"
+      Output: 231
+      Explanation: Deleting "s" from "sea" adds the ASCII value of "s" (115) to the sum.
+      Deleting "t" from "eat" adds 116 to the sum.
+      At the end, both strings are equal, and 115 + 116 = 231 is the minimum sum possible to achieve this.
 
+      Example 2:
+      Input: s1 = "delete", s2 = "leet"
+      Output: 403
+      Explanation: Deleting "dee" from "delete" to turn the string into "let",
+      adds 100[d] + 101[e] + 101[e] to the sum.
+      Deleting "e" from "leet" adds 101[e] to the sum.
+      At the end, both strings are equal to "let", and the answer is 100+101+101+101 = 403.
+      If instead we turned both strings into "lee" or "eet", we would get answers of 433 or 417, which are higher.
+    ```
+- https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
+- [minimumDeleteSum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationminimumDeleteSumum3.py) :
+  - 
+- algorithm :
+  - ```
+      |     |     |   0 |   1 |   2 |   3 |   4 |   5 |   6 |
+      |-----|-----|-----|-----|-----|-----|-----|-----|-----|
+      |     | chʳ |     |  d  |  e  |  l  |  e  |  t  |  e  |
+      |  0  |     |  0  |  0  |  0  |  0  |  0  |  0  |  0  |
+      |  1  |  l  |  0  |  0  |  0  |  1  |  1  |  1  |  1  |
+                                      l     l     l     l
+      |  2  |  e  |  0  |  0  |  1  |  1  |  2  |  2  |  2  |
+                                e    l,e    le    le    le
+      |  3  |  e  |  0  |  0  |  1  |  1  |  2  |  2  |  3  |
+                                e    l,e  le,ee le,ee  lee
+      |  4  |  t  |  0  |  0  |  1  |  1  |  2  |  3  |  3  |
+                                e    l,e  le,ee let,eet lee,let,eet
+    ```
+- complexity : O(MN)
+- next challenges : 
 
 # 138. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions
 - medium
@@ -3129,12 +3155,44 @@ https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
       Since 4193 is in the range [-231, 231 - 1], the final result is 4193.
     ```
 - https://leetcode.com/problems/string-to-integer-atoi/
-- [myAtoi.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/myAtoi.py) :
+- [myAtoi.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/myAtoi.py) : passed
   - Runtime: 50 ms, faster than 50.57% of Python3 online submissions for String to Integer (atoi).
   - Memory Usage: 14 MB, less than 29.44% of Python3 online submissions for String to Integer (atoi).
 - algorithm :
 - complexity : O(N)
 - next challenges : Valid Number / Check if Numbers Are Ascending in a Sentence
+
+# 139. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming
+- hard
+- problem :
+  - Design a special dictionary with some words that searchs the words in it by a prefix and a suffix.
+  - Implement the WordFilter class:
+    - WordFilter(string[] words) Initializes the object with the words in the dictionary.
+    - f(string prefix, string suffix) Returns the index of the word in the dictionary, which has the prefix prefix and the suffix suffix. If there is more than one valid index, return the largest of them. If there is no such word in the dictionary, return -1.
+    - Constraints:
+      - 1 <= words.length <= 15000 / 1 <= words[i].length <= 10 / 1 <= prefix.length, suffix.length <= 10
+      - words[i], prefix and suffix consist of lower-case English letters only.
+      - At most 15000 calls will be made to the function f.
+  - ```
+      Input
+      ["WordFilter", "f"]
+      [[["apple"]], ["a", "e"]]
+      Output
+      [null, 0]
+
+      Explanation
+      WordFilter wordFilter = new WordFilter(["apple"]);
+      wordFilter.f("a", "e"); // return 0, because the word at index 0 has prefix = "a" and suffix = 'e".
+    ```
+- https://leetcode.com/problems/prefix-and-suffix-search/
+- [WordFilter.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/WordFilter.py) : passed
+  - Runtime: 1532 ms, faster than 66.36% of Python3 online submissions for Prefix and Suffix Search.
+  - Memory Usage: 28.9 MB, less than 70.95% of Python3 online submissions for Prefix and Suffix Search.
+- algorithm : greedy (init) , dynamic programming (reuse already caluculated)
+- complexity : M:15000 , N: 10 O(MN)
+- next challenges : Design Add and Search Words Data Structure
+
+
 
 
 
@@ -3178,3 +3236,10 @@ https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
 - algorithm :
 - complexity :
 - next challenges : 
+
+1048. Longest String Chain
+https://leetcode.com/problems/longest-string-chain/
+- algorithm :
+  - how to find fast that one character is different
+    - ?bb  b?b bb? 
+    - nei{h_t , [hot,...]} 와 같이 가지면 된다. 3개의 문자로 될수 있는 것을 미리 table에 조사를 해두는 것이다. 
