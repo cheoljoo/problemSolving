@@ -169,10 +169,10 @@
 - [135. Longest Palindromic Substring (#5) - medium / python / 1H / palindrome / Top 100 Liked Questions](#135-longest-palindromic-substring-5---medium--python--1h--palindrome--top-100-liked-questions)
 - [136. Triangle (#120) - medium / python / 1H](#136-triangle-120---medium--python--1h)
 - [137. Delete Operation for Two Strings (#583) - medium / python / 1H / Longest Common Subsequence / LCS](#137-delete-operation-for-two-strings-583---medium--python--1h--longest-common-subsequence--lcs)
-- [139. Minimum ASCII Delete Sum for Two Strings (#712) - medium / python / Longest Common Subsequence / LCS / (ing)](#139-minimum-ascii-delete-sum-for-two-strings-712---medium--python--longest-common-subsequence--lcs--ing)
-- [138. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions](#138-string-to-integer-atoi-8---medium--python--30m--top-interview-questions)
-- [139. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming](#139-prefix-and-suffix-search-745---hard--python--1h--greedy--dynamic-programming)
-- [139. template (#) - medium / python / (ing)](#139-template----medium--python--ing)
+- [138. Minimum ASCII Delete Sum for Two Strings (#712) - medium / python / Longest Common Subsequence / LCS / (fail)](#138-minimum-ascii-delete-sum-for-two-strings-712---medium--python--longest-common-subsequence--lcs--fail)
+- [139. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions](#139-string-to-integer-atoi-8---medium--python--30m--top-interview-questions)
+- [140. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming](#140-prefix-and-suffix-search-745---hard--python--1h--greedy--dynamic-programming)
+- [141. template (#) - medium / python / (ing)](#141-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3061,6 +3061,9 @@ class Solution:
 - problem :
   - Given two strings word1 and word2, return the minimum number of steps required to make word1 and word2 the same.
   - In one step, you can delete exactly one character in either string.
+  - Constraints:
+    - 1 <= word1.length, word2.length <= 500
+    - word1 and word2 consist of only lowercase English letters.
   - ```
       Input: word1 = "sea", word2 = "eat"
       Output: 2
@@ -3082,10 +3085,13 @@ class Solution:
 - complexity : O(MN)
 - next challenges : Minimum ASCII Delete Sum for Two Strings
 
-# 139. Minimum ASCII Delete Sum for Two Strings (#712) - medium / python / Longest Common Subsequence / LCS / (ing)
+# 138. Minimum ASCII Delete Sum for Two Strings (#712) - medium / python / Longest Common Subsequence / LCS / (fail)
 - medium
 - problem :
   - Given two strings s1 and s2, return the lowest ASCII sum of deleted characters to make two strings equal.
+  - Constraints:
+    - 1 <= s1.length, s2.length <= 1000
+    - s1 and s2 consist of lowercase English letters.
   - ```
       Example 1:
       Input: s1 = "sea", s2 = "eat"
@@ -3104,9 +3110,8 @@ class Solution:
       If instead we turned both strings into "lee" or "eet", we would get answers of 433 or 417, which are higher.
     ```
 - https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
-- [minimumDeleteSum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationminimumDeleteSumum3.py) :
-  - 
-- algorithm :
+- [minimumDeleteSum.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeleteSum.py) :  Memory Limit Exceeded  63 / 93 test cases passed.
+- algorithm : my
   - ```
       |     |     |   0 |   1 |   2 |   3 |   4 |   5 |   6 |
       |-----|-----|-----|-----|-----|-----|-----|-----|-----|
@@ -3121,10 +3126,18 @@ class Solution:
       |  4  |  t  |  0  |  0  |  1  |  1  |  2  |  3  |  3  |
                                 e    l,e  le,ee let,eet lee,let,eet
     ```
+- solution : 
+  - [minimumDeleteSum_v2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumDeleteSum_v2.py) 
+  - Approach #1: Dynamic Programming [Accepted] - Intuition and Algorithm
+  - Let dp[i][j] be the answer to the problem for the strings s1[i:], s2[j:].
+  - When one of the input strings is empty, the answer is the ASCII-sum of the other string. We can calculate this cumulatively using code like dp[i][s2.length()] = dp[i+1][s2.length()] + s1.codePointAt(i).
+  - When s1[i] == s2[j], we have dp[i][j] = dp[i+1][j+1] as we can ignore these two characters.
+  - When s1[i] != s2[j], we will have to delete at least one of them. We'll have dp[i][j] as the minimum of the answers after both deletion options.
+  - The solutions presented will use bottom-up dynamic programming.
 - complexity : O(MN)
 - next challenges : 
 
-# 138. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions
+# 139. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions
 - medium
 - problem :
   - Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
@@ -3162,7 +3175,7 @@ class Solution:
 - complexity : O(N)
 - next challenges : Valid Number / Check if Numbers Are Ascending in a Sentence
 
-# 139. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming
+# 140. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming
 - hard
 - problem :
   - Design a special dictionary with some words that searchs the words in it by a prefix and a suffix.
@@ -3223,7 +3236,7 @@ class Solution:
 
 
 
-# 139. template (#) - medium / python / (ing)
+# 141. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
