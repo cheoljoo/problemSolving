@@ -172,7 +172,8 @@
 - [138. Minimum ASCII Delete Sum for Two Strings (#712) - medium / python / Longest Common Subsequence / LCS / (fail)](#138-minimum-ascii-delete-sum-for-two-strings-712---medium--python--longest-common-subsequence--lcs--fail)
 - [139. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions](#139-string-to-integer-atoi-8---medium--python--30m--top-interview-questions)
 - [140. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming](#140-prefix-and-suffix-search-745---hard--python--1h--greedy--dynamic-programming)
-- [141. template (#) - medium / python / (ing)](#141-template----medium--python--ing)
+- [141. Minimum Moves to Equal Array Elements II (#462) - medium / python / binary search / dynamic programming / 20M](#141-minimum-moves-to-equal-array-elements-ii-462---medium--python--binary-search--dynamic-programming--20m)
+- [142. template (#) - medium / python / (ing)](#142-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3205,6 +3206,30 @@ class Solution:
 - complexity : M:15000 , N: 10 O(MN)
 - next challenges : Design Add and Search Words Data Structure
 
+# 141. Minimum Moves to Equal Array Elements II (#462) - medium / python / binary search / dynamic programming / 20M
+- medium
+- problem :
+  - Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+  - In one move, you can increment or decrement an element of the array by 1.
+  - Test cases are designed so that the answer will fit in a 32-bit integer.
+  - Constraints:  n == nums.length / 1 <= nums.length <= 105  / -109 <= nums[i] <= 109
+  - ```
+    Input: nums = [1,2,3]
+    Output: 2
+    Explanation:
+    Only two moves are needed (remember each move increments or decrements one element):
+    [1,2,3]  =>  [2,2,3]  =>  [2,2,2]
+
+    Input: nums = [1,10,2,9]
+    Output: 16
+    ```
+- https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/
+- [minMoves2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minMoves2.py) :passed
+  - Runtime: 304 ms, faster than 5.10% of Python3 online submissions for Minimum Moves to Equal Array Elements II.
+  - Memory Usage: 15.5 MB, less than 33.43% of Python3 online submissions for Minimum Moves to Equal Array Elements II.
+- algorithm : binary search & dynamic programming
+- complexity : O(NlogN)
+- next challenges : Best Meeting Point / Minimum Moves to Equal Array Elements / Minimum Operations to Make a Uni-Value Grid / Removing Minimum Number of Magic Beans
 
 
 
@@ -3236,7 +3261,12 @@ class Solution:
 
 
 
-# 141. template (#) - medium / python / (ing)
+
+
+
+
+
+# 142. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
