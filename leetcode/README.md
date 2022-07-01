@@ -173,7 +173,7 @@
 - [139. String to Integer (atoi) (#8) - medium / python / 30M / Top Interview Questions](#139-string-to-integer-atoi-8---medium--python--30m--top-interview-questions)
 - [140. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming](#140-prefix-and-suffix-search-745---hard--python--1h--greedy--dynamic-programming)
 - [141. Minimum Moves to Equal Array Elements II (#462) - medium / python / binary search / dynamic programming / 20M](#141-minimum-moves-to-equal-array-elements-ii-462---medium--python--binary-search--dynamic-programming--20m)
-- [142. Maximum Units on a Truck (#1710) - easy / python / 5M / 2022.07.01](#142-maximum-units-on-a-truck-1710---easy--python--5m--20220701)
+- [142. Maximum Units on a Truck (#1710) - easy / python / 5M / sort / 2022.07.01](#142-maximum-units-on-a-truck-1710---easy--python--5m--sort--20220701)
 - [143. template (#) - medium / python / (ing)](#143-template----medium--python--ing)
 
 --------------------
@@ -3232,7 +3232,7 @@ class Solution:
 - complexity : O(NlogN)
 - next challenges : Best Meeting Point / Minimum Moves to Equal Array Elements / Minimum Operations to Make a Uni-Value Grid / Removing Minimum Number of Magic Beans
 
-# 142. Maximum Units on a Truck (#1710) - easy / python / 5M / 2022.07.01
+# 142. Maximum Units on a Truck (#1710) - easy / python / 5M / sort / 2022.07.01
 - easy
 - problem :
   - You are assigned to put some amount of boxes onto one truck. You are given a 2D array boxTypes, where boxTypes[i] = [numberOfBoxesi, numberOfUnitsPerBoxi]:
