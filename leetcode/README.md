@@ -174,6 +174,7 @@
 - [140. Prefix and Suffix Search (#745) - hard / python / 1H / greedy / dynamic programming](#140-prefix-and-suffix-search-745---hard--python--1h--greedy--dynamic-programming)
 - [141. Minimum Moves to Equal Array Elements II (#462) - medium / python / binary search / dynamic programming / 20M](#141-minimum-moves-to-equal-array-elements-ii-462---medium--python--binary-search--dynamic-programming--20m)
 - [142. Maximum Units on a Truck (#1710) - easy / python / 5M / sort / 2022.07.01](#142-maximum-units-on-a-truck-1710---easy--python--5m--sort--20220701)
+- [143. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts (#1465) - medium / python / 15M / sort / 2022.07.02](#143-maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts-1465---medium--python--15m--sort--20220702)
 - [143. template (#) - medium / python / (ing)](#143-template----medium--python--ing)
 
 --------------------
@@ -3261,6 +3262,31 @@ class Solution:
 - algorithm : sort
 - complexity : O(NlogN)
 - next challenges : Maximum Bags With Full Capacity of Rocks
+
+# 143. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts (#1465) - medium / python / 15M / sort / 2022.07.02
+- medium
+- problem :
+  - You are given a rectangular cake of size h x w and two arrays of integers horizontalCuts and verticalCuts where:
+    - horizontalCuts[i] is the distance from the top of the rectangular cake to the ith horizontal cut and similarly, and
+    - verticalCuts[j] is the distance from the left of the rectangular cake to the jth vertical cut.
+  - Return the maximum area of a piece of cake after you cut at each horizontal and vertical position provided in the arrays horizontalCuts and verticalCuts. Since the answer can be a large number, return this modulo 10^9 + 7.
+  - Constraints: 2 <= h, w <= 109 / 1 <= horizontalCuts.length <= min(h - 1, 10^5) / 1 <= verticalCuts.length <= min(w - 1, 1^05) / 1 <= horizontalCuts[i] < h / 1 <= verticalCuts[i] < w / All the elements in horizontalCuts are distinct. / All the elements in verticalCuts are distinct.
+  - ```
+      Input: h = 5, w = 4, horizontalCuts = [1,2,4], verticalCuts = [1,3]
+      Output: 4 
+      Explanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green piece of cake has the maximum area.
+
+      Input: h = 5, w = 4, horizontalCuts = [3,1], verticalCuts = [1]
+      Output: 6
+      Explanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green and yellow pieces of cake have the maximum area.
+    ```
+- https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/
+- [maxArea2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxArea2.py) : passed
+  - Runtime: 687 ms, faster than 6.07% of Python3 online submissions for Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts.
+  - Memory Usage: 26.9 MB, less than 62.62% of Python3 online submissions for Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts.
+- algorithm : sort
+- complexity : O(NlogN)
+- next challenges : Largest Number / Path with Maximum Gold / Check if Array Is Sorted and Rotated
 
 
 
