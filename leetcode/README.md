@@ -175,7 +175,7 @@
 - [141. Minimum Moves to Equal Array Elements II (#462) - medium / python / binary search / dynamic programming / 20M](#141-minimum-moves-to-equal-array-elements-ii-462---medium--python--binary-search--dynamic-programming--20m)
 - [142. Maximum Units on a Truck (#1710) - easy / python / 5M / sort / 2022.07.01](#142-maximum-units-on-a-truck-1710---easy--python--5m--sort--20220701)
 - [143. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts (#1465) - medium / python / 15M / sort / 2022.07.02](#143-maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts-1465---medium--python--15m--sort--20220702)
-- [143. template (#) - medium / python / (ing)](#143-template----medium--python--ing)
+- [144. template (#) - medium / python / (ing)](#144-template----medium--python--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3328,7 +3328,7 @@ class Solution:
 
 
 
-# 143. template (#) - medium / python / (ing)
+# 144. template (#) - medium / python / (ing)
 - medium
 - problem :
   - 
