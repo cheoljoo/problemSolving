@@ -68,8 +68,6 @@ class Solution:
                 heapq.heappush(lessQ,(a+move)*-1)
             count += 1
             print("lessQ:",lessQ,"greaterQ:",greaterQ,"move:",move,"count:",count)
-            if count > 20:
-                break
             
         return count
                     
