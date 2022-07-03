@@ -175,7 +175,8 @@
 - [141. Minimum Moves to Equal Array Elements II (#462) - medium / python / binary search / dynamic programming / 20M](#141-minimum-moves-to-equal-array-elements-ii-462---medium--python--binary-search--dynamic-programming--20m)
 - [142. Maximum Units on a Truck (#1710) - easy / python / 5M / sort / 2022.07.01](#142-maximum-units-on-a-truck-1710---easy--python--5m--sort--20220701)
 - [143. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts (#1465) - medium / python / 15M / sort / 2022.07.02](#143-maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts-1465---medium--python--15m--sort--20220702)
-- [144. template (#) - medium / python / (ing)](#144-template----medium--python--ing)
+- [144. Wiggle Subsequence (#376) - medium / python / 10M / 2022.07.03](#144-wiggle-subsequence-376---medium--python--10m--20220703)
+- [145. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#145-template----medium--python--1h--20220703--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3288,6 +3289,32 @@ class Solution:
 - complexity : O(NlogN)
 - next challenges : Largest Number / Path with Maximum Gold / Check if Array Is Sorted and Rotated
 
+# 144. Wiggle Subsequence (#376) - medium / python / 10M / 2022.07.03
+- medium
+- problem :
+  - A wiggle sequence is a sequence where the differences between successive numbers strictly alternate between positive and negative. The first difference (if one exists) may be either positive or negative. A sequence with one element and a sequence with two non-equal elements are trivially wiggle sequences.
+    - For example, [1, 7, 4, 9, 2, 5] is a wiggle sequence because the differences (6, -3, 5, -7, 3) alternate between positive and negative.
+    - In contrast, [1, 4, 7, 2, 5] and [1, 7, 4, 5, 5] are not wiggle sequences. The first is not because its first two differences are positive, and the second is not because its last difference is zero.
+  - A subsequence is obtained by deleting some elements (possibly zero) from the original sequence, leaving the remaining elements in their original order.
+  - Given an integer array nums, return the length of the longest wiggle subsequence of nums.
+  - Constraints: 1 <= nums.length <= 1000 / 0 <= nums[i] <= 1000
+  - ```
+      Input: nums = [1,7,4,9,2,5]
+      Output: 6
+      Explanation: The entire sequence is a wiggle sequence with differences (6, -3, 5, -7, 3).
+
+      Input: nums = [1,17,5,10,13,15,10,5,16,8]
+      Output: 7
+      Explanation: There are several subsequences that achieve this length.
+      One is [1, 17, 10, 13, 10, 16, 8] with differences (16, -7, 3, -3, 6, -8).
+    ```
+- https://leetcode.com/problems/wiggle-subsequence/
+- [wiggleMaxLength.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/wiggleMaxLength.py) : passed
+  - Runtime: 41 ms, faster than 82.84% of Python3 online submissions for Wiggle Subsequence.
+  - Memory Usage: 13.8 MB, less than 98.01% of Python3 online submissions for Wiggle Subsequence.
+- algorithm : easy to distinguish directions
+- complexity : O(N)
+- next challenges : Rearrange Array Elements by Sign
 
 
 
@@ -3328,7 +3355,15 @@ class Solution:
 
 
 
-# 144. template (#) - medium / python / (ing)
+
+
+
+
+
+
+
+
+# 145. template (#) - medium / python / 1H / 2022.07.03 / (ing)
 - medium
 - problem :
   - 
