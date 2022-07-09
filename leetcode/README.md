@@ -32,7 +32,8 @@
     - [1.17.2. Floyd-Warshall Algorithm](#1172-floyd-warshall-algorithm)
   - [1.18. grouping : find & union](#118-grouping--find--union)
   - [1.19. deque](#119-deque)
-  - [1.20. Books & URL](#120-books--url)
+  - [1.20. window slide to get max in moving range](#120-window-slide-to-get-max-in-moving-range)
+  - [1.21. Books & URL](#121-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -176,7 +177,8 @@
 - [142. Maximum Units on a Truck (#1710) - easy / python / 5M / sort / 2022.07.01](#142-maximum-units-on-a-truck-1710---easy--python--5m--sort--20220701)
 - [143. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts (#1465) - medium / python / 15M / sort / 2022.07.02](#143-maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts-1465---medium--python--15m--sort--20220702)
 - [144. Wiggle Subsequence (#376) - medium / python / 10M / 2022.07.03](#144-wiggle-subsequence-376---medium--python--10m--20220703)
-- [145. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#145-template----medium--python--1h--20220703--ing)
+- [145. Jump Game VI (#1696) - medium / python / 1H / 2022.07.10 / dynamic programming / window slide](#145-jump-game-vi-1696---medium--python--1h--20220710--dynamic-programming--window-slide)
+- [146. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#146-template----medium--python--1h--20220703--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -514,7 +516,24 @@ int GCD(int a, int b){
   - deque.remove(item): item을 데크에서 찾아 삭제한다.
   - deque.rotate(num): 데크를 num만큼 회전한다(양수면 오른쪽, 음수면 왼쪽).
 
-## 1.20. Books & URL
+## 1.20. window slide to get max in moving range
+- heapq를 이용한 window slide시 max 값을 가져오는 방법
+```python
+        heapwindow = [(-dp[-1],-1)]
+        for i in range(2,len(nums)+1):
+            mi = -i
+            while True:
+                vw , iw = heapq.heappop(heapwindow)
+                if mi+1 <= iw  and iw <= mi+k:
+                    heapq.heappush(heapwindow,(vw,iw))
+                    break
+                else:
+                    continue
+            dp[mi] = nums[mi] + -vw
+            heapq.heappush(heapwindow,(-dp[mi],mi))
+```
+
+## 1.21. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - For Beginners for graph : https://leetcode.com/discuss/study-guide/1808711/Graph-for-Beginers-Problems
@@ -3316,6 +3335,39 @@ class Solution:
 - complexity : O(N)
 - next challenges : Rearrange Array Elements by Sign
 
+# 145. Jump Game VI (#1696) - medium / python / 1H / 2022.07.10 / dynamic programming / window slide
+- medium
+- problem :
+  - You are given a 0-indexed integer array nums and an integer k.
+  - You are initially standing at index 0. In one move, you can jump at most k steps forward without going outside the boundaries of the array. That is, you can jump from index i to any index in the range [i + 1, min(n - 1, i + k)] inclusive.
+  - You want to reach the last index of the array (index n - 1). Your score is the sum of all nums[j] for each index j you visited in the array.
+  - Return the maximum score you can get.
+  - Constraints: 1 <= nums.length, k <= 10^5 / -10^4 <= nums[i] <= 10^4
+  - ```
+      Input: nums = [1,-1,-2,4,-7,3], k = 2
+      Output: 7
+      Explanation: You can choose your jumps forming the subsequence [1,-1,4,3] (underlined above). The sum is 7.
+
+      Input: nums = [10,-5,-2,4,0,3], k = 3
+      Output: 17
+      Explanation: You can choose your jumps forming the subsequence [10,4,3] (underlined above). The sum is 17.
+
+      Input: nums = [1,-5,-20,4,-1,3,-6,-3], k = 2
+      Output: 0
+    ```
+- https://leetcode.com/problems/jump-game-vi/
+- [maxResult.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxResult.py) : 68 / 71 test cases passed.
+- [maxResult_v1.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxResult_v1.py) : 57 / 71 test cases passed.  Status: Time Limit Exceeded
+  - total_time1 :  0.007215976715087891 -> SUCCESS -> 2354241 56
+  - total_time1 :  182.92022347450256 -> SUCCESS -> 223537346 k=16309   (node : 80,000 )
+- [maxResult_v2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/maxResult_v2.py) : passed
+  - total_time1 :  0.0014190673828125 -> SUCCESS -> 2354241 56
+  - total_time1 :  0.22069263458251953 -> SUCCESS -> 223537346 k=16309   (node : 80,000 )
+  - Runtime: 3480 ms, faster than 5.04% of Python3 online submissions for Jump Game VI.
+  - Memory Usage: 45.1 MB, less than 5.50% of Python3 online submissions for Jump Game VI.
+- algorithm : dynamic programming / window slide
+- complexity : O(NlogN)
+- next challenges : Jump Game VII / Jump Game VIII
 
 
 
@@ -3362,8 +3414,7 @@ class Solution:
 
 
 
-
-# 145. template (#) - medium / python / 1H / 2022.07.03 / (ing)
+# 146. template (#) - medium / python / 1H / 2022.07.03 / (ing)
 - medium
 - problem :
   - 
