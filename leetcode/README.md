@@ -178,7 +178,8 @@
 - [143. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts (#1465) - medium / python / 15M / sort / 2022.07.02](#143-maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts-1465---medium--python--15m--sort--20220702)
 - [144. Wiggle Subsequence (#376) - medium / python / 10M / 2022.07.03](#144-wiggle-subsequence-376---medium--python--10m--20220703)
 - [145. Jump Game VI (#1696) - medium / python / 1H / 2022.07.10 / dynamic programming / window slide](#145-jump-game-vi-1696---medium--python--1h--20220710--dynamic-programming--window-slide)
-- [146. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#146-template----medium--python--1h--20220703--ing)
+- [146. Min Cost Climbing Stairs (#746) - easy / python / 30M / 2022.07.11 / dynamic programming](#146-min-cost-climbing-stairs-746---easy--python--30m--20220711--dynamic-programming)
+- [147. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#147-template----medium--python--1h--20220703--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3366,9 +3367,45 @@ class Solution:
   - Runtime: 3480 ms, faster than 5.04% of Python3 online submissions for Jump Game VI.
   - Memory Usage: 45.1 MB, less than 5.50% of Python3 online submissions for Jump Game VI.
 - algorithm : dynamic programming / window slide
+  - from reverse order  (k=2)
+  - max(-1) = nums[-1]
+  - max(-2) = max of  nums[-2]+max(-1)
+  - max(-3) = max of  nums[-3]+max(-2) , nums[-3]+max(-1)
+  - max(-4) = max of  nums[-4]+max(-3) , nums[-4]+max(-2)
 - complexity : O(NlogN)
 - next challenges : Jump Game VII / Jump Game VIII
 
+# 146. Min Cost Climbing Stairs (#746) - easy / python / 30M / 2022.07.11 / dynamic programming
+- easy
+- problem :
+  - You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.
+  - You can either start from the step with index 0, or the step with index 1.
+  - Return the minimum cost to reach the top of the floor.
+  - Constraints: 2 <= cost.length <= 1000 / 0 <= cost[i] <= 999
+  - ```
+      Input: cost = [10,15,20]
+      Output: 15
+      Explanation: You will start at index 1.
+      - Pay 15 and climb two steps to reach the top.
+      The total cost is 15.
+
+      Input: cost = [1,100,1,1,1,100,1,1,100,1]
+      Output: 6
+      Explanation: You will start at index 0.
+      The total cost is 6.
+    ```
+- https://leetcode.com/problems/min-cost-climbing-stairs/
+- [minCostClimbingStairs.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minCostClimbingStairs.py) : passed
+  - Runtime: 90 ms, faster than 51.46% of Python3 online submissions for Min Cost Climbing Stairs.
+  - Memory Usage: 14 MB, less than 44.40% of Python3 online submissions for Min Cost Climbing Stairs.
+- algorithm : dynamic programming
+  - it is the same problem if k = 2 of [145. Jump Game VI (#1696) - medium / python / 1H / 2022.07.10 / dynamic programming / window slide](#145-jump-game-vi-1696---medium--python--1h--20220710--dynamic-programming--window-slide)
+  - [1,100,1,1,1,100,1,1,100,1] + [0]
+  - max(-1) = 0 = num[-1]
+  - max(-2) = num[-2]
+  - max(-3) = num[-3] + min( max(-2) , max(-1) )
+- complexity : O(N)
+- next challenges : Find the Duplicate Number / IPO / Remove Comments
 
 
 
@@ -3414,7 +3451,14 @@ class Solution:
 
 
 
-# 146. template (#) - medium / python / 1H / 2022.07.03 / (ing)
+
+
+
+
+
+
+
+# 147. template (#) - medium / python / 1H / 2022.07.03 / (ing)
 - medium
 - problem :
   - 
