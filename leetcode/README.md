@@ -179,7 +179,8 @@
 - [144. Wiggle Subsequence (#376) - medium / python / 10M / 2022.07.03](#144-wiggle-subsequence-376---medium--python--10m--20220703)
 - [145. Jump Game VI (#1696) - medium / python / 1H / 2022.07.10 / dynamic programming / window slide](#145-jump-game-vi-1696---medium--python--1h--20220710--dynamic-programming--window-slide)
 - [146. Min Cost Climbing Stairs (#746) - easy / python / 30M / 2022.07.11 / dynamic programming](#146-min-cost-climbing-stairs-746---easy--python--30m--20220711--dynamic-programming)
-- [147. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#147-template----medium--python--1h--20220703--ing)
+- [147. Out of Boundary Paths (#576) - medium / python / 1H / 2022.07.03 / dynamic programming](#147-out-of-boundary-paths-576---medium--python--1h--20220703--dynamic-programming)
+- [148. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#148-template----medium--python--1h--20220703--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3407,6 +3408,27 @@ class Solution:
 - complexity : O(N)
 - next challenges : Find the Duplicate Number / IPO / Remove Comments
 
+# 147. Out of Boundary Paths (#576) - medium / python / 1H / 2022.07.03 / dynamic programming
+- medium
+- problem :
+  - There is an m x n grid with a ball. The ball is initially at the position [startRow, startColumn]. You are allowed to move the ball to one of the four adjacent cells in the grid (possibly out of the grid crossing the grid boundary). You can apply at most maxMove moves to the ball.
+  - Given the five integers m, n, maxMove, startRow, startColumn, return the number of paths to move the ball out of the grid boundary. Since the answer can be very large, return it modulo 10**9 + 7.
+  - Constraints: 1 <= m, n <= 50 / 0 <= maxMove <= 50 / 0 <= startRow < m / 0 <= startColumn < n
+  - ```
+      Input: m = 2, n = 2, maxMove = 2, startRow = 0, startColumn = 0
+      Output: 6
+
+      Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1
+      Output: 12
+    ```
+  - ![](https://assets.leetcode.com/uploads/2021/04/28/out_of_boundary_paths_2.png)
+- https://leetcode.com/problems/out-of-boundary-paths/
+- [findPaths.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findPaths.py) : passed
+  - Runtime: 206 ms, faster than 50.64% of Python3 online submissions for Out of Boundary Paths.
+  - Memory Usage: 18.3 MB, less than 45.52% of Python3 online submissions for Out of Boundary Paths.
+- algorithm : dynamic programming
+- complexity : M * N * maxMove * 4
+- next challenges : Knight Probability in Chessboard / Execution of All Suffix Instructions Staying in a Grid
 
 
 
@@ -3458,7 +3480,18 @@ class Solution:
 
 
 
-# 147. template (#) - medium / python / 1H / 2022.07.03 / (ing)
+
+
+
+
+
+
+
+
+
+
+
+# 148. template (#) - medium / python / 1H / 2022.07.03 / (ing)
 - medium
 - problem :
   - 
