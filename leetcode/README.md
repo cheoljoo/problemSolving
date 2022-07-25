@@ -180,6 +180,8 @@
 - [145. Jump Game VI (#1696) - medium / python / 1H / 2022.07.10 / dynamic programming / window slide](#145-jump-game-vi-1696---medium--python--1h--20220710--dynamic-programming--window-slide)
 - [146. Min Cost Climbing Stairs (#746) - easy / python / 30M / 2022.07.11 / dynamic programming](#146-min-cost-climbing-stairs-746---easy--python--30m--20220711--dynamic-programming)
 - [147. Out of Boundary Paths (#576) - medium / python / 1H / 2022.07.03 / dynamic programming](#147-out-of-boundary-paths-576---medium--python--1h--20220703--dynamic-programming)
+- [148. Search a 2D Matrix II (#240) - medium / python / 1H / 2022.07.25 / bisect](#148-search-a-2d-matrix-ii-240---medium--python--1h--20220725--bisect)
+- [148. Find First and Last Position of Element in Sorted Array (#34) - medium / python / 1H / 2022.07.25 / bisect](#148-find-first-and-last-position-of-element-in-sorted-array-34---medium--python--1h--20220725--bisect)
 - [148. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#148-template----medium--python--1h--20220703--ing)
 
 --------------------
@@ -3430,8 +3432,49 @@ class Solution:
 - complexity : M * N * maxMove * 4
 - next challenges : Knight Probability in Chessboard / Execution of All Suffix Instructions Staying in a Grid
 
+# 148. Search a 2D Matrix II (#240) - medium / python / 1H / 2022.07.25 / bisect
+- medium
+- problem :
+  - Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+    - Integers in each row are sorted in ascending from left to right.
+    - Integers in each column are sorted in ascending from top to bottom.
+  - Constraints: m == matrix.length / n == matrix[i].length / 1 <= n, m <= 300  / -10^9 <= matrix[i][j] <= 10^9
+  - ```
+      Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5
+      Output: true
 
+      Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20
+      Output: false
+    ```
+- https://leetcode.com/problems/search-a-2d-matrix-ii/
+- [searchMatrix.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/searchMatrix.py) : passed
+  - Runtime: 445 ms, faster than 5.12% of Python3 online submissions for Search a 2D Matrix II.
+  - Memory Usage: 20.4 MB, less than 40.22% of Python3 online submissions for Search a 2D Matrix II.
+- algorithm : bisect
+- BEST : O(M+N) (got help) ![](https://assets.leetcode.com/users/images/ffcde87b-6220-4e61-a2ec-498abc7fd28d_1658626864.8423152.png)
+- complexity : O(NlogN)
+- next challenges : Search a 2D Matrix
 
+# 148. Find First and Last Position of Element in Sorted Array (#34) - medium / python / 1H / 2022.07.25 / bisect
+- medium
+- problem :
+  - Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+  - If target is not found in the array, return [-1, -1].
+  - You must write an algorithm with O(log n) runtime complexity.
+  - ```
+      Input: nums = [5,7,7,8,8,10], target = 8
+      Output: [3,4]
+
+      Input: nums = [], target = 0
+      Output: [-1,-1]
+    ```
+- https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+- [searchRange.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/searchRange.py) : passed
+  - Runtime: 147 ms, faster than 34.24% of Python3 online submissions for Find First and Last Position of Element in Sorted Array.
+  - Memory Usage: 15.4 MB, less than 93.21% of Python3 online submissions for Find First and Last Position of Element in Sorted Array.
+- algorithm : bisect
+- complexity : O(NlogN)
+- next challenges : Plates Between Candles / Find Target Indices After Sorting Array
 
 
 
