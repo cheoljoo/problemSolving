@@ -181,8 +181,9 @@
 - [146. Min Cost Climbing Stairs (#746) - easy / python / 30M / 2022.07.11 / dynamic programming](#146-min-cost-climbing-stairs-746---easy--python--30m--20220711--dynamic-programming)
 - [147. Out of Boundary Paths (#576) - medium / python / 1H / 2022.07.03 / dynamic programming](#147-out-of-boundary-paths-576---medium--python--1h--20220703--dynamic-programming)
 - [148. Search a 2D Matrix II (#240) - medium / python / 1H / 2022.07.25 / bisect](#148-search-a-2d-matrix-ii-240---medium--python--1h--20220725--bisect)
-- [148. Find First and Last Position of Element in Sorted Array (#34) - medium / python / 1H / 2022.07.25 / bisect](#148-find-first-and-last-position-of-element-in-sorted-array-34---medium--python--1h--20220725--bisect)
-- [148. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#148-template----medium--python--1h--20220703--ing)
+- [149. Find First and Last Position of Element in Sorted Array (#34) - medium / python / 1H / 2022.07.25 / bisect](#149-find-first-and-last-position-of-element-in-sorted-array-34---medium--python--1h--20220725--bisect)
+- [150. Lowest Common Ancestor of a Binary Tree (#236) - medium / python / 1H / 2022.07.26 / tree](#150-lowest-common-ancestor-of-a-binary-tree-236---medium--python--1h--20220726--tree)
+- [151. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#151-template----medium--python--1h--20220703--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3455,7 +3456,7 @@ class Solution:
 - complexity : O(NlogN)
 - next challenges : Search a 2D Matrix
 
-# 148. Find First and Last Position of Element in Sorted Array (#34) - medium / python / 1H / 2022.07.25 / bisect
+# 149. Find First and Last Position of Element in Sorted Array (#34) - medium / python / 1H / 2022.07.25 / bisect
 - medium
 - problem :
   - Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
@@ -3476,6 +3477,29 @@ class Solution:
 - complexity : O(NlogN)
 - next challenges : Plates Between Candles / Find Target Indices After Sorting Array
 
+# 150. Lowest Common Ancestor of a Binary Tree (#236) - medium / python / 1H / 2022.07.26 / tree
+- medium
+- problem :
+  - Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+  - According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+  - Constraints: The number of nodes in the tree is in the range [2, 10^5]. / -10^9 <= Node.val <= 10^9 / All Node.val are unique. / p != q / p and q will exist in the tree.
+  - ```
+      Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+      Output: 3
+      Explanation: The LCA of nodes 5 and 1 is 3.
+      Example 2:
+
+      Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+      Output: 5
+      Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
+    ```
+- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+- [lowestCommonAncestor.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/lowestCommonAncestor.py) :
+  - Runtime: 95 ms, faster than 67.50% of Python3 online submissions for Lowest Common Ancestor of a Binary Tree.
+  - Memory Usage: 18.4 MB, less than 96.66% of Python3 online submissions for Lowest Common Ancestor of a Binary Tree.
+- algorithm : tree - save the ancestors.
+- complexity : O(N)
+- next challenges : Lowest Common Ancestor of a Binary Search Tree / Smallest Common Region / Find Players With Zero or One Losses / Lowest Common Ancestor of a Binary Tree II / Lowest Common Ancestor of a Binary Tree III / Lowest Common Ancestor of a Binary Tree IV / Step-By-Step Directions From a Binary Tree Node to Another
 
 
 
@@ -3534,7 +3558,12 @@ class Solution:
 
 
 
-# 148. template (#) - medium / python / 1H / 2022.07.03 / (ing)
+
+
+
+
+
+# 151. template (#) - medium / python / 1H / 2022.07.03 / (ing)
 - medium
 - problem :
   - 
