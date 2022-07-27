@@ -183,7 +183,8 @@
 - [148. Search a 2D Matrix II (#240) - medium / python / 1H / 2022.07.25 / bisect](#148-search-a-2d-matrix-ii-240---medium--python--1h--20220725--bisect)
 - [149. Find First and Last Position of Element in Sorted Array (#34) - medium / python / 1H / 2022.07.25 / bisect](#149-find-first-and-last-position-of-element-in-sorted-array-34---medium--python--1h--20220725--bisect)
 - [150. Lowest Common Ancestor of a Binary Tree (#236) - medium / python / 1H / 2022.07.26 / tree](#150-lowest-common-ancestor-of-a-binary-tree-236---medium--python--1h--20220726--tree)
-- [151. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#151-template----medium--python--1h--20220703--ing)
+- [151. Flatten Binary Tree to Linked List (#114) - medium / python / 1H / 2022.07.27 / tree traverse](#151-flatten-binary-tree-to-linked-list-114---medium--python--1h--20220727--tree-traverse)
+- [152. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#152-template----medium--python--1h--20220703--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3501,6 +3502,26 @@ class Solution:
 - complexity : O(N)
 - next challenges : Lowest Common Ancestor of a Binary Search Tree / Smallest Common Region / Find Players With Zero or One Losses / Lowest Common Ancestor of a Binary Tree II / Lowest Common Ancestor of a Binary Tree III / Lowest Common Ancestor of a Binary Tree IV / Step-By-Step Directions From a Binary Tree Node to Another
 
+# 151. Flatten Binary Tree to Linked List (#114) - medium / python / 1H / 2022.07.27 / tree traverse
+- medium
+- problem :
+  - Given the root of a binary tree, flatten the tree into a "linked list":
+    - The "linked list" should use the same TreeNode class where the right child pointer points to the next node in the list and the left child pointer is always null.
+    - The "linked list" should be in the same order as a pre-order traversal of the binary tree.
+  - Constraints: The number of nodes in the tree is in the range [0, 2000].  / -100 <= Node.val <= 100
+  - Follow up: Can you flatten the tree in-place (with O(1) extra space)?
+  - ![](https://assets.leetcode.com/uploads/2021/01/14/flaten.jpg)
+  - ```
+      Input: root = [1,2,5,3,4,null,6]
+      Output: [1,null,2,null,3,null,4,null,5,null,6]
+    ```
+- https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
+- [flatten.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/flatten.py) : passed
+  - Runtime: 40 ms, faster than 90.70% of Python3 online submissions for Flatten Binary Tree to Linked List.
+  - Memory Usage: 15.3 MB, less than 47.67% of Python3 online submissions for Flatten Binary Tree to Linked List.
+- algorithm : tree traverse
+- complexity : O(N)    extra space : O(1)
+- next challenges : Flatten a Multilevel Doubly Linked List / Correct a Binary Tree
 
 
 
@@ -3563,7 +3584,7 @@ class Solution:
 
 
 
-# 151. template (#) - medium / python / 1H / 2022.07.03 / (ing)
+# 152. template (#) - medium / python / 1H / 2022.07.03 / (ing)
 - medium
 - problem :
   - 
