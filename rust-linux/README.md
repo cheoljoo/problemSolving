@@ -37,8 +37,10 @@
     - [14.1.3. 다시 읽어보세요.. 실제로 배포 할거면....](#1413-다시-읽어보세요-실제로-배포-할거면)
   - [14.2. Cargo 작업공간](#142-cargo-작업공간)
 - [15. 스마트 포인터](#15-스마트-포인터)
-- [16. (Appendix) miscellaneous](#16-appendix-miscellaneous)
-  - [16.1. code coverage](#161-code-coverage)
+- [16. 겁 없는 동시성](#16-겁-없는-동시성)
+  - [16.1. thread](#161-thread)
+- [17. (Appendix) miscellaneous](#17-appendix-miscellaneous)
+  - [17.1. code coverage](#171-code-coverage)
 
 --------
 
@@ -735,7 +737,39 @@ iter_mut 을 호출할 수 있습니다.
   - 순환 참조를 피하는 또다른 해결책은 여러분의 데이터 구조를 재구성하여 어떤 참조자는 소유권을 갖고 어떤 참조자는 그렇지 않도록 하는 것입니다. 결과적으로 여러분은 몇 개의 소유권 관계와 몇 개의 소유권 없는 관계로 이루어진 순환을 가질 수 있으며, 소유권 관계들만이 값을 버릴지 말지에 관해 영향을 주게 됩니다. 
   - Weak<T> 참조
 
-# 16. (Appendix) miscellaneous 
-## 16.1. code coverage
+# 16. 겁 없는 동시성
+## 16.1. thread
+- 그린 스레드 M:N 구조는 스레드들을 관리하기 위해 더 큰 언어 런타임이 필요합니다. 그런 이유로 러스트 표준 라이브러리는 오직 1:1 스레드 구현만 제공합니다. 러스트가 이러한 저수준 언어이기 때문에, 여러분이 예를 들어 어떤 스레드를 언제 실행시킬지에 대한 더 많은 제어권과 콘텍스트 교환(context switching)의 더 저렴한 비용 같은 관점을 위해 오버헤드와 맞바꾸겠다면 M:N 스레드를 구현한 크레이트도 있습니다.
+- [thread.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/thread.rs)
+- 스레드에 move 클로저 사용하기
+  - move 클로저는 thread::spawn와 함께 자주 사용되는데 그 이유는 이것이 여러분으로 하여금 어떤 스레드의 데이터를 다른 스레드 내에서 사용하도록 해주기 때문입니다.
+  - [thread-move.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/thread-move.rs)
+- message passing
+  - Go 언어 문서 의 슬로건에 있는 아이디어는 다음과 같습니다: "메모리를 공유하는 것으로 통신하지 마세요; 대신, 통신해서 메모리를 공유하세요"
+  - 러스트가 메세지 보내기 방식의 동시성을 달성하기 위해 갖춘 한가지 주요 도구는 **채널 (channel)** 인데, 이는 러스트의 표준 라이브러리가 구현체를 제공하는 프로그래밍 개념입니다. 프로그래밍에서의 채널은 개울이나 강 같은 물의 통로와 비슷하다고 상상할 수 있습니다.
+  - mpsc::channel
+    - [channel.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/channel.rs)
+    - mpsc는 복수 생성자, 단수 소비자 (multiple producer, single consumer) 를 나타냅니다. 
+    - recv -> try_recv
+  - 여러 메시지 보내고 받기
+    - [channel2.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/channel2.rs)
+  - 송신자를 복제하여 여러 생성자 만들기 : multiple producer, single consumer
+    - ```let tx1 = mpsc::Sender::clone(&tx);```
+    - [channel3.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/channel3.rs)
+- 뮤텍스를 사용하여 한번에 한 스레드에서의 데이터 접근을 허용하기
+  - Mutex<T>의 API
+  - [mutex.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/mutex.rs)
+  - 타입 시스템은 m 내부의 값을 사용하기 전에 우리가 락을 얻는 것을 확실히 해줍니다: Mutex<i32>는 i32가 아니므로 우리는 반드시 i32 값을 사용하기 위해 락을 얻어야 합니다. 우리는 이를 잊어버릴 수 없습니다; 잊어버린다면 타입 시스템이 내부의 i32에 접근할 수 없게 할 것입니다.
+  - 여러분이 의심한 것처럼, Mutex<T>는 스마트 포인터입니다. 더 정확하게는, lock의 호출은 MutexGuard라고 불리우는 스마트 포인터를 반환합니다. 
+- Arc<T>을 이용하는 아토믹 (atomic) 참조 카운팅
+  - [arc.rs](https://github.com/cheoljoo/problemSolving/blob/master/rust-linux/test/arc.rs)
+- Mutex<T>가 Cell 가족이 그러하듯 내부 가변성을 제공한다는 의미입니다. 우리가 15장에서 Rc<T>의 내용물을 변경할 수 있도록 하기 위해 RefCell<T>을 사용한 것과 같은 방식으로, Arc<T> 내부의 값을 변경하기 위해 Mutex<T>를 이용합니다.
+- 두 개의 동시성 개념이 이 언어에 내재되어 있습니다: 바로 std::marker 트레잇인 Sync와 Send입니다.
+  - Send를 사용하여 스레드 사이에 소유권 이전을 허용하기
+    - Send 마커 트레잇은 Send가 구현된 타입의 소유권이 스레드 사이에서 이전될 수 있음을 나타냅니다. 거의 대부분의 러스트 타입이 Send이지만, 몇 개의 예외가 있는데, 그 중 Rc<T>도 있습니다: 이것은 Send가 될 수 없는데 그 이유는 여러분이 Rc<T> 값을 클론하여 다른 스레드로 복제본의 소유권 전송을 시도한다면, 두 스레드 모두 동시에 참조 카운트 값을 갱신할지도 모르기 때문입니다. 이러한 이유로, Rc<T>는 여러분이 스레드-안전성 성능 저하를 지불하지 않아도 되는 단일 스레드의 경우에 사용되도록 구현되었습니다.
+    - 
+
+# 17. (Appendix) miscellaneous 
+## 17.1. code coverage
 - https://marco-c.github.io/2020/11/24/rust-source-based-code-coverage.html
 - 
