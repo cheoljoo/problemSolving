@@ -184,7 +184,8 @@
 - [149. Find First and Last Position of Element in Sorted Array (#34) - medium / python / 1H / 2022.07.25 / bisect](#149-find-first-and-last-position-of-element-in-sorted-array-34---medium--python--1h--20220725--bisect)
 - [150. Lowest Common Ancestor of a Binary Tree (#236) - medium / python / 1H / 2022.07.26 / tree](#150-lowest-common-ancestor-of-a-binary-tree-236---medium--python--1h--20220726--tree)
 - [151. Flatten Binary Tree to Linked List (#114) - medium / python / 1H / 2022.07.27 / tree traverse](#151-flatten-binary-tree-to-linked-list-114---medium--python--1h--20220727--tree-traverse)
-- [152. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#152-template----medium--python--1h--20220703--ing)
+- [152. Valid Anagram (#242) - easy / python / 15M / 2022.07.28](#152-valid-anagram-242---easy--python--15m--20220728)
+- [153. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#153-template----medium--python--1h--20220703--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3523,6 +3524,22 @@ class Solution:
 - complexity : O(N)    extra space : O(1)
 - next challenges : Flatten a Multilevel Doubly Linked List / Correct a Binary Tree
 
+# 152. Valid Anagram (#242) - easy / python / 15M / 2022.07.28
+- easy
+- problem :
+  - Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+  - An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+  - ```
+      Input: s = "anagram", t = "nagaram"
+      Output: true
+    ```
+- https://leetcode.com/problems/valid-anagram/
+- [isAnagram.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/isAnagram.py) : passed
+  - Runtime: 48 ms, faster than 93.50% of Python3 online submissions for Valid Anagram.
+  - Memory Usage: 14.5 MB, less than 34.60% of Python3 online submissions for Valid Anagram.
+- algorithm : None
+- complexity : O(N)
+- next challenges : Group Anagrams / Palindrome Permutation / Find All Anagrams in a String / Find Resultant Array After Removing Anagrams
 
 
 
@@ -3583,8 +3600,7 @@ class Solution:
 
 
 
-
-# 152. template (#) - medium / python / 1H / 2022.07.03 / (ing)
+# 153. template (#) - medium / python / 1H / 2022.07.03 / (ing)
 - medium
 - problem :
   - 
