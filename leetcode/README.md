@@ -3541,7 +3541,29 @@ class Solution:
 - complexity : O(N)
 - next challenges : Group Anagrams / Palindrome Permutation / Find All Anagrams in a String / Find Resultant Array After Removing Anagrams
 
+# 153. Word Subsets (#916) - medium / python / 1H / 2022.07.30 / count
+- medium
+- problem :
+  - You are given two string arrays words1 and words2.
+  - A string b is a subset of string a if every letter in b occurs in a including multiplicity.
+    - For example, "wrr" is a subset of "warrior" but is not a subset of "world".
+  - A string a from words1 is universal if for every string b in words2, b is a subset of a.
+  - Return an array of all the universal strings in words1. You may return the answer in any order.
+  - ```
+        Input: words1 = ["amazon","apple","facebook","google","leetcode"], words2 = ["l","e"]
+        Output: ["apple","google","leetcode"]
 
+        # ["amazon","apple","facebook","gopogle","leetcode"]
+        # ["e","oo"]
+        # => ["facebook","gopogle"]
+    ```
+- https://leetcode.com/problems/word-subsets/
+- [wordSubsets.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/wordSubsets.py) : passed
+  - Runtime: 686 ms, faster than 96.33% of Python3 online submissions for Word Subsets.
+  - Memory Usage: 20.6 MB, less than 10.67% of Python3 online submissions for Word Subsets.
+- algorithm : count
+- complexity : O(Words2 * 10 + Words1*10 + Words1*26*10)
+- next challenges : nothing
 
 
 
