@@ -32,6 +32,13 @@
 
 - http://lotto645.lge.com:8088/cheoljoo.lee/code/problemSolving/2022/docstring/site/my_page/
 
+# compile
+## tkinter
+```
+from tkinter import N
+ModuleNotFoundError: No module named 'tkinter'
+```
+- ```sudo apt-get install python3.10-tk```
 
 
 -----------------------------------------------------
