@@ -3562,7 +3562,7 @@ class Solution:
   - Runtime: 686 ms, faster than 96.33% of Python3 online submissions for Word Subsets.
   - Memory Usage: 20.6 MB, less than 10.67% of Python3 online submissions for Word Subsets.
 - algorithm : count
-- complexity : O(Words2 * 10 + Words1*10 + Words1*26*10)
+- complexity : O(Words2 x 10 + Words1 x 10 + Words1 x 26 x 10)
 - next challenges : nothing
 
 
