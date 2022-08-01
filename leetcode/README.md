@@ -185,7 +185,9 @@
 - [150. Lowest Common Ancestor of a Binary Tree (#236) - medium / python / 1H / 2022.07.26 / tree](#150-lowest-common-ancestor-of-a-binary-tree-236---medium--python--1h--20220726--tree)
 - [151. Flatten Binary Tree to Linked List (#114) - medium / python / 1H / 2022.07.27 / tree traverse](#151-flatten-binary-tree-to-linked-list-114---medium--python--1h--20220727--tree-traverse)
 - [152. Valid Anagram (#242) - easy / python / 15M / 2022.07.28](#152-valid-anagram-242---easy--python--15m--20220728)
-- [153. template (#) - medium / python / 1H / 2022.07.03 / (ing)](#153-template----medium--python--1h--20220703--ing)
+- [153. Word Subsets (#916) - medium / python / 1H / 2022.07.30 / count](#153-word-subsets-916---medium--python--1h--20220730--count)
+- [154. Unique Paths (#62) - medium / python / 1H / 2022.08.01 / dynamic programming](#154-unique-paths-62---medium--python--1h--20220801--dynamic-programming)
+- [155. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#155-template----medium--python--1h--20220802--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3565,6 +3567,28 @@ class Solution:
 - complexity : O(Words2 x 10 + Words1 x 10 + Words1 x 26 x 10)
 - next challenges : nothing
 
+# 154. Unique Paths (#62) - medium / python / 1H / 2022.08.01 / dynamic programming
+- medium
+- problem :
+  - There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.
+  - Given the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.
+  - The test cases are generated so that the answer will be less than or equal to 2 * 10^9.
+  - ```
+      Input: m = 3, n = 2
+      Output: 3
+      Explanation: From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+      1. Right -> Down -> Down
+      2. Down -> Down -> Right
+      3. Down -> Right -> Down
+    ```
+- https://leetcode.com/problems/unique-paths/
+- [uniquePaths.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/uniquePaths.py) : passed
+  - Runtime: 45 ms, faster than 63.14% of Python3 online submissions for Unique Paths.
+  - Memory Usage: 14 MB, less than 14.98% of Python3 online submissions for Unique Paths.
+- algorithm : dynamic programming
+  - [m-1,n-1] -> [m-1,n-2],[m-2,n-1] -> [m-1,n-3],[m-2,n-2],[m-3,n-1] -> ...
+- complexity : O(M*N)
+- next challenges : nothing
 
 
 
@@ -3621,8 +3645,7 @@ class Solution:
 
 
 
-
-# 153. template (#) - medium / python / 1H / 2022.07.03 / (ing)
+# 155. template (#) - medium / python / 1H / 2022.08.02 / (ing)
 - medium
 - problem :
   - 
