@@ -187,7 +187,8 @@
 - [152. Valid Anagram (#242) - easy / python / 15M / 2022.07.28](#152-valid-anagram-242---easy--python--15m--20220728)
 - [153. Word Subsets (#916) - medium / python / 1H / 2022.07.30 / count](#153-word-subsets-916---medium--python--1h--20220730--count)
 - [154. Unique Paths (#62) - medium / python / 1H / 2022.08.01 / dynamic programming](#154-unique-paths-62---medium--python--1h--20220801--dynamic-programming)
-- [155. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#155-template----medium--python--1h--20220802--ing)
+- [155. My Calendar I (#729) - medium / python / 1H / 2022.08.03](#155-my-calendar-i-729---medium--python--1h--20220803)
+- [156. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#156-template----medium--python--1h--20220802--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3590,6 +3591,27 @@ class Solution:
 - complexity : O(M*N)
 - next challenges : nothing
 
+# 155. My Calendar I (#729) - medium / python / 1H / 2022.08.03 
+- medium
+- problem :
+  - You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a double booking.
+  - A double booking happens when two events have some non-empty intersection (i.e., some moment is common to both events.).
+  - The event can be represented as a pair of integers start and end that represents a booking on the half-open interval [start, end), the range of real numbers x such that start <= x < end.
+  - Implement the MyCalendar class:
+    - MyCalendar() Initializes the calendar object.
+    - boolean book(int start, int end) Returns true if the event can be added to the calendar successfully without causing a double booking. Otherwise, return false and do not add the event to the calendar.
+  - Constraints: 0 <= start < end <= 10^ 9 / At most 1000 calls will be made to book.
+  - ```
+      ["MyCalendar", "book", "book", "book"]
+      [[], [10, 20], [15, 25], [20, 30]]
+      Output
+      [null, true, false, true]
+    ```
+- https://leetcode.com/problems/my-calendar-i/
+- [MyCalendar.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/MyCalendar.py) : passed
+  - Runtime: 1460 ms, faster than 14.37% of Python3 online submissions for My Calendar I.
+  - Memory Usage: 14.7 MB, less than 92.29% of Python3 online submissions for My Calendar I.
+- complexity : O(N)
 
 
 
@@ -3645,7 +3667,7 @@ class Solution:
 
 
 
-# 155. template (#) - medium / python / 1H / 2022.08.02 / (ing)
+# 156. template (#) - medium / python / 1H / 2022.08.02 / (ing)
 - medium
 - problem :
   - 
