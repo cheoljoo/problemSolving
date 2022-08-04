@@ -188,7 +188,8 @@
 - [153. Word Subsets (#916) - medium / python / 1H / 2022.07.30 / count](#153-word-subsets-916---medium--python--1h--20220730--count)
 - [154. Unique Paths (#62) - medium / python / 1H / 2022.08.01 / dynamic programming](#154-unique-paths-62---medium--python--1h--20220801--dynamic-programming)
 - [155. My Calendar I (#729) - medium / python / 1H / 2022.08.03](#155-my-calendar-i-729---medium--python--1h--20220803)
-- [156. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#156-template----medium--python--1h--20220802--ing)
+- [156. Mirror Reflection (#858) - medium / python / 2H / 2022.08.04](#156-mirror-reflection-858---medium--python--2h--20220804)
+- [157. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#157-template----medium--python--1h--20220802--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3613,6 +3614,32 @@ class Solution:
   - Memory Usage: 14.7 MB, less than 92.29% of Python3 online submissions for My Calendar I.
 - complexity : O(N)
 
+# 156. Mirror Reflection (#858) - medium / python / 2H / 2022.08.04
+- medium
+- problem :
+  - There is a special square room with mirrors on each of the four walls. Except for the southwest corner, there are receptors on each of the remaining corners, numbered 0, 1, and 2.
+  - The square room has walls of length p and a laser ray from the southwest corner first meets the east wall at a distance q from the 0th receptor.
+  - Given the two integers p and q, return the number of the receptor that the ray meets first.
+  - The test cases are guaranteed so that the ray will meet a receptor eventually.
+  - Constraints: 1 <= q <= p <= 1000
+  - ![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/06/18/reflection.png)
+  - ```
+      Input: p = 2, q = 1
+      Output: 2
+      Explanation: The ray meets receptor 2 the first time it gets reflected back to the left wall.
+
+      Input: p = 3, q = 1
+      Output: 1
+    ```
+- https://leetcode.com/problems/mirror-reflection/
+- [mirrorReflection.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/mirrorReflection.py) : passed 
+  - Runtime: 61 ms, faster than 16.83% of Python3 online submissions for Mirror Reflection.
+  - Memory Usage: 13.9 MB, less than 16.83% of Python3 online submissions for Mirror Reflection.
+- algorithm : stacked box and go to upper direction from bottom
+  - c is even && h % 2p == p -> return 2
+  - c is odd && h % 2p == p -> return 1
+  - c is odd && h % 2p == 0 -> return 0
+- complexity : O(N) : O(p)
 
 
 
@@ -3666,8 +3693,7 @@ class Solution:
 
 
 
-
-# 156. template (#) - medium / python / 1H / 2022.08.02 / (ing)
+# 157. template (#) - medium / python / 1H / 2022.08.02 / (ing)
 - medium
 - problem :
   - 
@@ -3679,9 +3705,9 @@ class Solution:
   - 
 - algorithm :
 - complexity :
-- next challenges : 
 
-1048. Longest String Chain
+
+1.    Longest String Chain
 https://leetcode.com/problems/longest-string-chain/
 - algorithm :
   - how to find fast that one character is different
