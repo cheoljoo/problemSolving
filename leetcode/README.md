@@ -189,7 +189,9 @@
 - [154. Unique Paths (#62) - medium / python / 1H / 2022.08.01 / dynamic programming](#154-unique-paths-62---medium--python--1h--20220801--dynamic-programming)
 - [155. My Calendar I (#729) - medium / python / 1H / 2022.08.03](#155-my-calendar-i-729---medium--python--1h--20220803)
 - [156. Mirror Reflection (#858) - medium / python / 2H / 2022.08.04](#156-mirror-reflection-858---medium--python--2h--20220804)
-- [157. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#157-template----medium--python--1h--20220802--ing)
+- [157. Ransom Note (#383) - easy / python / 5M / 2022.08.25 / dictionay](#157-ransom-note-383---easy--python--5m--20220825--dictionay)
+- [158. Sort the Matrix Diagonally (#1329) - medium / python / 20M / 2022.08.28 / partial sort](#158-sort-the-matrix-diagonally-1329---medium--python--20m--20220828--partial-sort)
+- [159. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#159-template----medium--python--1h--20220802--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3641,6 +3643,50 @@ class Solution:
   - c is odd && h % 2p == 0 -> return 0
 - complexity : O(N) : O(p)
 
+# 157. Ransom Note (#383) - easy / python / 5M / 2022.08.25 / dictionay
+- easy
+- problem :
+  - Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
+  - Each letter in magazine can only be used once in ransomNote.
+  - Constraints : 1 <= ransomNote.length, magazine.length <= 10^5
+  - ```
+      Input: ransomNote = "a", magazine = "b"
+      Output: false
+
+      Input: ransomNote = "aa", magazine = "ab"
+      Output: false
+
+      Input: ransomNote = "aa", magazine = "aab"
+      Output: true
+    ```
+- https://leetcode.com/problems/ransom-note/
+- [canConstruct.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/canConstruct.py) :
+  - Runtime: 86 ms, faster than 57.06% of Python3 online submissions for Ransom Note.
+  - Memory Usage: 14.2 MB, less than 20.43% of Python3 online submissions for Ransom Note.
+- algorithm : dictionay
+- complexity : O(N)
+- next challenges : Stickers to Spell Word
+
+# 158. Sort the Matrix Diagonally (#1329) - medium / python / 20M / 2022.08.28 / partial sort
+- medium
+- problem :
+  - A matrix diagonal is a diagonal line of cells starting from some cell in either the topmost row or leftmost column and going in the bottom-right direction until reaching the matrix's end. For example, the matrix diagonal starting from mat[2][0], where mat is a 6 x 3 matrix, includes cells mat[2][0], mat[3][1], and mat[4][2].
+  - Given an m x n matrix mat of integers, sort each matrix diagonal in ascending order and return the resulting matrix.
+  - Constraints : m == mat.length / n == mat[i].length / 1 <= m, n <= 100 / 1 <= mat[i][j] <= 100
+  - ```
+      Input: mat = [[3,3,1,1],[2,2,1,2],[1,1,1,2]]
+      Output: [[1,1,1,1],[1,2,2,2],[1,2,3,3]]
+
+      Input: mat = [[11,25,66,1,69,7],[23,55,17,45,15,52],[75,31,36,44,58,8],[22,27,33,25,68,4],[84,28,14,11,5,50]]
+      Output: [[5,17,4,1,52,7],[11,11,25,45,8,69],[14,23,25,44,58,15],[22,27,31,36,50,66],[84,28,75,33,55,68]]
+    ```
+- https://leetcode.com/problems/sort-the-matrix-diagonally/
+- [diagonalSort.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/diagonalSort.py) :
+  - Runtime: 84 ms, faster than 96.27% of Python3 online submissions for Sort the Matrix Diagonally.
+  - Memory Usage: 14.4 MB, less than 25.67% of Python3 online submissions for Sort the Matrix Diagonally.
+- algorithm : partial sort
+- complexity : NxM + (N+M)xMxlog(M)
+- next challenges : Unique Word Abbreviation / Rotating the Box / Minimum Cost Homecoming of a Robot in a Grid
 
 
 
@@ -3690,13 +3736,11 @@ class Solution:
 
 
 
-
-
-
-# 157. template (#) - medium / python / 1H / 2022.08.02 / (ing)
+# 159. template (#) - medium / python / 1H / 2022.08.02 / (ing)
 - medium
 - problem :
   - 
+  - Constraints : 
   - ```
 
     ```
@@ -3705,7 +3749,7 @@ class Solution:
   - 
 - algorithm :
 - complexity :
-
+- next challenges : 
 
 1.    Longest String Chain
 https://leetcode.com/problems/longest-string-chain/
