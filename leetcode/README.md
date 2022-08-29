@@ -191,6 +191,7 @@
 - [156. Mirror Reflection (#858) - medium / python / 2H / 2022.08.04](#156-mirror-reflection-858---medium--python--2h--20220804)
 - [157. Ransom Note (#383) - easy / python / 5M / 2022.08.25 / dictionay](#157-ransom-note-383---easy--python--5m--20220825--dictionay)
 - [158. Sort the Matrix Diagonally (#1329) - medium / python / 20M / 2022.08.28 / partial sort](#158-sort-the-matrix-diagonally-1329---medium--python--20m--20220828--partial-sort)
+- [159. Number of Islands (#200) - medium / python / 1H / 2022.08.29 / grouping](#159-number-of-islands-200---medium--python--1h--20220829--grouping)
 - [159. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#159-template----medium--python--1h--20220802--ing)
 
 --------------------
@@ -3660,7 +3661,7 @@ class Solution:
       Output: true
     ```
 - https://leetcode.com/problems/ransom-note/
-- [canConstruct.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/canConstruct.py) :
+- [canConstruct.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/canConstruct.py) : passed
   - Runtime: 86 ms, faster than 57.06% of Python3 online submissions for Ransom Note.
   - Memory Usage: 14.2 MB, less than 20.43% of Python3 online submissions for Ransom Note.
 - algorithm : dictionay
@@ -3681,14 +3682,43 @@ class Solution:
       Output: [[5,17,4,1,52,7],[11,11,25,45,8,69],[14,23,25,44,58,15],[22,27,31,36,50,66],[84,28,75,33,55,68]]
     ```
 - https://leetcode.com/problems/sort-the-matrix-diagonally/
-- [diagonalSort.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/diagonalSort.py) :
+- [diagonalSort.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/diagonalSort.py) : passed
   - Runtime: 84 ms, faster than 96.27% of Python3 online submissions for Sort the Matrix Diagonally.
   - Memory Usage: 14.4 MB, less than 25.67% of Python3 online submissions for Sort the Matrix Diagonally.
 - algorithm : partial sort
 - complexity : NxM + (N+M)xMxlog(M)
 - next challenges : Unique Word Abbreviation / Rotating the Box / Minimum Cost Homecoming of a Robot in a Grid
 
+# 159. Number of Islands (#200) - medium / python / 1H / 2022.08.29 / grouping
+- medium
+- problem :
+  - Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
+  - An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+  - Constraints : m == grid.length / n == grid[i].length / 1 <= m, n <= 300 / grid[i][j] is '0' or '1'.
+  - ```
+      Input: grid = [
+        ["1","1","1","1","0"],
+        ["1","1","0","1","0"],
+        ["1","1","0","0","0"],
+        ["0","0","0","0","0"]
+      ]
+      Output: 1
 
+      Input: grid = [
+        ["1","1","0","0","0"],
+        ["1","1","0","0","0"],
+        ["0","0","1","0","0"],
+        ["0","0","0","1","1"]
+      ]
+      Output: 3
+    ```
+- https://leetcode.com/problems/number-of-islands/
+- [numIslands.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/numIslands.py) : passed
+  - Runtime: 453 ms, faster than 60.39% of Python3 online submissions for Number of Islands.
+  - Memory Usage: 17.8 MB, less than 39.13% of Python3 online submissions for Number of Islands.
+- algorithm : grouping , parent
+- complexity : O(MxN)
+- next challenges : Surrounded Regions / Walls and Gates / Number of Islands II / Number of Connected Components in an Undirected Graph / Number of Distinct Islands / Max Area of Island / Count Sub Islands / Find All Groups of Farmland / Count Unreachable Pairs of Nodes in an Undirected Graph
 
 
 
