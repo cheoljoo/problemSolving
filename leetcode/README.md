@@ -193,7 +193,8 @@
 - [158. Sort the Matrix Diagonally (#1329) - medium / python / 20M / 2022.08.28 / partial sort](#158-sort-the-matrix-diagonally-1329---medium--python--20m--20220828--partial-sort)
 - [159. Number of Islands (#200) - medium / python / 1H / 2022.08.29 / grouping](#159-number-of-islands-200---medium--python--1h--20220829--grouping)
 - [160. Reordered Power of 2 (#869) - medium / python / 1H / 2022.08.30 / digitCount](#160-reordered-power-of-2-869---medium--python--1h--20220830--digitcount)
-- [161. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#161-template----medium--python--1h--20220802--ing)
+- [161. Rotate Image (#48) - medium / python / 1H / 2022.08.30](#161-rotate-image-48---medium--python--1h--20220830)
+- [162. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#162-template----medium--python--1h--20220802--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3745,6 +3746,27 @@ class Solution:
 - complexity : O(logN)
 - next challenges : Pairs of Songs With Total Durations Divisible by 60 / How Many Apples Can You Put into the Basket / Removing Minimum Number of Magic Beans
 
+# 161. Rotate Image (#48) - medium / python / 1H / 2022.08.30
+- medium
+- problem :
+  - You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+  - You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+  - Constraints : n == matrix.length == matrix[i].length / 1 <= n <= 20 / -1000 <= matrix[i][j] <= 1000
+  - ![](https://assets.leetcode.com/uploads/2020/08/28/mat1.jpg)
+  - ```
+      Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+      Output: [[7,4,1],[8,5,2],[9,6,3]]
+
+      Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+      Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+    ```
+- https://leetcode.com/problems/rotate-image/
+- [rotate.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/rotate.py) : passed
+  - Runtime: 43 ms, faster than 80.67% of Python3 online submissions for Rotate Image.
+  - Memory Usage: 13.8 MB, less than 98.34% of Python3 online submissions for Rotate Image.
+- algorithm : ![](https://github.com/cheoljoo/problemSolving/blob/master/images/rotate_image.jpg)
+- complexity : O(MxN)
+- next challenges : Determine Whether Matrix Can Be Obtained By Rotation
 
 
 
@@ -3788,8 +3810,7 @@ class Solution:
 
 
 
-
-# 161. template (#) - medium / python / 1H / 2022.08.02 / (ing)
+# 162. template (#) - medium / python / 1H / 2022.08.02 / (ing)
 - medium
 - problem :
   - 
