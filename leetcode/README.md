@@ -192,7 +192,8 @@
 - [157. Ransom Note (#383) - easy / python / 5M / 2022.08.25 / dictionay](#157-ransom-note-383---easy--python--5m--20220825--dictionay)
 - [158. Sort the Matrix Diagonally (#1329) - medium / python / 20M / 2022.08.28 / partial sort](#158-sort-the-matrix-diagonally-1329---medium--python--20m--20220828--partial-sort)
 - [159. Number of Islands (#200) - medium / python / 1H / 2022.08.29 / grouping](#159-number-of-islands-200---medium--python--1h--20220829--grouping)
-- [159. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#159-template----medium--python--1h--20220802--ing)
+- [160. Reordered Power of 2 (#869) - medium / python / 1H / 2022.08.30 / digitCount](#160-reordered-power-of-2-869---medium--python--1h--20220830--digitcount)
+- [161. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#161-template----medium--python--1h--20220802--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3720,6 +3721,29 @@ class Solution:
 - complexity : O(MxN)
 - next challenges : Surrounded Regions / Walls and Gates / Number of Islands II / Number of Connected Components in an Undirected Graph / Number of Distinct Islands / Max Area of Island / Count Sub Islands / Find All Groups of Farmland / Count Unreachable Pairs of Nodes in an Undirected Graph
 
+# 160. Reordered Power of 2 (#869) - medium / python / 1H / 2022.08.30 / digitCount
+- medium
+- problem :
+  - You are given an integer n. We reorder the digits in any order (including the original order) such that the leading digit is not zero.
+  - Return true if and only if we can do this so that the resulting number is a power of two.
+  - Constraints : 1 <= n <= 10^9
+  - ```
+      Input: n = 1
+      Output: true
+
+      Input: n = 10
+      Output: false
+
+      Input: n = 1420
+      Output: true
+    ```
+- https://leetcode.com/problems/reordered-power-of-2/
+- [reorderedPowerOf2.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/reorderedPowerOf2.py) :
+  - Runtime: 58 ms, faster than 52.80% of Python3 online submissions for Reordered Power of 2.
+  - Memory Usage: 13.9 MB, less than 60.23% of Python3 online submissions for Reordered Power of 2.
+- algorithm : digitCount
+- complexity : O(logN)
+- next challenges : Pairs of Songs With Total Durations Divisible by 60 / How Many Apples Can You Put into the Basket / Removing Minimum Number of Magic Beans
 
 
 
@@ -3765,8 +3789,7 @@ class Solution:
 
 
 
-
-# 159. template (#) - medium / python / 1H / 2022.08.02 / (ing)
+# 161. template (#) - medium / python / 1H / 2022.08.02 / (ing)
 - medium
 - problem :
   - 
