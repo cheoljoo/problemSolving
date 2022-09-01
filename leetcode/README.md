@@ -194,7 +194,9 @@
 - [159. Number of Islands (#200) - medium / python / 1H / 2022.08.29 / grouping](#159-number-of-islands-200---medium--python--1h--20220829--grouping)
 - [160. Reordered Power of 2 (#869) - medium / python / 1H / 2022.08.30 / digitCount](#160-reordered-power-of-2-869---medium--python--1h--20220830--digitcount)
 - [161. Rotate Image (#48) - medium / python / 1H / 2022.08.30](#161-rotate-image-48---medium--python--1h--20220830)
-- [162. template (#) - medium / python / 1H / 2022.08.02 / (ing)](#162-template----medium--python--1h--20220802--ing)
+- [162. Count Good Nodes in Binary Tree (#1448) - medium / python / 30M / 2022.09.01 / tree traverse](#162-count-good-nodes-in-binary-tree-1448---medium--python--30m--20220901--tree-traverse)
+- [163. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#163-template----medium--python--1h--20220902--ing)
+- [164. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#164-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3768,6 +3770,55 @@ class Solution:
 - complexity : O(MxN)
 - next challenges : Determine Whether Matrix Can Be Obtained By Rotation
 
+# 162. Count Good Nodes in Binary Tree (#1448) - medium / python / 30M / 2022.09.01 / tree traverse
+- medium
+- problem :
+  - Given a binary tree root, a node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X.
+  - Return the number of good nodes in the binary tree.
+  - Constraints : The number of nodes in the binary tree is in the range [1, 10^5]. / Each node's value is between [-10^4, 10^4].
+  - ```
+      Example 1:
+      Input: root = [3,1,4,3,null,1,5]
+      Output: 4
+      Explanation: Nodes in blue are good.
+      Root Node (3) is always a good node.
+      Node 4 -> (3,4) is the maximum value in the path starting from the root.
+      Node 5 -> (3,4,5) is the maximum value in the path
+      Node 3 -> (3,1,3) is the maximum value in the path.
+
+      Example 2:
+      Input: root = [3,3,null,4,2]
+      Output: 3
+      Explanation: Node 2 -> (3, 3, 2) is not good, because "3" is higher than it.
+
+      Example 3:
+      Input: root = [1]
+      Output: 1
+      Explanation: Root is considered as good.
+    ```
+- https://leetcode.com/problems/count-good-nodes-in-binary-tree/
+- [goodNodes.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/goodNodes.py) : passed
+  - Runtime: 771 ms, faster than 5.03% of Python3 online submissions for Count Good Nodes in Binary Tree.
+  - Memory Usage: 33.3 MB, less than 7.60% of Python3 online submissions for Count Good Nodes in Binary Tree.
+- algorithm : tree traverse
+  - best : recursive will have better performance and less memory.  https://leetcode.com/problems/count-good-nodes-in-binary-tree/discuss/2511520/C%2B%2B-or-PYTHON-oror-EXPLAINED-oror
+- complexity : O(N)
+- next challenges : Binary Tree Inorder Traversal / Delete Nodes And Return Forest / Map of Highest Peak
+
+# 163. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+- medium
+- problem :
+  - 
+  - Constraints : 
+  - ```
+
+    ```
+- 
+- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
+  - 
+- algorithm :
+- complexity :
+- next challenges : 
 
 
 
@@ -3809,8 +3860,7 @@ class Solution:
 
 
 
-
-# 162. template (#) - medium / python / 1H / 2022.08.02 / (ing)
+# 164. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
