@@ -195,8 +195,13 @@
 - [160. Reordered Power of 2 (#869) - medium / python / 1H / 2022.08.30 / digitCount](#160-reordered-power-of-2-869---medium--python--1h--20220830--digitcount)
 - [161. Rotate Image (#48) - medium / python / 1H / 2022.08.30](#161-rotate-image-48---medium--python--1h--20220830)
 - [162. Count Good Nodes in Binary Tree (#1448) - medium / python / 30M / 2022.09.01 / tree traverse](#162-count-good-nodes-in-binary-tree-1448---medium--python--30m--20220901--tree-traverse)
-- [163. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#163-template----medium--python--1h--20220902--ing)
+- [163. Average of Levels in Binary Tree (#637) - easy / python / 10M / 2022.09.02 / tree traverse](#163-average-of-levels-in-binary-tree-637---easy--python--10m--20220902--tree-traverse)
 - [164. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#164-template----medium--python--1h--20220902--ing)
+- [165. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#165-template----medium--python--1h--20220902--ing)
+- [166. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#166-template----medium--python--1h--20220902--ing)
+- [167. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#167-template----medium--python--1h--20220902--ing)
+- [168. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#168-template----medium--python--1h--20220902--ing)
+- [169. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#169-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3805,7 +3810,37 @@ class Solution:
 - complexity : O(N)
 - next challenges : Binary Tree Inorder Traversal / Delete Nodes And Return Forest / Map of Highest Peak
 
-# 163. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+# 163. Average of Levels in Binary Tree (#637) - easy / python / 10M / 2022.09.02 / tree traverse
+- easy
+- problem :
+  - Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. Answers within 10-5 of the actual answer will be accepted.
+  - Constraints : The number of nodes in the tree is in the range [1, 10^4]. / -2^31 <= Node.val <= 23^1 - 1
+  - ```
+      Example 1:
+      Input: root = [3,9,20,null,null,15,7]
+      Output: [3.00000,14.50000,11.00000]
+      Explanation: The average value of nodes on level 0 is 3, on level 1 is 14.5, and on level 2 is 11.
+      Hence return [3, 14.5, 11].
+
+      Example 2:
+      Input: root = [3,9,20,15,7]
+      Output: [3.00000,14.50000,11.00000]
+    ```
+- https://leetcode.com/problems/average-of-levels-in-binary-tree/
+- [averageOfLevels.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/averageOfLevels.py) : passed
+  - Runtime: 83 ms, faster than 44.96% of Python3 online submissions for Average of Levels in Binary Tree.
+  - Memory Usage: 16.5 MB, less than 87.46% of Python3 online submissions for Average of Levels in Binary Tree.
+- algorithm : tree traverse
+- complexity : O(N)
+- next challenges : Binary Tree Level Order Traversal / Binary Tree Level Order Traversal II
+
+
+
+
+
+
+
+# 164. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
@@ -3820,47 +3855,67 @@ class Solution:
 - complexity :
 - next challenges : 
 
+# 165. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+- medium
+- problem :
+  - 
+  - Constraints : 
+  - ```
 
+    ```
+- 
+- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
+  - 
+- algorithm :
+- complexity :
+- next challenges : 
 
+# 166. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+- medium
+- problem :
+  - 
+  - Constraints : 
+  - ```
 
+    ```
+- 
+- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
+  - 
+- algorithm :
+- complexity :
+- next challenges : 
 
+# 167. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+- medium
+- problem :
+  - 
+  - Constraints : 
+  - ```
 
+    ```
+- 
+- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
+  - 
+- algorithm :
+- complexity :
+- next challenges : 
 
+# 168. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+- medium
+- problem :
+  - 
+  - Constraints : 
+  - ```
 
+    ```
+- 
+- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
+  - 
+- algorithm :
+- complexity :
+- next challenges : 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 164. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+# 169. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
