@@ -196,12 +196,8 @@
 - [161. Rotate Image (#48) - medium / python / 1H / 2022.08.30](#161-rotate-image-48---medium--python--1h--20220830)
 - [162. Count Good Nodes in Binary Tree (#1448) - medium / python / 30M / 2022.09.01 / tree traverse](#162-count-good-nodes-in-binary-tree-1448---medium--python--30m--20220901--tree-traverse)
 - [163. Average of Levels in Binary Tree (#637) - easy / python / 10M / 2022.09.02 / tree traverse](#163-average-of-levels-in-binary-tree-637---easy--python--10m--20220902--tree-traverse)
-- [164. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#164-template----medium--python--1h--20220902--ing)
+- [164. Numbers With Same Consecutive Differences (#967) - medium / python / 30M / 2022.09.03](#164-numbers-with-same-consecutive-differences-967---medium--python--30m--20220903)
 - [165. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#165-template----medium--python--1h--20220902--ing)
-- [166. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#166-template----medium--python--1h--20220902--ing)
-- [167. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#167-template----medium--python--1h--20220902--ing)
-- [168. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#168-template----medium--python--1h--20220902--ing)
-- [169. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#169-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3834,88 +3830,31 @@ class Solution:
 - complexity : O(N)
 - next challenges : Binary Tree Level Order Traversal / Binary Tree Level Order Traversal II
 
-
-
-
-
-
-
-# 164. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+# 164. Numbers With Same Consecutive Differences (#967) - medium / python / 30M / 2022.09.03
 - medium
 - problem :
-  - 
-  - Constraints : 
+  - Return all non-negative integers of length n such that the absolute difference between every two consecutive digits is k.
+  - Note that every number in the answer must not have leading zeros. For example, 01 has one leading zero and is invalid.
+  - You may return the answer in any order.
+  - Constraints : 2 <= n <= 9 / 0 <= k <= 9
   - ```
+      Example 1:
+      Input: n = 3, k = 7
+      Output: [181,292,707,818,929]
+      Explanation: Note that 070 is not a valid number, because it has leading zeroes.
 
+      Example 2:
+      Input: n = 2, k = 1
+      Output: [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]
     ```
-- 
-- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
-  - 
-- algorithm :
-- complexity :
-- next challenges : 
+- https://leetcode.com/problems/numbers-with-same-consecutive-differences/
+- [numsSameConsecDiff.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/numsSameConsecDiff.py) : passed
+  - Runtime: 62 ms, faster than 60.20% of Python3 online submissions for Numbers With Same Consecutive Differences.
+  - Memory Usage: 14.1 MB, less than 93.88% of Python3 online submissions for Numbers With Same Consecutive Differences.
+- complexity : O(9x2xN)
+
 
 # 165. template (#) - medium / python / 1H / 2022.09.02 / (ing)
-- medium
-- problem :
-  - 
-  - Constraints : 
-  - ```
-
-    ```
-- 
-- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
-  - 
-- algorithm :
-- complexity :
-- next challenges : 
-
-# 166. template (#) - medium / python / 1H / 2022.09.02 / (ing)
-- medium
-- problem :
-  - 
-  - Constraints : 
-  - ```
-
-    ```
-- 
-- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
-  - 
-- algorithm :
-- complexity :
-- next challenges : 
-
-# 167. template (#) - medium / python / 1H / 2022.09.02 / (ing)
-- medium
-- problem :
-  - 
-  - Constraints : 
-  - ```
-
-    ```
-- 
-- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
-  - 
-- algorithm :
-- complexity :
-- next challenges : 
-
-# 168. template (#) - medium / python / 1H / 2022.09.02 / (ing)
-- medium
-- problem :
-  - 
-  - Constraints : 
-  - ```
-
-    ```
-- 
-- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
-  - 
-- algorithm :
-- complexity :
-- next challenges : 
-
-# 169. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
