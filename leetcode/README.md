@@ -197,7 +197,8 @@
 - [162. Count Good Nodes in Binary Tree (#1448) - medium / python / 30M / 2022.09.01 / tree traverse](#162-count-good-nodes-in-binary-tree-1448---medium--python--30m--20220901--tree-traverse)
 - [163. Average of Levels in Binary Tree (#637) - easy / python / 10M / 2022.09.02 / tree traverse](#163-average-of-levels-in-binary-tree-637---easy--python--10m--20220902--tree-traverse)
 - [164. Numbers With Same Consecutive Differences (#967) - medium / python / 30M / 2022.09.03](#164-numbers-with-same-consecutive-differences-967---medium--python--30m--20220903)
-- [165. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#165-template----medium--python--1h--20220902--ing)
+- [165. Vertical Order Traversal of a Binary Tree (#987) - hard / python / 1H / 2022.09.04 / sort / tree traverse](#165-vertical-order-traversal-of-a-binary-tree-987---hard--python--1h--20220904--sort--tree-traverse)
+- [166. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#166-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -232,6 +233,43 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     >>> students = [bill, patty, bart]
     >>> sorted(students, key=lambda x: getattr(x, 'grade'), reverse=True)
     [StudentFinal(name='Patty', grade=94), StudentFinal(name='Bill', grade=90), StudentFinal(name='Bart', grade=89)]
+
+    list.sort(key=lambda r:r[0])
+
+    # https://linuxhint.com/sort-lambda-python/
+    # Example-1: Sort a list of numerical string data
+    # Declare a list of string with number values
+    n_list = ['11', '50', '5', '1', '37', '19']
+    # Sort the list using lambda and sorted function
+    sorted_list = sorted(n_list, key=lambda x: int(x[0:]))
+
+    # Example-2: Sort a list of tuples
+    # Declare a list of tuples
+    tuple_list = [("HTML", 15, 'M01'), ("JavaScript", 10, 'M03'), ("Bootstrap", 5, 'M02')]
+    # Sort the list based on the first item of the tuple
+    sorted_list1 = sorted(tuple_list, key=lambda x: x[0])
+    # Print the first sorted list
+    print("The sorted list based on the first item:\n", sorted_list1)
+    # Sort the list based on the second item of the tuple
+    sorted_list2 = sorted(tuple_list, key=lambda x: x[1])
+    # Print the second sorted list
+    print("The sorted list based on the second item:\n", sorted_list2)
+    # Sort the list based on the third item of the tuple
+    sorted_list3 = sorted(tuple_list, key=lambda x: x[2])
+
+    # Example-4: Sort a list of dictionaries
+    # Declare the list of dictionary
+    dic_list = [{"code": "CSE-401", "name": "Multimedia", "Credit": 2.0},
+            {"code": "CSE-101", "name": "Computer Fundamental", "Credit": 1.5},
+            {"code": "CSE-305", "name": "Unix Programming", "Credit": 3.0}]
+    # Print the sorted dictionary based on code
+    print("Sorting based on the code:\n", sorted(dic_list, key=lambda i: i['code']))
+    # Print the sorted dictionary based on name
+    print("Sorting based on the name:\n", sorted(dic_list, key=lambda i: (i['name'])))
+    # Print the sorted dictionary based on code and name
+    print("Sorting based on the code and name:\n", sorted(dic_list, key=lambda i: (i['code'], i['name'])))
+    # Print the sorted dictionary in descending based on name
+    print("Sorting in descending order based on the name:\n", sorted(dic_list, key=lambda i: i['name'], reverse=True))
 ```
 - dictionary sort
   - ```sorted_dict = sorted(my_dict.items(), key = lambda item: item[1])```
@@ -3853,8 +3891,53 @@ class Solution:
   - Memory Usage: 14.1 MB, less than 93.88% of Python3 online submissions for Numbers With Same Consecutive Differences.
 - complexity : O(9x2xN)
 
+# 165. Vertical Order Traversal of a Binary Tree (#987) - hard / python / 1H / 2022.09.04 / sort / tree traverse
+- hard
+- problem :
+  - Given the root of a binary tree, calculate the vertical order traversal of the binary tree.
+  - For each node at position (row, col), its left and right children will be at positions (row + 1, col - 1) and (row + 1, col + 1) respectively. The root of the tree is at (0, 0).
+  - The vertical order traversal of a binary tree is a list of top-to-bottom orderings for each column index starting from the leftmost column and ending on the rightmost column. There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
+  - Return the vertical order traversal of the binary tree.
+  - Constraints : The number of nodes in the tree is in the range [1, 1000]. / 0 <= Node.val <= 1000
+  - ![](https://assets.leetcode.com/uploads/2021/01/29/vtree1.jpg)
+  - ```
+      Example 1:
+      Input: root = [3,9,20,null,null,15,7]
+      Output: [[9],[3,15],[20],[7]]
+      Explanation:
+      Column -1: Only node 9 is in this column.
+      Column 0: Nodes 3 and 15 are in this column in that order from top to bottom.
+      Column 1: Only node 20 is in this column.
+      Column 2: Only node 7 is in this column.
 
-# 165. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+      Example 2:
+      Input: root = [1,2,3,4,5,6,7]
+      Output: [[4],[2],[1,5,6],[3],[7]]
+      Explanation:
+      Column -2: Only node 4 is in this column.
+      Column -1: Only node 2 is in this column.
+      Column 0: Nodes 1, 5, and 6 are in this column.
+                1 is at the top, so it comes first.
+                5 and 6 are at the same position (2, 0), so we order them by their value, 5 before 6.
+      Column 1: Only node 3 is in this column.
+      Column 2: Only node 7 is in this column.
+
+      Example 3:
+      Input: root = [1,2,3,4,6,5,7]
+      Output: [[4],[2],[1,5,6],[3],[7]]
+      Explanation:
+      This case is the exact same as example 2, but with nodes 5 and 6 swapped.
+      Note that the solution remains the same since 5 and 6 are in the same location and should be ordered by their values.
+    ```
+- 
+- [verticalTraversal.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/verticalTraversal.py) : passed
+  - Runtime: 57 ms, faster than 41.65% of Python3 online submissions for Vertical Order Traversal of a Binary Tree.
+  - Memory Usage: 14.3 MB, less than 28.65% of Python3 online submissions for Vertical Order Traversal of a Binary Tree.
+- algorithm : sort / tree traverse 
+- complexity : O(N + NlogN)
+- next challenges : Contains Duplicate II / Buddy Strings / Tuple with Same Product
+
+# 166. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
