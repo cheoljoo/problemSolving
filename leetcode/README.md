@@ -3929,7 +3929,7 @@ class Solution:
       This case is the exact same as example 2, but with nodes 5 and 6 swapped.
       Note that the solution remains the same since 5 and 6 are in the same location and should be ordered by their values.
     ```
-- 
+- https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
 - [verticalTraversal.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/verticalTraversal.py) : passed
   - Runtime: 57 ms, faster than 41.65% of Python3 online submissions for Vertical Order Traversal of a Binary Tree.
   - Memory Usage: 14.3 MB, less than 28.65% of Python3 online submissions for Vertical Order Traversal of a Binary Tree.
