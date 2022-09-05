@@ -198,6 +198,7 @@
 - [163. Average of Levels in Binary Tree (#637) - easy / python / 10M / 2022.09.02 / tree traverse](#163-average-of-levels-in-binary-tree-637---easy--python--10m--20220902--tree-traverse)
 - [164. Numbers With Same Consecutive Differences (#967) - medium / python / 30M / 2022.09.03](#164-numbers-with-same-consecutive-differences-967---medium--python--30m--20220903)
 - [165. Vertical Order Traversal of a Binary Tree (#987) - hard / python / 1H / 2022.09.04 / sort / tree traverse](#165-vertical-order-traversal-of-a-binary-tree-987---hard--python--1h--20220904--sort--tree-traverse)
+- [166. N-ary Tree Level Order Traversal (#429) - medium / python / 1H / 2022.09.05 / tree trverse](#166-n-ary-tree-level-order-traversal-429---medium--python--1h--20220905--tree-trverse)
 - [166. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#166-template----medium--python--1h--20220902--ing)
 
 --------------------
@@ -3937,6 +3938,30 @@ class Solution:
 - complexity : O(N + NlogN)
 - next challenges : Contains Duplicate II / Buddy Strings / Tuple with Same Product
 
+# 166. N-ary Tree Level Order Traversal (#429) - medium / python / 1H / 2022.09.05 / tree trverse
+- medium
+- problem :
+  - Given an n-ary tree, return the level order traversal of its nodes' values.
+  - Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples).
+  - Constraints : The height of the n-ary tree is less than or equal to 1000 / The total number of nodes is between [0, 10^4]
+  - ![](https://assets.leetcode.com/uploads/2019/11/08/sample_4_964.png)
+  - ```
+      Example 1:
+      Input: root = [1,null,3,2,4,null,5,6]
+      Output: [[1],[3,2,4],[5,6]]
+
+      Example 2:
+      Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+      Output: [[1],[2,3,4,5],[6,7,8,9,10],[11,12,13],[14]]
+    ```
+- https://leetcode.com/problems/n-ary-tree-level-order-traversal/
+- [levelOrder.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/levelOrder.py) : passed
+  - Runtime: 136 ms, faster than 5.17% of Python3 online submissions for N-ary Tree Level Order Traversal.
+  - Memory Usage: 16.1 MB, less than 50.08% of Python3 online submissions for N-ary Tree Level Order Traversal.
+- algorithm : tree trverse
+- complexity : O(N)
+- next challenges : Binary Tree Level Order Traversal / N-ary Tree Preorder Traversal / N-ary Tree Postorder Traversal / The Time When the Network Becomes Idle
+
 # 166. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
@@ -3951,7 +3976,6 @@ class Solution:
 - algorithm :
 - complexity :
 - next challenges : 
-
 1.    Longest String Chain
 https://leetcode.com/problems/longest-string-chain/
 - algorithm :
