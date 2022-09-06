@@ -199,7 +199,8 @@
 - [164. Numbers With Same Consecutive Differences (#967) - medium / python / 30M / 2022.09.03](#164-numbers-with-same-consecutive-differences-967---medium--python--30m--20220903)
 - [165. Vertical Order Traversal of a Binary Tree (#987) - hard / python / 1H / 2022.09.04 / sort / tree traverse](#165-vertical-order-traversal-of-a-binary-tree-987---hard--python--1h--20220904--sort--tree-traverse)
 - [166. N-ary Tree Level Order Traversal (#429) - medium / python / 1H / 2022.09.05 / tree trverse](#166-n-ary-tree-level-order-traversal-429---medium--python--1h--20220905--tree-trverse)
-- [166. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#166-template----medium--python--1h--20220902--ing)
+- [167. Binary Tree Pruning (#814) - medium / python / 20M / 2022.09.06 / tree traverse / recusiion](#167-binary-tree-pruning-814---medium--python--20m--20220906--tree-traverse--recusiion)
+- [168. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#168-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3962,7 +3963,43 @@ class Solution:
 - complexity : O(N)
 - next challenges : Binary Tree Level Order Traversal / N-ary Tree Preorder Traversal / N-ary Tree Postorder Traversal / The Time When the Network Becomes Idle
 
-# 166. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+# 167. Binary Tree Pruning (#814) - medium / python / 20M / 2022.09.06 / tree traverse / recusiion
+- medium
+- problem :
+  - Given the root of a binary tree, return the same tree where every subtree (of the given tree) not containing a 1 has been removed.
+  - A subtree of a node node is node plus every node that is a descendant of node.
+  - Constraints : The number of nodes in the tree is in the range [1, 200]. / Node.val is either 0 or 1.
+  - ![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/06/1028_1.png)
+  - ```
+      Input: root = [1,null,0,0,1]
+      Output: [1,null,0,null,1]
+      Explanation: 
+      Only the red nodes satisfy the property "every subtree not containing a 1".
+      The diagram on the right represents the answer.
+
+      Input: root = [1,0,1,0,0,0,1]
+      Output: [1,null,1,null,1]
+    ```
+- https://leetcode.com/problems/binary-tree-pruning/
+- [pruneTree.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/pruneTree.py) : passed
+  - Runtime: 37 ms, faster than 84.08% of Python3 online submissions for Binary Tree Pruning.
+  - Memory Usage: 13.7 MB, less than 97.77% of Python3 online submissions for Binary Tree Pruning.
+- algorithm : tree traverse / recusiion
+- complexity : O(N)
+- testcases
+  - ```
+      [0]
+      [1]
+      [0,0,0]
+      [1,null,0,0,1]
+      [1,1,0,0,1,0,1,1,0,0,0,1,0,0,0]
+      [1,0,1,0,0,0,1]
+      [1,1,0,1,1,0,1,0]
+    ```
+- next challenges : Populating Next Right Pointers in Each Node / Longest Univalue Path
+
+
+# 168. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
