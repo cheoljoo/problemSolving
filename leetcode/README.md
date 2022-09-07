@@ -200,7 +200,8 @@
 - [165. Vertical Order Traversal of a Binary Tree (#987) - hard / python / 1H / 2022.09.04 / sort / tree traverse](#165-vertical-order-traversal-of-a-binary-tree-987---hard--python--1h--20220904--sort--tree-traverse)
 - [166. N-ary Tree Level Order Traversal (#429) - medium / python / 1H / 2022.09.05 / tree trverse](#166-n-ary-tree-level-order-traversal-429---medium--python--1h--20220905--tree-trverse)
 - [167. Binary Tree Pruning (#814) - medium / python / 20M / 2022.09.06 / tree traverse / recusiion](#167-binary-tree-pruning-814---medium--python--20m--20220906--tree-traverse--recusiion)
-- [168. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#168-template----medium--python--1h--20220902--ing)
+- [168. Integer to Roman (#12) - medium / python / 10M / 2022.09.07 / table](#168-integer-to-roman-12---medium--python--10m--20220907--table)
+- [169. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#169-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -3998,8 +3999,49 @@ class Solution:
     ```
 - next challenges : Populating Next Right Pointers in Each Node / Longest Univalue Path
 
+# 168. Integer to Roman (#12) - medium / python / 10M / 2022.09.07 / table
+- medium
+- problem :
+  - Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+  - ```
+      Symbol       Value
+      I             1
+      V             5
+      X             10
+      L             50
+      C             100
+      D             500
+      M             1000
+    ```
+  - For example, 2 is written as II in Roman numeral, just two one's added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+  - Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+    - I can be placed before V (5) and X (10) to make 4 and 9. 
+    - X can be placed before L (50) and C (100) to make 40 and 90. 
+    - C can be placed before D (500) and M (1000) to make 400 and 900.
+  - Given an integer, convert it to a roman numeral.
+  - Constraints : 1 <= num <= 3999
+  - ```
+      Input: num = 3
+      Output: "III"
+      Explanation: 3 is represented as 3 ones.
 
-# 168. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+      Input: num = 58
+      Output: "LVIII"
+      Explanation: L = 50, V = 5, III = 3.
+
+      Input: num = 1994
+      Output: "MCMXCIV"
+      Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+    ```
+- https://leetcode.com/problems/integer-to-roman/
+- [intToRoman.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/intToRoman.py) : passed
+  - Runtime: 100 ms, faster than 21.43% of Python3 online submissions for Integer to Roman.
+  - Memory Usage: 14 MB, less than 6.89% of Python3 online submissions for Integer to Roman.
+- algorithm : table
+- complexity : O(N)
+- next challenges : Integer to English Words
+
+# 169. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
