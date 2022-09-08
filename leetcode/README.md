@@ -201,7 +201,8 @@
 - [166. N-ary Tree Level Order Traversal (#429) - medium / python / 1H / 2022.09.05 / tree trverse](#166-n-ary-tree-level-order-traversal-429---medium--python--1h--20220905--tree-trverse)
 - [167. Binary Tree Pruning (#814) - medium / python / 20M / 2022.09.06 / tree traverse / recusiion](#167-binary-tree-pruning-814---medium--python--20m--20220906--tree-traverse--recusiion)
 - [168. Integer to Roman (#12) - medium / python / 10M / 2022.09.07 / table](#168-integer-to-roman-12---medium--python--10m--20220907--table)
-- [169. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#169-template----medium--python--1h--20220902--ing)
+- [169. Binary Tree Inorder Traversal (#94) - medium / python / 1H / 2022.09.02 / inorder traverse / tree traverse](#169-binary-tree-inorder-traversal-94---medium--python--1h--20220902--inorder-traverse--tree-traverse)
+- [170. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#170-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -4041,7 +4042,30 @@ class Solution:
 - complexity : O(N)
 - next challenges : Integer to English Words
 
-# 169. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+# 169. Binary Tree Inorder Traversal (#94) - medium / python / 1H / 2022.09.02 / inorder traverse / tree traverse
+- medium
+- problem :
+  - Given the root of a binary tree, return the inorder traversal of its nodes' values.
+  - Constraints : The number of nodes in the tree is in the range [0, 100]. / -100 <= Node.val <= 100
+  - ```
+      Input: root = [1,null,2,3]
+      Output: [1,3,2]
+
+      Input: root = []
+      Output: []
+
+      Input: root = [1]
+      Output: [1]
+    ```
+- https://leetcode.com/problems/binary-tree-inorder-traversal/
+- [inorderTraversal.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/inorderTraversal.py) : passed
+  - Runtime: 33 ms, faster than 90.84% of Python3 online submissions for Binary Tree Inorder Traversal.
+  - Memory Usage: 14 MB, less than 13.48% of Python3 online submissions for Binary Tree Inorder Traversal.
+- algorithm : inorder traverse  (preorder , inorder , postorder traverse)
+- complexity : O(N)
+- next challenges : Validate Binary Search Tree / Binary Tree Preorder Traversal / Binary Tree Postorder Traversal / Closest Binary Search Tree Value II / Inorder Successor in BST / Convert Binary Search Tree to Sorted Doubly Linked List / Minimum Distance Between BST Nodes 
+
+# 170. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
