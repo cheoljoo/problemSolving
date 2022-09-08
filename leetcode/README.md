@@ -201,7 +201,7 @@
 - [166. N-ary Tree Level Order Traversal (#429) - medium / python / 1H / 2022.09.05 / tree trverse](#166-n-ary-tree-level-order-traversal-429---medium--python--1h--20220905--tree-trverse)
 - [167. Binary Tree Pruning (#814) - medium / python / 20M / 2022.09.06 / tree traverse / recusiion](#167-binary-tree-pruning-814---medium--python--20m--20220906--tree-traverse--recusiion)
 - [168. Integer to Roman (#12) - medium / python / 10M / 2022.09.07 / table](#168-integer-to-roman-12---medium--python--10m--20220907--table)
-- [169. Binary Tree Inorder Traversal (#94) - medium / python / 1H / 2022.09.02 / inorder traverse / tree traverse](#169-binary-tree-inorder-traversal-94---medium--python--1h--20220902--inorder-traverse--tree-traverse)
+- [169. Binary Tree Inorder Traversal (#94) - medium / python / 10M / 2022.09.02 / inorder traverse / tree traverse](#169-binary-tree-inorder-traversal-94---medium--python--10m--20220902--inorder-traverse--tree-traverse)
 - [170. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#170-template----medium--python--1h--20220902--ing)
 
 --------------------
@@ -4042,7 +4042,7 @@ class Solution:
 - complexity : O(N)
 - next challenges : Integer to English Words
 
-# 169. Binary Tree Inorder Traversal (#94) - medium / python / 1H / 2022.09.02 / inorder traverse / tree traverse
+# 169. Binary Tree Inorder Traversal (#94) - medium / python / 10M / 2022.09.02 / inorder traverse / tree traverse
 - medium
 - problem :
   - Given the root of a binary tree, return the inorder traversal of its nodes' values.
