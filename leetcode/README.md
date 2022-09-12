@@ -202,7 +202,8 @@
 - [167. Binary Tree Pruning (#814) - medium / python / 20M / 2022.09.06 / tree traverse / recusiion](#167-binary-tree-pruning-814---medium--python--20m--20220906--tree-traverse--recusiion)
 - [168. Integer to Roman (#12) - medium / python / 10M / 2022.09.07 / table](#168-integer-to-roman-12---medium--python--10m--20220907--table)
 - [169. Binary Tree Inorder Traversal (#94) - medium / python / 10M / 2022.09.02 / inorder traverse / tree traverse](#169-binary-tree-inorder-traversal-94---medium--python--10m--20220902--inorder-traverse--tree-traverse)
-- [170. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#170-template----medium--python--1h--20220902--ing)
+- [170. Bag of Tokens (#948) - medium / python / 30M / 2022.09.12 / sort](#170-bag-of-tokens-948---medium--python--30m--20220912--sort)
+- [171. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#171-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -4065,7 +4066,47 @@ class Solution:
 - complexity : O(N)
 - next challenges : Validate Binary Search Tree / Binary Tree Preorder Traversal / Binary Tree Postorder Traversal / Closest Binary Search Tree Value II / Inorder Successor in BST / Convert Binary Search Tree to Sorted Doubly Linked List / Minimum Distance Between BST Nodes 
 
-# 170. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+# 170. Bag of Tokens (#948) - medium / python / 30M / 2022.09.12 / sort
+- medium
+- problem :
+  - You have an initial power of power, an initial score of 0, and a bag of tokens where tokens[i] is the value of the ith token (0-indexed).
+  - Your goal is to maximize your total score by potentially playing each token in one of two ways:
+    - If your current power is at least tokens[i], you may play the ith token face up, losing tokens[i] power and gaining 1 score.
+    - If your current score is at least 1, you may play the ith token face down, gaining tokens[i] power and losing 1 score.
+  - Each token may be played at most once and in any order. You do not have to play all the tokens.
+  - Return the largest possible score you can achieve after playing any number of tokens.
+  - Constraints : 0 <= tokens.length <= 1000 / 0 <= tokens[i], power < 10^4
+  - ```
+      Example 1:
+      Input: tokens = [100], power = 50
+      Output: 0
+      Explanation: Playing the only token in the bag is impossible because you either have too little power or too little score.
+
+      Example 2:
+      Input: tokens = [100,200], power = 150
+      Output: 1
+      Explanation: Play the 0th token (100) face up, your power becomes 50 and score becomes 1.
+      There is no need to play the 1st token since you cannot play it face up to add to your score.
+
+      Example 3:
+      Input: tokens = [100,200,300,400], power = 200
+      Output: 2
+      Explanation: Play the tokens in this order to get a score of 2:
+      1. Play the 0th token (100) face up, your power becomes 100 and score becomes 1.
+      2. Play the 3rd token (400) face down, your power becomes 500 and score becomes 0.
+      3. Play the 1st token (200) face up, your power becomes 300 and score becomes 1.
+      4. Play the 2nd token (300) face up, your power becomes 0 and score becomes 2.
+    ```
+- https://leetcode.com/problems/bag-of-tokens/
+- [bagOfTokensScore.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/bagOfTokensScore.py) : passed
+  - Runtime: 117 ms, faster than 15.57% of Python3 online submissions for Bag of Tokens.
+  - Memory Usage: 14 MB, less than 39.62% of Python3 online submissions for Bag of Tokens.
+- algorithm : sort
+- complexity : O(N)
+- next challenges : Reorder List / Global and Local Inversions / Rabbits in Forest
+
+
+# 171. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
