@@ -204,7 +204,8 @@
 - [169. Binary Tree Inorder Traversal (#94) - medium / python / 10M / 2022.09.02 / inorder traverse / tree traverse](#169-binary-tree-inorder-traversal-94---medium--python--10m--20220902--inorder-traverse--tree-traverse)
 - [170. Bag of Tokens (#948) - medium / python / 30M / 2022.09.12 / sort](#170-bag-of-tokens-948---medium--python--30m--20220912--sort)
 - [171. UTF-8 Validation (#393) - medium / python / 20M / 2022.09.13](#171-utf-8-validation-393---medium--python--20m--20220913)
-- [172. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#172-template----medium--python--1h--20220902--ing)
+- [172. Pseudo-Palindromic Paths in a Binary Tree (#1457) - medium / python / 30M / 2022.09.14 / tree traverse](#172-pseudo-palindromic-paths-in-a-binary-tree-1457---medium--python--30m--20220914--tree-traverse)
+- [173. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#173-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -4148,8 +4149,29 @@ class Solution:
 - complexity : O(N)
 - next challenges : Maximum Alternating Subarray Sum / Analyze User Website Visit Pattern / Count Number of Maximum Bitwise-OR Subsets
 
+# 172. Pseudo-Palindromic Paths in a Binary Tree (#1457) - medium / python / 30M / 2022.09.14 / tree traverse
+- medium
+- problem :
+  - Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be pseudo-palindromic if at least one permutation of the node values in the path is a palindrome.
+  - Return the number of pseudo-palindromic paths going from the root node to leaf nodes.
+  - Constraints : 
+  - ![](https://assets.leetcode.com/uploads/2020/05/06/palindromic_paths_1.png)
+  - ```
+      Input: root = [2,3,1,3,1,null,1]
+      Output: 2 
+      Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).
+    ```
+- https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/
+- [pseudoPalindromicPaths.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/pseudoPalindromicPaths.py) : passed
+  - Runtime: 2467 ms, faster than 5.30% of Python3 online submissions for Pseudo-Palindromic Paths in a Binary Tree.
+  - Memory Usage: 84.6 MB, less than 89.41% of Python3 online submissions for Pseudo-Palindromic Paths in a Binary Tree.
+- algorithm : tree traverse
+- complexity : ON(N)
+- next challenges : Closest Leaf in a Binary Tree / Correct a Binary Tree / Minimum XOR Sum of Two Arrays
 
-# 172. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+
+
+# 173. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
