@@ -205,7 +205,8 @@
 - [170. Bag of Tokens (#948) - medium / python / 30M / 2022.09.12 / sort](#170-bag-of-tokens-948---medium--python--30m--20220912--sort)
 - [171. UTF-8 Validation (#393) - medium / python / 20M / 2022.09.13](#171-utf-8-validation-393---medium--python--20m--20220913)
 - [172. Pseudo-Palindromic Paths in a Binary Tree (#1457) - medium / python / 30M / 2022.09.14 / tree traverse](#172-pseudo-palindromic-paths-in-a-binary-tree-1457---medium--python--30m--20220914--tree-traverse)
-- [173. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#173-template----medium--python--1h--20220902--ing)
+- [173. Find Original Array From Doubled Array (#2007) - medium / python / 10M / 2022.09.16 / sort / bisect](#173-find-original-array-from-doubled-array-2007---medium--python--10m--20220916--sort--bisect)
+- [174. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#174-template----medium--python--1h--20220902--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -4166,12 +4167,42 @@ class Solution:
   - Runtime: 2467 ms, faster than 5.30% of Python3 online submissions for Pseudo-Palindromic Paths in a Binary Tree.
   - Memory Usage: 84.6 MB, less than 89.41% of Python3 online submissions for Pseudo-Palindromic Paths in a Binary Tree.
 - algorithm : tree traverse
-- complexity : ON(N)
+- complexity : O(N)
 - next challenges : Closest Leaf in a Binary Tree / Correct a Binary Tree / Minimum XOR Sum of Two Arrays
 
+# 173. Find Original Array From Doubled Array (#2007) - medium / python / 10M / 2022.09.16 / sort / bisect
+- medium
+- problem :
+  - An integer array original is transformed into a doubled array changed by appending twice the value of every element in original, and then randomly shuffling the resulting array.
+  - Given an array changed, return original if changed is a doubled array. If changed is not a doubled array, return an empty array. The elements in original may be returned in any order.
+  - Constraints : 1 <= changed.length <= 10^5 / 0 <= changed[i] <= 10^5
+  - ```
+      Input: changed = [1,3,4,2,6,8]
+      Output: [1,3,4]
+      Explanation: One possible original array could be [1,3,4]:
+      - Twice the value of 1 is 1 * 2 = 2.
+      - Twice the value of 3 is 3 * 2 = 6.
+      - Twice the value of 4 is 4 * 2 = 8.
+      Other original arrays could be [4,3,1] or [3,1,4].
+
+      Input: changed = [1]
+      Output: []
+      Explanation: changed is not a doubled array.
+
+      Input: changed = [1,2,2,3,6,4,4,2,4,8]
+      Output: [1,2,2,3,4]
+    ```
+- https://leetcode.com/problems/find-original-array-from-doubled-array/
+- [findOriginalArray.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findOriginalArray.py) : passed
+  - Runtime: 6068 ms, faster than 5.12% of Python3 online submissions for Find Original Array From Doubled Array.
+  - Memory Usage: 28.5 MB, less than 98.58% of Python3 online submissions for Find Original Array From Doubled Array.
+- algorithm : sort / bisect
+- complexity : O(NlogN)
+- next challenges : Array of Doubled Pairs / Recover the Original Array
 
 
-# 173. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+
+# 174. template (#) - medium / python / 1H / 2022.09.02 / (ing)
 - medium
 - problem :
   - 
