@@ -207,6 +207,7 @@
 - [172. Pseudo-Palindromic Paths in a Binary Tree (#1457) - medium / python / 30M / 2022.09.14 / tree traverse](#172-pseudo-palindromic-paths-in-a-binary-tree-1457---medium--python--30m--20220914--tree-traverse)
 - [173. Find Original Array From Doubled Array (#2007) - medium / python / 10M / 2022.09.16 / sort / bisect](#173-find-original-array-from-doubled-array-2007---medium--python--10m--20220916--sort--bisect)
 - [174. Maximum Score from Performing Multiplication Operations (#1770) - medium / python / 1H / 2022.09.16 / dynamic programming](#174-maximum-score-from-performing-multiplication-operations-1770---medium--python--1h--20220916--dynamic-programming)
+- [175. Design Circular Queue (#622) - medium / python / 8M / 2022.09.26](#175-design-circular-queue-622---medium--python--8m--20220926)
 - [175. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#175-template----medium--python--1h--20220902--ing)
 
 --------------------
@@ -4237,6 +4238,47 @@ class Solution:
 - algorithm : dynamic programming
 - complexity : O(NxM)
 - next challenges : Maximum Points You Can Obtain from Cards / Stone Game VII
+
+# 175. Design Circular Queue (#622) - medium / python / 8M / 2022.09.26
+- medium
+- problem :
+  - Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle and the last position is connected back to the first position to make a circle. It is also called "Ring Buffer".
+  - One of the benefits of the circular queue is that we can make use of the spaces in front of the queue. In a normal queue, once the queue becomes full, we cannot insert the next element even if there is a space in front of the queue. But using the circular queue, we can use the space to store new values.
+  - Implementation the MyCircularQueue class:
+    - MyCircularQueue(k) Initializes the object with the size of the queue to be k.
+    - int Front() Gets the front item from the queue. If the queue is empty, return -1.
+    - int Rear() Gets the last item from the queue. If the queue is empty, return -1.
+    - boolean enQueue(int value) Inserts an element into the circular queue. Return true if the operation is successful.
+    - boolean deQueue() Deletes an element from the circular queue. Return true if the operation is successful.
+    - boolean isEmpty() Checks whether the circular queue is empty or not.
+    - boolean isFull() Checks whether the circular queue is full or not.
+  - You must solve the problem without using the built-in queue data structure in your programming language. 
+  - Constraints : 1 <= k <= 1000 / 0 <= value <= 1000 / At most 3000 calls will be made to enQueue, deQueue, Front, Rear, isEmpty, and isFull.
+  - ```
+      Input
+      ["MyCircularQueue", "enQueue", "enQueue", "enQueue", "enQueue", "Rear", "isFull", "deQueue", "enQueue", "Rear"]
+      [[3], [1], [2], [3], [4], [], [], [], [4], []]
+      Output
+      [null, true, true, true, false, 3, true, true, true, 4]
+
+      Explanation
+      MyCircularQueue myCircularQueue = new MyCircularQueue(3);
+      myCircularQueue.enQueue(1); // return True
+      myCircularQueue.enQueue(2); // return True
+      myCircularQueue.enQueue(3); // return True
+      myCircularQueue.enQueue(4); // return False
+      myCircularQueue.Rear();     // return 3
+      myCircularQueue.isFull();   // return True
+      myCircularQueue.deQueue();  // return True
+      myCircularQueue.enQueue(4); // return True
+      myCircularQueue.Rear();     // return 4
+    ```
+- https://leetcode.com/problems/design-circular-queue/
+- [MyCircularQueue.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/MyCircularQueue.py) : passed
+  - Runtime: 153 ms, faster than 16.44% of Python3 online submissions for Design Circular Queue.
+  - Memory Usage: 14.5 MB, less than 56.74% of Python3 online submissions for Design Circular Queue.
+- next challenges : Design Circular Deque / Design Front Middle Back Queue
+
 
 
 # 175. template (#) - medium / python / 1H / 2022.09.02 / (ing)
