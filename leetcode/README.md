@@ -4318,8 +4318,33 @@ class Solution:
 - complexity : O(N)
 - next challenges : Reorder List / Remove Linked List Elements / Middle of the Linked List
 
+# 177. Valid Triangle Number (#611) - medium / python / 20M / 2022.10.14 / sort , calculate earlier
+- medium
+- problem :
+  - Given an integer array nums, return the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
+  - Constraints : 1 <= nums.length <= 1000 / 0 <= nums[i] <= 1000
+  - ```
+    Example 1:
+    Input: nums = [2,2,3,4]
+    Output: 3
+    Explanation: Valid combinations are:
+    2,3,4 (using the first 2)
+    2,3,4 (using the second 2)
+    2,2,3
+    
+    Example 2:
+    Input: nums = [4,2,3,4]
+    Output: 4
+    ```
+- https://leetcode.com/problems/valid-triangle-number/
+- [triangleNumber.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/triangleNumber.py) : passed
+  - Runtime: 3886 ms, faster than 25.32% of Python3 online submissions for Valid Triangle Number.
+  - Memory Usage: 14.1 MB, less than 29.30% of Python3 online submissions for Valid Triangle Number.
+- algorithm : sort , calculate earlier
+- complexity : O(N^2)
+- next challenges : 3Sum Smaller
 
-# 175. template (#) - medium / python / 1H / 2022.09.02 / (ing)
+# 177. template (#) - medium / python / 20M / 2022.10.14 / (ing)
 - medium
 - problem :
   - 
@@ -4328,7 +4353,7 @@ class Solution:
 
     ```
 - 
-- [combinationSum3.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/combinationSum3.py) :
+- [triangleNumber.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/triangleNumber.py) :
   - 
 - algorithm :
 - complexity :
