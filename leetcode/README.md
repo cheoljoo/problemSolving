@@ -208,7 +208,10 @@
 - [173. Find Original Array From Doubled Array (#2007) - medium / python / 10M / 2022.09.16 / sort / bisect](#173-find-original-array-from-doubled-array-2007---medium--python--10m--20220916--sort--bisect)
 - [174. Maximum Score from Performing Multiplication Operations (#1770) - medium / python / 1H / 2022.09.16 / dynamic programming](#174-maximum-score-from-performing-multiplication-operations-1770---medium--python--1h--20220916--dynamic-programming)
 - [175. Design Circular Queue (#622) - medium / python / 8M / 2022.09.26](#175-design-circular-queue-622---medium--python--8m--20220926)
-- [175. template (#) - medium / python / 1H / 2022.09.02 / (ing)](#175-template----medium--python--1h--20220902--ing)
+- [176. Delete the Middle Node of a Linked List (#2095) - medium / python / 20M / 2022.10.14 / tree travese](#176-delete-the-middle-node-of-a-linked-list-2095---medium--python--20m--20221014--tree-travese)
+- [177. Valid Triangle Number (#611) - medium / python / 20M / 2022.10.14 / sort , calculate earlier](#177-valid-triangle-number-611---medium--python--20m--20221014--sort--calculate-earlier)
+- [178. Minimum Time to Make Rope Colorful (#1578) - medium / python / 20M / 2022.10.14](#178-minimum-time-to-make-rope-colorful-1578---medium--python--20m--20221014)
+- [179. template (#) - medium / python / 20M / 2022.10.14 / (ing)](#179-template----medium--python--20m--20221014--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -4344,7 +4347,33 @@ class Solution:
 - complexity : O(N^2)
 - next challenges : 3Sum Smaller
 
-# 177. template (#) - medium / python / 20M / 2022.10.14 / (ing)
+# 178. Minimum Time to Make Rope Colorful (#1578) - medium / python / 20M / 2022.10.14 
+- medium
+- problem :
+  - Alice has n balloons arranged on a rope. You are given a 0-indexed string colors where colors[i] is the color of the ith balloon.
+  - Alice wants the rope to be colorful. She does not want two consecutive balloons to be of the same color, so she asks Bob for help. Bob can remove some balloons from the rope to make it colorful. You are given a 0-indexed integer array neededTime where neededTime[i] is the time (in seconds) that Bob needs to remove the ith balloon from the rope.
+  - Return the minimum time Bob needs to make the rope colorful.
+  - Constraints : n == colors.length == neededTime.length / 1 <= n <= 10^5 / 1 <= neededTime[i] <= 10^4 / colors contains only lowercase English letters.
+  - ```
+    Input: colors = "abaac", neededTime = [1,2,3,4,5]
+    Output: 3
+    Explanation: In the above image, 'a' is blue, 'b' is red, and 'c' is green.
+    Bob can remove the blue balloon at index 2. This takes 3 seconds.
+    There are no longer two consecutive balloons of the same color. Total time = 3.
+
+    Input: colors = "aabaa", neededTime = [1,2,3,4,1]
+    Output: 2
+    Explanation: Bob will remove the ballons at indices 0 and 4. Each ballon takes 1 second to remove.
+    There are no longer two consecutive balloons of the same color. Total time = 1 + 1 = 2.
+    ```
+- https://leetcode.com/problems/minimum-time-to-make-rope-colorful/
+- [minCost.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minCost.py) : passed
+  - Runtime: 2661 ms, faster than 47.21% of Python3 online submissions for Minimum Time to Make Rope Colorful.
+  - Memory Usage: 25.3 MB, less than 7.37% of Python3 online submissions for Minimum Time to Make Rope Colorful.
+- complexity : O(N)
+- next challenges : Web Crawler / Minimum Swaps to Group All 1's Together II / Divide Intervals Into Minimum Number of Groups
+
+# 179. template (#) - medium / python / 20M / 2022.10.14 / (ing)
 - medium
 - problem :
   - 
@@ -4353,12 +4382,11 @@ class Solution:
 
     ```
 - 
-- [triangleNumber.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/triangleNumber.py) :
+- [minCost.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minCost.py) :
   - 
 - algorithm :
 - complexity :
 - next challenges : 
-
 
 1.    Longest String Chain
 https://leetcode.com/problems/longest-string-chain/
