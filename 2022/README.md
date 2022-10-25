@@ -564,3 +564,8 @@ N-1번째 사람부터 N번째 사람까지 사은품을 받는 경우,
   - 제품 수가 같아지기 위한 최소 이동 숫자 (불가능하면 -1)
 - - http://collab.lge.com/main/pages/viewpage.action?pageId=1672640242&focusedCommentId=1680178985
 - [warehouse.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/warehouse.py) : python3 warehouse.py
+
+# burstBallon : 풍선 터트리기
+- http://collab.lge.com/main/pages/viewpage.action?pageId=1809798914
+- https://school.programmers.co.kr/learn/courses/30/lessons/68646?language=python3
+- [burstBallon.py](https://github.com/cheoljoo/problemSolving/blob/master/2022/burstBallon.py) : python3 burstBallon.py
