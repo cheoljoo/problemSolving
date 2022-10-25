@@ -212,7 +212,8 @@
 - [177. Valid Triangle Number (#611) - medium / python / 20M / 2022.10.14 / sort , calculate earlier](#177-valid-triangle-number-611---medium--python--20m--20221014--sort--calculate-earlier)
 - [178. Minimum Time to Make Rope Colorful (#1578) - medium / python / 20M / 2022.10.14](#178-minimum-time-to-make-rope-colorful-1578---medium--python--20m--20221014)
 - [179. Time Based Key-Value Store (#981) - medium / python / 30M / 2022.10.14 / bisect](#179-time-based-key-value-store-981---medium--python--30m--20221014--bisect)
-- [180. template (#) - medium / python / 20M / 2022.10.14 / (ing)](#180-template----medium--python--20m--20221014--ing)
+- [180. Nth Digit (#400) - medium / python / 1H / 2022.10.25 / find nth digit](#180-nth-digit-400---medium--python--1h--20221025--find-nth-digit)
+- [181. template (#) - medium / python / 20M / 2022.10.14 / (ing)](#181-template----medium--python--20m--20221014--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -4407,8 +4408,25 @@ class Solution:
 - complexity : O(NlogN)
 - next challenges : Stock Price Fluctuation
 
+# 180. Nth Digit (#400) - medium / python / 1H / 2022.10.25 / find nth digit
+- medium
+- problem :
+  - Given an integer n, return the nth digit of the infinite integer sequence [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...].
+  - Constraints : 1 <= n <= 2^31 - 1
+  - ```
+    Input: n = 11
+    Output: 0
+    Explanation: The 11th digit of the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... is a 0, which is part of the number 10.
+    ```
+- https://leetcode.com/problems/nth-digit/
+- [findNthDigit.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/findNthDigit.py) : passed
+  - Runtime: 50 ms, faster than 61.38% of Python3 online submissions for Nth Digit.
+  - Memory Usage: 13.9 MB, less than 11.97% of Python3 online submissions for Nth Digit.
+- algorithm : 남은 자리수 구하기를 // , % 으로 숫자 처리 (배움)
+- complexity : O(logN)
+- next challenges : Count Subarrays With More Ones Than Zeros / Stone Game VII / GCD Sort of an Array
 
-# 180. template (#) - medium / python / 20M / 2022.10.14 / (ing)
+# 181. template (#) - medium / python / 20M / 2022.10.14 / (ing)
 - medium
 - problem :
   - 
