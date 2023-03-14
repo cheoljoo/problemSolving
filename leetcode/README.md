@@ -10,7 +10,7 @@
   - [1.4. Euclidean-algorithm : 유클리드 호제법](#14-euclidean-algorithm--유클리드-호제법)
   - [1.5. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#15-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
   - [1.6. hamming weight : number of '1' bits](#16-hamming-weight--number-of-1-bits)
-  - [1.7. find (?,?) including A among [(x1,x2) , ....] if x1>x2](#17-find--including-a-among-x1x2---if-x1x2)
+  - [1.7. find (?,?) including A among \[(x1,x2) , ....\] if x1\>x2](#17-find--including-a-among-x1x2---if-x1x2)
   - [1.8. two dimensional array initialize and set](#18-two-dimensional-array-initialize-and-set)
   - [1.9. regular expression (import re)](#19-regular-expression-import-re)
     - [1.9.1. difference between re.search() and re.match()](#191-difference-between-research-and-rematch)
@@ -30,10 +30,10 @@
   - [1.17. Dynamic Programming](#117-dynamic-programming)
     - [1.17.1. Longest Common Subsequence](#1171-longest-common-subsequence)
     - [1.17.2. Floyd-Warshall Algorithm](#1172-floyd-warshall-algorithm)
-  - [1.18. grouping : find & union](#118-grouping--find--union)
+  - [1.18. grouping : find \& union](#118-grouping--find--union)
   - [1.19. deque](#119-deque)
   - [1.20. window slide to get max in moving range](#120-window-slide-to-get-max-in-moving-range)
-  - [1.21. Books & URL](#121-books--url)
+  - [1.21. Books \& URL](#121-books--url)
 - [2. Meidan of Two Sorted Arrays - hard](#2-meidan-of-two-sorted-arrays---hard)
 - [3. Regular Expression Matching - hard](#3-regular-expression-matching---hard)
 - [4. Strange Printer - hard](#4-strange-printer---hard)
@@ -80,7 +80,7 @@
 - [45. Minimum Remove to Make Valid Parentheses ($1249) - medium](#45-minimum-remove-to-make-valid-parentheses-1249---medium)
 - [46. Validate Stack Sequences (#946) - medium / python / rust](#46-validate-stack-sequences-946---medium--python--rust)
 - [47. Score of Parentheses (#856) - medium : / python](#47-score-of-parentheses-856---medium---python)
-- [48. Remove Duplicate Letters (#316) (#1081) - medium : [python]](#48-remove-duplicate-letters-316-1081---medium--python)
+- [48. Remove Duplicate Letters (#316) (#1081) - medium : \[python\]](#48-remove-duplicate-letters-316-1081---medium--python)
 - [49. Maximum Frequency Stack (#895) - hard : / python](#49-maximum-frequency-stack-895---hard---python)
 - [50. Minimum Domino Rotations For Equal Row (#1007) - medium / python](#50-minimum-domino-rotations-for-equal-row-1007---medium--python)
 - [51. Count Collisions on a Road (#2211) - medium / python : 2020-03-20 Weekly Contest 285](#51-count-collisions-on-a-road-2211---medium--python--2020-03-20-weekly-contest-285)
@@ -128,13 +128,13 @@
 - [93. Design Underground System (#1396) - medium / python / c++ / 30M (caution : should be different between variables and funciton names)](#93-design-underground-system-1396---medium--python--c--30m-caution--should-be-different-between-variables-and-funciton-names)
 - [94. Peeking Iterator (#284) - medium / python / c++ / 1H](#94-peeking-iterator-284---medium--python--c--1h)
 - [95. Min Cost to Connect All Points (#1584) - medium / python / 3H](#95-min-cost-to-connect-all-points-1584---medium--python--3h)
-- [96. Minimum Window Substring (#76) - hard / python / 2D / (got help) : sliding window (left->right) / Top 100 Liked Questions](#96-minimum-window-substring-76---hard--python--2d--got-help--sliding-window-left-right--top-100-liked-questions)
+- [96. Minimum Window Substring (#76) - hard / python / 2D / (got help) : sliding window (left-\>right) / Top 100 Liked Questions](#96-minimum-window-substring-76---hard--python--2d--got-help--sliding-window-left-right--top-100-liked-questions)
 - [97. Smallest String With Swaps (#1202) - medium / python / 2D / (got help) : grouping](#97-smallest-string-with-swaps-1202---medium--python--2d--got-help--grouping)
 - [98. Path With Minimum Effort (#1631) - medium / python / 1D / (got help) : Dijkstra](#98-path-with-minimum-effort-1631---medium--python--1d--got-help--dijkstra)
-- [99. Is Graph Bipartite? (#785) - medium / python / 3H / black&white](#99-is-graph-bipartite-785---medium--python--3h--blackwhite)
-- [100. Evaluate Division(#399) - medium / python / 3H / grouping : find&union](#100-evaluate-division399---medium--python--3h--grouping--findunion)
-- [101. Sliding Window Maximum (#239) - hard / python / sliding : left->right : deque / Top 100 Liked Questions (got help)](#101-sliding-window-maximum-239---hard--python--sliding--left-right--deque--top-100-liked-questions-got-help)
-- [102. hiking - hard / python / dijkstra / 1D / SW_TEST](#102-hiking---hard--python--dijkstra--1d--sw_test)
+- [99. Is Graph Bipartite? (#785) - medium / python / 3H / black\&white](#99-is-graph-bipartite-785---medium--python--3h--blackwhite)
+- [100. Evaluate Division(#399) - medium / python / 3H / grouping : find\&union](#100-evaluate-division399---medium--python--3h--grouping--findunion)
+- [101. Sliding Window Maximum (#239) - hard / python / sliding : left-\>right : deque / Top 100 Liked Questions (got help)](#101-sliding-window-maximum-239---hard--python--sliding--left-right--deque--top-100-liked-questions-got-help)
+- [102. hiking - hard / python / dijkstra / 1D / SW\_TEST](#102-hiking---hard--python--dijkstra--1d--sw_test)
 - [103. Binary Tree Maximum Path Sum (#124) - hard / python / 3H / tree : dfs : left,right,root,leftroot,rightroot,leftrootright / Top 100 Liked Questions](#103-binary-tree-maximum-path-sum-124---hard--python--3h--tree--dfs--leftrightrootleftrootrightrootleftrootright--top-100-liked-questions)
 - [104. Find Median from Data Stream (#295) - hard / python / 2H / bisect / Top 100 Liked Questions](#104-find-median-from-data-stream-295---hard--python--2h--bisect--top-100-liked-questions)
 - [105. Shortest Unsorted Continuous Subarray (#581) - medium / python / 1H](#105-shortest-unsorted-continuous-subarray-581---medium--python--1h)
@@ -158,7 +158,7 @@
 - [123. Target Sum (#494) - medium / python / dp / Top 100 Liked Questions / 45M](#123-target-sum-494---medium--python--dp--top-100-liked-questions--45m)
 - [124. Critical Connections in a Network (#1192) - hard / python / graph / loop / (fail) (ing)](#124-critical-connections-in-a-network-1192---hard--python--graph--loop--fail-ing)
 - [125. Unique Paths II (#63) - medium / python / dfs / dp / 5H](#125-unique-paths-ii-63---medium--python--dfs--dp--5h)
-- [126. fisher - hard / python / binary / SW_TEST / (got help)](#126-fisher---hard--python--binary--sw_test--got-help)
+- [126. fisher - hard / python / binary / SW\_TEST / (got help)](#126-fisher---hard--python--binary--sw_test--got-help)
 - [127. Coin Change (#322) - medium / python / dp / (got help) (got solution)](#127-coin-change-322---medium--python--dp--got-help-got-solution)
 - [128. Divide Two Integers (#29) - medium / python / 2H](#128-divide-two-integers-29---medium--python--2h)
 - [129. Check If a String Contains All Binary Codes of Size K (#1461) - medium / python / 1H](#129-check-if-a-string-contains-all-binary-codes-of-size-k-1461---medium--python--1h)
@@ -213,7 +213,11 @@
 - [178. Minimum Time to Make Rope Colorful (#1578) - medium / python / 20M / 2022.10.14](#178-minimum-time-to-make-rope-colorful-1578---medium--python--20m--20221014)
 - [179. Time Based Key-Value Store (#981) - medium / python / 30M / 2022.10.14 / bisect](#179-time-based-key-value-store-981---medium--python--30m--20221014--bisect)
 - [180. Nth Digit (#400) - medium / python / 1H / 2022.10.25 / find nth digit](#180-nth-digit-400---medium--python--1h--20221025--find-nth-digit)
-- [181. template (#) - medium / python / 20M / 2022.10.14 / (ing)](#181-template----medium--python--20m--20221014--ing)
+- [181. Minimum Time to Complete Trips (#2187) - medium / python / 30M / 2023.03.08 / binary search](#181-minimum-time-to-complete-trips-2187---medium--python--30m--20230308--binary-search)
+- [182. Koko Eating Bananas (#875) - medium / python / 20M / 2023.03.08 / binary search](#182-koko-eating-bananas-875---medium--python--20m--20230308--binary-search)
+- [183. Convert Sorted List to Binary Search Tree (#109) - medium / python / 20M / 2023.03.11](#183-convert-sorted-list-to-binary-search-tree-109---medium--python--20m--20230311)
+- [184. Sum Root to Leaf Numbers (#129) - medium / python / 20M / 2023.03.14 / tree traverse](#184-sum-root-to-leaf-numbers-129---medium--python--20m--20230314--tree-traverse)
+- [185. template (#) - medium / python / 20M / 2023.03.14 / (ing)](#185-template----medium--python--20m--20230314--ing)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -4426,7 +4430,89 @@ class Solution:
 - complexity : O(logN)
 - next challenges : Count Subarrays With More Ones Than Zeros / Stone Game VII / GCD Sort of an Array
 
-# 181. template (#) - medium / python / 20M / 2022.10.14 / (ing)
+# 181. Minimum Time to Complete Trips (#2187) - medium / python / 30M / 2023.03.08 / binary search
+- medium
+- problem :
+  - You are given an array time where time[i] denotes the time taken by the ith bus to complete one trip.
+  - Each bus can make multiple trips successively; that is, the next trip can start immediately after completing the current trip. Also, each bus operates independently; that is, the trips of one bus do not influence the trips of any other bus.
+  - You are also given an integer totalTrips, which denotes the number of trips all buses should make in total. Return the minimum time required for all buses to complete at least totalTrips trips.
+  - Constraints : 1 <= time.length <= 10^5 / 1 <= time[i], totalTrips <= 10^7
+  - ```
+    Input: time = [1,2,3], totalTrips = 5
+    Output: 3
+    Explanation:
+    - At time t = 1, the number of trips completed by each bus are [1,0,0]. 
+      The total number of trips completed is 1 + 0 + 0 = 1.
+    - At time t = 2, the number of trips completed by each bus are [2,1,0]. 
+      The total number of trips completed is 2 + 1 + 0 = 3.
+    - At time t = 3, the number of trips completed by each bus are [3,1,1]. 
+      The total number of trips completed is 3 + 1 + 1 = 5.
+    So the minimum time needed for all buses to complete at least 5 trips is 3.
+    ```
+- https://leetcode.com/problems/minimum-time-to-complete-trips/
+- [minimumTime.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minimumTime.py) : passed
+  - Runtime 4008 ms / Beats 18%
+- algorithm : binary search
+- complexity : O(NlogN)
+- TODO : learn more 
+
+# 182. Koko Eating Bananas (#875) - medium / python / 20M / 2023.03.08 / binary search
+- medium
+- problem :
+  - Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.
+  - Koko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.
+  - Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.
+  - Return the minimum integer k such that she can eat all the bananas within h hours.
+  - Constraints : 1 <= piles.length <= 10^4 / piles.length <= h <= 10^9 / 1 <= piles[i] <= 10^9
+  - ```
+    IInput: piles = [3,6,7,11], h = 8
+    Output: 4
+    Input: piles = [30,11,23,4,20], h = 5
+    Output: 30
+    Input: piles = [30,11,23,4,20], h = 6
+    Output: 23
+    ```
+- https://leetcode.com/problems/koko-eating-bananas
+- [minEatingSpeed.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minEatingSpeed.py) : passed
+  - Runtime 464 ms / Beats 77.33% / Memory 15.5 MB / Beats 16.17%
+- algorithm : binary search
+- complexity : O(NlogN)
+
+# 183. Convert Sorted List to Binary Search Tree (#109) - medium / python / 20M / 2023.03.11 
+- medium
+- problem :
+  - Given the head of a singly linked list where elements are sorted in ascending order, convert it to a height-balanced binary search tree.
+- https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
+- [sortedListToBST.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sortedListToBST.py) : passed
+  - Runtime 121 ms / Beats  75.46% / Memory 20.3 MB / Beats 26.76%
+- complexity : O(N)
+
+# 184. Sum Root to Leaf Numbers (#129) - medium / python / 20M / 2023.03.14 / tree traverse
+- medium
+- problem :
+  - You are given the root of a binary tree containing digits from 0 to 9 only.
+  - Each root-to-leaf path in the tree represents a number.
+    - For example, the root-to-leaf path 1 -> 2 -> 3 represents the number 123.
+  - Return the total sum of all root-to-leaf numbers. Test cases are generated so that the answer will fit in a 32-bit integer.
+  - A leaf node is a node with no children.
+  - Constraints : The number of nodes in the tree is in the range [1, 1000]. / 0 <= Node.val <= 9 / The depth of the tree will not exceed 10.
+  - ```
+    Input: root = [4,9,0,5,1]
+    Output: 1026
+    Explanation:
+    The root-to-leaf path 4->9->5 represents the number 495.
+    The root-to-leaf path 4->9->1 represents the number 491.
+    The root-to-leaf path 4->0 represents the number 40.
+    Therefore, sum = 495 + 491 + 40 = 1026.
+    ```
+- https://leetcode.com/problems/sum-root-to-leaf-numbers/
+- [sumNumbers.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/sumNumbers.py) : passed
+  - Runtime 32 ms  Beats 70.48% / Memory 13.8 MB  Beats 95.89%
+- algorithm : tree traverse
+- complexity : O(N)
+
+
+# 185. template (#) - medium / python / 20M / 2023.03.14 / (ing)
 - medium
 - problem :
   - 
@@ -4439,7 +4525,7 @@ class Solution:
   - 
 - algorithm :
 - complexity :
-- next challenges : 
+
 
 1.    Longest String Chain
 https://leetcode.com/problems/longest-string-chain/
