@@ -217,6 +217,8 @@
 - [182. Koko Eating Bananas (#875) - medium / python / 20M / 2023.03.08 / binary search](#182-koko-eating-bananas-875---medium--python--20m--20230308--binary-search)
 - [183. Convert Sorted List to Binary Search Tree (#109) - medium / python / 20M / 2023.03.11](#183-convert-sorted-list-to-binary-search-tree-109---medium--python--20m--20230311)
 - [184. Sum Root to Leaf Numbers (#129) - medium / python / 20M / 2023.03.14 / tree traverse](#184-sum-root-to-leaf-numbers-129---medium--python--20m--20230314--tree-traverse)
+- [185. Implement Trie (Prefix Tree) (#208) - medium / python / 20M / 2023.03.17](#185-implement-trie-prefix-tree-208---medium--python--20m--20230317)
+- [185. Design Browser History (#1472) - medium / python / 20M / 2023.03.18](#185-design-browser-history-1472---medium--python--20m--20230318)
 - [185. template (#) - medium / python / 20M / 2023.03.14 / (ing)](#185-template----medium--python--20m--20230314--ing)
 
 --------------------
@@ -4510,6 +4512,71 @@ class Solution:
   - Runtime 32 ms  Beats 70.48% / Memory 13.8 MB  Beats 95.89%
 - algorithm : tree traverse
 - complexity : O(N)
+
+
+# 185. Implement Trie (Prefix Tree) (#208) - medium / python / 20M / 2023.03.17
+- medium
+- problem :
+  - A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.
+  - Implement the Trie class:
+    - Trie() Initializes the trie object.
+    - void insert(String word) Inserts the string word into the trie.
+    - boolean search(String word) Returns true if the string word is in the trie (i.e., was inserted before), and false otherwise.
+    - boolean startsWith(String prefix) Returns true if there is a previously inserted string word that has the prefix prefix, and false otherwise.
+  - ```
+    Input
+    ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+    [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+    Output
+    [null, null, true, false, true, null, true]
+
+    Explanation
+    Trie trie = new Trie();
+    trie.insert("apple");
+    trie.search("apple");   // return True
+    trie.search("app");     // return False
+    trie.startsWith("app"); // return True
+    trie.insert("app");
+    trie.search("app");     // return True
+    ```
+- https://leetcode.com/problems/implement-trie-prefix-tree/
+- [Trie.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/Trie.py) : passed
+  - Runtime 799 ms  Beats 5% / Memory 20.8 MB Beats 97.63%
+
+
+# 185. Design Browser History (#1472) - medium / python / 20M / 2023.03.18
+- medium
+- problem :
+  - You have a browser of one tab where you start on the homepage and you can visit another url, get back in the history number of steps or move forward in the history number of steps.
+  - Implement the BrowserHistory class:
+    - BrowserHistory(string homepage) Initializes the object with the homepage of the browser.
+    - void visit(string url) Visits url from the current page. It clears up all the forward history.
+    - string back(int steps) Move steps back in history. If you can only return x steps in the history and steps > x, you will return only x steps. Return the current url after moving back in history at most steps.
+    - string forward(int steps) Move steps forward in history. If you can only forward x steps in the history and steps > x, you will forward only x steps. Return the current url after forwarding in history at most steps.
+  - ```
+    Input:
+    ["BrowserHistory","visit","visit","visit","back","back","forward","visit","forward","back","back"]
+    [["leetcode.com"],["google.com"],["facebook.com"],["youtube.com"],[1],[1],[1],["linkedin.com"],[2],[2],[7]]
+    Output:
+    [null,null,null,null,"facebook.com","google.com","facebook.com",null,"linkedin.com","google.com","leetcode.com"]
+
+    Explanation:
+    BrowserHistory browserHistory = new BrowserHistory("leetcode.com");
+    browserHistory.visit("google.com");       // You are in "leetcode.com". Visit "google.com"
+    browserHistory.visit("facebook.com");     // You are in "google.com". Visit "facebook.com"
+    browserHistory.visit("youtube.com");      // You are in "facebook.com". Visit "youtube.com"
+    browserHistory.back(1);                   // You are in "youtube.com", move back to "facebook.com" return "facebook.com"
+    browserHistory.back(1);                   // You are in "facebook.com", move back to "google.com" return "google.com"
+    browserHistory.forward(1);                // You are in "google.com", move forward to "facebook.com" return "facebook.com"
+    browserHistory.visit("linkedin.com");     // You are in "facebook.com". Visit "linkedin.com"
+    browserHistory.forward(2);                // You are in "linkedin.com", you cannot move forward any steps.
+    browserHistory.back(2);                   // You are in "linkedin.com", move back two steps to "facebook.com" then to "google.com". return "google.com"
+    browserHistory.back(7);                   // You are in "google.com", you can move back only one step to "leetcode.com". return "leetcode.com"
+    ```
+- https://leetcode.com/problems/design-browser-history/
+- [BrowserHistory.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/minCoBrowserHistoryst.py) : passed
+  - Runtime 217 ms  Beats 86.77% /  Memory 16.7 MB  Beats 37.23%
+
 
 
 # 185. template (#) - medium / python / 20M / 2023.03.14 / (ing)
