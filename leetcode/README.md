@@ -20,21 +20,22 @@
   - [2.12. palindromic](#212-palindromic)
   - [2.13. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#213-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
   - [2.14. list : python remove element from a list](#214-list--python-remove-element-from-a-list)
-  - [2.15. graph](#215-graph)
-    - [2.15.1. dijkstra](#2151-dijkstra)
-  - [2.16. greedy algorithm](#216-greedy-algorithm)
-    - [2.16.1. dijkstra's algorithm](#2161-dijkstras-algorithm)
-    - [2.16.2. Ford-Fulkerson Algorithm](#2162-ford-fulkerson-algorithm)
-    - [2.16.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics](#2163-kruskals-algorithm--find-minimum-spanning-tree--optimal-graph-connected-all-vertics)
-    - [2.16.4. Prim's Algorithm : find minimum spanning tree](#2164-prims-algorithm--find-minimum-spanning-tree)
-    - [2.16.5. Huffman Coding : a technique of compressing data to reduce its size](#2165-huffman-coding--a-technique-of-compressing-data-to-reduce-its-size)
-  - [2.17. Dynamic Programming](#217-dynamic-programming)
-    - [2.17.1. Longest Common Subsequence](#2171-longest-common-subsequence)
-    - [2.17.2. Floyd-Warshall Algorithm](#2172-floyd-warshall-algorithm)
-  - [2.18. grouping : find \& union](#218-grouping--find--union)
-  - [2.19. deque](#219-deque)
-  - [2.20. window slide to get max in moving range](#220-window-slide-to-get-max-in-moving-range)
-  - [2.21. Books \& URL](#221-books--url)
+  - [2.15. compare between list and set()  : 3Sum (#15)](#215-compare-between-list-and-set---3sum-15)
+  - [2.16. graph](#216-graph)
+    - [2.16.1. dijkstra](#2161-dijkstra)
+  - [2.17. greedy algorithm](#217-greedy-algorithm)
+    - [2.17.1. dijkstra's algorithm](#2171-dijkstras-algorithm)
+    - [2.17.2. Ford-Fulkerson Algorithm](#2172-ford-fulkerson-algorithm)
+    - [2.17.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics](#2173-kruskals-algorithm--find-minimum-spanning-tree--optimal-graph-connected-all-vertics)
+    - [2.17.4. Prim's Algorithm : find minimum spanning tree](#2174-prims-algorithm--find-minimum-spanning-tree)
+    - [2.17.5. Huffman Coding : a technique of compressing data to reduce its size](#2175-huffman-coding--a-technique-of-compressing-data-to-reduce-its-size)
+  - [2.18. Dynamic Programming](#218-dynamic-programming)
+    - [2.18.1. Longest Common Subsequence](#2181-longest-common-subsequence)
+    - [2.18.2. Floyd-Warshall Algorithm](#2182-floyd-warshall-algorithm)
+  - [2.19. grouping : find \& union](#219-grouping--find--union)
+  - [2.20. deque](#220-deque)
+  - [2.21. window slide to get max in moving range](#221-window-slide-to-get-max-in-moving-range)
+  - [2.22. Books \& URL](#222-books--url)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -252,8 +253,17 @@ int GCD(int a, int b){
 - thislist.clear()
   - https://www.w3schools.com/python/python_lists_remove.asp
 
-## 2.15. graph
-### 2.15.1. dijkstra
+## 2.15. compare between list and set()  : 3Sum (#15)
+- list : tmplist = [nums[i],nums[j],nums[k]]
+  - list.append(tmplist)
+- set : tmptuple = (nums[i],nums[j],nums[k])
+  - set.add(tmptuple)
+- set is faster when we want to add item
+  - if tmplist not in list:     list.append(tmplist)
+  - set.add(tmptuple)
+
+## 2.16. graph
+### 2.16.1. dijkstra
 - [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)  O(E Log V)
     - Src1 src2 -> dst 으로 갈때의 최소 path를 구하라. : 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
     - 어떤 노드에서 3개의 목적지로 가는 최소값들을 가진 것 (src1 -> node , src2 -> node , dst -> node) 일때의 합이 최소가 되는 것이 src1,src2->node->dst로 가는 최소값이 된다.  node는 모든 node를 넣어볼수 있다. src1,src2,dst도 node가 될수 있다. 
@@ -274,7 +284,7 @@ int GCD(int a, int b){
         return result
 ```
 
-## 2.16. greedy algorithm
+## 2.17. greedy algorithm
 - Greedy Choice Property : If an optimal solution to the problem can be found by choosing the best choice at each step without reconsidering the previous steps once chosen, the problem can be solved using a greedy approach. This property is called greedy choice property.
   - Problem: You have to make a change of an amount using the smallest possible number of coins.
     - Amount: $18
@@ -283,10 +293,10 @@ int GCD(int a, int b){
       -   $2 coin
       -   $1 coin
     - There is no limit to the number of each coin you can use.
-### 2.16.1. dijkstra's algorithm
+### 2.17.1. dijkstra's algorithm
 - [1.14.1. dijkstra](#1141-dijkstra)
 
-### 2.16.2. Ford-Fulkerson Algorithm
+### 2.17.2. Ford-Fulkerson Algorithm
 - Ford-Fulkerson algorithm is a greedy approach for calculating the maximum possible flow in a network or a graph.
 - Each pipe has a certain capacity of liquid it can transfer at an instance. For this algorithm, we are going to find how much liquid can be flowed from the source to the sink at an instance using the network.
   - ![](https://cdn.programiz.com/sites/tutorial2program/files/flow-network.png)
@@ -296,7 +306,7 @@ int GCD(int a, int b){
   3. change graph (substract graph capacity when they used from sink)
   4. goto 1
 
-### 2.16.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics
+### 2.17.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics
 - We start from the edges with the lowest weight and keep adding edges until we reach our goal. The steps for implementing Kruskal's algorithm are as follows:
   - Sort all the edges from low weight to high
   - Take the edge with the lowest weight and add it to the spanning tree. **If adding the edge created a cycle,** then reject this edge.
@@ -305,10 +315,10 @@ int GCD(int a, int b){
 - algorithm :
   - checking the loop is key factor. if both vertics of edge are in current graph , it is loop.  <-  i think it is faster than suggested code.
 
-### 2.16.4. Prim's Algorithm : find minimum spanning tree
+### 2.17.4. Prim's Algorithm : find minimum spanning tree
 - i do not know what is difference with kruskal's algorithm
   
-### 2.16.5. Huffman Coding : a technique of compressing data to reduce its size
+### 2.17.5. Huffman Coding : a technique of compressing data to reduce its size
 - Using the Huffman Coding technique, we can compress the string to a smaller size. Huffman coding first creates a tree using the frequencies of the character and then generates code for each character.
 
 | Character       | Frequency | Code | Size     |
@@ -319,11 +329,11 @@ int GCD(int a, int b){
 | D               | 3         | 101  | 3*3 = 9  |
 | 4 * 8 = 32 bits | 15 bits   |      | 28 bits  |
 
-## 2.17. Dynamic Programming
+## 2.18. Dynamic Programming
 - if there are overlapping among these subproblems, then the solutions to these subproblems can be saved for future reference. 
 - This technique of storing the value of subproblems is called memoization. By saving the values in the array, we save time for computations of sub-problems we have already come across.
 
-### 2.17.1. Longest Common Subsequence
+### 2.18.1. Longest Common Subsequence
 - https://riptutorial.com/algorithm/example/24007/longest-common-subsequence-explanation
 - O(MN) 
 - Table[2][3] represents the length of the longest common subsequence between "ac" and "abc".
@@ -377,13 +387,13 @@ int GCD(int a, int b){
         return len(word1) + len(word2) - mx*2   
   ```
 
-### 2.17.2. Floyd-Warshall Algorithm
+### 2.18.2. Floyd-Warshall Algorithm
 - https://www.programiz.com/dsa/floyd-warshall-algorithm
 - Floyd-Warshall Algorithm is an algorithm for finding the shortest path between all the pairs of vertices in a weighted graph. This algorithm works for both the directed and undirected weighted graphs. 
 - ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Graph.png)  ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-1.png) ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-2.png)
 - O(N^3)
 
-## 2.18. grouping : find & union
+## 2.19. grouping : find & union
 - it is faster than union() in set.
 ```python
         p = list(range(len(s)))  # parent
@@ -403,7 +413,7 @@ int GCD(int a, int b){
             p[i] = find(p[i])    
 ```
 
-## 2.19. deque
+## 2.20. deque
 - https://leonkong.cc/posts/python-deque.html
   - deque.append(item): item을 데크의 오른쪽 끝에 삽입한다.
   - deque.appendleft(item): item을 데크의 왼쪽 끝에 삽입한다.
@@ -414,7 +424,7 @@ int GCD(int a, int b){
   - deque.remove(item): item을 데크에서 찾아 삭제한다.
   - deque.rotate(num): 데크를 num만큼 회전한다(양수면 오른쪽, 음수면 왼쪽).
 
-## 2.20. window slide to get max in moving range
+## 2.21. window slide to get max in moving range
 - heapq를 이용한 window slide시 max 값을 가져오는 방법
 ```python
         heapwindow = [(-dp[-1],-1)]
@@ -431,7 +441,7 @@ int GCD(int a, int b){
             heapq.heappush(heapwindow,(-dp[mi],mi))
 ```
 
-## 2.21. Books & URL
+## 2.22. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - For Beginners for graph : https://leetcode.com/discuss/study-guide/1808711/Graph-for-Beginers-Problems

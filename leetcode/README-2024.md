@@ -1,5 +1,4 @@
 - [1. unsolved](#1-unsolved)
-  - [1.1. 3Sum (#15) - medium / python / 20M / 2024.01.05](#11-3sum-15---medium--python--20m--20240105)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -8,16 +7,15 @@
   - [2.5. Minimum Number of Operations to Make Array Empty (#2870) - medium / python / 30M / 2024.01.04](#25-minimum-number-of-operations-to-make-array-empty-2870---medium--python--30m--20240104)
   - [2.6. Valid Palindrome (#125) - easy / python / 9M / 2024.01.04](#26-valid-palindrome-125---easy--python--9m--20240104)
   - [2.7. Range Sum of BST (#938) - easy / python / 5M / 2024.01.08](#27-range-sum-of-bst-938---easy--python--5m--20240108)
+  - [2.8. 3Sum (#15) - medium / python / 2D / 2024.01.05 (recommend)](#28-3sum-15---medium--python--2d--20240105-recommend)
+    - [2.8.1. compare between list and set()  : 3Sum (#15)](#281-compare-between-list-and-set---3sum-15)
+  - [2.9. Leaf-Similar Trees (#872) - easy / python / 5M / 2024.01.09](#29-leaf-similar-trees-872---easy--python--5m--20240109)
 
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
 
 # 1. unsolved
-## 1.1. 3Sum (#15) - medium / python / 20M / 2024.01.05
-- https://leetcode.com/problems/3sum/
-- algorithm 1 : i use dictionary to calculate earlier. i save all information within O(N^2). but it is not solution. i am curious whether dictionay saving is budden.
-  - i need to study more
 
 
 # 2. solved
@@ -59,7 +57,23 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 125 ms  Beats 88.25% /  Memory 24.56 MB  Beats 79.04%
 - complexity : O(N)
 
+## 2.8. 3Sum (#15) - medium / python / 2D / 2024.01.05 (recommend)
+- https://leetcode.com/problems/3sum/
+  - Runtime 548 ms  Beats 96.53% /  Memory 21.3 MB  Beats 33.44%
+- complexity : O(N^2)
+- algorithm 1 : i use dictionary to calculate earlier. i save all information within O(N^2). but it is not solution. i am curious whether dictionay saving is budden.
+  - i need to study more
+### 2.8.1. compare between list and set()  : 3Sum (#15)
+- list : tmplist = [nums[i],nums[j],nums[k]]
+  - list.append(tmplist)
+- set : tmptuple = (nums[i],nums[j],nums[k])
+  - set.add(tmptuple)
+- set is faster when we want to add item
+  - if tmplist not in list:     list.append(tmplist)
+  - set.add(tmptuple)
 
-
-
+## 2.9. Leaf-Similar Trees (#872) - easy / python / 5M / 2024.01.09
+- https://leetcode.com/problems/leaf-similar-trees/
+  - Runtime 29 ms  Beats 96.99% /  Memory 17.39 MB  Beats 18.13%
+- complexity : O(N)
 
