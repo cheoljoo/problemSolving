@@ -13,6 +13,7 @@
   - [2.10. Valid Number (#65) - hard / python / 30M / 2024.01.09](#210-valid-number-65---hard--python--30m--20240109)
   - [2.11. Amount of Time for Binary Tree to Be Infected (#2385) - medium / python / 2H / 2024.01.11](#211-amount-of-time-for-binary-tree-to-be-infected-2385---medium--python--2h--20240111)
   - [2.12. Maximum Difference Between Node and Ancestor (#1026) - medium / python / 4M / 2024.01.11](#212-maximum-difference-between-node-and-ancestor-1026---medium--python--4m--20240111)
+  - [2.12. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12](#212-longest-increasing-subsequence-300---medium--python--solution--20240112)
 
 
 --------------------
@@ -110,10 +111,36 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - algorithm : node value exists between min and max of his ancestors.
 
+## 2.12. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12
+- https://leetcode.com/problems/longest-increasing-subsequence
+  - refer to https://leetcode.com/problems/longest-increasing-subsequence/solutions/4509322/c-python-binary-search-3-ms-beats-98-69
+- complexity : O(NlogN)
+- algorithm : 
+  - ```
+    Let's see the process for the testcase [10,9,2,5,3,7,101,18]:
+    10<=10 replace:[10]
+    9<=10 replace:[9]
+    2<=9 replace:[2]
+    5>2 append:[2, 5]
+    3<=5 replace:[2, 3]
+    7>3 append:[2, 3, 7]
+    101>7 append:[2, 3, 7, 101]
+    18<=101 replace:[2, 3, 7, 18]
 
+    [0,1,0,3,2,3]
+    [0, 1] 1
+    [0, 1] 0
+    [0, 1, 3] 3
+    [0, 1, 2] 2
+    [0, 1, 2, 3] 3
 
-
-
+    [4,10,4,3,8,9]
+    [4, 10] 10
+    [4, 10] 4
+    [3, 10] 3
+    [3, 8] 8
+    [3, 8, 9] 9
+    ```
 
 
 
