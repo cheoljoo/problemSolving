@@ -10,6 +10,9 @@
   - [2.8. 3Sum (#15) - medium / python / 2D / 2024.01.05 (recommend)](#28-3sum-15---medium--python--2d--20240105-recommend)
     - [2.8.1. compare between list and set()  : 3Sum (#15)](#281-compare-between-list-and-set---3sum-15)
   - [2.9. Leaf-Similar Trees (#872) - easy / python / 5M / 2024.01.09](#29-leaf-similar-trees-872---easy--python--5m--20240109)
+  - [2.10. Valid Number (#65) - hard / python / 30M / 2024.01.09](#210-valid-number-65---hard--python--30m--20240109)
+  - [2.11. Amount of Time for Binary Tree to Be Infected (#2385) - medium / python / 2H / 2024.01.11](#211-amount-of-time-for-binary-tree-to-be-infected-2385---medium--python--2h--20240111)
+  - [2.12. Maximum Difference Between Node and Ancestor (#1026) - medium / python / 4M / 2024.01.11](#212-maximum-difference-between-node-and-ancestor-1026---medium--python--4m--20240111)
 
 
 --------------------
@@ -76,4 +79,46 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/leaf-similar-trees/
   - Runtime 29 ms  Beats 96.99% /  Memory 17.39 MB  Beats 18.13%
 - complexity : O(N)
+
+## 2.10. Valid Number (#65) - hard / python / 30M / 2024.01.09
+- https://leetcode.com/problems/valid-number/
+  - Runtime 47ms Beats 28.93% , Memory 17.40MB Beats 14.83%
+- complexity : O(N)
+
+## 2.11. Amount of Time for Binary Tree to Be Infected (#2385) - medium / python / 2H / 2024.01.11
+- https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/
+  - Runtime 280ms Beats 98.89% / Memory 58.45MB Beats 90.72%
+- complexity : O(N)
+- testcase
+  - ```
+    [1,5,3,null,4,10,6,9,2]
+    3
+    [1]
+    1
+    [1,null,2,3,4,null,5]
+    4
+    [1,2,null,3,null,4,null,5]
+    2
+    [5,2,3,4,null,null,null,1]
+    4
+    ```
+- algorithm : tree traverse is first. then change tree that the start value's node will be root.  additionally start node dropped after child depth to reduce the calculation count.
+
+## 2.12. Maximum Difference Between Node and Ancestor (#1026) - medium / python / 4M / 2024.01.11
+- https://leetcode.com/problems/maximum-difference-between-node-and-ancestor
+  - [ Time taken: 3 m 48 s ] Runtime 37ms Beats 88.16% / Memory 18.87MB Beats 89.04%
+- complexity : O(N)
+- algorithm : node value exists between min and max of his ancestors.
+
+
+
+
+
+
+
+
+
+
+
+
 
