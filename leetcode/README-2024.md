@@ -1,4 +1,5 @@
 - [1. unsolved](#1-unsolved)
+  - [1.1. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12](#11-longest-increasing-subsequence-300---medium--python--solution--20240112)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -13,14 +14,46 @@
   - [2.10. Valid Number (#65) - hard / python / 30M / 2024.01.09](#210-valid-number-65---hard--python--30m--20240109)
   - [2.11. Amount of Time for Binary Tree to Be Infected (#2385) - medium / python / 2H / 2024.01.11](#211-amount-of-time-for-binary-tree-to-be-infected-2385---medium--python--2h--20240111)
   - [2.12. Maximum Difference Between Node and Ancestor (#1026) - medium / python / 4M / 2024.01.11](#212-maximum-difference-between-node-and-ancestor-1026---medium--python--4m--20240111)
-  - [2.13. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12](#213-longest-increasing-subsequence-300---medium--python--solution--20240112)
-  - [2.14. Determine if String Halves Are Alike (#1704) - easy / python / 5M / 2024.01.12](#214-determine-if-string-halves-are-alike-1704---easy--python--5m--20240112)
+  - [2.13. Determine if String Halves Are Alike (#1704) - easy / python / 5M / 2024.01.12](#213-determine-if-string-halves-are-alike-1704---easy--python--5m--20240112)
+  - [2.14. Max Points on a Line (#149) - hard / python / 15M / 2024.01.12](#214-max-points-on-a-line-149---hard--python--15m--20240112)
+  - [2.15. Group Anagrams (#49) - medium / python / 4M / 2024.01.12](#215-group-anagrams-49---medium--python--4m--20240112)
+  - [2.16. Candy (#135) - hard / python / 40M / 2024.01.12](#216-candy-135---hard--python--40m--20240112)
 
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
 
 # 1. unsolved
+## 1.1. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12
+- https://leetcode.com/problems/longest-increasing-subsequence
+  - refer to https://leetcode.com/problems/longest-increasing-subsequence/solutions/4509322/c-python-binary-search-3-ms-beats-98-69
+- complexity : O(NlogN)
+- algorithm : 
+  - ```
+    Let's see the process for the testcase [10,9,2,5,3,7,101,18]:
+    10<=10 replace:[10]
+    9<=10 replace:[9]
+    2<=9 replace:[2]
+    5>2 append:[2, 5]
+    3<=5 replace:[2, 3]
+    7>3 append:[2, 3, 7]
+    101>7 append:[2, 3, 7, 101]
+    18<=101 replace:[2, 3, 7, 18]
+
+    [0,1,0,3,2,3]
+    [0, 1] 1
+    [0, 1] 0
+    [0, 1, 3] 3
+    [0, 1, 2] 2
+    [0, 1, 2, 3] 3
+
+    [4,10,4,3,8,9]
+    [4, 10] 10
+    [4, 10] 4
+    [3, 10] 3
+    [3, 8] 8
+    [3, 8, 9] 9
+    ```
 
 
 # 2. solved
@@ -112,43 +145,31 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - algorithm : node value exists between min and max of his ancestors.
 
-## 2.13. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12
-- https://leetcode.com/problems/longest-increasing-subsequence
-  - refer to https://leetcode.com/problems/longest-increasing-subsequence/solutions/4509322/c-python-binary-search-3-ms-beats-98-69
-- complexity : O(NlogN)
-- algorithm : 
-  - ```
-    Let's see the process for the testcase [10,9,2,5,3,7,101,18]:
-    10<=10 replace:[10]
-    9<=10 replace:[9]
-    2<=9 replace:[2]
-    5>2 append:[2, 5]
-    3<=5 replace:[2, 3]
-    7>3 append:[2, 3, 7]
-    101>7 append:[2, 3, 7, 101]
-    18<=101 replace:[2, 3, 7, 18]
-
-    [0,1,0,3,2,3]
-    [0, 1] 1
-    [0, 1] 0
-    [0, 1, 3] 3
-    [0, 1, 2] 2
-    [0, 1, 2, 3] 3
-
-    [4,10,4,3,8,9]
-    [4, 10] 10
-    [4, 10] 4
-    [3, 10] 3
-    [3, 8] 8
-    [3, 8, 9] 9
-    ```
-
-## 2.14. Determine if String Halves Are Alike (#1704) - easy / python / 5M / 2024.01.12
+## 2.13. Determine if String Halves Are Alike (#1704) - easy / python / 5M / 2024.01.12
 - https://leetcode.com/problems/determine-if-string-halves-are-alike
   - [ Time taken: 4 m 29 s ] Runtime 42ms Beats 55.68% / Memory 17.34MB Beats 19.92%
 - complexity : O(N)
 
+## 2.14. Max Points on a Line (#149) - hard / python / 15M / 2024.01.12
+- https://leetcode.com/problems/max-points-on-a-line
+  - [ Time taken: 14 m 53 s ] Runtime 100ms Beats 48.21% / Memory 41.68MB Beats 5.69%
+- complexity : O(N^2)
+- algorithm : y = Ax + B , consider one point , consider (A,B) , consider (1,3) , (2,3)
+- https://leetcode.com/studyplan/top-interview-150/
 
+## 2.15. Group Anagrams (#49) - medium / python / 4M / 2024.01.12
+- https://leetcode.com/problems/group-anagrams
+  - [ Time taken: 3 m 32 s ] Runtime 75ms Beats 99.34% / Memory 20.41MB  Beats 57.05%
+- complexity : O(N^2*logN)
+- algorithm : N * sorted(NlogN) / hashmap
+- https://leetcode.com/studyplan/top-interview-150/
+
+## 2.16. Candy (#135) - hard / python / 40M / 2024.01.12
+- https://leetcode.com/problems/candy
+  - Runtime 139ms Beats 64.60% / Memory 20.32MB Beats 17.86%
+- complexity : O(N)
+- algorithm : increased_array , decreased_array 
+- https://leetcode.com/studyplan/top-interview-150/
 
 
 
