@@ -13,7 +13,8 @@
   - [2.10. Valid Number (#65) - hard / python / 30M / 2024.01.09](#210-valid-number-65---hard--python--30m--20240109)
   - [2.11. Amount of Time for Binary Tree to Be Infected (#2385) - medium / python / 2H / 2024.01.11](#211-amount-of-time-for-binary-tree-to-be-infected-2385---medium--python--2h--20240111)
   - [2.12. Maximum Difference Between Node and Ancestor (#1026) - medium / python / 4M / 2024.01.11](#212-maximum-difference-between-node-and-ancestor-1026---medium--python--4m--20240111)
-  - [2.12. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12](#212-longest-increasing-subsequence-300---medium--python--solution--20240112)
+  - [2.13. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12](#213-longest-increasing-subsequence-300---medium--python--solution--20240112)
+  - [2.14. Determine if String Halves Are Alike (#1704) - easy / python / 5M / 2024.01.12](#214-determine-if-string-halves-are-alike-1704---easy--python--5m--20240112)
 
 
 --------------------
@@ -111,7 +112,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - algorithm : node value exists between min and max of his ancestors.
 
-## 2.12. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12
+## 2.13. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12
 - https://leetcode.com/problems/longest-increasing-subsequence
   - refer to https://leetcode.com/problems/longest-increasing-subsequence/solutions/4509322/c-python-binary-search-3-ms-beats-98-69
 - complexity : O(NlogN)
@@ -141,6 +142,13 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     [3, 8] 8
     [3, 8, 9] 9
     ```
+
+## 2.14. Determine if String Halves Are Alike (#1704) - easy / python / 5M / 2024.01.12
+- https://leetcode.com/problems/determine-if-string-halves-are-alike
+  - [ Time taken: 4 m 29 s ] Runtime 42ms Beats 55.68% / Memory 17.34MB Beats 19.92%
+- complexity : O(N)
+
+
 
 
 
