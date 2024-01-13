@@ -22,6 +22,11 @@
   - [2.18. Basic Calculator (#224) - hard / python / 1H / 2024.01.13](#218-basic-calculator-224---hard--python--1h--20240113)
   - [2.19. Summary Ranges (#228) - easy / python / 10M / 2024.01.13](#219-summary-ranges-228---easy--python--10m--20240113)
   - [2.20. Pow(x, n) (#50) - medium / python / 40M / 2024.01.13](#220-powx-n-50---medium--python--40m--20240113)
+  - [2.21. Single Number II (#137) - medium / python / 10M / 2024.01.13](#221-single-number-ii-137---medium--python--10m--20240113)
+  - [2.22. Merge Intervals (#56) - medium / python / 20M / 2024.01.13](#222-merge-intervals-56---medium--python--20m--20240113)
+  - [2.23. Binary Tree Right Side View (#199) - medium / python / 25M / 2024.01.13](#223-binary-tree-right-side-view-199---medium--python--25m--20240113)
+  - [2.24. Binary Tree Level Order Traversal (#102) - medium / python / 3M / 2024.01.13](#224-binary-tree-level-order-traversal-102---medium--python--3m--20240113)
+  - [2.25. Binary Tree Zigzag Level Order Traversal (#103) - medium / python / 3M / 2024.01.13](#225-binary-tree-zigzag-level-order-traversal-103---medium--python--3m--20240113)
 
 
 --------------------
@@ -199,10 +204,40 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 36ms Beats 68.98% / Memory 17.40 MB Beats 5.04%
 - complexity : O(logN)
 
+## 2.21. Single Number II (#137) - medium / python / 10M / 2024.01.13
+- https://leetcode.com/problems/single-number-ii
+  - Runtime 59ms Beats 75.62% / Memory 19.69MB Beats 6.91%
+- complexity : O(N)
+- algorithm : Bit Manipulation
+- https://leetcode.com/studyplan/top-interview-150/
 
+## 2.22. Merge Intervals (#56) - medium / python / 20M / 2024.01.13
+- https://leetcode.com/problems/merge-intervals
+  - [ Time taken: 30 m 29 s ] Runtime 135ms Beats 55.61% / Memory 21.44MB Beats 32.50%
+- complexity : O(NlogN)
+- algorithm : sort , intervals
+- https://leetcode.com/studyplan/top-interview-150/
 
+## 2.23. Binary Tree Right Side View (#199) - medium / python / 25M / 2024.01.13
+- https://leetcode.com/problems/binary-tree-right-side-view
+  - Runtime 37ms Beats 72.40% / Memory 17.48MB Beats 17.33%
+- complexity : O(N)
+- algorithm : Binary Tree DFS with depth  , BFS
+- https://leetcode.com/studyplan/top-interview-150/
 
+## 2.24. Binary Tree Level Order Traversal (#102) - medium / python / 3M / 2024.01.13
+- https://leetcode.com/problems/binary-tree-level-order-traversal
+  - [ Time taken: 2 m 52 s ] Runtime 39ms  Beats 84.61% / Memory 18.19MB  Beats 17.17%
+- complexity : O(N)
+- algorithm : Binary Tree DFS with depth , BFS
+- https://leetcode.com/studyplan/top-interview-150/
 
+## 2.25. Binary Tree Zigzag Level Order Traversal (#103) - medium / python / 3M / 2024.01.13
+- https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal
+  - [ Time taken: 1 m 38 s ] Runtime 35ms Beats 84.20% / Memory 17.56MB Beats 17.02%
+- complexity : O(N)
+- algorithm : Binary Tree DFS with depth , BFS
+- https://leetcode.com/studyplan/top-interview-150/
 
 
 
