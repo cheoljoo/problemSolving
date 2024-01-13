@@ -18,6 +18,10 @@
   - [2.14. Max Points on a Line (#149) - hard / python / 15M / 2024.01.12](#214-max-points-on-a-line-149---hard--python--15m--20240112)
   - [2.15. Group Anagrams (#49) - medium / python / 4M / 2024.01.12](#215-group-anagrams-49---medium--python--4m--20240112)
   - [2.16. Candy (#135) - hard / python / 40M / 2024.01.12](#216-candy-135---hard--python--40m--20240112)
+  - [2.17. Minimum Number of Steps to Make Two Strings Anagram (#1347) - medium / python / 6M / 2024.01.13](#217-minimum-number-of-steps-to-make-two-strings-anagram-1347---medium--python--6m--20240113)
+  - [2.18. Basic Calculator (#224) - hard / python / 1H / 2024.01.13](#218-basic-calculator-224---hard--python--1h--20240113)
+  - [2.19. Summary Ranges (#228) - easy / python / 10M / 2024.01.13](#219-summary-ranges-228---easy--python--10m--20240113)
+  - [2.20. Pow(x, n) (#50) - medium / python / 40M / 2024.01.13](#220-powx-n-50---medium--python--40m--20240113)
 
 
 --------------------
@@ -170,6 +174,34 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - algorithm : increased_array , decreased_array 
 - https://leetcode.com/studyplan/top-interview-150/
+
+## 2.17. Minimum Number of Steps to Make Two Strings Anagram (#1347) - medium / python / 6M / 2024.01.13
+- https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram
+  - [ Time taken: 5 m 37 s ] Runtime 190ms Beats 42.11% / Memory 18.21MB Beats 5.24%
+- complexity : O(N)
+
+## 2.18. Basic Calculator (#224) - hard / python / 1H / 2024.01.13
+- https://leetcode.com/problems/basic-calculator
+  - Runtime 160ms Beats 12.08% / Memory 19.60MB Beats 17.75%
+- complexity : O(N)
+- algorithm : stack and backtracking , consider +(22)
+- https://leetcode.com/studyplan/top-interview-150/
+
+## 2.19. Summary Ranges (#228) - easy / python / 10M / 2024.01.13
+- https://leetcode.com/problems/summary-ranges
+  - Runtime 33ms Beats 84.66% / Memory  17.26MB  Beats 30.86%
+- complexity : O(N)
+- algorithm : intervals
+- https://leetcode.com/studyplan/top-interview-150/
+
+## 2.20. Pow(x, n) (#50) - medium / python / 40M / 2024.01.13
+- https://leetcode.com/problems/powx-n
+  - Runtime 36ms Beats 68.98% / Memory 17.40 MB Beats 5.04%
+- complexity : O(logN)
+
+
+
+
 
 
 
