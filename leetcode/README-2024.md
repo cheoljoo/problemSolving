@@ -27,6 +27,7 @@
   - [2.23. Binary Tree Right Side View (#199) - medium / python / 25M / 2024.01.13](#223-binary-tree-right-side-view-199---medium--python--25m--20240113)
   - [2.24. Binary Tree Level Order Traversal (#102) - medium / python / 3M / 2024.01.13](#224-binary-tree-level-order-traversal-102---medium--python--3m--20240113)
   - [2.25. Binary Tree Zigzag Level Order Traversal (#103) - medium / python / 3M / 2024.01.13](#225-binary-tree-zigzag-level-order-traversal-103---medium--python--3m--20240113)
+  - [2.26. Valid Sudoku (#36) - medium / python / 31M / 2024.01.13](#226-valid-sudoku-36---medium--python--31m--20240113)
 
 
 --------------------
@@ -239,6 +240,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : Binary Tree DFS with depth , BFS
 - https://leetcode.com/studyplan/top-interview-150/
 
+## 2.26. Valid Sudoku (#36) - medium / python / 31M / 2024.01.13
+- https://leetcode.com/problems/valid-sudoku
+  - [ Time taken: 30 m 53 s ] Runtime 96ms Beats 70.49% / Memory 17.30MB Beats 22.81%
+- complexity : O(N)
+- algorithm : Matrix
+- https://leetcode.com/studyplan/top-interview-150/
 
 
 
