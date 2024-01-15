@@ -30,6 +30,7 @@
   - [2.26. Valid Sudoku (#36) - medium / python / 31M / 2024.01.13](#226-valid-sudoku-36---medium--python--31m--20240113)
   - [2.27. Reverse Words in a String (#151) - medium / python / 7M / 2024.01.13](#227-reverse-words-in-a-string-151---medium--python--7m--20240113)
   - [2.28. Substring with Concatenation of All Words (#30) - hard / python / 40M / 2024.01.13](#228-substring-with-concatenation-of-all-words-30---hard--python--40m--20240113)
+  - [2.28. Determine if Two Strings Are Close (#1657) - medium / python / 20M / 2024.01.14](#228-determine-if-two-strings-are-close-1657---medium--python--20m--20240114)
 
 
 --------------------
@@ -261,6 +262,20 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - [ Time taken: 39 m 33 s ] Runtime 4769ms Beats 36.32% / Memory 17.88MB Beats 41.57%
 - complexity : O(N*M)  N:s.length M:words.length
 - https://leetcode.com/studyplan/top-interview-150/
+
+## 2.28. Determine if Two Strings Are Close (#1657) - medium / python / 20M / 2024.01.14
+- https://leetcode.com/problems/determine-if-two-strings-are-close
+  - Runtime 189ms Beats 46.15% / Memory 18.43MB Beats 20.97%
+- complexity : O(N+M) N:word1.length , M:word2.length
+- algorithm : they should have the same characters and have the same count even though character is different.
+- learnt : english expression -  two "close" strings must have the same set of characters and the same frequency of each character, although the characters themselves can be different.
+  - my implementation has lower big O.
+
+## 2.28. Find Players With Zero or One Losses (#2225) - medium / python / 10M / 2024.01.15
+- https://leetcode.com/problems/find-players-with-zero-or-one-losses
+  - [ Time taken: 9 m 48 s ] Runtime 1390ms Beats 92.47% / Memory 72.39MB Beats 21.70%
+- complexity : O(N)
+
 
 
 
