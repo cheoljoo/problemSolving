@@ -35,7 +35,8 @@
   - [2.19. grouping : find \& union](#219-grouping--find--union)
   - [2.20. deque](#220-deque)
   - [2.21. window slide to get max in moving range](#221-window-slide-to-get-max-in-moving-range)
-  - [2.22. appendix](#222-appendix)
+  - [2.22. OrderedDict](#222-ordereddict)
+  - [2.23. appendix](#223-appendix)
 - [3. Books \& URL](#3-books--url)
 
 --------------------
@@ -442,7 +443,11 @@ int GCD(int a, int b){
             heapq.heappush(heapwindow,(-dp[mi],mi))
 ```
 
-## 2.22. appendix
+## 2.22. OrderedDict
+- collections.OrderedDict : https://docs.python.org/3/library/collections.html#ordereddict-objects
+- A regular dict can emulate OrderedDict’s od.move_to_end(k, last=True) with d[k] = d.pop(k) which will move the key and its associated value to the rightmost (last) position.
+
+## 2.23. appendix
 - dictionary is faster than set
 
 # 3. Books & URL

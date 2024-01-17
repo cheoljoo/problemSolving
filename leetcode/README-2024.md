@@ -37,6 +37,7 @@
   - [2.32. Insert Delete GetRandom O(1) (#380) - medium / python / 33M / 2024.01.15](#232-insert-delete-getrandom-o1-380---medium--python--33m--20240115)
   - [2.33. Reverse Linked List II (#92) - medium / python / 20M / 2024.01.16](#233-reverse-linked-list-ii-92---medium--python--20m--20240116)
   - [2.34. Unique Number of Occurrences (#1207) - easy / python / 4M / 2024.01.17](#234-unique-number-of-occurrences-1207---easy--python--4m--20240117)
+  - [2.35. LRU Cache (#146) - medium / python / 2D / 2024.01.17](#235-lru-cache-146---medium--python--2d--20240117)
 
 
 --------------------
@@ -327,6 +328,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 -algorithm : dictionary is faster than set
 
+## 2.35. LRU Cache (#146) - medium / python / 2D / 2024.01.17
+- https://leetcode.com/problems/reverse-linked-list-ii
+  - Runtime 521ms Beats 98.48% / Memory 77.97MB Beats 79.30%
+- complexity : O(N)
+- algorithm : collections.OrderedDict - popitem(last=True) , move_to_end(key, last=True)
+- https://leetcode.com/studyplan/top-interview-150/
 
 
 
