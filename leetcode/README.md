@@ -35,7 +35,8 @@
   - [2.19. grouping : find \& union](#219-grouping--find--union)
   - [2.20. deque](#220-deque)
   - [2.21. window slide to get max in moving range](#221-window-slide-to-get-max-in-moving-range)
-  - [2.22. Books \& URL](#222-books--url)
+  - [2.22. appendix](#222-appendix)
+- [3. Books \& URL](#3-books--url)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -441,7 +442,10 @@ int GCD(int a, int b){
             heapq.heappush(heapwindow,(-dp[mi],mi))
 ```
 
-## 2.22. Books & URL
+## 2.22. appendix
+- dictionary is faster than set
+
+# 3. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - For Beginners for graph : https://leetcode.com/discuss/study-guide/1808711/Graph-for-Beginers-Problems

@@ -1,5 +1,6 @@
 - [1. unsolved](#1-unsolved)
   - [1.1. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12](#11-longest-increasing-subsequence-300---medium--python--solution--20240112)
+  - [1.2. Best Time to Buy and Sell Stock III (#123) - hard / python / solution / 2024.01.15](#12-best-time-to-buy-and-sell-stock-iii-123---hard--python--solution--20240115)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -30,7 +31,12 @@
   - [2.26. Valid Sudoku (#36) - medium / python / 31M / 2024.01.13](#226-valid-sudoku-36---medium--python--31m--20240113)
   - [2.27. Reverse Words in a String (#151) - medium / python / 7M / 2024.01.13](#227-reverse-words-in-a-string-151---medium--python--7m--20240113)
   - [2.28. Substring with Concatenation of All Words (#30) - hard / python / 40M / 2024.01.13](#228-substring-with-concatenation-of-all-words-30---hard--python--40m--20240113)
-  - [2.28. Determine if Two Strings Are Close (#1657) - medium / python / 20M / 2024.01.14](#228-determine-if-two-strings-are-close-1657---medium--python--20m--20240114)
+  - [2.29. Determine if Two Strings Are Close (#1657) - medium / python / 20M / 2024.01.14](#229-determine-if-two-strings-are-close-1657---medium--python--20m--20240114)
+  - [2.30. Find Players With Zero or One Losses (#2225) - medium / python / 10M / 2024.01.15](#230-find-players-with-zero-or-one-losses-2225---medium--python--10m--20240115)
+  - [2.31. IPO (#502) - hard / python / 2D / 2024.01.15](#231-ipo-502---hard--python--2d--20240115)
+  - [2.32. Insert Delete GetRandom O(1) (#380) - medium / python / 33M / 2024.01.15](#232-insert-delete-getrandom-o1-380---medium--python--33m--20240115)
+  - [2.33. Reverse Linked List II (#92) - medium / python / 20M / 2024.01.16](#233-reverse-linked-list-ii-92---medium--python--20m--20240116)
+  - [2.34. Unique Number of Occurrences (#1207) - easy / python / 4M / 2024.01.17](#234-unique-number-of-occurrences-1207---easy--python--4m--20240117)
 
 
 --------------------
@@ -68,6 +74,17 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     [3, 8, 9] 9
     ```
 
+## 1.2. Best Time to Buy and Sell Stock III (#123) - hard / python / solution / 2024.01.15
+- https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii
+- complexity : O(N)
+- algorithm : state diagram :  buy-sell-buy-sell
+- learnt : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/solutions/149383/easy-dp-solution-using-state-machine-o-n-time-complexity-o-1-space-complexity/?envType=study-plan-v2&envId=top-interview-150
+    - state diagram 
+    - brilliant idea.  i can not create it.
+- easy version : Best Time to Buy and Sell Stock (#121) - easy / python / 30M / 2024.01.02
+    - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+
 
 # 2. solved
 ## 2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02
@@ -85,7 +102,9 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
   - Runtime 2301 ms  Beats 5.01% /  Memory 29.4 MB  Beats 9.52%
 - complexity : O(N)
-- algorithm : left2right max, right2left max
+- algorithm : left2right min, right2left max
+- learnt : https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4452418/easy-to-understand-most-efficient-solution-with-98-43-efficiency-o-n-time-o-1-space/
+    - N loop is done from the end.
 
 ## 2.4. Number of Laser Beams in a Bank (#2125) - medium / python / 30M / 2024.01.03
 - https://leetcode.com/problems/number-of-laser-beams-in-a-bank
@@ -263,7 +282,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N*M)  N:s.length M:words.length
 - https://leetcode.com/studyplan/top-interview-150/
 
-## 2.28. Determine if Two Strings Are Close (#1657) - medium / python / 20M / 2024.01.14
+## 2.29. Determine if Two Strings Are Close (#1657) - medium / python / 20M / 2024.01.14
 - https://leetcode.com/problems/determine-if-two-strings-are-close
   - Runtime 189ms Beats 46.15% / Memory 18.43MB Beats 20.97%
 - complexity : O(N+M) N:word1.length , M:word2.length
@@ -271,10 +290,46 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - learnt : english expression -  two "close" strings must have the same set of characters and the same frequency of each character, although the characters themselves can be different.
   - my implementation has lower big O.
 
-## 2.28. Find Players With Zero or One Losses (#2225) - medium / python / 10M / 2024.01.15
+## 2.30. Find Players With Zero or One Losses (#2225) - medium / python / 10M / 2024.01.15
 - https://leetcode.com/problems/find-players-with-zero-or-one-losses
   - [ Time taken: 9 m 48 s ] Runtime 1390ms Beats 92.47% / Memory 72.39MB Beats 21.70%
 - complexity : O(N)
+
+## 2.31. IPO (#502) - hard / python / 2D / 2024.01.15
+- https://leetcode.com/problems/ipo
+  - Runtime 1010ms Beats 21.51% / Memory 54.33MB Beats 5.30%
+- complexity : O(N^2)
+- algorithm : 
+    - make sorted [capital, profits] 
+    - we can find profits when existing capital is more than necessary capital. our choice is 0..bisect_right
+    - if we use all profits whithin bisect_right ,  return answer until now
+    - if existing capital exceed maximum necessary capital , we can choose the largest profit in unused profits.
+- https://leetcode.com/studyplan/top-interview-150/
+- learnt : 
+    - this is good solution : https://leetcode.com/problems/ipo/solutions/3220653/heap-priority-queue/?envType=study-plan-v2&envId=top-interview-150
+    - your chosen capital was consumed when you chose any project.  but , my source code does not reflect it.
+    - they use heapq (python) , priority_queue(c++)  -> O(NlogN)
+
+## 2.32. Insert Delete GetRandom O(1) (#380) - medium / python / 33M / 2024.01.15
+- https://leetcode.com/problems/insert-delete-getrandom-o1
+  - [ Time taken: 32 m 26 s ] Runtime 475ms Beats 30.52% / Memory 64.66MB Beats 19.71%
+- complexity : O(1) , practically set is logN
+
+## 2.33. Reverse Linked List II (#92) - medium / python / 20M / 2024.01.16
+- https://leetcode.com/problems/reverse-linked-list-ii
+  - Runtime 43ms Beats 30.62% / Memory 17.43MB Beats 23.18%
+- complexity : O(N)
+- https://leetcode.com/studyplan/top-interview-150/
+
+## 2.34. Unique Number of Occurrences (#1207) - easy / python / 4M / 2024.01.17
+- https://leetcode.com/problems/unique-number-of-occurrences
+  - [ Time taken: 3 m 14 s ] Runtime 36ms Beats 90.28% / Memory 17.30MB Beats 47.75%
+- complexity : O(N)
+-algorithm : dictionary is faster than set
+
+
+
+
 
 
 

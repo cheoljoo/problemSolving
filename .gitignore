@@ -4,3 +4,6 @@ target
 __pycache__
 2022/Pipfile
 2022/a/
+2022/docstring/test
+2022/docstring/site
+tmp
