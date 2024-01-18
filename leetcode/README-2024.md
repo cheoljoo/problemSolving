@@ -38,6 +38,8 @@
   - [2.33. Reverse Linked List II (#92) - medium / python / 20M / 2024.01.16](#233-reverse-linked-list-ii-92---medium--python--20m--20240116)
   - [2.34. Unique Number of Occurrences (#1207) - easy / python / 4M / 2024.01.17](#234-unique-number-of-occurrences-1207---easy--python--4m--20240117)
   - [2.35. LRU Cache (#146) - medium / python / 2D / 2024.01.17](#235-lru-cache-146---medium--python--2d--20240117)
+  - [2.36. Search Suggestions System (#1268) - medium / python / 25M / 2024.01.18](#236-search-suggestions-system-1268---medium--python--25m--20240118)
+  - [2.37. The kth Factor of n (#1492) - medium / python / 10M / 2024.01.18](#237-the-kth-factor-of-n-1492---medium--python--10m--20240118)
 
 
 --------------------
@@ -188,21 +190,21 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - [ Time taken: 14 m 53 s ] Runtime 100ms Beats 48.21% / Memory 41.68MB Beats 5.69%
 - complexity : O(N^2)
 - algorithm : y = Ax + B , consider one point , consider (A,B) , consider (1,3) , (2,3)
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.15. Group Anagrams (#49) - medium / python / 4M / 2024.01.12
 - https://leetcode.com/problems/group-anagrams
   - [ Time taken: 3 m 32 s ] Runtime 75ms Beats 99.34% / Memory 20.41MB  Beats 57.05%
 - complexity : O(N^2*logN)
 - algorithm : N * sorted(NlogN) / hashmap
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.16. Candy (#135) - hard / python / 40M / 2024.01.12
 - https://leetcode.com/problems/candy
   - Runtime 139ms Beats 64.60% / Memory 20.32MB Beats 17.86%
 - complexity : O(N)
 - algorithm : increased_array , decreased_array 
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.17. Minimum Number of Steps to Make Two Strings Anagram (#1347) - medium / python / 6M / 2024.01.13
 - https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram
@@ -214,14 +216,14 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 160ms Beats 12.08% / Memory 19.60MB Beats 17.75%
 - complexity : O(N)
 - algorithm : stack and backtracking , consider +(22)
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.19. Summary Ranges (#228) - easy / python / 10M / 2024.01.13
 - https://leetcode.com/problems/summary-ranges
   - Runtime 33ms Beats 84.66% / Memory  17.26MB  Beats 30.86%
 - complexity : O(N)
 - algorithm : intervals
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.20. Pow(x, n) (#50) - medium / python / 40M / 2024.01.13
 - https://leetcode.com/problems/powx-n
@@ -233,55 +235,55 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 59ms Beats 75.62% / Memory 19.69MB Beats 6.91%
 - complexity : O(N)
 - algorithm : Bit Manipulation
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.22. Merge Intervals (#56) - medium / python / 20M / 2024.01.13
 - https://leetcode.com/problems/merge-intervals
   - [ Time taken: 30 m 29 s ] Runtime 135ms Beats 55.61% / Memory 21.44MB Beats 32.50%
 - complexity : O(NlogN)
 - algorithm : sort , intervals
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.23. Binary Tree Right Side View (#199) - medium / python / 25M / 2024.01.13
 - https://leetcode.com/problems/binary-tree-right-side-view
   - Runtime 37ms Beats 72.40% / Memory 17.48MB Beats 17.33%
 - complexity : O(N)
 - algorithm : Binary Tree DFS with depth  , BFS
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.24. Binary Tree Level Order Traversal (#102) - medium / python / 3M / 2024.01.13
 - https://leetcode.com/problems/binary-tree-level-order-traversal
   - [ Time taken: 2 m 52 s ] Runtime 39ms  Beats 84.61% / Memory 18.19MB  Beats 17.17%
 - complexity : O(N)
 - algorithm : Binary Tree DFS with depth , BFS
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.25. Binary Tree Zigzag Level Order Traversal (#103) - medium / python / 3M / 2024.01.13
 - https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal
   - [ Time taken: 1 m 38 s ] Runtime 35ms Beats 84.20% / Memory 17.56MB Beats 17.02%
 - complexity : O(N)
 - algorithm : Binary Tree DFS with depth , BFS
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.26. Valid Sudoku (#36) - medium / python / 31M / 2024.01.13
 - https://leetcode.com/problems/valid-sudoku
   - [ Time taken: 30 m 53 s ] Runtime 96ms Beats 70.49% / Memory 17.30MB Beats 22.81%
 - complexity : O(N)
 - algorithm : Matrix
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.27. Reverse Words in a String (#151) - medium / python / 7M / 2024.01.13
 - https://leetcode.com/problems/reverse-words-in-a-string
   - [ Time taken: 6 m 50 s ] Runtime 39ms Beats 62.48% / Memory 17.59MB Beats 12.06%
 - complexity : O(N)
 - algorithm : Array / String ->  ' '.join(filter(lambda n : n != '' , reversed([i for i in a])))
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.28. Substring with Concatenation of All Words (#30) - hard / python / 40M / 2024.01.13
 - https://leetcode.com/problems/substring-with-concatenation-of-all-words
   - [ Time taken: 39 m 33 s ] Runtime 4769ms Beats 36.32% / Memory 17.88MB Beats 41.57%
 - complexity : O(N*M)  N:s.length M:words.length
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.29. Determine if Two Strings Are Close (#1657) - medium / python / 20M / 2024.01.14
 - https://leetcode.com/problems/determine-if-two-strings-are-close
@@ -305,7 +307,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     - we can find profits when existing capital is more than necessary capital. our choice is 0..bisect_right
     - if we use all profits whithin bisect_right ,  return answer until now
     - if existing capital exceed maximum necessary capital , we can choose the largest profit in unused profits.
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 - learnt : 
     - this is good solution : https://leetcode.com/problems/ipo/solutions/3220653/heap-priority-queue/?envType=study-plan-v2&envId=top-interview-150
     - your chosen capital was consumed when you chose any project.  but , my source code does not reflect it.
@@ -320,7 +322,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/reverse-linked-list-ii
   - Runtime 43ms Beats 30.62% / Memory 17.43MB Beats 23.18%
 - complexity : O(N)
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 ## 2.34. Unique Number of Occurrences (#1207) - easy / python / 4M / 2024.01.17
 - https://leetcode.com/problems/unique-number-of-occurrences
@@ -333,9 +335,21 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 521ms Beats 98.48% / Memory 77.97MB Beats 79.30%
 - complexity : O(N)
 - algorithm : collections.OrderedDict - popitem(last=True) , move_to_end(key, last=True)
-- https://leetcode.com/studyplan/top-interview-150/
+- study - https://leetcode.com/studyplan/top-interview-150/
 
+## 2.36. Search Suggestions System (#1268) - medium / python / 25M / 2024.01.18
+- https://leetcode.com/problems/search-suggestions-system
+  - Runtime 69ms Beats 92.96% / Memory 20.44MB Beats 66.08%
+- complexity : O(NlogN + N*M)  N : products , M : searchWord
+- algorithm : sort , minimum search of products before reducing the node
+- study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.37. The kth Factor of n (#1492) - medium / python / 10M / 2024.01.18
+- https://leetcode.com/problems/the-kth-factor-of-n
+  - Runtime 31 ms Beats 93.36% if n < k//int(math.log2(n)+1):
+- complexity : O(N) 
+- algorithm : add some rule to get faster  - if n < k//int(math.log2(n)+1):
+- study - https://leetcode.com/studyplan/amazon-spring-23-high-frequency/
 
 
 
