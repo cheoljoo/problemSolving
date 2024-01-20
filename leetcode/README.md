@@ -447,7 +447,7 @@ int GCD(int a, int b){
 - collections.OrderedDict : https://docs.python.org/3/library/collections.html#ordereddict-objects
 - A regular dict can emulate OrderedDict’s od.move_to_end(k, last=True) with d[k] = d.pop(k) which will move the key and its associated value to the rightmost (last) position.
 
-## sometimes initalizing time is slower than calulation.
+## sometimes initializing time is slower than calulation.
 - https://leetcode.com/problems/climbing-stairs
 - 
 
