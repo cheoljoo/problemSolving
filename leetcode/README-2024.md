@@ -1,6 +1,8 @@
 - [1. unsolved](#1-unsolved)
   - [1.1. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12](#11-longest-increasing-subsequence-300---medium--python--solution--20240112)
   - [1.2. Best Time to Buy and Sell Stock III (#123) - hard / python / solution / 2024.01.15](#12-best-time-to-buy-and-sell-stock-iii-123---hard--python--solution--20240115)
+  - [1.3. Word Search II (#212) - hard / python / solution / 2024.01.20](#13-word-search-ii-212---hard--python--solution--20240120)
+  - [1.4. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20](#14-sum-of-subarray-minimums-907---medium--python--solution--20240120)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -40,6 +42,10 @@
   - [2.35. LRU Cache (#146) - medium / python / 2D / 2024.01.17](#235-lru-cache-146---medium--python--2d--20240117)
   - [2.36. Search Suggestions System (#1268) - medium / python / 25M / 2024.01.18](#236-search-suggestions-system-1268---medium--python--25m--20240118)
   - [2.37. The kth Factor of n (#1492) - medium / python / 10M / 2024.01.18](#237-the-kth-factor-of-n-1492---medium--python--10m--20240118)
+  - [2.38. Swap Nodes in Pairs (#24) - medium / python / 9M / 2024.01.18](#238-swap-nodes-in-pairs-24---medium--python--9m--20240118)
+  - [2.39. Minimum Falling Path Sum (#931) - medium / python / 23M / 2024.01.19](#239-minimum-falling-path-sum-931---medium--python--23m--20240119)
+  - [2.40. Text Justification (#68) - hard / python / 36M / 2024.01.20](#240-text-justification-68---hard--python--36m--20240120)
+  - [2.41. Merge Sorted Array (#88) - easy / c++ / 33m / 2024.01.20](#241-merge-sorted-array-88---easy--c--33m--20240120)
 
 
 --------------------
@@ -86,6 +92,25 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     - brilliant idea.  i can not create it.
 - easy version : Best Time to Buy and Sell Stock (#121) - easy / python / 30M / 2024.01.02
     - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+## 1.3. Word Search II (#212) - hard / python / solution / 2024.01.20
+- https://leetcode.com/problems/word-search-ii
+- complexity : O(MN*Words#*WordsLength)
+- [my solution but it is timeout](2024/word-search-ii.py)
+- learnt : [best solution](2024/word-search-ii-solution.py)
+  - set in board
+  - sub tri dictionary or tree than string comparison
+- study - https://leetcode.com/studyplan/top-interview-150/
+
+## 1.4. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20
+- https://leetcode.com/problems/sum-of-subarray-minimums
+- complexity : O(N)
+- my algorithm : O(N^2) so it is timeout.  
+- learnt : 
+    - state diagram 
+    - brilliant idea.  i can not create it.
+
+
 
 
 
@@ -350,6 +375,43 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N) 
 - algorithm : add some rule to get faster  - if n < k//int(math.log2(n)+1):
 - study - https://leetcode.com/studyplan/amazon-spring-23-high-frequency/
+
+## 2.38. Swap Nodes in Pairs (#24) - medium / python / 9M / 2024.01.18
+- https://leetcode.com/problems/swap-nodes-in-pairs
+  - [ Time taken: 8 m 22 s ] Runtime 39ms Beats 51.14% / Memory 17.19MB Beats 47.33%
+- complexity : O(N) 
+
+## 2.39. Minimum Falling Path Sum (#931) - medium / python / 23M / 2024.01.19
+- https://leetcode.com/problems/minimum-falling-path-sum
+  - [ Time taken: 22 m 17 s ] Runtime 148ms Beats 36.19% / Memory 19.24MB Beats 23.94%
+- complexity : O(N*N)   N:Matix Row Count
+- algorithm : DP
+- learnt : best is DP also. only it is different to calculate something. i think it is not a big difference.
+
+## 2.40. Text Justification (#68) - hard / python / 36M / 2024.01.20
+- https://leetcode.com/problems/text-justification
+  - [ Time taken: 35 m 26 s ] Runtime 39ms Beats 58.18% / Memory 16.70MB Beats 56.93%
+- complexity : O(N) 
+- study - https://leetcode.com/studyplan/leetcode-75/
+
+## 2.41. Merge Sorted Array (#88) - easy / c++ / 33m / 2024.01.20
+- https://leetcode.com/problems/merge-sorted-array
+  - Runtime 0ms Beats 100.00% of users with C++ / Memory 10.94MB Beats 5.62%
+of users with C++
+- complexity : O(N)
+- algorithm : return nums2 if n==0
+- study - https://leetcode.com/studyplan/top-interview-150/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
