@@ -46,6 +46,8 @@
   - [2.39. Minimum Falling Path Sum (#931) - medium / python / 23M / 2024.01.19](#239-minimum-falling-path-sum-931---medium--python--23m--20240119)
   - [2.40. Text Justification (#68) - hard / python / 36M / 2024.01.20](#240-text-justification-68---hard--python--36m--20240120)
   - [2.41. Merge Sorted Array (#88) - easy / c++ / 33m / 2024.01.20](#241-merge-sorted-array-88---easy--c--33m--20240120)
+  - [2.42. Jump Game (#55) - medium / python / 20m / 2024.01.20](#242-jump-game-55---medium--python--20m--20240120)
+  - [2.43. Jump Game II (#45) - medium / python / 30m / 2024.01.20](#243-jump-game-ii-45---medium--python--30m--20240120)
 
 
 --------------------
@@ -396,12 +398,26 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 
 ## 2.41. Merge Sorted Array (#88) - easy / c++ / 33m / 2024.01.20
 - https://leetcode.com/problems/merge-sorted-array
-  - Runtime 0ms Beats 100.00% of users with C++ / Memory 10.94MB Beats 5.62%
-of users with C++
+  - Runtime 0ms Beats 100.00% / Memory 10.94MB Beats 5.62% of users with C++
 - complexity : O(N)
 - algorithm : return nums2 if n==0
 - study - https://leetcode.com/studyplan/top-interview-150/
 
+## 2.42. Jump Game (#55) - medium / python / 20m / 2024.01.20
+- https://leetcode.com/problems/jump-game
+  - Runtime 9822ms Beats 5.00% of users with Python3 / Memory 18.04MB Beats 56.56% of users with Python3
+    - O(N^2)
+  - Runtime 354 ms Beats 90.64% / Memory 17.89 MB Beats 57.27% of users with Python3
+    - O(N)
+- complexity : O(N)
+- algorithm : calculate from end , if you meet 0 , find the position to jump over here.
+- study - https://leetcode.com/studyplan/top-interview-150/
+
+## 2.43. Jump Game II (#45) - medium / python / 30m / 2024.01.20
+- https://leetcode.com/problems/jump-game-ii
+  - Runtime 673 ms Beats 31.28% / Memory 17.61  MB  Beats  60.31% of users with Python3
+- complexity : O(N^2)
+- study - https://leetcode.com/studyplan/top-interview-150/
 
 
 
