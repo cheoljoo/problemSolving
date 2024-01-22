@@ -3,6 +3,8 @@
   - [1.2. Best Time to Buy and Sell Stock III (#123) - hard / python / solution / 2024.01.15](#12-best-time-to-buy-and-sell-stock-iii-123---hard--python--solution--20240115)
   - [1.3. Word Search II (#212) - hard / python / solution / 2024.01.20](#13-word-search-ii-212---hard--python--solution--20240120)
   - [1.4. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20](#14-sum-of-subarray-minimums-907---medium--python--solution--20240120)
+  - [1.5. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21](#15-minimum-size-subarray-sum-209---medium--python--30m--20240121)
+  - [1.6. N-Queens II (#52) - hard / python / solution / 2024.01.21](#16-n-queens-ii-52---hard--python--solution--20240121)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -48,6 +50,9 @@
   - [2.41. Merge Sorted Array (#88) - easy / c++ / 33m / 2024.01.20](#241-merge-sorted-array-88---easy--c--33m--20240120)
   - [2.42. Jump Game (#55) - medium / python / 20m / 2024.01.20](#242-jump-game-55---medium--python--20m--20240120)
   - [2.43. Jump Game II (#45) - medium / python / 30m / 2024.01.20](#243-jump-game-ii-45---medium--python--30m--20240120)
+  - [2.44. Longest Common Prefix (#14) - easy / c++ / 5m / 2024.01.21](#244-longest-common-prefix-14---easy--c--5m--20240121)
+  - [2.45. H-Index (#274) - medium / python / 20m / 2024.01.21](#245-h-index-274---medium--python--20m--20240121)
+  - [2.46. Set Mismatch (#645) - easy / c++ / 22m / 2024.01.22](#246-set-mismatch-645---easy--c--22m--20240122)
 
 
 --------------------
@@ -89,7 +94,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii
 - complexity : O(N)
 - algorithm : state diagram :  buy-sell-buy-sell
-- learnt : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/solutions/149383/easy-dp-solution-using-state-machine-o-n-time-complexity-o-1-space-complexity/?envType=study-plan-v2&envId=top-interview-150
+- learnt : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/solutions/149383/easy-dp-solution-using-state-machine-o-n-time-complexity-o-1-space-complexity
     - state diagram 
     - brilliant idea.  i can not create it.
 - easy version : Best Time to Buy and Sell Stock (#121) - easy / python / 30M / 2024.01.02
@@ -112,8 +117,21 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     - state diagram 
     - brilliant idea.  i can not create it.
 
+## 1.5. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21
+- https://leetcode.com/problems/minimum-size-subarray-sum
+  - Runtime 187 ms  Beats  96.56% / Memory 30.34  MB  Beats  52.90% of users with Python3
+- complexity : O(N)
+- algotithm : sliding window 
+- study - https://leetcode.com/studyplan/top-interview-150/
+- learnt : https://leetcode.com/problems/minimum-size-subarray-sum/solutions/4575964/check-it-out
 
-
+## 1.6. N-Queens II (#52) - hard / python / solution / 2024.01.21
+- https://leetcode.com/problems/n-queens-ii
+  - Runtime 113 ms Beats 11.79% / Memory 16.60 MB Beats 61.74% of users with Python3
+- complexity : ??
+- algotithm : brute force
+- study - https://leetcode.com/studyplan/top-interview-150/
+- learnt : https://leetcode.com/problems/n-queens-ii/solutions/2111857/java-c-n-queens-1-2-almost-same-solution
 
 
 # 2. solved
@@ -336,7 +354,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     - if existing capital exceed maximum necessary capital , we can choose the largest profit in unused profits.
 - study - https://leetcode.com/studyplan/top-interview-150/
 - learnt : 
-    - this is good solution : https://leetcode.com/problems/ipo/solutions/3220653/heap-priority-queue/?envType=study-plan-v2&envId=top-interview-150
+    - this is good solution : https://leetcode.com/problems/ipo/solutions/3220653/heap-priority-queue
     - your chosen capital was consumed when you chose any project.  but , my source code does not reflect it.
     - they use heapq (python) , priority_queue(c++)  -> O(NlogN)
 
@@ -358,7 +376,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 -algorithm : dictionary is faster than set
 
 ## 2.35. LRU Cache (#146) - medium / python / 2D / 2024.01.17
-- https://leetcode.com/problems/reverse-linked-list-ii
+- https://leetcode.com/problems/lru-cache
   - Runtime 521ms Beats 98.48% / Memory 77.97MB Beats 79.30%
 - complexity : O(N)
 - algorithm : collections.OrderedDict - popitem(last=True) , move_to_end(key, last=True)
@@ -418,6 +436,25 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 673 ms Beats 31.28% / Memory 17.61  MB  Beats  60.31% of users with Python3
 - complexity : O(N^2)
 - study - https://leetcode.com/studyplan/top-interview-150/
+
+## 2.44. Longest Common Prefix (#14) - easy / c++ / 5m / 2024.01.21
+- https://leetcode.com/problems/longest-common-prefix
+  - Runtime 0 ms Beats 100.00% / Memory 10.74  MB Beats 7.57% of users with C++
+- complexity : O(N^2)
+- study - https://leetcode.com/studyplan/top-interview-150/
+
+## 2.45. H-Index (#274) - medium / python / 20m / 2024.01.21
+- https://leetcode.com/problems/h-index
+  - Runtime 43 ms Beats 64.62% / Memory 16.81 MB Beats 57.57% of users with Python3
+  - Runtime 5  ms  Beats  36.59%   / Memory  10.80 MB  Beats 6.45% of users with C++
+- complexity : O(NlogN)
+- algorithm : sort and calculate from the end : max from h-index
+- study - https://leetcode.com/studyplan/top-interview-150/
+
+## 2.46. Set Mismatch (#645) - easy / c++ / 22m / 2024.01.22
+- https://leetcode.com/problems/set-mismatch
+  - [ Time taken: 21 m 13 s ] Runtime 24 ms  Beats  69.83% / Memory  24.64  MB Beats  34.82% of users with C++
+- complexity : O(N)
 
 
 
