@@ -1,10 +1,11 @@
 - [1. unsolved](#1-unsolved)
   - [1.1. Longest Increasing Subsequence (#300) - medium / python / solution / 2024.01.12](#11-longest-increasing-subsequence-300---medium--python--solution--20240112)
   - [1.2. Best Time to Buy and Sell Stock III (#123) - hard / python / solution / 2024.01.15](#12-best-time-to-buy-and-sell-stock-iii-123---hard--python--solution--20240115)
-  - [1.3. Word Search II (#212) - hard / python / solution / 2024.01.20](#13-word-search-ii-212---hard--python--solution--20240120)
-  - [1.4. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20](#14-sum-of-subarray-minimums-907---medium--python--solution--20240120)
-  - [1.5. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21](#15-minimum-size-subarray-sum-209---medium--python--30m--20240121)
-  - [1.6. N-Queens II (#52) - hard / python / solution / 2024.01.21](#16-n-queens-ii-52---hard--python--solution--20240121)
+  - [1.3. Best Time to Buy and Sell Stock with Transaction Fee (#714) - medium / python / solution / 2024.01.25](#13-best-time-to-buy-and-sell-stock-with-transaction-fee-714---medium--python--solution--20240125)
+  - [1.4. Word Search II (#212) - hard / python / solution / 2024.01.20](#14-word-search-ii-212---hard--python--solution--20240120)
+  - [1.5. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20](#15-sum-of-subarray-minimums-907---medium--python--solution--20240120)
+  - [1.6. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21](#16-minimum-size-subarray-sum-209---medium--python--30m--20240121)
+  - [1.7. N-Queens II (#52) - hard / python / solution / 2024.01.21](#17-n-queens-ii-52---hard--python--solution--20240121)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -53,6 +54,8 @@
   - [2.44. Longest Common Prefix (#14) - easy / c++ / 5m / 2024.01.21](#244-longest-common-prefix-14---easy--c--5m--20240121)
   - [2.45. H-Index (#274) - medium / python / 20m / 2024.01.21](#245-h-index-274---medium--python--20m--20240121)
   - [2.46. Set Mismatch (#645) - easy / c++ / 22m / 2024.01.22](#246-set-mismatch-645---easy--c--22m--20240122)
+  - [2.47. Maximum Length of a Concatenated String with Unique Characters (#1239) - medium / python / 1D / 2024.01.24](#247-maximum-length-of-a-concatenated-string-with-unique-characters-1239---medium--python--1d--20240124)
+  - [2.48. Best Time to Buy and Sell Stock IV (#188) - hard / python / 1H / 2024.01.25](#248-best-time-to-buy-and-sell-stock-iv-188---hard--python--1h--20240125)
 
 
 --------------------
@@ -100,7 +103,15 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - easy version : Best Time to Buy and Sell Stock (#121) - easy / python / 30M / 2024.01.02
     - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
-## 1.3. Word Search II (#212) - hard / python / solution / 2024.01.20
+## 1.3. Best Time to Buy and Sell Stock with Transaction Fee (#714) - medium / python / solution / 2024.01.25
+- https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee
+- complexity : O(N)
+- algorithm : state diagram :  buy-sell-buy-sell
+- learnt : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solutions/3667440/beats-100-c-java-python-beginner-friendly
+- study : https://leetcode.com/studyplan/leetcode-75/
+
+
+## 1.4. Word Search II (#212) - hard / python / solution / 2024.01.20
 - https://leetcode.com/problems/word-search-ii
 - complexity : O(MN*Words#*WordsLength)
 - [my solution but it is timeout](2024/word-search-ii.py)
@@ -109,7 +120,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - sub tri dictionary or tree than string comparison
 - study - https://leetcode.com/studyplan/top-interview-150/
 
-## 1.4. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20
+## 1.5. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20
 - https://leetcode.com/problems/sum-of-subarray-minimums
 - complexity : O(N)
 - my algorithm : O(N^2) so it is timeout.  
@@ -117,7 +128,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     - state diagram 
     - brilliant idea.  i can not create it.
 
-## 1.5. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21
+## 1.6. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21
 - https://leetcode.com/problems/minimum-size-subarray-sum
   - Runtime 187 ms  Beats  96.56% / Memory 30.34  MB  Beats  52.90% of users with Python3
 - complexity : O(N)
@@ -125,7 +136,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - study - https://leetcode.com/studyplan/top-interview-150/
 - learnt : https://leetcode.com/problems/minimum-size-subarray-sum/solutions/4575964/check-it-out
 
-## 1.6. N-Queens II (#52) - hard / python / solution / 2024.01.21
+## 1.7. N-Queens II (#52) - hard / python / solution / 2024.01.21
 - https://leetcode.com/problems/n-queens-ii
   - Runtime 113 ms Beats 11.79% / Memory 16.60 MB Beats 61.74% of users with Python3
 - complexity : ??
@@ -455,6 +466,21 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/set-mismatch
   - [ Time taken: 21 m 13 s ] Runtime 24 ms  Beats  69.83% / Memory  24.64  MB Beats  34.82% of users with C++
 - complexity : O(N)
+
+## 2.47. Maximum Length of a Concatenated String with Unique Characters (#1239) - medium / python / 1D / 2024.01.24
+- https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters
+  - Runtime 102 ms Beats 46.41% / Memory 16.57 MB Beats 79.02% of users with Python3
+- complexity : O(2^16)
+- algorithm : how to traverse 2^16 like binary number. use DFS (index,not include / include me)
+
+## 2.48. Best Time to Buy and Sell Stock IV (#188) - hard / python / 1H / 2024.01.25
+- https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv
+  - Runtime 108 ms Beats 70.56% / Memory 16.83 MB Beats 85.22% of users with Python3
+- complexity : O(N*K)
+- algorithm : buy (-) and sell (+)  : calculate max profits for each position : buy and sell stock
+- study - https://leetcode.com/studyplan/top-interview-150/
+  - https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/?envType=study-plan-v2&envId=top-interview-150
+
 
 
 

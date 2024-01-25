@@ -36,7 +36,10 @@
   - [2.20. deque](#220-deque)
   - [2.21. window slide to get max in moving range](#221-window-slide-to-get-max-in-moving-range)
   - [2.22. OrderedDict](#222-ordereddict)
-  - [2.23. appendix](#223-appendix)
+  - [2.23. 2^16 traverse](#223-216-traverse)
+  - [2.24. maximum profit when buy and sell stock](#224-maximum-profit-when-buy-and-sell-stock)
+  - [2.25. sometimes initializing time is slower than calulation.](#225-sometimes-initializing-time-is-slower-than-calulation)
+  - [2.26. appendix](#226-appendix)
 - [3. Books \& URL](#3-books--url)
 
 --------------------
@@ -447,11 +450,44 @@ int GCD(int a, int b){
 - collections.OrderedDict : https://docs.python.org/3/library/collections.html#ordereddict-objects
 - A regular dict can emulate OrderedDict’s od.move_to_end(k, last=True) with d[k] = d.pop(k) which will move the key and its associated value to the rightmost (last) position.
 
-## sometimes initializing time is slower than calulation.
-- https://leetcode.com/problems/climbing-stairs
-- 
+## 2.23. 2^16 traverse
+- O(2^16)
+- algorithm : how to traverse 2^16 like binary number. use DFS (index,not include / include me)
+```python
+self.dp(arr,1,arr[0])
+self.dp(arr,1,"")
+def dp(self,arr,idx,result):  # fromIdx .. toIdx
+        self.count += 1
+        # print(idx,result)
+        if idx >= len(arr):
+            self.ans = max(self.ans,len(result))
+            return
+        self.dp(arr,idx+1,result)
+        ....
+        if flag == False:
+            self.dp(arr,idx+1,result+arr[idx])
+        return
+```
 
-## 2.23. appendix
+## 2.24. maximum profit when buy and sell stock
+- https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solutions/3667440/beats-100-c-java-python-beginner-friendly
+- Time complexity: O(n)     Space complexity: O(1)
+```python
+    def maxProfit(self, prices: List[int], fee: int) -> int:
+        buy = float('-inf')
+        sell = 0
+
+        for price in prices:
+            buy = max(buy, sell - price)
+            sell = max(sell, buy + price - fee)
+
+        return sell
+```
+
+## 2.25. sometimes initializing time is slower than calulation.
+- https://leetcode.com/problems/climbing-stairs
+
+## 2.26. appendix
 - dictionary is faster than set
 
 # 3. Books & URL
