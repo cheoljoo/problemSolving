@@ -6,6 +6,7 @@
   - [1.5. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20](#15-sum-of-subarray-minimums-907---medium--python--solution--20240120)
   - [1.6. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21](#16-minimum-size-subarray-sum-209---medium--python--30m--20240121)
   - [1.7. N-Queens II (#52) - hard / python / solution / 2024.01.21](#17-n-queens-ii-52---hard--python--solution--20240121)
+  - [1.8. K Inverse Pairs Array (#629) - hard / python / solution / 2024.01.27](#18-k-inverse-pairs-array-629---hard--python--solution--20240127)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -56,6 +57,8 @@
   - [2.46. Set Mismatch (#645) - easy / c++ / 22m / 2024.01.22](#246-set-mismatch-645---easy--c--22m--20240122)
   - [2.47. Maximum Length of a Concatenated String with Unique Characters (#1239) - medium / python / 1D / 2024.01.24](#247-maximum-length-of-a-concatenated-string-with-unique-characters-1239---medium--python--1d--20240124)
   - [2.48. Best Time to Buy and Sell Stock IV (#188) - hard / python / 1H / 2024.01.25](#248-best-time-to-buy-and-sell-stock-iv-188---hard--python--1h--20240125)
+  - [2.49. Online Stock Span (#901) - medium / python / 30M / 2024.01.26](#249-online-stock-span-901---medium--python--30m--20240126)
+  - [2.50. Minimum Number of Arrows to Burst Balloons (#452) - medium / python / 1D / 2024.01.27](#250-minimum-number-of-arrows-to-burst-balloons-452---medium--python--1d--20240127)
 
 
 --------------------
@@ -110,7 +113,6 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - learnt : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solutions/3667440/beats-100-c-java-python-beginner-friendly
 - study : https://leetcode.com/studyplan/leetcode-75/
 
-
 ## 1.4. Word Search II (#212) - hard / python / solution / 2024.01.20
 - https://leetcode.com/problems/word-search-ii
 - complexity : O(MN*Words#*WordsLength)
@@ -143,6 +145,23 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algotithm : brute force
 - study - https://leetcode.com/studyplan/top-interview-150/
 - learnt : https://leetcode.com/problems/n-queens-ii/solutions/2111857/java-c-n-queens-1-2-almost-same-solution
+
+## 1.8. K Inverse Pairs Array (#629) - hard / python / solution / 2024.01.27
+- https://leetcode.com/problems/k-inverse-pairs-array
+- complexity : O(N^2)
+- learnt : https://leetcode.com/problems/k-inverse-pairs-array/solutions/4632133/easily-dp-explained-c-java-python
+  - Filling the DP Array
+  - For each array size i, we calculate the number of inverse pairs j from 0 to k.
+    - at most k - at most (k-1) = exactly k
+
+
+
+
+
+
+
+
+
 
 
 # 2. solved
@@ -482,8 +501,19 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/?envType=study-plan-v2&envId=top-interview-150
 
 
+## 2.49. Online Stock Span (#901) - medium / python / 30M / 2024.01.26
+- https://leetcode.com/problems/online-stock-span
+  - [ Time taken: 29 m 9 s ] Runtime 271 ms Beats 95.98%  / Memory 21.12 MB Beats 98.56% of users with Python3
+- complexity : O(N)
+- algorithm : stack with (price,count)  count is the number less than current position.
+- study - https://leetcode.com/studyplan/leetcode-75/
 
-
+## 2.50. Minimum Number of Arrows to Burst Balloons (#452) - medium / python / 1D / 2024.01.27
+- https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons
+  - Runtime 1083 ms Beats 65.89% / Memory 62.88 MB Beats 57.54% of users with Python3
+- complexity : O(NlogN) 
+- algorithm : sort and intervals , it is similar how to produce faster or to do something with short periods
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
