@@ -59,6 +59,8 @@
   - [2.48. Best Time to Buy and Sell Stock IV (#188) - hard / python / 1H / 2024.01.25](#248-best-time-to-buy-and-sell-stock-iv-188---hard--python--1h--20240125)
   - [2.49. Online Stock Span (#901) - medium / python / 30M / 2024.01.26](#249-online-stock-span-901---medium--python--30m--20240126)
   - [2.50. Minimum Number of Arrows to Burst Balloons (#452) - medium / python / 1D / 2024.01.27](#250-minimum-number-of-arrows-to-burst-balloons-452---medium--python--1d--20240127)
+  - [2.51. Implement Queue using Stacks (#232) - easy / c++ / 14m / 2024.01.29](#251-implement-queue-using-stacks-232---easy--c--14m--20240129)
+  - [2.52. Evaluate Reverse Polish Notation (#150) - medium / python / 35m / 2024.01.30](#252-evaluate-reverse-polish-notation-150---medium--python--35m--20240130)
 
 
 --------------------
@@ -153,7 +155,18 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Filling the DP Array
   - For each array size i, we calculate the number of inverse pairs j from 0 to k.
     - at most k - at most (k-1) = exactly k
-
+    - ```python
+      int previous = dp[i - 1][j]; // Count of arrays with (i - 1) elements and j inverse pairs
+      int subtracted = 0;
+      if (j - i >= 0) {
+          subtracted = dp[i - 1][j - i]; // Count of arrays with (i - 1) elements and (j - i) inverse pairs
+      }
+      int adjusted = (previous + MOD - subtracted) % MOD; // Adjusted count to consider negative values
+      int val = adjusted; // Final value for dp[i][j]   // val is at most k
+      dp[i][j] = (dp[i][j - 1] + val) % MOD;
+      ```
+  - recursive (n,k) = (n-1,k) (n-1,k-1)... (n-1,k-n+1)  <= [sliding window : size n]  **[[best]]**
+    - https://www.youtube.com/watch?v=dglwb30bUKI
 
 
 
@@ -515,7 +528,16 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : sort and intervals , it is similar how to produce faster or to do something with short periods
 - study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.51. Implement Queue using Stacks (#232) - easy / c++ / 14m / 2024.01.29
+- https://leetcode.com/problems/implement-queue-using-stacks
+  - [ Time taken: 13 m 58 s ] Runtime 0 ms Beats 100.00% / Memory 8.30 MB Beats 15.21% of users with C++
+- complexity : O(N)
 
+## 2.52. Evaluate Reverse Polish Notation (#150) - medium / python / 35m / 2024.01.30
+- https://leetcode.com/problems/evaluate-reverse-polish-notation
+  - [ Time taken: 34 m 54 s ] Runtime 581 ms Beats 5.14% / Memory 310.54 MB Beats 7.07% of users with Python3
+  - Runtime 62 ms Beats 86.06% / Memory 17.20 MB Beats 62.53% of users with Python3
+- complexity : O(N)
 
 
 
