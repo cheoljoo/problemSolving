@@ -61,6 +61,8 @@
   - [2.50. Minimum Number of Arrows to Burst Balloons (#452) - medium / python / 1D / 2024.01.27](#250-minimum-number-of-arrows-to-burst-balloons-452---medium--python--1d--20240127)
   - [2.51. Implement Queue using Stacks (#232) - easy / c++ / 14m / 2024.01.29](#251-implement-queue-using-stacks-232---easy--c--14m--20240129)
   - [2.52. Evaluate Reverse Polish Notation (#150) - medium / python / 35m / 2024.01.30](#252-evaluate-reverse-polish-notation-150---medium--python--35m--20240130)
+  - [2.53. Non-overlapping Intervals (#435) - medium / python / 1H / 2024.01.30](#253-non-overlapping-intervals-435---medium--python--1h--20240130)
+  - [2.54. Minimum Flips to Make a OR b Equal to c (#1318) - medium / python / 20M / 2024.01.31](#254-minimum-flips-to-make-a-or-b-equal-to-c-1318---medium--python--20m--20240131)
 
 
 --------------------
@@ -539,7 +541,18 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 62 ms Beats 86.06% / Memory 17.20 MB Beats 62.53% of users with Python3
 - complexity : O(N)
 
+## 2.53. Non-overlapping Intervals (#435) - medium / python / 1H / 2024.01.30
+- https://leetcode.com/problems/non-overlapping-intervals
+  - Runtime 1154 ms Beats 45.37% / Memory 55.31 MB Beats 65.18% of users with Python3
+- complexity : O(NlogN) 
+- algorithm : sort and intervals
+- study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.54. Minimum Flips to Make a OR b Equal to c (#1318) - medium / python / 20M / 2024.01.31
+- https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c
+  - Runtime 35 ms Beats 65.39% / Memory 16.53 MB Beats 68.16% of users with Python3
+- complexity : O(logN) 
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
