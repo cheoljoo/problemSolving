@@ -133,10 +133,19 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Do NOT use the same filename with import module name.
 ```python
 python3 bisectExample.py
-nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6] n: 4 bisect_left: 2
-nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6] n: 4 bisect_right: 2
-nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6] n: 5 bisect_left: 2
-nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6] n: 5 bisect_right: 9
+len(nums): 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 4 bisect_left: 2 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 4 bisect_right: 2 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 5 bisect_left: 2 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 5 bisect_right: 9 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 1 bisect_left: 0 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 1 bisect_right: 0 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 6 bisect_left: 9 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 6 bisect_right: 10 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 81 bisect_left: 10 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 81 bisect_right: 10 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 181 bisect_left: 11 len(nums) 11
+nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 181 bisect_right: 11 len(nums) 11
 ```
 
 ### 2.3.2. heapq
