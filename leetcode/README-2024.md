@@ -66,6 +66,7 @@
   - [2.55. Divide Array Into Arrays With Max Difference (#2966) - medium / python / 40m / 2024.02.01](#255-divide-array-into-arrays-with-max-difference-2966---medium--python--40m--20240201)
   - [2.56. Sequential Digits (#1291) - medium / python / 19m / 2024.02.02](#256-sequential-digits-1291---medium--python--19m--20240202)
   - [2.57. Successful Pairs of Spells and Potions (#2300) - medium / python / 20M / 2024.02.02](#257-successful-pairs-of-spells-and-potions-2300---medium--python--20m--20240202)
+  - [2.58. Guess Number Higher or Lower (#374) - easy / c++ / 20M / 2024.02.02](#258-guess-number-higher-or-lower-374---easy--c--20m--20240202)
 
 
 --------------------
@@ -573,6 +574,21 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 872 ms Beats 92.69% / Memory 39.55 MB Beats 82.23% of users with Python3
 - complexity : O(NlogN) 
 - study - https://leetcode.com/studyplan/leetcode-75/
+
+## 2.58. Guess Number Higher or Lower (#374) - easy / c++ / 20M / 2024.02.02
+- https://leetcode.com/problems/guess-number-higher-or-lower
+  - Runtime 2 ms Beats 50.66% / Memory 7.28 MB Beats 14.78% of users with C++
+  - Runtime 0 ms
+- complexity : O(logN) 
+- study - https://leetcode.com/studyplan/leetcode-75/
+```c++
+  // double t = (double) s+ (double)e;
+  // if ((s%2 + e%2) %2 == 1){
+  //     t++;
+  // }
+  // int h = (int)(t/2);
+  int h = s + (e-s)/2;
+```
 
 
 
