@@ -63,6 +63,9 @@
   - [2.52. Evaluate Reverse Polish Notation (#150) - medium / python / 35m / 2024.01.30](#252-evaluate-reverse-polish-notation-150---medium--python--35m--20240130)
   - [2.53. Non-overlapping Intervals (#435) - medium / python / 1H / 2024.01.30](#253-non-overlapping-intervals-435---medium--python--1h--20240130)
   - [2.54. Minimum Flips to Make a OR b Equal to c (#1318) - medium / python / 20M / 2024.01.31](#254-minimum-flips-to-make-a-or-b-equal-to-c-1318---medium--python--20m--20240131)
+  - [2.55. Divide Array Into Arrays With Max Difference (#2966) - medium / python / 40m / 2024.02.01](#255-divide-array-into-arrays-with-max-difference-2966---medium--python--40m--20240201)
+  - [2.56. Sequential Digits (#1291) - medium / python / 19m / 2024.02.02](#256-sequential-digits-1291---medium--python--19m--20240202)
+  - [2.57. Successful Pairs of Spells and Potions (#2300) - medium / python / 20M / 2024.02.02](#257-successful-pairs-of-spells-and-potions-2300---medium--python--20m--20240202)
 
 
 --------------------
@@ -554,6 +557,22 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(logN) 
 - study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.55. Divide Array Into Arrays With Max Difference (#2966) - medium / python / 40m / 2024.02.01
+- https://leetcode.com/problems/divide-array-into-arrays-with-max-difference
+  - Runtime 740 ms Beats  85.78% / Memory  30.69  MB Beats 98.12% of users with Python3
+- complexity : O(NlogN)
+- algorithm : get 3 possible element
+
+## 2.56. Sequential Digits (#1291) - medium / python / 19m / 2024.02.02
+- https://leetcode.com/problems/sequential-digits
+  - [ Time taken: 18 m 34 s ] Runtime 37 ms Beats 54.97% / Memory 16.44 MB Beats 72.98% of users with Python3
+- complexity : O(9*9*9)
+
+## 2.57. Successful Pairs of Spells and Potions (#2300) - medium / python / 20M / 2024.02.02
+- https://leetcode.com/problems/successful-pairs-of-spells-and-potions
+  - Runtime 872 ms Beats 92.69% / Memory 39.55 MB Beats 82.23% of users with Python3
+- complexity : O(NlogN) 
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
