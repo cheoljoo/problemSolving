@@ -7,6 +7,8 @@
   - [1.6. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21](#16-minimum-size-subarray-sum-209---medium--python--30m--20240121)
   - [1.7. N-Queens II (#52) - hard / python / solution / 2024.01.21](#17-n-queens-ii-52---hard--python--solution--20240121)
   - [1.8. K Inverse Pairs Array (#629) - hard / python / solution / 2024.01.27](#18-k-inverse-pairs-array-629---hard--python--solution--20240127)
+  - [1.9. Partition Array for Maximum Sum (#1043) - medium / python / solution / 2024.02.03](#19-partition-array-for-maximum-sum-1043---medium--python--solution--20240203)
+  - [1.10. Domino and Tromino Tiling (#790) - medium / python / solution / 2024.02.04](#110-domino-and-tromino-tiling-790---medium--python--solution--20240204)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -67,6 +69,7 @@
   - [2.56. Sequential Digits (#1291) - medium / python / 19m / 2024.02.02](#256-sequential-digits-1291---medium--python--19m--20240202)
   - [2.57. Successful Pairs of Spells and Potions (#2300) - medium / python / 20M / 2024.02.02](#257-successful-pairs-of-spells-and-potions-2300---medium--python--20m--20240202)
   - [2.58. Guess Number Higher or Lower (#374) - easy / c++ / 20M / 2024.02.02](#258-guess-number-higher-or-lower-374---easy--c--20m--20240202)
+  - [2.59. Total Cost to Hire K Workers (#2462) - medium / python / 3h / 2024.02.04](#259-total-cost-to-hire-k-workers-2462---medium--python--3h--20240204)
 
 
 --------------------
@@ -173,6 +176,28 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
       ```
   - recursive (n,k) = (n-1,k) (n-1,k-1)... (n-1,k-n+1)  <= [sliding window : size n]  **[[best]]**
     - https://www.youtube.com/watch?v=dglwb30bUKI
+
+## 1.9. Partition Array for Maximum Sum (#1043) - medium / python / solution / 2024.02.03
+- https://leetcode.com/problems/partition-array-for-maximum-sum
+- complexity : O(N^2) = O(N * K)
+- algorithm : DP  , dp[n + 1] = max(dp[n + 1], dp[n - ki + 1] + mx * ki) , calculate new from old data and now then update
+- learnt : https://www.perplexity.ai/
+
+## 1.10. Domino and Tromino Tiling (#790) - medium / python / solution / 2024.02.04
+- https://leetcode.com/problems/domino-and-tromino-tiling
+- complexity : O(N)
+- algorithm : DP  , dp[i] = (dp[i-1]*2 + dp[i-3])
+- learnt : https://leetcode.com/problems/domino-and-tromino-tiling/solutions/4581905/go-python-dp-approach-o-n-o-1-space-with-explanation
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -590,7 +615,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   int h = s + (e-s)/2;
 ```
 
-
+## 2.59. Total Cost to Hire K Workers (#2462) - medium / python / 3h / 2024.02.04
+- https://leetcode.com/problems/total-cost-to-hire-k-workers
+  - Runtime 1011 ms Beats 15.60% / Memory 47.22 MB Beats 5.01% of users with Python3
+- complexity : O(9*9*9)
+- study - https://leetcode.com/studyplan/leetcode-75/
+- learnt : 
 
 
 
