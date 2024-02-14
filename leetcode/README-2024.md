@@ -3,7 +3,7 @@
   - [1.2. Best Time to Buy and Sell Stock III (#123) - hard / python / solution / 2024.01.15](#12-best-time-to-buy-and-sell-stock-iii-123---hard--python--solution--20240115)
   - [1.3. Best Time to Buy and Sell Stock with Transaction Fee (#714) - medium / python / solution / 2024.01.25](#13-best-time-to-buy-and-sell-stock-with-transaction-fee-714---medium--python--solution--20240125)
   - [1.4. Word Search II (#212) - hard / python / solution / 2024.01.20](#14-word-search-ii-212---hard--python--solution--20240120)
-  - [1.5. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20](#15-sum-of-subarray-minimums-907---medium--python--solution--20240120)
+  - [1.5. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.02.08](#15-sum-of-subarray-minimums-907---medium--python--solution--20240208)
   - [1.6. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21](#16-minimum-size-subarray-sum-209---medium--python--30m--20240121)
   - [1.7. N-Queens II (#52) - hard / python / solution / 2024.01.21](#17-n-queens-ii-52---hard--python--solution--20240121)
   - [1.8. K Inverse Pairs Array (#629) - hard / python / solution / 2024.01.27](#18-k-inverse-pairs-array-629---hard--python--solution--20240127)
@@ -70,6 +70,9 @@
   - [2.57. Successful Pairs of Spells and Potions (#2300) - medium / python / 20M / 2024.02.02](#257-successful-pairs-of-spells-and-potions-2300---medium--python--20m--20240202)
   - [2.58. Guess Number Higher or Lower (#374) - easy / c++ / 20M / 2024.02.02](#258-guess-number-higher-or-lower-374---easy--c--20m--20240202)
   - [2.59. Total Cost to Hire K Workers (#2462) - medium / python / 3h / 2024.02.04](#259-total-cost-to-hire-k-workers-2462---medium--python--3h--20240204)
+  - [2.59. First Unique Character in a String (#387) - easy / c++ / 38m / 2024.02.05](#259-first-unique-character-in-a-string-387---easy--c--38m--20240205)
+  - [2.59. Sort Characters By Frequency (#451) - medium / python / 5m / 2024.02.08](#259-sort-characters-by-frequency-451---medium--python--5m--20240208)
+  - [2.59. Perfect Squares (#279) - medium / python / 2h / 2024.02.08](#259-perfect-squares-279---medium--python--2h--20240208)
 
 
 --------------------
@@ -133,13 +136,16 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - sub tri dictionary or tree than string comparison
 - study - https://leetcode.com/studyplan/top-interview-150/
 
-## 1.5. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.01.20
+## 1.5. Sum of Subarray Minimums (#907) - medium / python / solution / 2024.02.08
 - https://leetcode.com/problems/sum-of-subarray-minimums
 - complexity : O(N)
 - my algorithm : O(N^2) so it is timeout.  
 - learnt : 
-    - state diagram 
     - brilliant idea.  i can not create it.
+    - https://leetcode.com/problems/sum-of-subarray-minimums/solutions/178876/stack-solution-with-very-detailed-explanation-step-by-step/
+      - leftCount and rightCount calcualte. leftCount is index count that indexed value becomes minimum value
+      - ex) [3,1,2,4]   leftCount : [1, 2, 1, 1]   rightCount : [1, 3, 2, 1]
+      - arr[i] * leftCount[i] * rightCount[i]
 
 ## 1.6. Minimum Size Subarray Sum (#209) - medium / python / 30m / 2024.01.21
 - https://leetcode.com/problems/minimum-size-subarray-sum
@@ -189,6 +195,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : DP  , dp[i] = (dp[i-1]*2 + dp[i-3])
 - learnt : https://leetcode.com/problems/domino-and-tromino-tiling/solutions/4581905/go-python-dp-approach-o-n-o-1-space-with-explanation
 
+## 1.10. Largest Divisible Subset (#368) - medium / python / solution / 2024.02.09
+- https://leetcode.com/problems/largest-divisible-subset
+- complexity : O(N^2)
+- algorithm : calculate max subset count each position.  n will add 1 from divisible number less than n
+  - use index to traverse
+- learnt : https://leetcode.com/problems/largest-divisible-subset/solutions/4699839/interview-approach-for-beginners-clean-code
 
 
 
@@ -618,9 +630,61 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 ## 2.59. Total Cost to Hire K Workers (#2462) - medium / python / 3h / 2024.02.04
 - https://leetcode.com/problems/total-cost-to-hire-k-workers
   - Runtime 1011 ms Beats 15.60% / Memory 47.22 MB Beats 5.01% of users with Python3
-- complexity : O(9*9*9)
+- complexity : O(K*N)
 - study - https://leetcode.com/studyplan/leetcode-75/
-- learnt : 
+
+## 2.59. First Unique Character in a String (#387) - easy / c++ / 38m / 2024.02.05
+- https://leetcode.com/problems/first-unique-character-in-a-string
+  - [ Time taken: 37 m 49 s ] Runtime 31 ms Beats 63.61% / Memory 12.37 MB Beats 22.96% of users with C++
+- complexity : O(N)
+- 
+## 2.59. Sort Characters By Frequency (#451) - medium / python / 5m / 2024.02.08
+- https://leetcode.com/problems/sort-characters-by-frequency
+  - [ Time taken: 4 m 10 s ] Runtime 50 ms Beats 48.69% / Memory 17.63 MB Beats 93.31% of users with Python3
+- complexity : O(NlogN)
+- algorithm : DP ,   x*x + i-x*x
+
+## 2.59. Perfect Squares (#279) - medium / python / 2h / 2024.02.08
+- https://leetcode.com/problems/perfect-squares
+  - Runtime 3185 ms Beats 31.77% / Memory 17.06 MB Beats 70.44% of users with Python3
+- complexity : O(NlogN)
+- algorithm : sort
+
+## 2.59. Count and Say (#38) - medium / python / 14m / 2024.02.13
+- https://leetcode.com/problems/count-and-say
+  - [ Time taken: 13 hrs 15 m 10 s ] Runtime 42 ms Beats 68.59% / Memory 16.59  MB  Beats 87.06% of users with Python3
+- complexity : O(n * N)
+## 2.59. Count and Say (#38) - medium / python / 14m / 2024.02.13
+- https://leetcode.com/problems/count-and-say
+  - [ Time taken: 13 hrs 15 m 10 s ] Runtime 42 ms Beats 68.59% / Memory 16.59  MB  Beats 87.06% of users with Python3
+- complexity : O(n * N)
+
+## 2.59. Find First Palindromic String in the Array (#2108) - eacy / c++ / 20m / 2024.02.13
+- https://leetcode.com/problems/find-first-palindromic-string-in-the-array
+  - Runtime 50 ms Beats 50.00% / Memory 26.58 MB Beats 36.60% of users with C++
+- complexity : O(N^2)
+
+## 2.59. Palindromic Substrings (#647) - medium / python / 14m / 2024.02.10
+- https://leetcode.com/problems/palindromic-substrings
+  - brute force : check all range : Runtime 5761  ms  Beats 5.02%
+  - odd and even when i is center.  : Runtime 175 ms Beats 31.29%
+- complexity : O(N * N)
+
+## 2.59. Rearrange Array Elements by Sign (#2149) - medium / python / 4m / 2024.02.14
+- https://leetcode.com/problems/rearrange-array-elements-by-sign
+  - [ Time taken: 4 m 2 s ] Runtime 1012 ms Beats 68.76% / Memory 47.97 MB Beats 43.49% of users with Python3
+- complexity : O(N)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
