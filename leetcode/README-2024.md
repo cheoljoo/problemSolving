@@ -703,6 +703,10 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N^2)
 - learnt : last largest l count is in heap.  <- To maintain the largest n elements while processing the smallest one 
   - ```python
+      st.append(h)
+        if laddersmx == -1 or laddersmx < h:
+            st.sort()
+      # ====> 
       heapq.heappush(heap, diff)
       if len(heap) > ladders:
           bricks -= heapq.heappop(heap)
