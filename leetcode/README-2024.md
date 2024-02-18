@@ -81,6 +81,8 @@
   - [2.67. Rearrange Array Elements by Sign (#2149) - medium / python / 4m / 2024.02.14](#267-rearrange-array-elements-by-sign-2149---medium--python--4m--20240214)
   - [2.68. Find Polygon With the Largest Perimeter (#2971) - medium / python / 2h / 2024.02.15](#268-find-polygon-with-the-largest-perimeter-2971---medium--python--2h--20240215)
   - [2.69. Least Number of Unique Integers after K Removals (#1481) - medium / python / 9m / 2024.02.16](#269-least-number-of-unique-integers-after-k-removals-1481---medium--python--9m--20240216)
+  - [2.70. Furthest Building You Can Reach (#1642) - medium / python / 45m / 2024.02.17](#270-furthest-building-you-can-reach-1642---medium--python--45m--20240217)
+  - [2.71. Meeting Rooms III (#2402) - hard / python / 3H / 2024.02.18](#271-meeting-rooms-iii-2402---hard--python--3h--20240218)
 
 
 --------------------
@@ -691,10 +693,20 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 
 ## 2.69. Least Number of Unique Integers after K Removals (#1481) - medium / python / 9m / 2024.02.16
 - https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals
-  - [ Time taken: 8 m 31 s  Runtime 372 ms Beats 49.29% / Memory 36.82 MB Beats 40.07% of users with Python3
+  - [ Time taken: 8 m 31 s ]  Runtime 372 ms Beats 49.29% / Memory 36.82 MB Beats 40.07% of users with Python3
 - complexity : O(NlogN)
 
+## 2.70. Furthest Building You Can Reach (#1642) - medium / python / 45m / 2024.02.17
+- https://leetcode.com/problems/furthest-building-you-can-reach
+  - [ Time taken: 44 m 22 s ] Runtime 5062 ms Beats 5.11%  / Memory 33.96 MB Beats 13.31% of users with Python3
+- algorithm : you should have sorted list. this sorted list is between first and now (the middle). when it is in the middle , last (largest) difference will use ladders.  so the differences between first and middle will be occupied by bricks.
+- complexity : O(N^2)
 
+## 2.71. Meeting Rooms III (#2402) - hard / python / 3H / 2024.02.18
+- https://leetcode.com/problems/meeting-rooms-iii
+  - Runtime 1236 ms Beats 45.90% / Memory 62.70 MB Beats 71.97% of users with Python3
+- algorithm : sorted by start. nearest room and smallest room number is first for each booking.
+- complexity : O(NlogN)
 
 
 
