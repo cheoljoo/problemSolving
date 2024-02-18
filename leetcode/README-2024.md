@@ -701,6 +701,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - [ Time taken: 44 m 22 s ] Runtime 5062 ms Beats 5.11%  / Memory 33.96 MB Beats 13.31% of users with Python3
 - algorithm : you should have sorted list. this sorted list is between first and now (the middle). when it is in the middle , last (largest) difference will use ladders.  so the differences between first and middle will be occupied by bricks.
 - complexity : O(N^2)
+- learnt : last largest l count is in heap.  <- To maintain the largest n elements while processing the smallest one 
+  - ```python
+      heapq.heappush(heap, diff)
+      if len(heap) > ladders:
+          bricks -= heapq.heappop(heap)
+    ```
 
 ## 2.71. Meeting Rooms III (#2402) - hard / python / 3H / 2024.02.18
 - https://leetcode.com/problems/meeting-rooms-iii
