@@ -5,41 +5,38 @@
   - [2.3. sorted data structure](#23-sorted-data-structure)
     - [2.3.1. bisect](#231-bisect)
     - [2.3.2. heapq](#232-heapq)
-    - [2.3.3. PriorityQueue](#233-priorityqueue)
-    - [2.3.4. sortedcontainers](#234-sortedcontainers)
-    - [2.3.5. in place sort](#235-in-place-sort)
-  - [2.4. Euclidean-algorithm : 유클리드 호제법](#24-euclidean-algorithm--유클리드-호제법)
-  - [2.5. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#25-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
-  - [2.6. hamming weight : number of '1' bits](#26-hamming-weight--number-of-1-bits)
-  - [2.7. find (?,?) including A among \[(x1,x2) , ....\] if x1\>x2](#27-find--including-a-among-x1x2---if-x1x2)
-  - [2.8. two dimensional array initialize and set](#28-two-dimensional-array-initialize-and-set)
-  - [2.9. regular expression (import re)](#29-regular-expression-import-re)
-    - [2.9.1. difference between re.search() and re.match()](#291-difference-between-research-and-rematch)
-  - [2.10. format string](#210-format-string)
-  - [2.11. lexicographical order](#211-lexicographical-order)
-  - [2.12. palindromic](#212-palindromic)
-  - [2.13. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#213-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
-  - [2.14. list : python remove element from a list](#214-list--python-remove-element-from-a-list)
-  - [2.15. compare between list and set()  : 3Sum (#15)](#215-compare-between-list-and-set---3sum-15)
-  - [2.16. graph](#216-graph)
-    - [2.16.1. dijkstra](#2161-dijkstra)
-  - [2.17. greedy algorithm](#217-greedy-algorithm)
-    - [2.17.1. dijkstra's algorithm](#2171-dijkstras-algorithm)
-    - [2.17.2. Ford-Fulkerson Algorithm](#2172-ford-fulkerson-algorithm)
-    - [2.17.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics](#2173-kruskals-algorithm--find-minimum-spanning-tree--optimal-graph-connected-all-vertics)
-    - [2.17.4. Prim's Algorithm : find minimum spanning tree](#2174-prims-algorithm--find-minimum-spanning-tree)
-    - [2.17.5. Huffman Coding : a technique of compressing data to reduce its size](#2175-huffman-coding--a-technique-of-compressing-data-to-reduce-its-size)
-  - [2.18. Dynamic Programming](#218-dynamic-programming)
-    - [2.18.1. Longest Common Subsequence](#2181-longest-common-subsequence)
-    - [2.18.2. Floyd-Warshall Algorithm](#2182-floyd-warshall-algorithm)
-  - [2.19. grouping : find \& union](#219-grouping--find--union)
-  - [2.20. deque](#220-deque)
-  - [2.21. window slide to get max in moving range](#221-window-slide-to-get-max-in-moving-range)
-  - [2.22. OrderedDict](#222-ordereddict)
-  - [2.23. 2^16 traverse](#223-216-traverse)
-  - [2.24. maximum profit when buy and sell stock](#224-maximum-profit-when-buy-and-sell-stock)
-  - [2.25. sometimes initializing time is slower than calulation.](#225-sometimes-initializing-time-is-slower-than-calulation)
-  - [2.26. appendix](#226-appendix)
+      - [2.3.2.1. last largest l count is in heap.  \<- To maintain the largest n elements while processing the smallest one](#2321-last-largest-l-count-is-in-heap----to-maintain-the-largest-n-elements-while-processing-the-smallest-one)
+  - [2.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree](#24-height-balanced-binary-search-trees--avlcreatoradelson-velsky-and-landis-tree)
+  - [2.5. hamming weight : number of '1' bits](#25-hamming-weight--number-of-1-bits)
+  - [2.6. find (?,?) including A among \[(x1,x2) , ....\] if x1\>x2](#26-find--including-a-among-x1x2---if-x1x2)
+  - [2.7. two dimensional array initialize and set](#27-two-dimensional-array-initialize-and-set)
+  - [2.8. regular expression (import re)](#28-regular-expression-import-re)
+    - [2.8.1. difference between re.search() and re.match()](#281-difference-between-research-and-rematch)
+  - [2.9. format string](#29-format-string)
+  - [2.10. lexicographical order](#210-lexicographical-order)
+  - [2.11. palindromic](#211-palindromic)
+  - [2.12. dictionary : Python Remove Key from a Dictionary: A Complete Guide](#212-dictionary--python-remove-key-from-a-dictionary-a-complete-guide)
+  - [2.13. list : python remove element from a list](#213-list--python-remove-element-from-a-list)
+  - [2.14. compare between list and set()  : 3Sum (#15)](#214-compare-between-list-and-set---3sum-15)
+  - [2.15. graph](#215-graph)
+    - [2.15.1. dijkstra](#2151-dijkstra)
+  - [2.16. greedy algorithm](#216-greedy-algorithm)
+    - [2.16.1. dijkstra's algorithm](#2161-dijkstras-algorithm)
+    - [2.16.2. Ford-Fulkerson Algorithm](#2162-ford-fulkerson-algorithm)
+    - [2.16.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics](#2163-kruskals-algorithm--find-minimum-spanning-tree--optimal-graph-connected-all-vertics)
+    - [2.16.4. Prim's Algorithm : find minimum spanning tree](#2164-prims-algorithm--find-minimum-spanning-tree)
+    - [2.16.5. Huffman Coding : a technique of compressing data to reduce its size](#2165-huffman-coding--a-technique-of-compressing-data-to-reduce-its-size)
+  - [2.17. Dynamic Programming](#217-dynamic-programming)
+    - [2.17.1. Longest Common Subsequence](#2171-longest-common-subsequence)
+    - [2.17.2. Floyd-Warshall Algorithm](#2172-floyd-warshall-algorithm)
+  - [2.18. grouping : find \& union](#218-grouping--find--union)
+  - [2.19. deque](#219-deque)
+  - [2.20. window slide to get max in moving range](#220-window-slide-to-get-max-in-moving-range)
+  - [2.21. OrderedDict](#221-ordereddict)
+  - [2.22. 2^16 traverse](#222-216-traverse)
+  - [2.23. maximum profit when buy and sell stock](#223-maximum-profit-when-buy-and-sell-stock)
+  - [2.24. sometimes initializing time is slower than calulation.](#224-sometimes-initializing-time-is-slower-than-calulation)
+  - [2.25. appendix](#225-appendix)
 - [3. Books \& URL](#3-books--url)
 
 --------------------
@@ -156,6 +153,17 @@ nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 181 bisect_right: 11 len(nums) 11
     - list[0] is minimal value.   
     - if you want to maximum value , * -1.0 
 
+#### 2.3.2.1. last largest l count is in heap.  <- To maintain the largest n elements while processing the smallest one 
+- ```python
+    st.append(h)
+      if laddersmx == -1 or laddersmx < h:
+          st.sort()
+    # ====> 
+    heapq.heappush(heap, diff)
+    if len(heap) > ladders:
+        bricks -= heapq.heappop(heap)
+  ```
+
 ### 2.3.3. PriorityQueue
 - priority Queue (sorted with priority order)
   - https://www.daleseo.com/python-priority-queue/
@@ -188,27 +196,27 @@ int GCD(int a, int b){
 }
 ```
 
-## 2.5. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree
+## 2.4. Height-Balanced Binary Search Trees : AVL(creator:Adelson-Velsky and Landis) Tree
 - https://www.programiz.com/dsa/avl-tree
 - [avl.py](https://github.com/cheoljoo/problemSolving/blob/master/leetcode/avl.py)
 
-## 2.6. hamming weight : number of '1' bits
+## 2.5. hamming weight : number of '1' bits
 - Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the [Hamming weight](http://shumin.co.kr/algorithm-hamming-weight-bit-count/)).
 
-## 2.7. find (?,?) including A among [(x1,x2) , ....] if x1>x2 
+## 2.6. find (?,?) including A among [(x1,x2) , ....] if x1>x2 
 - 27. The Skyline Problem (#218) - Hard
 - korean : [(x1,x2) , ....] 에서 A를 포함하는 것들을 구하시요.
 - sort by x1 -> find x1 : 0 .. A .. x1 -> calulate
 - if A is another sorted list [A1,A2...] , 0 .. A1 .. x1 and x2 A1 (sorted by x2) -> when we find pairs for A2 , we can skip until x2   
 
-## 2.8. two dimensional array initialize and set
+## 2.7. two dimensional array initialize and set
 - ln = [[0] * 101] * (query_row+1)
   - ln[0][0]=2 then all row's [0] were changed into 2
 - ln = [[0 for c in range(101)] for r in range(query_row+1)]
   - it is right solution to initialize two dimensional array
   - https://www.kite.com/python/answers/how-to-initialize-a-2d-array-in-python
   
-## 2.9. regular expression (import re)
+## 2.8. regular expression (import re)
 - https://www.programiz.com/python-programming/regex
 - https://emilkwak.github.io/python-re-named-group
 ```python
@@ -240,34 +248,34 @@ int GCD(int a, int b){
 """, re.VERBOSE)
 ```
 
-### 2.9.1. difference between re.search() and re.match()
+### 2.8.1. difference between re.search() and re.match()
 - https://www.geeksforgeeks.org/python-re-search-vs-re-match/
 - re.match() searches only from the beginning of the string and return match object if found. But if a match of substring is found somewhere in the middle of the string, it returns none.
 
-## 2.10. format string
+## 2.9. format string
 - https://hyjykelly.tistory.com/65
 - performance comparison : https://brownbears.tistory.com/421
 
-## 2.11. lexicographical order
+## 2.10. lexicographical order
 - alphaveticall order except we can not find this character  ex) cb  -> cb  ,  cbc -> bc
 - https://leetcode.com/problems/remove-duplicate-letters/submissions/
 
-## 2.12. palindromic 
+## 2.11. palindromic 
 - a word, phrase, sentence, or number that reads the same backward or forward "Step on no pets" is a palindrome.
 - [63. Valid Palindrome II (#680) - easy / python / 1H](#63-valid-palindrome-ii-680---easy--python--1h)
 
-## 2.13. dictionary : Python Remove Key from a Dictionary: A Complete Guide
+## 2.12. dictionary : Python Remove Key from a Dictionary: A Complete Guide
 - dictionary.pop(key_to_remove, not_found)
   - https://careerkarma.com/blog/python-remove-key-from-a-dictionary/#:~:text=To%20remove%20a%20key%20from,item%20after%20the%20del%20keyword.
 
-## 2.14. list : python remove element from a list 
+## 2.13. list : python remove element from a list 
 - thislist.remove("banana")
 - thislist.pop(1)
 - del thislist[0]
 - thislist.clear()
   - https://www.w3schools.com/python/python_lists_remove.asp
 
-## 2.15. compare between list and set()  : 3Sum (#15)
+## 2.14. compare between list and set()  : 3Sum (#15)
 - list : tmplist = [nums[i],nums[j],nums[k]]
   - list.append(tmplist)
 - set : tmptuple = (nums[i],nums[j],nums[k])
@@ -276,8 +284,8 @@ int GCD(int a, int b){
   - if tmplist not in list:     list.append(tmplist)
   - set.add(tmptuple)
 
-## 2.16. graph
-### 2.16.1. dijkstra
+## 2.15. graph
+### 2.15.1. dijkstra
 - [Dijkstra](https://www.programiz.com/dsa/dijkstra-algorithm#:~:text=Dijkstra's%20algorithm%20allows%20us%20to,the%20vertices%20of%20the%20graph.)  O(E Log V)
     - Src1 src2 -> dst 으로 갈때의 최소 path를 구하라. : 각각에서 가야하할때의 노드로 갈때의 최소값을 구한다  dijkstra.
     - 어떤 노드에서 3개의 목적지로 가는 최소값들을 가진 것 (src1 -> node , src2 -> node , dst -> node) 일때의 합이 최소가 되는 것이 src1,src2->node->dst로 가는 최소값이 된다.  node는 모든 node를 넣어볼수 있다. src1,src2,dst도 node가 될수 있다. 
@@ -298,7 +306,7 @@ int GCD(int a, int b){
         return result
 ```
 
-## 2.17. greedy algorithm
+## 2.16. greedy algorithm
 - Greedy Choice Property : If an optimal solution to the problem can be found by choosing the best choice at each step without reconsidering the previous steps once chosen, the problem can be solved using a greedy approach. This property is called greedy choice property.
   - Problem: You have to make a change of an amount using the smallest possible number of coins.
     - Amount: $18
@@ -307,10 +315,10 @@ int GCD(int a, int b){
       -   $2 coin
       -   $1 coin
     - There is no limit to the number of each coin you can use.
-### 2.17.1. dijkstra's algorithm
+### 2.16.1. dijkstra's algorithm
 - [1.14.1. dijkstra](#1141-dijkstra)
 
-### 2.17.2. Ford-Fulkerson Algorithm
+### 2.16.2. Ford-Fulkerson Algorithm
 - Ford-Fulkerson algorithm is a greedy approach for calculating the maximum possible flow in a network or a graph.
 - Each pipe has a certain capacity of liquid it can transfer at an instance. For this algorithm, we are going to find how much liquid can be flowed from the source to the sink at an instance using the network.
   - ![](https://cdn.programiz.com/sites/tutorial2program/files/flow-network.png)
@@ -320,7 +328,7 @@ int GCD(int a, int b){
   3. change graph (substract graph capacity when they used from sink)
   4. goto 1
 
-### 2.17.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics
+### 2.16.3. Kruskal's Algorithm : find minimum spanning tree : optimal graph connected all vertics
 - We start from the edges with the lowest weight and keep adding edges until we reach our goal. The steps for implementing Kruskal's algorithm are as follows:
   - Sort all the edges from low weight to high
   - Take the edge with the lowest weight and add it to the spanning tree. **If adding the edge created a cycle,** then reject this edge.
@@ -329,10 +337,10 @@ int GCD(int a, int b){
 - algorithm :
   - checking the loop is key factor. if both vertics of edge are in current graph , it is loop.  <-  i think it is faster than suggested code.
 
-### 2.17.4. Prim's Algorithm : find minimum spanning tree
+### 2.16.4. Prim's Algorithm : find minimum spanning tree
 - i do not know what is difference with kruskal's algorithm
   
-### 2.17.5. Huffman Coding : a technique of compressing data to reduce its size
+### 2.16.5. Huffman Coding : a technique of compressing data to reduce its size
 - Using the Huffman Coding technique, we can compress the string to a smaller size. Huffman coding first creates a tree using the frequencies of the character and then generates code for each character.
 
 | Character       | Frequency | Code | Size     |
@@ -343,11 +351,11 @@ int GCD(int a, int b){
 | D               | 3         | 101  | 3*3 = 9  |
 | 4 * 8 = 32 bits | 15 bits   |      | 28 bits  |
 
-## 2.18. Dynamic Programming
+## 2.17. Dynamic Programming
 - if there are overlapping among these subproblems, then the solutions to these subproblems can be saved for future reference. 
 - This technique of storing the value of subproblems is called memoization. By saving the values in the array, we save time for computations of sub-problems we have already come across.
 
-### 2.18.1. Longest Common Subsequence
+### 2.17.1. Longest Common Subsequence
 - https://riptutorial.com/algorithm/example/24007/longest-common-subsequence-explanation
 - O(MN) 
 - Table[2][3] represents the length of the longest common subsequence between "ac" and "abc".
@@ -401,13 +409,13 @@ int GCD(int a, int b){
         return len(word1) + len(word2) - mx*2   
   ```
 
-### 2.18.2. Floyd-Warshall Algorithm
+### 2.17.2. Floyd-Warshall Algorithm
 - https://www.programiz.com/dsa/floyd-warshall-algorithm
 - Floyd-Warshall Algorithm is an algorithm for finding the shortest path between all the pairs of vertices in a weighted graph. This algorithm works for both the directed and undirected weighted graphs. 
 - ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Graph.png)  ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-1.png) ![](https://cdn.programiz.com/sites/tutorial2program/files/fw-Matrix-2.png)
 - O(N^3)
 
-## 2.19. grouping : find & union
+## 2.18. grouping : find & union
 - it is faster than union() in set.
 ```python
         p = list(range(len(s)))  # parent
@@ -427,7 +435,7 @@ int GCD(int a, int b){
             p[i] = find(p[i])    
 ```
 
-## 2.20. deque
+## 2.19. deque
 - https://leonkong.cc/posts/python-deque.html
   - deque.append(item): item을 데크의 오른쪽 끝에 삽입한다.
   - deque.appendleft(item): item을 데크의 왼쪽 끝에 삽입한다.
@@ -438,7 +446,7 @@ int GCD(int a, int b){
   - deque.remove(item): item을 데크에서 찾아 삭제한다.
   - deque.rotate(num): 데크를 num만큼 회전한다(양수면 오른쪽, 음수면 왼쪽).
 
-## 2.21. window slide to get max in moving range
+## 2.20. window slide to get max in moving range
 - heapq를 이용한 window slide시 max 값을 가져오는 방법
 ```python
         heapwindow = [(-dp[-1],-1)]
@@ -455,11 +463,11 @@ int GCD(int a, int b){
             heapq.heappush(heapwindow,(-dp[mi],mi))
 ```
 
-## 2.22. OrderedDict
+## 2.21. OrderedDict
 - collections.OrderedDict : https://docs.python.org/3/library/collections.html#ordereddict-objects
 - A regular dict can emulate OrderedDict’s od.move_to_end(k, last=True) with d[k] = d.pop(k) which will move the key and its associated value to the rightmost (last) position.
 
-## 2.23. 2^16 traverse
+## 2.22. 2^16 traverse
 - O(2^16)
 - algorithm : how to traverse 2^16 like binary number. use DFS (index,not include / include me)
 ```python
@@ -478,7 +486,7 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
         return
 ```
 
-## 2.24. maximum profit when buy and sell stock
+## 2.23. maximum profit when buy and sell stock
 - https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solutions/3667440/beats-100-c-java-python-beginner-friendly
 - Time complexity: O(n)     Space complexity: O(1)
 ```python
@@ -493,10 +501,10 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
         return sell
 ```
 
-## 2.25. sometimes initializing time is slower than calulation.
+## 2.24. sometimes initializing time is slower than calulation.
 - https://leetcode.com/problems/climbing-stairs
 
-## 2.26. appendix
+## 2.25. appendix
 - dictionary is faster than set
 
 # 3. Books & URL
