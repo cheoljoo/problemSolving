@@ -720,7 +720,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(NlogN)
 
 ## 2.72. Bitwise AND of Numbers Range (#201) - medium / python / 5H / 2024.02.21
-- https://leetcode.com/problems/meeting-rooms-iii
+- https://leetcode.com/problems/bitwise-and-of-numbers-range/
   - Runtime 52 ms Beats 59.50% / Memory 16.70 MB Beats 50.60% of users with Python3
 - algorithm : start from the smallest binary digit. : left -(left%2^count) + 2^count > right
 - complexity : O(logN)
