@@ -83,6 +83,7 @@
   - [2.69. Least Number of Unique Integers after K Removals (#1481) - medium / python / 9m / 2024.02.16](#269-least-number-of-unique-integers-after-k-removals-1481---medium--python--9m--20240216)
   - [2.70. Furthest Building You Can Reach (#1642) - medium / python / 45m / 2024.02.17](#270-furthest-building-you-can-reach-1642---medium--python--45m--20240217)
   - [2.71. Meeting Rooms III (#2402) - hard / python / 3H / 2024.02.18](#271-meeting-rooms-iii-2402---hard--python--3h--20240218)
+  - [2.72. Bitwise AND of Numbers Range (#201) - hard / python / 5H / 2024.02.21](#272-bitwise-and-of-numbers-range-201---hard--python--5h--20240221)
 
 
 --------------------
@@ -718,6 +719,11 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : sorted by start. nearest room and smallest room number is first for each booking.
 - complexity : O(NlogN)
 
+## 2.72. Bitwise AND of Numbers Range (#201) - hard / python / 5H / 2024.02.21
+- https://leetcode.com/problems/meeting-rooms-iii
+  - Runtime 52 ms Beats 59.50% / Memory 16.70 MB Beats 50.60% of users with Python3
+- algorithm : start from the smallest binary digit. : left -(left%2^count) + 2^count > right
+- complexity : O(logN)
 
 
 
