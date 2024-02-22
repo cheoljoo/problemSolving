@@ -84,6 +84,7 @@
   - [2.70. Furthest Building You Can Reach (#1642) - medium / python / 45m / 2024.02.17](#270-furthest-building-you-can-reach-1642---medium--python--45m--20240217)
   - [2.71. Meeting Rooms III (#2402) - hard / python / 3H / 2024.02.18](#271-meeting-rooms-iii-2402---hard--python--3h--20240218)
   - [2.72. Bitwise AND of Numbers Range (#201) - medium / python / 5H / 2024.02.21](#272-bitwise-and-of-numbers-range-201---medium--python--5h--20240221)
+  - [2.73. Delete Node in a BST (#450) - medium / python / 2H / 2024.02.22](#273-delete-node-in-a-bst-450---medium--python--2h--20240222)
 
 
 --------------------
@@ -665,6 +666,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/count-and-say
   - [ Time taken: 13 hrs 15 m 10 s ] Runtime 42 ms Beats 68.59% / Memory 16.59  MB  Beats 87.06% of users with Python3
 - complexity : O(n * N)
+
 ## 2.64. Count and Say (#38) - medium / python / 14m / 2024.02.13
 - https://leetcode.com/problems/count-and-say
   - [ Time taken: 13 hrs 15 m 10 s ] Runtime 42 ms Beats 68.59% / Memory 16.59  MB  Beats 87.06% of users with Python3
@@ -725,7 +727,14 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : start from the smallest binary digit. : left -(left%2^count) + 2^count > right
 - complexity : O(logN)
 
-
+## 2.73. Delete Node in a BST (#450) - medium / python / 2H / 2024.02.22
+- https://leetcode.com/problems/delete-node-in-a-bst
+  - Runtime 68 ms Beats 11.39%  / Memory 19.89 MB Beats  81.62%  of users with Python3
+- complexity : O(N) 
+- algorithm : binary search tree
+  - right.left.left...left = root.left
+- study - https://leetcode.com/studyplan/leetcode-75/
+- learnt : if needed , optiomization the code
 
 
 
