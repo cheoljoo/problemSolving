@@ -86,6 +86,7 @@
   - [2.72. Bitwise AND of Numbers Range (#201) - medium / python / 5H / 2024.02.21](#272-bitwise-and-of-numbers-range-201---medium--python--5h--20240221)
   - [2.73. Delete Node in a BST (#450) - medium / python / 2H / 2024.02.22](#273-delete-node-in-a-bst-450---medium--python--2h--20240222)
   - [2.74. Cheapest Flights Within K Stops (#787) - medium / python / 1H / 2024.02.23](#274-cheapest-flights-within-k-stops-787---medium--python--1h--20240223)
+  - [2.75. Cherry Pickup II (#1463) - hard / python / 2D / 2024.02.23](#275-cherry-pickup-ii-1463---hard--python--2d--20240223)
 
 
 --------------------
@@ -214,6 +215,10 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : calculate max subset count each position.  n will add 1 from divisible number less than n
   - use index to traverse
 - learnt : https://leetcode.com/problems/largest-divisible-subset/solutions/4699839/interview-approach-for-beginners-clean-code
+
+
+
+
 
 
 
@@ -746,7 +751,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - DP : https://leetcode.com/problems/cheapest-flights-within-k-stops/solutions/3047883/python-dp-top-down-solution
   - BFS : https://leetcode.com/problems/cheapest-flights-within-k-stops/solutions/4770004/using-dijkstra-s-algorithm-bfs-python
 
-
+## 2.75. Cherry Pickup II (#1463) - hard / python / 2D / 2024.02.23
+- https://leetcode.com/problems/cherry-pickup-ii
+  - Runtime 1221 ms Beats 24.74% / Memory 33.66 MB Beats 44.90% of users with Python3
+- complexity : O(N^2)
+- algorithm : dp ,  self.dp has the max value for below rows.
+  - self.dp[ (rr,c1,c2)] = self.grid[rr][c1]+self.grid[rr][c2] + max( self.go(rr+1,c1+r1c,c2+r2c) )
 
 
 
