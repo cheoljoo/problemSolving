@@ -85,6 +85,7 @@
   - [2.71. Meeting Rooms III (#2402) - hard / python / 3H / 2024.02.18](#271-meeting-rooms-iii-2402---hard--python--3h--20240218)
   - [2.72. Bitwise AND of Numbers Range (#201) - medium / python / 5H / 2024.02.21](#272-bitwise-and-of-numbers-range-201---medium--python--5h--20240221)
   - [2.73. Delete Node in a BST (#450) - medium / python / 2H / 2024.02.22](#273-delete-node-in-a-bst-450---medium--python--2h--20240222)
+  - [2.74. Cheapest Flights Within K Stops (#787) - medium / python / 1H / 2024.02.23](#274-cheapest-flights-within-k-stops-787---medium--python--1h--20240223)
 
 
 --------------------
@@ -736,6 +737,14 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - study - https://leetcode.com/studyplan/leetcode-75/
 - learnt : if needed , optiomization the code
 
+## 2.74. Cheapest Flights Within K Stops (#787) - medium / python / 1H / 2024.02.23
+- https://leetcode.com/problems/cheapest-flights-within-k-stops
+  - 1H  Runtime 179 ms Beats 27.02% / Memory 18.00 MB Beats 71.46% of users with Python3
+- algorithm : DFS
+- complexity : O(N^2)
+- learnt : BFS , DP   but , i do not understand about visited when we use heapq
+  - DP : https://leetcode.com/problems/cheapest-flights-within-k-stops/solutions/3047883/python-dp-top-down-solution
+  - BFS : https://leetcode.com/problems/cheapest-flights-within-k-stops/solutions/4770004/using-dijkstra-s-algorithm-bfs-python
 
 
 
