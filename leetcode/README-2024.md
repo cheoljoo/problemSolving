@@ -761,11 +761,17 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 
 ## 2.76. Nearest Exit from Entrance in Maze (#1926) - medium / python / 2h / 2024.02.23
 - https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
-  - Runtime 700 ms Beats 34.78% / Memory 17.24 MB Beats 79.20% of users with Python3
+  - BfS heapq : Runtime 700 ms Beats 34.78% / Memory 17.24 MB Beats 79.20% of users with Python3
+  - BFS queue : Runtime 648 ms Beats 78.18% / Memory 17.12 MB Beats 86.44% of users with Python3
 - complexity : O(R*C)
 - algorithm : BFS , BFS is the best when we find shortest path in maze
 - study - https://leetcode.com/studyplan/leetcode-75/
 - learnt : better code for BFS uses only queue.  we do not need to use heapq in this case because it will increase path in BFS.
+
+
+
+
+
 
 
 
