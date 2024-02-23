@@ -87,6 +87,7 @@
   - [2.73. Delete Node in a BST (#450) - medium / python / 2H / 2024.02.22](#273-delete-node-in-a-bst-450---medium--python--2h--20240222)
   - [2.74. Cheapest Flights Within K Stops (#787) - medium / python / 1H / 2024.02.23](#274-cheapest-flights-within-k-stops-787---medium--python--1h--20240223)
   - [2.75. Cherry Pickup II (#1463) - hard / python / 2D / 2024.02.23](#275-cherry-pickup-ii-1463---hard--python--2d--20240223)
+  - [2.76. Nearest Exit from Entrance in Maze (#1926) - medium / python / 2h / 2024.02.23](#276-nearest-exit-from-entrance-in-maze-1926---medium--python--2h--20240223)
 
 
 --------------------
@@ -758,7 +759,13 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : dp ,  self.dp has the max value for below rows.
   - self.dp[ (rr,c1,c2)] = self.grid[rr][c1]+self.grid[rr][c2] + max( self.go(rr+1,c1+r1c,c2+r2c) )
 
-
+## 2.76. Nearest Exit from Entrance in Maze (#1926) - medium / python / 2h / 2024.02.23
+- https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
+  - Runtime 700 ms Beats 34.78% / Memory 17.24 MB Beats 79.20% of users with Python3
+- complexity : O(R*C)
+- algorithm : BFS , BFS is the best when we find shortest path in maze
+- study - https://leetcode.com/studyplan/leetcode-75/
+- learnt : better code for BFS uses only queue.  we do not need to use heapq in this case because it will increase path in BFS.
 
 
 

@@ -36,7 +36,8 @@
   - [2.22. 2^16 traverse](#222-216-traverse)
   - [2.23. maximum profit when buy and sell stock](#223-maximum-profit-when-buy-and-sell-stock)
   - [2.24. sometimes initializing time is slower than calulation.](#224-sometimes-initializing-time-is-slower-than-calulation)
-  - [2.25. appendix](#225-appendix)
+  - [2.25. BFS](#225-bfs)
+  - [2.26. appendix](#226-appendix)
 - [3. Books \& URL](#3-books--url)
 
 --------------------
@@ -504,7 +505,12 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 ## 2.24. sometimes initializing time is slower than calulation.
 - https://leetcode.com/problems/climbing-stairs
 
-## 2.25. appendix
+## 2.25. BFS
+- better code for BFS uses only queue.  we do not need to use heapq in this case because it will increase path in BFS.
+- BFS is the best when we find shortest path in maze
+- https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
+
+## 2.26. appendix
 - dictionary is faster than set
 
 # 3. Books & URL
