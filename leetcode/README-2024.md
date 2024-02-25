@@ -237,7 +237,11 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
       ```
   - https://leetcode.com/problems/greatest-common-divisor-traversal/solutions/4778657/100-memory-efficient-10-lines-simple-python-code
     - new idea : change the value if it has GCD.   
-
+    - ```python
+      if gcd(nums[j],nums[i]) > 1:
+          nums[j] *= nums[i]
+          break
+      ```
 
 
 
