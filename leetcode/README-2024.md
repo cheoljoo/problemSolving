@@ -10,6 +10,7 @@
   - [1.9. Partition Array for Maximum Sum (#1043) - medium / python / solution / 2024.02.03](#19-partition-array-for-maximum-sum-1043---medium--python--solution--20240203)
   - [1.10. Domino and Tromino Tiling (#790) - medium / python / solution / 2024.02.04](#110-domino-and-tromino-tiling-790---medium--python--solution--20240204)
   - [1.11. Largest Divisible Subset (#368) - medium / python / solution / 2024.02.09](#111-largest-divisible-subset-368---medium--python--solution--20240209)
+  - [1.8. Greatest Common Divisor Traversal (#2709) - hard / python / solution / 2024.02.25](#18-greatest-common-divisor-traversal-2709---hard--python--solution--20240225)
 - [2. solved](#2-solved)
   - [2.1. Remove Duplicates from Sorted Array II (#80) - medium / python / 30M / 2024.01.02](#21-remove-duplicates-from-sorted-array-ii-80---medium--python--30m--20240102)
   - [2.2. Convert an Array Into a 2D Array With Conditions (#2610) - medium / python / 30M / 2024.01.02](#22-convert-an-array-into-a-2d-array-with-conditions-2610---medium--python--30m--20240102)
@@ -88,6 +89,7 @@
   - [2.74. Cheapest Flights Within K Stops (#787) - medium / python / 1H / 2024.02.23](#274-cheapest-flights-within-k-stops-787---medium--python--1h--20240223)
   - [2.75. Cherry Pickup II (#1463) - hard / python / 2D / 2024.02.23](#275-cherry-pickup-ii-1463---hard--python--2d--20240223)
   - [2.76. Nearest Exit from Entrance in Maze (#1926) - medium / python / 2h / 2024.02.23](#276-nearest-exit-from-entrance-in-maze-1926---medium--python--2h--20240223)
+  - [2.75. Find All People With Secret (#2092) - hard / python / 6H / 2024.02.24](#275-find-all-people-with-secret-2092---hard--python--6h--20240224)
 
 
 --------------------
@@ -217,6 +219,24 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - use index to traverse
 - learnt : https://leetcode.com/problems/largest-divisible-subset/solutions/4699839/interview-approach-for-beginners-clean-code
 
+## 1.8. Greatest Common Divisor Traversal (#2709) - hard / python / solution / 2024.02.25
+- https://leetcode.com/problems/greatest-common-divisor-traversal
+- complexity : O(NlogN)
+- learnt : 
+  - https://leetcode.com/problems/greatest-common-divisor-traversal/solutions/4778362/detailed-intuition-and-explanation-python-solution
+    - prime  , union
+    - ```python
+      # PrimeSieve( max(nus)) : Consider going through all the primes, finding the m array elements that are divisible by each prime
+      class PrimeSieve:
+          def __init__(self, n):
+              self.prime_divs = [list() for i in range(n+1)]
+              for p in range(2, n+1):
+                  if len(self.prime_divs[p]) == 0:
+                      for i in range(p, n+1, p):
+                          self.prime_divs[i].append(p)
+      ```
+  - https://leetcode.com/problems/greatest-common-divisor-traversal/solutions/4778657/100-memory-efficient-10-lines-simple-python-code
+    - new idea : change the value if it has GCD.   
 
 
 
@@ -767,6 +787,18 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : BFS , BFS is the best when we find shortest path in maze
 - study - https://leetcode.com/studyplan/leetcode-75/
 - learnt : better code for BFS uses only queue.  we do not need to use heapq in this case because it will increase path in BFS.
+
+## 2.75. Find All People With Secret (#2092) - hard / python / 6H / 2024.02.24
+- https://leetcode.com/problems/find-all-people-with-secret
+  - Runtime 9585 ms Beats 5.29% / Memory 54.99 MB Beats 66.22% of users with Python3
+- complexity : O(N^2)
+- algorithm : divide into time , grouping , it is answer if final parent is 0.
+  - fx = find(tp,x)     fy = find(tp,y)    if fx == 0 or fy == 0:    flag = True      if fx <= fy :   union(tp,x, y)   else:  union(tp,y, x)
+- learnt : https://leetcode.com/problems/find-all-people-with-secret/solutions/4775568/beats-100-best-c-java-python-javascript-solution
+  - it has the same method. find menas find_ancestor.    why is my code slower?
+
+
+
 
 
 
