@@ -821,7 +821,11 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - For every even-indexed level, all nodes at the level have odd integer values in strictly increasing order (from left to right).
   - For every odd-indexed level, all nodes at the level have even integer values in strictly decreasing order (from left to right).
 
-
+## 2.78. Greatest Common Divisor of Strings (#1071) - easy / python / 20M / 2024.02.29
+- https://leetcode.com/problems/greatest-common-divisor-of-strings
+  - Runtime 27 ms Beats 5.02% of users with C++
+- learnt : 0 ms
+  - ```return (str1 + str2 == str2 + str1) ? str1.substr(0, gcd(str1.size(), str2.size())): "";```
 
 
 
