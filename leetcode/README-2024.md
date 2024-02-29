@@ -805,13 +805,24 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - it has the same method. find menas find_ancestor.    why is my code slower?
 
 ## 2.78. Find Bottom Left Tree Value (#513) - medium / python / 4M / 2024.02.28
-- https://leetcode.com/problems/cheapest-flights-within-k-stops
+- https://leetcode.com/problems/find-bottom-left-tree-value
   - [ Time taken: 3 m 31 s ] Runtime 44 ms Beats 46.23% / Memory 18.36 MB Beats 52.22% of users with Python3
-- algorithm : DFS
-- complexity : O(N^2)
-- learnt : BFS , DP   but , i do not understand about visited when we use heapq
-  - DP : https://leetcode.com/problems/cheapest-flights-within-k-stops/solutions/3047883/python-dp-top-down-solution
-  - BFS : https://leetcode.com/problems/cheapest-flights-within-k-stops/solutions/4770004/using-dijkstra-s-algorithm-bfs-python
+- algorithm : tree traverse
+- complexity : O(N)
+- learnt : save once
+
+## 2.78. Even Odd Tree (#1609) - medium / python / 4M / 2024.02.29
+- https://leetcode.com/problems/even-odd-tree
+  - [ Time taken: 18 m 57 s ] Runtime 203 ms Beats 95.06% / Memory 57.38 MB Beats 5.97% of users with Python3
+- algorithm : tree traverse
+- complexity : O(N)
+- learnt :  A binary tree is named Even-Odd if it meets the following conditions:
+  - The root of the binary tree is at level index 0, its children are at level index 1, their children are at level index 2, etc.
+  - For every even-indexed level, all nodes at the level have odd integer values in strictly increasing order (from left to right).
+  - For every odd-indexed level, all nodes at the level have even integer values in strictly decreasing order (from left to right).
+
+
+
 
 
 
