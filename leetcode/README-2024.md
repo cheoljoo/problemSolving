@@ -94,6 +94,7 @@
   - [2.79. Even Odd Tree (#1609) - medium / python / 4M / 2024.02.29](#279-even-odd-tree-1609---medium--python--4m--20240229)
   - [2.80. Greatest Common Divisor of Strings (#1071) - easy / python / 20M / 2024.02.29](#280-greatest-common-divisor-of-strings-1071---easy--python--20m--20240229)
   - [2.81. Maximum Subsequence Score (#2542) - medium / python / 3D / 2024.03.01](#281-maximum-subsequence-score-2542---medium--python--3d--20240301)
+  - [2.81. Maximum Performance of a Team (#1383) - hard / python / 2H / 2024.03.01](#281-maximum-performance-of-a-team-1383---hard--python--2h--20240301)
 
 
 --------------------
@@ -839,6 +840,38 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - keep partial sum of heapq with element k.
     - Minimum Cost to Hire K Workers
     - Maximum Performance of a Team
+
+## 2.81. Maximum Performance of a Team (#1383) - hard / python / 2H / 2024.03.01
+- https://leetcode.com/problems/maximum-performance-of-a-team
+  - Runtime 293 ms Beats 60.59% / Memory 32.21 MB Beats 78.82% of users with Python3
+- algorithm : 
+```python
+        for i in reversed(range(self.E)):
+            heapq.heappush(hq,perf[i+1][1] if i+1 < self.E else 0)
+            sumq += (perf[i+1][1] if i+1 < self.E else 0)
+            if len(hq) > k-1:
+                sumq -= heapq.heappop(hq)
+            ans = max(ans,perf[i][0] * (perf[i][1] + sumq))
+```
+- complexity : O(NlogN)
+- learnt :  https://leetcode.com/problems/maximum-subsequence-score/solutions/3557261/python3-heap-similar-questions-beats-94-810ms
+  - keep partial sum of heapq with element k.
+```python
+        for ef, sp in sorted(zip(efficiency, speed), reverse=True):
+            speedSum += sp
+            heappush(minHeap, sp)
+            res = max(res, speedSum * ef)
+            if len(minHeap) == k:
+                speedSum -= heappop(minHeap)
+```
+
+
+
+
+
+
+
+
 
 
 
