@@ -91,6 +91,9 @@
   - [2.76. Nearest Exit from Entrance in Maze (#1926) - medium / python / 2h / 2024.02.23](#276-nearest-exit-from-entrance-in-maze-1926---medium--python--2h--20240223)
   - [2.77. Find All People With Secret (#2092) - hard / python / 6H / 2024.02.24](#277-find-all-people-with-secret-2092---hard--python--6h--20240224)
   - [2.78. Find Bottom Left Tree Value (#513) - medium / python / 4M / 2024.02.28](#278-find-bottom-left-tree-value-513---medium--python--4m--20240228)
+  - [2.79. Even Odd Tree (#1609) - medium / python / 4M / 2024.02.29](#279-even-odd-tree-1609---medium--python--4m--20240229)
+  - [2.80. Greatest Common Divisor of Strings (#1071) - easy / python / 20M / 2024.02.29](#280-greatest-common-divisor-of-strings-1071---easy--python--20m--20240229)
+  - [2.81. Maximum Subsequence Score (#2542) - medium / python / 3D / 2024.03.01](#281-maximum-subsequence-score-2542---medium--python--3d--20240301)
 
 
 --------------------
@@ -811,7 +814,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - learnt : save once
 
-## 2.78. Even Odd Tree (#1609) - medium / python / 4M / 2024.02.29
+## 2.79. Even Odd Tree (#1609) - medium / python / 4M / 2024.02.29
 - https://leetcode.com/problems/even-odd-tree
   - [ Time taken: 18 m 57 s ] Runtime 203 ms Beats 95.06% / Memory 57.38 MB Beats 5.97% of users with Python3
 - algorithm : tree traverse
@@ -821,11 +824,24 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - For every even-indexed level, all nodes at the level have odd integer values in strictly increasing order (from left to right).
   - For every odd-indexed level, all nodes at the level have even integer values in strictly decreasing order (from left to right).
 
-## 2.78. Greatest Common Divisor of Strings (#1071) - easy / python / 20M / 2024.02.29
+## 2.80. Greatest Common Divisor of Strings (#1071) - easy / python / 20M / 2024.02.29
 - https://leetcode.com/problems/greatest-common-divisor-of-strings
   - Runtime 27 ms Beats 5.02% of users with C++
 - learnt : 0 ms
   - ```return (str1 + str2 == str2 + str1) ? str1.substr(0, gcd(str1.size(), str2.size())): "";```
+
+## 2.81. Maximum Subsequence Score (#2542) - medium / python / 3D / 2024.03.01
+- https://leetcode.com/problems/maximum-subsequence-score
+  - Runtime 1660 ms Beats 5.02% / Memory 37.51 MB Beats 71.05% of users with Python3
+- algorithm : choose index of sorted nums2 , if index : 0 , nums2[0]=2 others:[2,3]  ,  k== 2 ,  so we choose (k-1) elements ==> nums1의 k-1개에 대한 max sum =>  max sum of nums1 * nums2[0]
+- complexity : O(3* NlogN)
+- learnt :  https://leetcode.com/problems/maximum-subsequence-score/solutions/3557261/python3-heap-similar-questions-beats-94-810ms
+  - keep partial sum of heapq with element k.
+    - Minimum Cost to Hire K Workers
+    - Maximum Performance of a Team
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 - [1. yearly report](#1-yearly-report)
-- [2. knowledge](#2-knowledge)
+- [2. Python3 knowledge](#2-python3-knowledge)
   - [2.1. sort performance](#21-sort-performance)
   - [2.2. sort keys](#22-sort-keys)
   - [2.3. sorted data structure](#23-sorted-data-structure)
@@ -38,7 +38,9 @@
   - [2.24. sometimes initializing time is slower than calulation.](#224-sometimes-initializing-time-is-slower-than-calulation)
   - [2.25. BFS](#225-bfs)
   - [2.26. appendix](#226-appendix)
-- [3. Books \& URL](#3-books--url)
+- [3. C++ Knowledge](#3-c-knowledge)
+  - [3.1. add this statements in starting points](#31-add-this-statements-in-starting-points)
+- [4. Books \& URL](#4-books--url)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -47,7 +49,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - [2022~2023 Problem Solving](./README-2022-2023.md)
 - [2024 Problem Solving](./README-2024.md)
 
-# 2. knowledge
+# 2. Python3 knowledge
 ## 2.1. sort performance
 - update and sort is faster than update-insert each elements
   - slow : remove() and bisect.insort()
@@ -164,6 +166,7 @@ nums: [2, 3, 5, 5, 5, 5, 5, 5, 5, 6, 100] n: 181 bisect_right: 11 len(nums) 11
     if len(heap) > ladders:
         bricks -= heapq.heappop(heap)
   ```
+#### 
 
 ### 2.3.3. PriorityQueue
 - priority Queue (sorted with priority order)
@@ -513,7 +516,14 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 ## 2.26. appendix
 - dictionary is faster than set
 
-# 3. Books & URL
+# 3. C++ Knowledge
+## 3.1. add this statements in starting points
+```cpp
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+```
+
+# 4. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
 - RealPython : http://www.realpython.org
 - For Beginners for graph : https://leetcode.com/discuss/study-guide/1808711/Graph-for-Beginers-Problems
