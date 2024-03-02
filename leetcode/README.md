@@ -40,6 +40,7 @@
   - [2.26. appendix (technique)](#226-appendix-technique)
 - [3. C++ Knowledge](#3-c-knowledge)
   - [3.1. add this statements in starting points](#31-add-this-statements-in-starting-points)
+  - [3.2. sort](#32-sort)
 - [4. Books \& URL](#4-books--url)
 
 --------------------
@@ -528,6 +529,8 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 ```
+## 3.2. sort
+- sort(nums.begin(), nums.end());
 
 # 4. Books & URL
 - Python module of the week : http://pymotw.com/2/PyMOTW-1.133.pdf
