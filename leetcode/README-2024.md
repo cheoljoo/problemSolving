@@ -97,6 +97,7 @@
   - [2.82. Maximum Performance of a Team (#1383) - hard / python / 2H / 2024.03.01](#282-maximum-performance-of-a-team-1383---hard--python--2h--20240301)
   - [2.83. Smallest Number in Infinite Set (#2336) - medium / python / 30M / 2024.03.02](#283-smallest-number-in-infinite-set-2336---medium--python--30m--20240302)
   - [2.84. Rotting Oranges (#994) - medium / python / 30M / 2024.03.02](#284-rotting-oranges-994---medium--python--30m--20240302)
+  - [2.85. Reorder Routes to Make All Paths Lead to the City Zero (#1466) - medium / python / 1H / 2024.03.02](#285-reorder-routes-to-make-all-paths-lead-to-the-city-zero-1466---medium--python--1h--20240302)
 
 
 --------------------
@@ -890,6 +891,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - deque() is better than ```[]```.   deque().popleft() / pop() / append()
   - declaration as valuable is better.   ```for rr,cc in [[1,0],[-1,0],[0,1],[0,-1]]:``` -> ```direction = [[1,0],[-1,0],[0,1],[0,-1]]```
 
+## 2.85. Reorder Routes to Make All Paths Lead to the City Zero (#1466) - medium / python / 1H / 2024.03.02
+- https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero
+  - Runtime 740 ms Beats 99.70% / Memory 45.95 MB Beats 68.23% of users with Python3
+- algorithm : graph , bfs , change direction each step
+- complexity : O(N^2)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
