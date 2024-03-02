@@ -37,7 +37,7 @@
   - [2.23. maximum profit when buy and sell stock](#223-maximum-profit-when-buy-and-sell-stock)
   - [2.24. sometimes initializing time is slower than calulation.](#224-sometimes-initializing-time-is-slower-than-calulation)
   - [2.25. BFS](#225-bfs)
-  - [2.26. appendix](#226-appendix)
+  - [2.26. appendix (technique)](#226-appendix-technique)
 - [3. C++ Knowledge](#3-c-knowledge)
   - [3.1. add this statements in starting points](#31-add-this-statements-in-starting-points)
 - [4. Books \& URL](#4-books--url)
@@ -513,8 +513,14 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 - BFS is the best when we find shortest path in maze
 - https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
 
-## 2.26. appendix
+## 2.26. appendix (technique)
 - dictionary is faster than set
+- several line of condition check (if) does not have any benefit of performance.
+  - ```if (0 <= r + rr < self.R) and (0<= c+cc < self.C) and (grid[r+rr][c+cc] == 1):```
+- for check is better "in" command
+  - ```for c in range(self.C): if grid[r][c] == 1: return -1``` is better than ```if 1 in grid[r]:```
+- deque() is better than ```[]```.   deque().popleft() / pop() / append()
+- declaration as valuable is better.   ```for rr,cc in [[1,0],[-1,0],[0,1],[0,-1]]:``` -> ```direction = [[1,0],[-1,0],[0,1],[0,-1]]```
 
 # 3. C++ Knowledge
 ## 3.1. add this statements in starting points

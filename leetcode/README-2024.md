@@ -94,7 +94,9 @@
   - [2.79. Even Odd Tree (#1609) - medium / python / 4M / 2024.02.29](#279-even-odd-tree-1609---medium--python--4m--20240229)
   - [2.80. Greatest Common Divisor of Strings (#1071) - easy / python / 20M / 2024.02.29](#280-greatest-common-divisor-of-strings-1071---easy--python--20m--20240229)
   - [2.81. Maximum Subsequence Score (#2542) - medium / python / 3D / 2024.03.01](#281-maximum-subsequence-score-2542---medium--python--3d--20240301)
-  - [2.81. Maximum Performance of a Team (#1383) - hard / python / 2H / 2024.03.01](#281-maximum-performance-of-a-team-1383---hard--python--2h--20240301)
+  - [2.82. Maximum Performance of a Team (#1383) - hard / python / 2H / 2024.03.01](#282-maximum-performance-of-a-team-1383---hard--python--2h--20240301)
+  - [2.83. Smallest Number in Infinite Set (#2336) - medium / python / 30M / 2024.03.02](#283-smallest-number-in-infinite-set-2336---medium--python--30m--20240302)
+  - [2.84. Rotting Oranges (#994) - medium / python / 30M / 2024.03.02](#284-rotting-oranges-994---medium--python--30m--20240302)
 
 
 --------------------
@@ -836,12 +838,13 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 1660 ms Beats 5.02% / Memory 37.51 MB Beats 71.05% of users with Python3
 - algorithm : choose index of sorted nums2 , if index : 0 , nums2[0]=2 others:[2,3]  ,  k== 2 ,  so we choose (k-1) elements ==> nums1의 k-1개에 대한 max sum =>  max sum of nums1 * nums2[0]
 - complexity : O(3* NlogN)
+- study - https://leetcode.com/studyplan/leetcode-75/
 - learnt :  https://leetcode.com/problems/maximum-subsequence-score/solutions/3557261/python3-heap-similar-questions-beats-94-810ms
   - keep partial sum of heapq with element k.
     - Minimum Cost to Hire K Workers
     - Maximum Performance of a Team
 
-## 2.81. Maximum Performance of a Team (#1383) - hard / python / 2H / 2024.03.01
+## 2.82. Maximum Performance of a Team (#1383) - hard / python / 2H / 2024.03.01
 - https://leetcode.com/problems/maximum-performance-of-a-team
   - Runtime 293 ms Beats 60.59% / Memory 32.21 MB Beats 78.82% of users with Python3
 - algorithm : 
@@ -864,6 +867,30 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
             if len(minHeap) == k:
                 speedSum -= heappop(minHeap)
 ```
+
+## 2.83. Smallest Number in Infinite Set (#2336) - medium / python / 30M / 2024.03.02
+- https://leetcode.com/problems/smallest-number-in-infinite-set
+  - Runtime 161 ms Beats 22.40% / Memory 17.20 MB Beats 91.79% of users with Python3
+- algorithm : heapq
+- complexity : O(NlogN)
+- study - https://leetcode.com/studyplan/leetcode-75/
+- learnt :  set is not sorted order.
+
+## 2.84. Rotting Oranges (#994) - medium / python / 30M / 2024.03.02
+- https://leetcode.com/problems/rotting-oranges
+  - Runtime 53 ms Beats 44.43% / Memory 16.52 MB Beats 77.04% of users with Python3
+- algorithm : bfs
+- complexity : O(N*M)
+- study - https://leetcode.com/studyplan/leetcode-75/
+- learnt :  sevral trials in python code. but it is not algorithm difference but just technique.
+  - several line of condition check (if) does not have any benefit of performance.
+    - ```if (0 <= r + rr < self.R) and (0<= c+cc < self.C) and (grid[r+rr][c+cc] == 1):```
+  - for check is better "in" command
+    - ```for c in range(self.C): if grid[r][c] == 1: return -1``` is better than ```if 1 in grid[r]:```
+  - deque() is better than ```[]```.   deque().popleft() / pop() / append()
+  - declaration as valuable is better.   ```for rr,cc in [[1,0],[-1,0],[0,1],[0,-1]]:``` -> ```direction = [[1,0],[-1,0],[0,1],[0,-1]]```
+
+
 
 
 
