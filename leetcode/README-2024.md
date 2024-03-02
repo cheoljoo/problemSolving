@@ -894,7 +894,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 ## 2.85. Reorder Routes to Make All Paths Lead to the City Zero (#1466) - medium / python / 1H / 2024.03.02
 - https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero
   - Runtime 740 ms Beats 99.70% / Memory 45.95 MB Beats 68.23% of users with Python3
-- algorithm : graph , bfs , change direction each step
+- algorithm : graph , bfs , **change direction each step**
 - complexity : O(N^2)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
