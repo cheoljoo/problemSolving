@@ -522,6 +522,17 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
   - ```for c in range(self.C): if grid[r][c] == 1: return -1``` is better than ```if 1 in grid[r]:```
 - deque() is better than ```[]```.   deque().popleft() / pop() / append()
 - declaration as valuable is better.   ```for rr,cc in [[1,0],[-1,0],[0,1],[0,-1]]:``` -> ```direction = [[1,0],[-1,0],[0,1],[0,-1]]```
+- list :  rs += rooms[r]  --> rs.extend(rooms[r])
+
+
+
+
+
+
+
+
+
+
 
 # 3. C++ Knowledge
 ## 3.1. add this statements in starting points
