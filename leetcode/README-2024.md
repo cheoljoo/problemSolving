@@ -100,6 +100,7 @@
   - [2.85. Reorder Routes to Make All Paths Lead to the City Zero (#1466) - medium / python / 1H / 2024.03.02](#285-reorder-routes-to-make-all-paths-lead-to-the-city-zero-1466---medium--python--1h--20240302)
   - [2.86. Number of Provinces (#547) - medium / python / 30M / 2024.03.03](#286-number-of-provinces-547---medium--python--30m--20240303)
   - [2.87. Keys and Rooms (#841) - medium / python / 30M / 2024.03.03](#287-keys-and-rooms-841---medium--python--30m--20240303)
+  - [2.87. Maximum Level Sum of a Binary Tree (#1161) - medium / python / 1H / 2024.03.03](#287-maximum-level-sum-of-a-binary-tree-1161---medium--python--1h--20240303)
 
 
 --------------------
@@ -916,6 +917,13 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - learnt : 
   - Runtime 63 ms Beats 73.93%   :  rs += rooms[r]  --> rs.extend(rooms[r])   && non-recursive
 
+## 2.87. Maximum Level Sum of a Binary Tree (#1161) - medium / python / 1H / 2024.03.03
+- https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree
+  - Runtime 170 ms Beats 30.65% / Memory 19.88 MB Beats 92.41% of users with Python3 (dfs - recursive)
+  - Runtime 136 ms Beats 98.46% / Memory 20.20 MB Beats 33.92% of users with Python3 (bfs)
+- algorithm : graph-dfs , bfs
+- complexity : O(N^2)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
