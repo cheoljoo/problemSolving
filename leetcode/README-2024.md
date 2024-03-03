@@ -100,7 +100,8 @@
   - [2.85. Reorder Routes to Make All Paths Lead to the City Zero (#1466) - medium / python / 1H / 2024.03.02](#285-reorder-routes-to-make-all-paths-lead-to-the-city-zero-1466---medium--python--1h--20240302)
   - [2.86. Number of Provinces (#547) - medium / python / 30M / 2024.03.03](#286-number-of-provinces-547---medium--python--30m--20240303)
   - [2.87. Keys and Rooms (#841) - medium / python / 30M / 2024.03.03](#287-keys-and-rooms-841---medium--python--30m--20240303)
-  - [2.87. Maximum Level Sum of a Binary Tree (#1161) - medium / python / 1H / 2024.03.03](#287-maximum-level-sum-of-a-binary-tree-1161---medium--python--1h--20240303)
+  - [2.88. Maximum Level Sum of a Binary Tree (#1161) - medium / python / 1H / 2024.03.03](#288-maximum-level-sum-of-a-binary-tree-1161---medium--python--1h--20240303)
+  - [2.88. Longest ZigZag Path in a Binary Tree (#1372) - medium / python / 15M / 2024.03.04](#288-longest-zigzag-path-in-a-binary-tree-1372---medium--python--15m--20240304)
 
 
 --------------------
@@ -905,26 +906,32 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/number-of-provinces
   - Runtime 186 ms Beats 57.17% / Memory 17.54 MB Beats 51.58% of users with Python3
 - algorithm : grouping (me)  ,   graph-dfs (solution)
-- complexity : O(N^2)
+- complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
 ## 2.87. Keys and Rooms (#841) - medium / python / 30M / 2024.03.03
 - https://leetcode.com/problems/keys-and-rooms
   - Runtime 74 ms Beats 15.84% / Memory 17.00 MB Beats 73.01% of users with Python3
 - algorithm : graph-dfs
-- complexity : O(N^2)
+- complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 - learnt : 
   - Runtime 63 ms Beats 73.93%   :  rs += rooms[r]  --> rs.extend(rooms[r])   && non-recursive
 
-## 2.87. Maximum Level Sum of a Binary Tree (#1161) - medium / python / 1H / 2024.03.03
+## 2.88. Maximum Level Sum of a Binary Tree (#1161) - medium / python / 1H / 2024.03.03
 - https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree
   - Runtime 170 ms Beats 30.65% / Memory 19.88 MB Beats 92.41% of users with Python3 (dfs - recursive)
   - Runtime 136 ms Beats 98.46% / Memory 20.20 MB Beats 33.92% of users with Python3 (bfs)
 - algorithm : graph-dfs , bfs
-- complexity : O(N^2)
+- complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.88. Longest ZigZag Path in a Binary Tree (#1372) - medium / python / 15M / 2024.03.04
+- https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree
+  - Runtime 157 ms Beats 98.05% / Memory 30.27 MB Beats 85.32% of users with Python3
+- algorithm : graph-dfs
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
