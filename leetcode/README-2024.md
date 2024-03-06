@@ -101,7 +101,9 @@
   - [2.86. Number of Provinces (#547) - medium / python / 30M / 2024.03.03](#286-number-of-provinces-547---medium--python--30m--20240303)
   - [2.87. Keys and Rooms (#841) - medium / python / 30M / 2024.03.03](#287-keys-and-rooms-841---medium--python--30m--20240303)
   - [2.88. Maximum Level Sum of a Binary Tree (#1161) - medium / python / 1H / 2024.03.03](#288-maximum-level-sum-of-a-binary-tree-1161---medium--python--1h--20240303)
-  - [2.88. Longest ZigZag Path in a Binary Tree (#1372) - medium / python / 15M / 2024.03.04](#288-longest-zigzag-path-in-a-binary-tree-1372---medium--python--15m--20240304)
+  - [2.89. Longest ZigZag Path in a Binary Tree (#1372) - medium / python / 15M / 2024.03.04](#289-longest-zigzag-path-in-a-binary-tree-1372---medium--python--15m--20240304)
+  - [2.90. Path Sum III (#437) - medium / python / 15M / 2024.03.05](#290-path-sum-iii-437---medium--python--15m--20240305)
+  - [2.91. Minimum Length of String After Deleting Similar Ends (#1750) - medium / python / 10M / 2024.03.05](#291-minimum-length-of-string-after-deleting-similar-ends-1750---medium--python--10m--20240305)
 
 
 --------------------
@@ -926,13 +928,25 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
-## 2.88. Longest ZigZag Path in a Binary Tree (#1372) - medium / python / 15M / 2024.03.04
+## 2.89. Longest ZigZag Path in a Binary Tree (#1372) - medium / python / 15M / 2024.03.04
 - https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree
   - Runtime 157 ms Beats 98.05% / Memory 30.27 MB Beats 85.32% of users with Python3
 - algorithm : graph-dfs
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.90. Path Sum III (#437) - medium / python / 15M / 2024.03.05
+- https://leetcode.com/problems/path-sum-iii
+  - Runtime 139 ms Beats 50.43% / Memory 16.88 MB Beats 93.67% of users with Python3
+- algorithm : node count max : 1000   it means depth max is 10  so N*10  (N=1000)
+- complexity : O(NlogN)
+- study - https://leetcode.com/studyplan/leetcode-75/
+
+## 2.91. Minimum Length of String After Deleting Similar Ends (#1750) - medium / python / 10M / 2024.03.05
+- https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends
+  - Runtime 69 ms Beats 59.50% / Memory 17.36 MB Beats 73.50% of users with Python3
+- algorithm : two pointers
+- complexity : O(N)
 
 
 
