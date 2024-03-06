@@ -104,6 +104,7 @@
   - [2.89. Longest ZigZag Path in a Binary Tree (#1372) - medium / python / 15M / 2024.03.04](#289-longest-zigzag-path-in-a-binary-tree-1372---medium--python--15m--20240304)
   - [2.90. Path Sum III (#437) - medium / python / 15M / 2024.03.05](#290-path-sum-iii-437---medium--python--15m--20240305)
   - [2.91. Minimum Length of String After Deleting Similar Ends (#1750) - medium / python / 10M / 2024.03.05](#291-minimum-length-of-string-after-deleting-similar-ends-1750---medium--python--10m--20240305)
+  - [2.92. Product of Array Except Self (#238) - medium / python / 6M / 2024.03.06](#292-product-of-array-except-self-238---medium--python--6m--20240306)
 
 
 --------------------
@@ -948,6 +949,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : two pointers
 - complexity : O(N)
 
+## 2.92. Product of Array Except Self (#238) - medium / python / 6M / 2024.03.06
+- https://leetcode.com/problems/product-of-array-except-self
+  - 6 minuts : Runtime 162 ms Beats 76.10% / Memory 23.72 MB Beats 81.35% of users with Python3
+- algorithm : save total -> then divide by own
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
