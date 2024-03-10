@@ -107,6 +107,7 @@
   - [2.92. Product of Array Except Self (#238) - medium / python / 6M / 2024.03.06](#292-product-of-array-except-self-238---medium--python--6m--20240306)
   - [2.92. Increasing Triplet Subsequence (#334) - medium / python / 2H / 2024.03.07](#292-increasing-triplet-subsequence-334---medium--python--2h--20240307)
   - [2.92. String Compression (#443) - medium / python / 15M / 2024.03.10](#292-string-compression-443---medium--python--15m--20240310)
+  - [2.92. Decode String (#394) - medium / python / 2H / 2024.03.11](#292-decode-string-394---medium--python--2h--20240311)
 
 
 --------------------
@@ -973,6 +974,12 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.92. Decode String (#394) - medium / python / 2H / 2024.03.11
+- https://leetcode.com/problems/decode-string
+  - Runtime 34 ms Beats 62.59% / Memory 16.48 MB Beats 93.34% of users with Python3
+- algorithm : stack , recursion
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
