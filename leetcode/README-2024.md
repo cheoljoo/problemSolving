@@ -105,9 +105,9 @@
   - [2.90. Path Sum III (#437) - medium / python / 15M / 2024.03.05](#290-path-sum-iii-437---medium--python--15m--20240305)
   - [2.91. Minimum Length of String After Deleting Similar Ends (#1750) - medium / python / 10M / 2024.03.05](#291-minimum-length-of-string-after-deleting-similar-ends-1750---medium--python--10m--20240305)
   - [2.92. Product of Array Except Self (#238) - medium / python / 6M / 2024.03.06](#292-product-of-array-except-self-238---medium--python--6m--20240306)
-  - [2.92. Increasing Triplet Subsequence (#334) - medium / python / 2H / 2024.03.07](#292-increasing-triplet-subsequence-334---medium--python--2h--20240307)
-  - [2.92. String Compression (#443) - medium / python / 15M / 2024.03.10](#292-string-compression-443---medium--python--15m--20240310)
-  - [2.92. Decode String (#394) - medium / python / 2H / 2024.03.11](#292-decode-string-394---medium--python--2h--20240311)
+  - [2.93. Increasing Triplet Subsequence (#334) - medium / python / 2H / 2024.03.07](#293-increasing-triplet-subsequence-334---medium--python--2h--20240307)
+  - [2.94. String Compression (#443) - medium / python / 15M / 2024.03.10](#294-string-compression-443---medium--python--15m--20240310)
+  - [2.95. Decode String (#394) - medium / python / 2H / 2024.03.11](#295-decode-string-394---medium--python--2h--20240311)
 
 
 --------------------
@@ -959,7 +959,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
-## 2.92. Increasing Triplet Subsequence (#334) - medium / python / 2H / 2024.03.07
+## 2.93. Increasing Triplet Subsequence (#334) - medium / python / 2H / 2024.03.07
 - https://leetcode.com/problems/increasing-triplet-subsequence
   - Runtime 867 ms Beats 18.08% / Memory 32.54 MB Beats 79.61% of users with Python3  <- it is not good solution. because it is just for tripplet.
 - algorithm : it is not good solution. because it is just for tripplet.
@@ -968,13 +968,13 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - learnt : https://leetcode.com/problems/increasing-triplet-subsequence/solutions/2688195/python-3-6-lines-one-pass-w-explanation-t-m-98-50
   - 6 lines : first, second = inf, inf , third ...
 
-## 2.92. String Compression (#443) - medium / python / 15M / 2024.03.10
+## 2.94. String Compression (#443) - medium / python / 15M / 2024.03.10
 - https://leetcode.com/problems/string-compression
   - Runtime 56 ms Beats 72.10% / Memory 16.69 MB Beats 83.07% of users with Python3
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
-## 2.92. Decode String (#394) - medium / python / 2H / 2024.03.11
+## 2.95. Decode String (#394) - medium / python / 2H / 2024.03.11
 - https://leetcode.com/problems/decode-string
   - Runtime 34 ms Beats 62.59% / Memory 16.48 MB Beats 93.34% of users with Python3
 - algorithm : stack , recursion
