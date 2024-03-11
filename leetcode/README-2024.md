@@ -109,6 +109,9 @@
   - [2.94. String Compression (#443) - medium / python / 15M / 2024.03.10](#294-string-compression-443---medium--python--15m--20240310)
   - [2.95. Decode String (#394) - medium / python / 2H / 2024.03.11](#295-decode-string-394---medium--python--2h--20240311)
   - [2.96. Custom Sort String (#791) - medium / python / 20M / 2024.03.11](#296-custom-sort-string-791---medium--python--20m--20240311)
+  - [2.97. Maximum Twin Sum of a Linked List (#2130) - medium / python / 20M / 2024.03.11](#297-maximum-twin-sum-of-a-linked-list-2130---medium--python--20m--20240311)
+  - [2.98. Odd Even Linked List (#328) - medium / python / 20M / 2024.03.11](#298-odd-even-linked-list-328---medium--python--20m--20240311)
+  - [2.99. Asteroid Collision (#735) - medium / python / 36M / 2024.03.11](#299-asteroid-collision-735---medium--python--36m--20240311)
 
 
 --------------------
@@ -986,6 +989,32 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/custom-sort-string
   - Runtime 37 ms Beats 46.56% / Memory 16.49 MB Beats 91.57% of users with Python3
 - complexity : O(N)
+
+## 2.97. Maximum Twin Sum of a Linked List (#2130) - medium / python / 20M / 2024.03.11
+- https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list
+  - Runtime 369 ms Beats 30.75% / Memory 44.41 MB Beats 44.13% of users with Python3
+- algorithm : linked list
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
+
+## 2.98. Odd Even Linked List (#328) - medium / python / 20M / 2024.03.11
+- https://leetcode.com/problems/odd-even-linked-list
+  - Runtime 39 ms Beats 65.40% / Memory 18.66 MB Beats 35.16% of users with Python3
+- algorithm : linked list
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
+
+## 2.99. Asteroid Collision (#735) - medium / python / 36M / 2024.03.11
+- https://leetcode.com/problems/asteroid-collision
+  - [ Time taken: 35 m 36 s ] Runtime 77 ms Beats 86.26% / Memory 18.00 MB Beats 36.51% of users with Python3
+- algorithm : stack
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
+
+
+
+
+
 
 
 
