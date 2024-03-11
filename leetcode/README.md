@@ -516,7 +516,7 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 
 ## 2.26. appendix (technique)
 - dictionary is faster than set
-- defaultdict is faster than {}  : https://leetcode.com/problems/custom-sort-string/submissions/
+- defaultdict is faster than {}  : 37 -> 31 ms : https://leetcode.com/problems/custom-sort-string/submissions/
 - several line of condition check (if) does not have any benefit of performance.
   - ```if (0 <= r + rr < self.R) and (0<= c+cc < self.C) and (grid[r+rr][c+cc] == 1):```
 - for check is better "in" command
