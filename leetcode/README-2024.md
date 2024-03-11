@@ -108,6 +108,7 @@
   - [2.93. Increasing Triplet Subsequence (#334) - medium / python / 2H / 2024.03.07](#293-increasing-triplet-subsequence-334---medium--python--2h--20240307)
   - [2.94. String Compression (#443) - medium / python / 15M / 2024.03.10](#294-string-compression-443---medium--python--15m--20240310)
   - [2.95. Decode String (#394) - medium / python / 2H / 2024.03.11](#295-decode-string-394---medium--python--2h--20240311)
+  - [2.96. Custom Sort String (#791) - medium / python / 20M / 2024.03.11](#296-custom-sort-string-791---medium--python--20m--20240311)
 
 
 --------------------
@@ -981,6 +982,10 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.96. Custom Sort String (#791) - medium / python / 20M / 2024.03.11
+- https://leetcode.com/problems/custom-sort-string
+  - Runtime 37 ms Beats 46.56% / Memory 16.49 MB Beats 91.57% of users with Python3
+- complexity : O(N)
 
 
 
