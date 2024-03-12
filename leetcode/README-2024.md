@@ -112,6 +112,8 @@
   - [2.97. Maximum Twin Sum of a Linked List (#2130) - medium / python / 20M / 2024.03.11](#297-maximum-twin-sum-of-a-linked-list-2130---medium--python--20m--20240311)
   - [2.98. Odd Even Linked List (#328) - medium / python / 20M / 2024.03.11](#298-odd-even-linked-list-328---medium--python--20m--20240311)
   - [2.99. Asteroid Collision (#735) - medium / python / 36M / 2024.03.11](#299-asteroid-collision-735---medium--python--36m--20240311)
+  - [2.100. Max Consecutive Ones III (#1004) - medium / python / 1H / 2024.03.12](#2100-max-consecutive-ones-iii-1004---medium--python--1h--20240312)
+  - [2.101. Remove Zero Sum Consecutive Nodes from Linked List (#1171) - medium / python / 1H / 2024.03.12](#2101-remove-zero-sum-consecutive-nodes-from-linked-list-1171---medium--python--1h--20240312)
 
 
 --------------------
@@ -1011,7 +1013,24 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.100. Max Consecutive Ones III (#1004) - medium / python / 1H / 2024.03.12
+- https://leetcode.com/problems/max-consecutive-ones-iii
+  - Runtime 423 ms Beats 72.28% / Memory 17.29 MB Beats 21.66% of users with Python3
+- algorithm : sliding window , consecutive
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.101. Remove Zero Sum Consecutive Nodes from Linked List (#1171) - medium / python / 1H / 2024.03.12
+- https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list
+  - Runtime 259 ms Beats 5.18% / Memory 17.37 MB Beats 19.52% of users with Python3
+- complexity : O(N^2)
+- learnt : https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/solutions/4862085/easy-explanation-prefixsum-hashmap-c-java-python3
+  - complexity : O(N)
+  - algorithm : [1,2,3,-3,4] 
+    - At node 1: Cumulative Sum = 1, Insert (1, node1) into hashmap.
+    - At node 2: Cumulative Sum = 3, Insert (3, node2) into hashmap.
+    - At node 3: Cumulative Sum = 6, Insert (6, node3) into hashmap.
+    - At node -3: Cumulative Sum = 3, Found in hashmap. Remove nodes between node2 and node3. New linked list: [1,2,4].
 
 
 
