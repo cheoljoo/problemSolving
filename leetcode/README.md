@@ -37,6 +37,7 @@
   - [2.23. maximum profit when buy and sell stock](#223-maximum-profit-when-buy-and-sell-stock)
   - [2.24. sometimes initializing time is slower than calulation.](#224-sometimes-initializing-time-is-slower-than-calulation)
   - [2.25. BFS](#225-bfs)
+  - [Zero Sum Consecutive](#zero-sum-consecutive)
   - [2.26. appendix (technique)](#226-appendix-technique)
 - [3. C++ Knowledge](#3-c-knowledge)
   - [3.1. add this statements in starting points](#31-add-this-statements-in-starting-points)
@@ -513,6 +514,9 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 - better code for BFS uses only queue.  we do not need to use heapq in this case because it will increase path in BFS.
 - BFS is the best when we find shortest path in maze
 - https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
+
+## Zero Sum Consecutive
+- [1,2,3,-3,4]  -> accumulative [1,3,6,3,7]  index 1 and 3 's value is the same 3.   sum of index 2~3  is zero.
 
 ## 2.26. appendix (technique)
 - dictionary is faster than set
