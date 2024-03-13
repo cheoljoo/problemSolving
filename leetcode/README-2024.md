@@ -114,6 +114,10 @@
   - [2.99. Asteroid Collision (#735) - medium / python / 36M / 2024.03.11](#299-asteroid-collision-735---medium--python--36m--20240311)
   - [2.100. Max Consecutive Ones III (#1004) - medium / python / 1H / 2024.03.12](#2100-max-consecutive-ones-iii-1004---medium--python--1h--20240312)
   - [2.101. Remove Zero Sum Consecutive Nodes from Linked List (#1171) - medium / python / 1H / 2024.03.12](#2101-remove-zero-sum-consecutive-nodes-from-linked-list-1171---medium--python--1h--20240312)
+  - [2.102. Maximum Number of Vowels in a Substring of Given Length (#1456) - medium / python / 10M / 2024.03.13](#2102-maximum-number-of-vowels-in-a-substring-of-given-length-1456---medium--python--10m--20240313)
+  - [2.103. Longest Subarray of 1's After Deleting One Element (#1493) - medium / python / 30M / 2024.03.13](#2103-longest-subarray-of-1s-after-deleting-one-element-1493---medium--python--30m--20240313)
+  - [2.104. Equal Row and Column Pairs (#2352) - medium / python / 30M / 2024.03.13](#2104-equal-row-and-column-pairs-2352---medium--python--30m--20240313)
+  - [2.105. Removing Stars From a String (#2390) - medium / python / 30M / 2024.03.13](#2105-removing-stars-from-a-string-2390---medium--python--30m--20240313)
 
 
 --------------------
@@ -1016,7 +1020,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 ## 2.100. Max Consecutive Ones III (#1004) - medium / python / 1H / 2024.03.12
 - https://leetcode.com/problems/max-consecutive-ones-iii
   - Runtime 423 ms Beats 72.28% / Memory 17.29 MB Beats 21.66% of users with Python3
-- algorithm : sliding window , consecutive
+- algorithm : sliding window , consecutive , flip
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
@@ -1032,9 +1036,31 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
     - At node 3: Cumulative Sum = 6, Insert (6, node3) into hashmap.
     - At node -3: Cumulative Sum = 3, Found in hashmap. Remove nodes between node2 and node3. New linked list: [1,2,4].
 
+## 2.102. Maximum Number of Vowels in a Substring of Given Length (#1456) - medium / python / 10M / 2024.03.13
+- https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length
+  - Runtime 131 ms Beats 48.37% / Memory 17.35 MB Beats 38.95% of users with Python3
+- algorithm : sliding window
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.103. Longest Subarray of 1's After Deleting One Element (#1493) - medium / python / 30M / 2024.03.13
+- https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element
+  - Runtime 437 ms Beats 76.10% / Memory 20.23 MB Beats 26.25% of users with Python3
+- algorithm : sliding window , flip 1 , sum of pair
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.104. Equal Row and Column Pairs (#2352) - medium / python / 30M / 2024.03.13
+- https://leetcode.com/problems/equal-row-and-column-pairs
+  - Runtime 515 ms Beats 31.65% / Memory 21.55 MB Beats 40.94% of users with Python3
+- complexity : O(R*C)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
+## 2.105. Removing Stars From a String (#2390) - medium / python / 30M / 2024.03.13
+- https://leetcode.com/problems/removing-stars-from-a-string
+  - Runtime 250 ms Beats 16.12% / Memory 18.67 MB Beats 17.02% of users with Python3
+- complexity : O(N)
+- study - https://leetcode.com/studyplan/leetcode-75/
 
 
 
