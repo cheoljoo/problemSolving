@@ -118,6 +118,7 @@
   - [2.103. Longest Subarray of 1's After Deleting One Element (#1493) - medium / python / 30M / 2024.03.13](#2103-longest-subarray-of-1s-after-deleting-one-element-1493---medium--python--30m--20240313)
   - [2.104. Equal Row and Column Pairs (#2352) - medium / python / 30M / 2024.03.13](#2104-equal-row-and-column-pairs-2352---medium--python--30m--20240313)
   - [2.105. Removing Stars From a String (#2390) - medium / python / 30M / 2024.03.13](#2105-removing-stars-from-a-string-2390---medium--python--30m--20240313)
+  - [2.106. Binary Subarrays With Sum (#930) - medium / python / 3H / 2024.03.14](#2106-binary-subarrays-with-sum-930---medium--python--3h--20240314)
 
 
 --------------------
@@ -1062,7 +1063,14 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - study - https://leetcode.com/studyplan/leetcode-75/
 
-
+## 2.106. Binary Subarrays With Sum (#930) - medium / python / 3H / 2024.03.14
+- https://leetcode.com/problems/binary-subarrays-with-sum
+  - Runtime 240 ms (best : 192 ms) Beats 8.68% / Memory 18.24 MB Beats 74.94% of users with Python3 
+- algorithm : sliding window , contiguous zero count
+- complexity : O(N)
+- learnt : dp  (207 ms)   O(N)
+  - https://leetcode.com/problems/binary-subarrays-with-sum/solutions/4872569/beat-80-20-full-explanation-with-pictures
+  - sum of count of (cur_sum - goal)  for each num and position
 
 
 
