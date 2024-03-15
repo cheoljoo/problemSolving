@@ -37,8 +37,8 @@
   - [2.23. maximum profit when buy and sell stock](#223-maximum-profit-when-buy-and-sell-stock)
   - [2.24. sometimes initializing time is slower than calulation.](#224-sometimes-initializing-time-is-slower-than-calulation)
   - [2.25. BFS](#225-bfs)
-  - [Zero Sum Consecutive](#zero-sum-consecutive)
-  - [2.26. appendix (technique)](#226-appendix-technique)
+  - [2.26. Zero Sum Consecutive](#226-zero-sum-consecutive)
+  - [2.27. appendix (technique)](#227-appendix-technique)
 - [3. C++ Knowledge](#3-c-knowledge)
   - [3.1. add this statements in starting points](#31-add-this-statements-in-starting-points)
   - [3.2. sort](#32-sort)
@@ -515,10 +515,10 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 - BFS is the best when we find shortest path in maze
 - https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
 
-## Zero Sum Consecutive
+## 2.26. Zero Sum Consecutive
 - [1,2,3,-3,4]  -> accumulative [1,3,6,3,7]  index 1 and 3 's value is the same 3.   sum of index 2~3  is zero.
 
-## 2.26. appendix (technique)
+## 2.27. appendix (technique)
 - dictionary is faster than set
 - defaultdict is faster than {}  : 37 -> 31 ms : https://leetcode.com/problems/custom-sort-string/submissions/
 - several line of condition check (if) does not have any benefit of performance.
@@ -528,7 +528,7 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 - deque() is better than ```[]```.   deque().popleft() / pop() / append()
 - declaration as valuable is better.   ```for rr,cc in [[1,0],[-1,0],[0,1],[0,-1]]:``` -> ```direction = [[1,0],[-1,0],[0,1],[0,-1]]```
 - list :  rs += rooms[r]  --> rs.extend(rooms[r])
-
+- set differnce :  set(nums1) - set(nums2)
 
 
 
