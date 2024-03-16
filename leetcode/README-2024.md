@@ -1071,6 +1071,20 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - learnt : dp  (207 ms)   O(N)
   - https://leetcode.com/problems/binary-subarrays-with-sum/solutions/4872569/beat-80-20-full-explanation-with-pictures
   - sum of count of (cur_sum - goal)  for each num and position
+  - ```python
+    for num in nums:
+        curr_sum += num
+        if curr_sum - goal in count:
+            total_subarrays += count[curr_sum - goal]
+        count[curr_sum] = count.get(curr_sum, 0) + 1
+    ```
+
+## 2.106. Contiguous Array (#525) - medium / python / 1H / 2024.03.16
+- https://leetcode.com/problems/contiguous-array
+  - Runtime 689 ms Beats 5.03% / Memory 24.56 MB Beats 5.09% of users with Python3
+  - optimization : Runtime 632 ms Beats 31.02%
+- algorithm : sliding window , 0 -> -1 then goal == 0
+- complexity : O(N)
 
 
 
