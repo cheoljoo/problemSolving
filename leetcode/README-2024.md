@@ -119,6 +119,7 @@
   - [2.104. Equal Row and Column Pairs (#2352) - medium / python / 30M / 2024.03.13](#2104-equal-row-and-column-pairs-2352---medium--python--30m--20240313)
   - [2.105. Removing Stars From a String (#2390) - medium / python / 30M / 2024.03.13](#2105-removing-stars-from-a-string-2390---medium--python--30m--20240313)
   - [2.106. Binary Subarrays With Sum (#930) - medium / python / 3H / 2024.03.14](#2106-binary-subarrays-with-sum-930---medium--python--3h--20240314)
+  - [2.107. Contiguous Array (#525) - medium / python / 1H / 2024.03.16](#2107-contiguous-array-525---medium--python--1h--20240316)
 
 
 --------------------
@@ -1079,7 +1080,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
         count[curr_sum] = count.get(curr_sum, 0) + 1
     ```
 
-## 2.106. Contiguous Array (#525) - medium / python / 1H / 2024.03.16
+## 2.107. Contiguous Array (#525) - medium / python / 1H / 2024.03.16
 - https://leetcode.com/problems/contiguous-array
   - Runtime 689 ms Beats 5.03% / Memory 24.56 MB Beats 5.09% of users with Python3
   - optimization : Runtime 632 ms Beats 31.02%
