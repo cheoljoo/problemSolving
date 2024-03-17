@@ -120,6 +120,7 @@
   - [2.105. Removing Stars From a String (#2390) - medium / python / 30M / 2024.03.13](#2105-removing-stars-from-a-string-2390---medium--python--30m--20240313)
   - [2.106. Binary Subarrays With Sum (#930) - medium / python / 3H / 2024.03.14](#2106-binary-subarrays-with-sum-930---medium--python--3h--20240314)
   - [2.107. Contiguous Array (#525) - medium / python / 1H / 2024.03.16](#2107-contiguous-array-525---medium--python--1h--20240316)
+  - [2.108. Insert Interval (#57) - medium / python / 20M / 2024.03.17](#2108-insert-interval-57---medium--python--20m--20240317)
 
 
 --------------------
@@ -1087,6 +1088,11 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : sliding window , 0 -> -1 then goal == 0
 - complexity : O(N)
 
+## 2.108. Insert Interval (#57) - medium / python / 20M / 2024.03.17
+- https://leetcode.com/problems/insert-interval
+  - Runtime 64 ms Beats 97.11% / Memory 20.03 MB Beats 12.07% of users with Python3
+- algorithm : my post : https://leetcode.com/problems/insert-interval/solutions/4886316/python3-97-11-64ms
+- complexity : O(N)
 
 
 
