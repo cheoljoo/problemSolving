@@ -1099,6 +1099,7 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - https://leetcode.com/problems/task-scheduler
   - [ Time taken: 41 m 12 s ] Runtime 446 ms Beats 60.99%/ Memory 18.21 MB Beats 5.67% of users with Python3
 - algorithm : count all characters sequentially. use dictionary. use heapq for sort
+  - d = Counter(tasks)  is faster than  d = {}
 - complexity : O(N)
 
 

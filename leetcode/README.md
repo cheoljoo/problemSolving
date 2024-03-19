@@ -529,7 +529,7 @@ def dp(self,arr,idx,result):  # fromIdx .. toIdx
 - declaration as valuable is better.   ```for rr,cc in [[1,0],[-1,0],[0,1],[0,-1]]:``` -> ```direction = [[1,0],[-1,0],[0,1],[0,-1]]```
 - list :  rs += rooms[r]  --> rs.extend(rooms[r])
 - set differnce :  set(nums1) - set(nums2)
-
+- d = Counter(tasks)  is faster than  d = {}
 
 
 
