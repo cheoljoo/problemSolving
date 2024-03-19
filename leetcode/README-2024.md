@@ -121,6 +121,7 @@
   - [2.106. Binary Subarrays With Sum (#930) - medium / python / 3H / 2024.03.14](#2106-binary-subarrays-with-sum-930---medium--python--3h--20240314)
   - [2.107. Contiguous Array (#525) - medium / python / 1H / 2024.03.16](#2107-contiguous-array-525---medium--python--1h--20240316)
   - [2.108. Insert Interval (#57) - medium / python / 20M / 2024.03.17](#2108-insert-interval-57---medium--python--20m--20240317)
+  - [2.109. Task Scheduler (#621) - medium / python / 42M / 2024.03.19](#2109-task-scheduler-621---medium--python--42m--20240319)
 
 
 --------------------
@@ -1094,6 +1095,11 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : my post : https://leetcode.com/problems/insert-interval/solutions/4886316/python3-97-11-64ms
 - complexity : O(N)
 
+## 2.109. Task Scheduler (#621) - medium / python / 42M / 2024.03.19
+- https://leetcode.com/problems/task-scheduler
+  - [ Time taken: 41 m 12 s ] Runtime 446 ms Beats 60.99%/ Memory 18.21 MB Beats 5.67% of users with Python3
+- algorithm : count all characters sequentially. use dictionary. use heapq for sort
+- complexity : O(N)
 
 
 
