@@ -123,6 +123,7 @@
   - [2.108. Insert Interval (#57) - medium / python / 20M / 2024.03.17](#2108-insert-interval-57---medium--python--20m--20240317)
   - [2.109. Task Scheduler (#621) - medium / python / 42M / 2024.03.19](#2109-task-scheduler-621---medium--python--42m--20240319)
   - [2.110. Merge In Between Linked Lists (#1669) - medium / python / 9M / 2024.03.20](#2110-merge-in-between-linked-lists-1669---medium--python--9m--20240320)
+  - [2.111. Gas Station (#134) - medium / python / 2H / 2024.03.21](#2111-gas-station-134---medium--python--2h--20240321)
 
 
 --------------------
@@ -1109,8 +1110,14 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : linked list
 - complexity : O(N)
 
-
-
+## 2.111. Gas Station (#134) - medium / python / 2H / 2024.03.21
+- https://leetcode.com/problems/gas-station
+  - Runtime 1003 ms Beats 8.54% / Memory 52.84  MB Beats 5.30% of users with Python3
+- complexity : O(N^2)
+- algorithm : reduce gas == cost , dp 
+- study - https://leetcode.com/studyplan/top-interview-150/
+- learnt : O(N)
+  - 
 
 
 
