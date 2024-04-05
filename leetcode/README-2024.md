@@ -125,6 +125,7 @@
   - [2.110. Merge In Between Linked Lists (#1669) - medium / python / 9M / 2024.03.20](#2110-merge-in-between-linked-lists-1669---medium--python--9m--20240320)
   - [2.111. Gas Station (#134) - medium / python / 2H / 2024.03.21](#2111-gas-station-134---medium--python--2h--20240321)
   - [2.112. Reorder List (#143) - medium / c++ / 10M / 2024.03.23](#2112-reorder-list-143---medium--c--10m--20240323)
+- [3. pandas](#3-pandas)
 
 
 --------------------
@@ -1130,7 +1131,15 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 
 
 
-
+# 3. pandas
+- DataFrame
+  - df = pd.DataFrame(student_data, columns = ['student_id', 'age'])
+  - [ len(players.index) , len(players.columns) ]
+- First Three Rows : employees.head(3)
+- select data : students[students['student_id'] == 101][["name", "age"]]
+- Create a New Column : employees['bonus']= employees["salary"] *2
+- Drop Duplicate Rows : customers.drop_duplicates(subset = 'email', inplace = True)
+- Drop Missing Data : students.loc[students.notnull()['name'],:]
 
 
 
