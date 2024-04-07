@@ -1118,8 +1118,8 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N^2)
 - algorithm : reduce gas == cost , dp 
 - study - https://leetcode.com/studyplan/top-interview-150/
-- learnt : O(N)
-  - 
+- learnt : O(N)  anyway get the start ifsum(gas) >= sum(cost). 
+  - best : if sum(gas) < sum(cost):  return -1         for i in range(len(gas)):   total += (gas[i]- cost[i])  if total < 0:
 
 ## 2.112. Reorder List (#143) - medium / c++ / 10M / 2024.03.23
 - https://leetcode.com/problems/reorder-list
@@ -1127,8 +1127,39 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : vector
 - complexity : O(N)
 
+## 2.112. First Missing Positive (#41) - hard / python / 4H / 2024.03.26
+- https://leetcode.com/problems/first-missing-positive
+  - Runtime 314 ms Beats 20.30% / Memory 27.28 MB Beats 98.84% of users with Python3
+- algorithm : 
+- learnt : O(n) time and uses O(1) auxiliary space.
+  - for i in range(N)
 
+## 2.112. Length of Longest Subarray With at Most K Frequency (#2958) - medium / python / 1H / 2024.03.28
+- https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency
+  - Runtime 1171 ms Beats 44.43% / Memory 31.09 MB Beats 74.68% of users with Python3
+- algorithm : sliding window
+- complexity : O(N)
+- 
+## 2.112. Count Subarrays Where Max Element Appears at Least K Times (#2962) - medium / python / 1H / 2024.03.29
+- https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times
+  - Runtime 867 ms Beats 69.08% / Memory 30.93 MB Beats 56.87% of users with Python3
+- algorithm : sliding window
+- complexity : O(N)
 
+## 2.112. Subarray Product Less Than K (#713) - medium / python / 1H / 2024.03.27
+- https://leetcode.com/problems/subarray-product-less-than-k
+  - Runtime 587 ms Beats 5.09% / Memory 19.33 MB Beats 16.13% of users with Python3
+- algorithm : brute force N^2
+- complexity : O(N^2)
+- learnt : https://leetcode.com/problems/subarray-product-less-than-k/solutions/4930464/sliding-window-in-action-counting-subarrays-with-product-less-than-k
+  - sliding window : count += 1 + (right - left)
+
+## 2.112. Subarrays with K Different Integers (#992) - hard / python / 8H / 2024.03.30
+- https://leetcode.com/problems/subarrays-with-k-different-integers
+  - [ Time taken: 7 hrs 13 m 30 s ] Runtime 346 ms Beats 53.49% / Memory 20.12 MB Beats 29.82% of users with Python3
+- algorithm : 
+- learnt : O(n) time and uses O(1) auxiliary space.
+  - for i in range(N)
 
 
 # 3. pandas
