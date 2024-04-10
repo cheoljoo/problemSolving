@@ -125,6 +125,15 @@
   - [2.110. Merge In Between Linked Lists (#1669) - medium / python / 9M / 2024.03.20](#2110-merge-in-between-linked-lists-1669---medium--python--9m--20240320)
   - [2.111. Gas Station (#134) - medium / python / 2H / 2024.03.21](#2111-gas-station-134---medium--python--2h--20240321)
   - [2.112. Reorder List (#143) - medium / c++ / 10M / 2024.03.23](#2112-reorder-list-143---medium--c--10m--20240323)
+  - [2.113. First Missing Positive (#41) - hard / python / 4H / 2024.03.26](#2113-first-missing-positive-41---hard--python--4h--20240326)
+  - [2.114. Length of Longest Subarray With at Most K Frequency (#2958) - medium / python / 1H / 2024.03.28](#2114-length-of-longest-subarray-with-at-most-k-frequency-2958---medium--python--1h--20240328)
+  - [2.115. Count Subarrays Where Max Element Appears at Least K Times (#2962) - medium / python / 1H / 2024.03.29](#2115-count-subarrays-where-max-element-appears-at-least-k-times-2962---medium--python--1h--20240329)
+  - [2.116. Subarray Product Less Than K (#713) - medium / python / 1H / 2024.03.27](#2116-subarray-product-less-than-k-713---medium--python--1h--20240327)
+  - [2.117. Subarrays with K Different Integers (#992) - hard / python / 8H / 2024.03.30](#2117-subarrays-with-k-different-integers-992---hard--python--8h--20240330)
+  - [2.118. Count Subarrays With Fixed Bounds (#2444) - hard / python / 8H / 2024.03.31](#2118-count-subarrays-with-fixed-bounds-2444---hard--python--8h--20240331)
+  - [2.119. Word Search (#79) - medium / python / 40M / 2024.04.03](#2119-word-search-79---medium--python--40m--20240403)
+  - [2.120. Valid Parenthesis String (#678) - medium / python / 40M / 2024.04.07](#2120-valid-parenthesis-string-678---medium--python--40m--20240407)
+  - [2.121. Reveal Cards In Increasing Order (#950) - medium / python / 40M / 2024.04.10](#2121-reveal-cards-in-increasing-order-950---medium--python--40m--20240410)
 - [3. pandas](#3-pandas)
 
 
@@ -1127,26 +1136,26 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : vector
 - complexity : O(N)
 
-## 2.112. First Missing Positive (#41) - hard / python / 4H / 2024.03.26
+## 2.113. First Missing Positive (#41) - hard / python / 4H / 2024.03.26
 - https://leetcode.com/problems/first-missing-positive
   - Runtime 314 ms Beats 20.30% / Memory 27.28 MB Beats 98.84% of users with Python3
 - algorithm : 
 - learnt : O(n) time and uses O(1) auxiliary space.
   - for i in range(N)
 
-## 2.112. Length of Longest Subarray With at Most K Frequency (#2958) - medium / python / 1H / 2024.03.28
+## 2.114. Length of Longest Subarray With at Most K Frequency (#2958) - medium / python / 1H / 2024.03.28
 - https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency
   - Runtime 1171 ms Beats 44.43% / Memory 31.09 MB Beats 74.68% of users with Python3
 - algorithm : sliding window
 - complexity : O(N)
 - 
-## 2.112. Count Subarrays Where Max Element Appears at Least K Times (#2962) - medium / python / 1H / 2024.03.29
+## 2.115. Count Subarrays Where Max Element Appears at Least K Times (#2962) - medium / python / 1H / 2024.03.29
 - https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times
   - Runtime 867 ms Beats 69.08% / Memory 30.93 MB Beats 56.87% of users with Python3
 - algorithm : sliding window
 - complexity : O(N)
 
-## 2.112. Subarray Product Less Than K (#713) - medium / python / 1H / 2024.03.27
+## 2.116. Subarray Product Less Than K (#713) - medium / python / 1H / 2024.03.27
 - https://leetcode.com/problems/subarray-product-less-than-k
   - Runtime 587 ms Beats 5.09% / Memory 19.33 MB Beats 16.13% of users with Python3
 - algorithm : brute force N^2
@@ -1154,12 +1163,37 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - learnt : https://leetcode.com/problems/subarray-product-less-than-k/solutions/4930464/sliding-window-in-action-counting-subarrays-with-product-less-than-k
   - sliding window : count += 1 + (right - left)
 
-## 2.112. Subarrays with K Different Integers (#992) - hard / python / 8H / 2024.03.30
+## 2.117. Subarrays with K Different Integers (#992) - hard / python / 8H / 2024.03.30
 - https://leetcode.com/problems/subarrays-with-k-different-integers
   - [ Time taken: 7 hrs 13 m 30 s ] Runtime 346 ms Beats 53.49% / Memory 20.12 MB Beats 29.82% of users with Python3
-- algorithm : 
-- learnt : O(n) time and uses O(1) auxiliary space.
-  - for i in range(N)
+- algorithm : sliding window
+- complexity : O(N^2)
+
+## 2.118. Count Subarrays With Fixed Bounds (#2444) - hard / python / 8H / 2024.03.31
+- https://leetcode.com/problems/count-subarrays-with-fixed-bounds/
+  - Runtime 768 ms Beats 13.22% / Memory 31.15 MB Beats 17.63% of users with Python3
+- algorithm : rem is the satisfied number's count after the current number / find the first matching
+- complexity : O(N^2)
+
+## 2.119. Word Search (#79) - medium / python / 40M / 2024.04.03
+- https://leetcode.com/problems/word-search
+  - Runtime 5014 ms Beats 28.31% / Memory 16.62 MB Beats 26.43% of users with Python3 
+- algorithm : dfs
+- complexity : O(N^2)
+
+## 2.120. Valid Parenthesis String (#678) - medium / python / 40M / 2024.04.07
+- https://leetcode.com/problems/valid-parenthesis-string
+  - Runtime 37 ms Beats 48.54% / Memory 16.56 MB Beats 50.32% of users with Python3
+- algorithm : check count both direction ( left->right : '(*' count vs ')' count )
+- complexity : O(N)
+
+## 2.121. Reveal Cards In Increasing Order (#950) - medium / python / 40M / 2024.04.10
+- https://leetcode.com/problems/reveal-cards-in-increasing-order
+  - Runtime 37 ms Beats 95.04% / Memory 16.89 MB Beats 36.98% of users with Python3
+  - Runtime 0 ms Beats 100.00% of users with C++
+- algorithm : think reversly
+- complexity : O(NlogN)
+
 
 
 # 3. pandas
@@ -1171,6 +1205,20 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - Create a New Column : employees['bonus']= employees["salary"] *2
 - Drop Duplicate Rows : customers.drop_duplicates(subset = 'email', inplace = True)
 - Drop Missing Data : students.loc[students.notnull()['name'],:]
+- Modify Columns : employees['salary']= employees["salary"] *2
+- Rename Columns : students.rename(columns={'id': 'student_id', 'first':'first_name','last':'last_name','age':'age_in_years'}, inplace=True)
+- Change Data Type : students.astype({'grade':'int'}) 
+- Fill Missing Data : products['quantity'].fillna(0,inplace=True)
+- Reshape Data: Concatenate : pd.concat([df1,df2]) is slower than pd.concat([df1, df2], ignore_index=True)
+- Reshape Data: Pivot : weather.pivot(index='month' , columns='city' , values='temperature')
+- Reshape Data: Melt : pd.melt(report,  id_vars=['product'], var_name='quarter' ,value_name='sales')
+- Method Chaining : pd.DataFrame(animals[animals.weight >= 100].sort_values(by=['weight'], ascending=False)['name'])
+- reference
+  - https://velog.io/@euisuk-chung/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%8B%9C%EA%B0%81%ED%99%94-%EB%A7%88%EC%8A%A4%ED%84%B0%ED%95%98%EA%B8%B0-Pandas
+  - https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/
+  - https://pandas.pydata.org/docs/user_guide/merging.html
+  - https://rfriend.tistory.com/278
+  - 
 
 
 
