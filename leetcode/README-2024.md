@@ -134,6 +134,9 @@
   - [2.119. Word Search (#79) - medium / python / 40M / 2024.04.03](#2119-word-search-79---medium--python--40m--20240403)
   - [2.120. Valid Parenthesis String (#678) - medium / python / 40M / 2024.04.07](#2120-valid-parenthesis-string-678---medium--python--40m--20240407)
   - [2.121. Reveal Cards In Increasing Order (#950) - medium / python / 40M / 2024.04.10](#2121-reveal-cards-in-increasing-order-950---medium--python--40m--20240410)
+  - [2.122. Add One Row to Tree (#623) - medium / python / 30M / 2024.04.16](#2122-add-one-row-to-tree-623---medium--python--30m--20240416)
+  - [2.123. Sum Root to Leaf Numbers (#129) - medium / python / 30M / 2024.04.15](#2123-sum-root-to-leaf-numbers-129---medium--python--30m--20240415)
+  - [2.124. Smallest String Starting From Leaf (#988) - medium / python / 15M / 2024.04.17](#2124-smallest-string-starting-from-leaf-988---medium--python--15m--20240417)
 - [3. pandas](#3-pandas)
 
 
@@ -1193,6 +1196,28 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
   - Runtime 0 ms Beats 100.00% of users with C++
 - algorithm : think reversly
 - complexity : O(NlogN)
+
+## 2.122. Add One Row to Tree (#623) - medium / python / 30M / 2024.04.16
+- https://leetcode.com/problems/add-one-row-to-tree
+  - Runtime 37 ms Beats 94.50% / Memory 17.73 MB Beats 73.75% of users with Python3
+- algorithm : DFS , this is my solution : https://leetcode.com/problems/add-one-row-to-tree/solutions/5029275/python3-dfs-runtime-37-ms-beats-94-50-memory-17-73-mb-beats-73-75-of-users-with-python3
+- complexity : O(N)
+
+## 2.123. Sum Root to Leaf Numbers (#129) - medium / python / 30M / 2024.04.15
+- https://leetcode.com/problems/sum-root-to-leaf-numbers/description/?envType=daily-question&envId=2024-04-15
+  - Runtime 32 ms Beats 76.70% / Memory 13.76 MB Beats 100.00% of users with Python3
+- algorithm : DFS 
+- complexity : O(N)
+
+## 2.124. Smallest String Starting From Leaf (#988) - medium / python / 15M / 2024.04.17
+- https://leetcode.com/problems/smallest-string-starting-from-leaf/description/?envType=daily-question&envId=2024-04-17
+  - 15M    Runtime 47 ms Beats 33.96% / Memory 17.86 MB Beats 34.37% of users with Python3
+- algorithm : DFS 
+- complexity : O(N)
+
+
+
+
 
 
 
