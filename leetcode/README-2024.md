@@ -137,6 +137,7 @@
   - [2.122. Add One Row to Tree (#623) - medium / python / 30M / 2024.04.16](#2122-add-one-row-to-tree-623---medium--python--30m--20240416)
   - [2.123. Sum Root to Leaf Numbers (#129) - medium / python / 30M / 2024.04.15](#2123-sum-root-to-leaf-numbers-129---medium--python--30m--20240415)
   - [2.124. Smallest String Starting From Leaf (#988) - medium / python / 15M / 2024.04.17](#2124-smallest-string-starting-from-leaf-988---medium--python--15m--20240417)
+  - [2.125. Find All Groups of Farmland (#1992) - medium / python / 20M / 2024.04.20](#2125-find-all-groups-of-farmland-1992---medium--python--20m--20240420)
 - [3. pandas](#3-pandas)
 
 
@@ -1215,6 +1216,11 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - algorithm : DFS 
 - complexity : O(N)
 
+## 2.125. Find All Groups of Farmland (#1992) - medium / python / 20M / 2024.04.20
+- https://leetcode.com/problems/find-all-groups-of-farmland/description/?envType=daily-question&envId=2024-04-20
+  - [20M] Runtime 769 ms Beats 86.50% / Memory 31.01 MB Beats 51.00% of users with Python3
+- algorithm : Sequential-Search
+- complexity : O(R*C)
 
 
 
