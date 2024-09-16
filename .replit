@@ -1,6 +1,6 @@
 modules = ["python-3.12", "cpp-clang14", "rust-stable", "c-clang14"]
 
-run = "python3 $PWD/leetcode/2024/word-search-ii-solution.py"
+run = "python3 $PWD/leetcode/2024/xor-queries-of-a-subarray.py"
 
 [nix]
 channel = "stable-24_05"
