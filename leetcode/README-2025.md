@@ -8,7 +8,7 @@ TOC
 - [7. Count Ways To Build Good Strings (#2466) - medium / python / solution / 2025.01.02](#7-count-ways-to-build-good-strings-2466---medium--python--solution--20250102)
 - [8. Minimum Time to Break Locks I (#3376) - medium / python / 2H / 2024.01.07](#8-minimum-time-to-break-locks-i-3376---medium--python--2h--20240107)
 - [9. Shifting Letters II (#2381) - medium / python / 1H / 2024.01.09](#9-shifting-letters-ii-2381---medium--python--1h--20240109)
-- [10. The Number of Beautiful Subsets (#2597) - medium / python /   / 2024.01.14](#10-the-number-of-beautiful-subsets-2597---medium--python-----20240114)
+- [10. The Number of Beautiful Subsets (#2597) - medium / python / 1H / 2024.01.14](#10-the-number-of-beautiful-subsets-2597---medium--python--1h--20240114)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -99,11 +99,17 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - alternatives : 
   - [source code]()
 
-# 10. The Number of Beautiful Subsets (#2597) - medium / python /   / 2024.01.14
+# 10. The Number of Beautiful Subsets (#2597) - medium / python / 1H / 2024.01.14
+- idea
+  - n의 max가  20개이면 , 2**n = 1M 이다.  이는 모든 가능한 combination이 가능하다는 것이다.
 - https://leetcode.com/problems/the-number-of-beautiful-subsets
-  - 
-- complexity : O(N)
+  - Runtime 8401 ms Beats 10.36% / Memory 157.14 MB Beats 9.71% : [source code](./2025/the-number-of-beautiful-subsets-2597---medium--python.py)
+- complexity : O(2^N)
 - algorithm : 
-  - 
+  - combination을 구해서 각기 subset이 beautiful한지를 check
 - alternatives : 
-  - [source code]()
+  - 모든 것을 check하기에는 시간이 많이 걸리므로 각기 combination을 구할때 이미 beautiful이 아니면 중단함으로 전체 loop수를 줄일수 있다.  Runtime: 2596ms
+  - [source code](./2025/the-number-of-beautiful-subsets-2597---medium--python-2.py)
+- [ ] recursive 가 아닌 것으로 직접 작성해봐야함.
+
+
