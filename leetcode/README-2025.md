@@ -8,6 +8,7 @@ TOC
 - [7. Count Ways To Build Good Strings (#2466) - medium / python / solution / 2025.01.02](#7-count-ways-to-build-good-strings-2466---medium--python--solution--20250102)
 - [8. Minimum Time to Break Locks I (#3376) - medium / python / 2H / 2024.01.07](#8-minimum-time-to-break-locks-i-3376---medium--python--2h--20240107)
 - [9. Shifting Letters II (#2381) - medium / python / 1H / 2024.01.09](#9-shifting-letters-ii-2381---medium--python--1h--20240109)
+- [10. The Number of Beautiful Subsets (#2597) - medium / python /   / 2024.01.14](#10-the-number-of-beautiful-subsets-2597---medium--python-----20240114)
 
 --------------------
 leetcode : my profile -> https://leetcode.com/cheoljoo/
@@ -95,5 +96,14 @@ leetcode : my profile -> https://leetcode.com/cheoljoo/
 - complexity : O(N)
 - algorithm : 
   - pins 는 각 index에서 값이 증가하거나 감소하는 것이다. forward  기준으로보면 start는 당연히 증가를 하는 것이고, end까지는 유지 되다가 , end+1 부터 증가되었던 부분이 감소하게 되는 것이므로 end+1로 하였다. end는 len(s)까지 올수 있으므로 계산의 편의를 위해서 pins의 size는 len(s)+1로 잡은 것이다. 위치의 계산은 % 연산으로 사용하여 26개의 circle을 돌게 한다고 생각하면 된다.  'a' 로터의 간격(gap) 을 구하면 된다.  O(N)
+- alternatives : 
+  - [source code]()
+
+# 10. The Number of Beautiful Subsets (#2597) - medium / python /   / 2024.01.14
+- https://leetcode.com/problems/the-number-of-beautiful-subsets
+  - 
+- complexity : O(N)
+- algorithm : 
+  - 
 - alternatives : 
   - [source code]()
